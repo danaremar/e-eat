@@ -1,0 +1,42 @@
+.glf-btn-basic {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/** Restaurant menu - START **/
+.glf-mor-restaurant-menu-item {
+    margin-bottom: 1rem;
+}
+
+.glf-mor-restaurant-menu-item-header {
+    display: flex;
+}
+
+.glf-mor-restaurant-menu-item-header h5 {
+    margin: 0 0.5rem 0 0;
+}
+
+.glf-mor-restaurant-menu-category {
+    padding-top: 3rem;
+}
+
+.glf-mor-restaurant-menu-category:first-of-type {
+    padding-top: 0;
+}
+
+.glf-mor-restaurant-menu-item-inner {
+    display: flex;
+}
+
+.glf-mor-restaurant-menu-item-inner img {
+    margin-right: 0.5rem;
+    max-width: fit-content;
+}
+
+.glf-mor-restaurant-menu-item-price {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+
+/** Restaurant menu - END **/
