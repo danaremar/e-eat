@@ -1,0 +1,194 @@
+# Translation of Plugins - menu-image - Development (trunk) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - menu-image - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-07-07 18:14:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - menu-image - Development (trunk)\n"
+
+#. Author URI of the plugin/theme
+msgid "http://makeyoulivebetter.org.ua/"
+msgstr "http://makeyoulivebetter.org.ua/"
+
+#. Author of the plugin/theme
+msgid "Alex Davyskiba aka Zviryatko"
+msgstr "Alex Davyskiba aka Zviryatko"
+
+#. Description of the plugin/theme
+msgid "Provide uploading images to menu item"
+msgstr "Permite usar imágenes en los elementos del menú"
+
+#. Plugin URI of the plugin/theme
+msgid "http://html-and-cms.com/plugins/menu-image/"
+msgstr "http://html-and-cms.com/plugins/menu-image/"
+
+#. Plugin Name of the plugin/theme
+msgid "Menu Image"
+msgstr "Menu Image"
+
+#: menu-image.php:749
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: menu-image.php:735
+msgid "Original: %s"
+msgstr "Original: %s"
+
+#: menu-image.php:728
+msgid "To the top"
+msgstr "Hacia la parte superior"
+
+#: menu-image.php:725
+msgid "Down one"
+msgstr "Bajar uno"
+
+#: menu-image.php:724
+msgid "Up one"
+msgstr "Subir uno"
+
+#: menu-image.php:723
+msgid "Move"
+msgstr "Mover"
+
+#: menu-image.php:717
+msgid "The description will be displayed in the menu if the current theme supports it."
+msgstr "La descripción se mostrará en el menú si el tema actual lo permite."
+
+#: menu-image.php:715
+msgid "Description"
+msgstr "Descripción"
+
+#: menu-image.php:702
+msgid "Link Relationship (XFN)"
+msgstr "Relación del enlace (XFN)"
+
+#: menu-image.php:696
+msgid "CSS Classes (optional)"
+msgstr "Clases CSS (opcional)"
+
+#: menu-image.php:691
+msgid "Open link in a new window/tab"
+msgstr "Abrir el enlace en una nueva ventana/pestaña"
+
+#: menu-image.php:684
+msgid "Title Attribute"
+msgstr "Atributo del título"
+
+#: menu-image.php:678
+msgid "Navigation Label"
+msgstr "Etiqueta de navegación"
+
+#: menu-image.php:671
+msgid "URL"
+msgstr "URL"
+
+#: menu-image.php:660 menu-image.php:662
+msgid "Edit Menu Item"
+msgstr "Editar elemento del menú"
+
+#: menu-image.php:658
+msgid "Move down"
+msgstr "Mover abajo"
+
+#: menu-image.php:645
+msgid "Move up"
+msgstr "Mover arriba"
+
+#: menu-image.php:630
+msgid "sub item"
+msgstr "Subelemento"
+
+#. translators: %s: title of menu item in draft status
+#: menu-image.php:617
+msgid "%s (Pending)"
+msgstr "%s (pendientes)"
+
+#. translators: %s: title of menu item which is invalid
+#: menu-image.php:613
+msgid "%s (Invalid)"
+msgstr "%s (no válidos)"
+
+#: menu-image.php:456
+msgid "After"
+msgstr "Después"
+
+#: menu-image.php:455
+msgid "Before"
+msgstr "Antes"
+
+#: menu-image.php:454
+msgid "Below"
+msgstr "Inferior"
+
+#: menu-image.php:453
+msgid "Above"
+msgstr "Superior"
+
+#: menu-image.php:452
+msgid "Hide"
+msgstr "Ocultar"
+
+#: menu-image.php:449
+msgid "Title position"
+msgstr "Posición del titulo"
+
+#: menu-image.php:436
+msgid "Original Size"
+msgstr "Tamaño original"
+
+#: menu-image.php:431
+msgid "Image size"
+msgstr "Tamaño de la imagen"
+
+#: menu-image.php:398
+msgid "Set image on hover"
+msgstr "Establecer imagen al pasar el cursor"
+
+#: menu-image.php:395
+msgid "Set menu item image on hover"
+msgstr "Establecer imagen del elemento del menú al pasar el cursor"
+
+#: menu-image.php:395
+msgid "Change menu item image on hover"
+msgstr "Cambiar imagen del elemento del menú al pasar el cursor"
+
+#: menu-image.php:394
+msgid "Image on hover"
+msgstr "Imagen al pasar el cursor"
+
+#: menu-image.php:388 menu-image.php:399 menu-image.php:748
+msgid "Remove"
+msgstr "Eliminar"
+
+#: menu-image.php:387
+msgid "Set image"
+msgstr "Establecer imagen"
+
+#: menu-image.php:384
+msgid "Set menu item image"
+msgstr "Establecer imagen del menú"
+
+#: menu-image.php:384
+msgid "Change menu item image"
+msgstr "Cambiar imagen del menú"
+
+#: menu-image.php:383
+msgid "Menu image"
+msgstr "Imagen del menú"
+
+#: menu-image.php:339
+msgid "Select"
+msgstr "Selección"
+
+#: menu-image.php:338
+msgid "Chose menu image"
+msgstr "Elegir imagen del menú"
+
+#: menu-image.php:142
+msgid "Image"
+msgstr "Imagen"

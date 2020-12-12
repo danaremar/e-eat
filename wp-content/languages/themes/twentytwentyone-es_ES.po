@@ -11,6 +11,15 @@ msgstr ""
 "Language: es\n"
 "Project-Id-Version: Themes - Twenty Twenty-One\n"
 
+#. Description of the theme
+msgid "Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog."
+msgstr "Twenty Twenty-One es un lienzo en blanco para tus ideas y hace que el editor de bloques sea tu mejor pincel. Con los nuevos patrones de bloques, que te permiten crear un hermoso diseño en cuestión de segundos, los suaves colores de este tema y el diseño llamativo, aunque atemporal, harán que tu trabajo brille. ¡Dale una vuelta! Mira cómo Twenty Twenty-One eleva tu porfolio, tu web de negocios o tu blog personal."
+
+#. Theme Name of the theme
+#: inc/block-patterns.php:20
+msgid "Twenty Twenty-One"
+msgstr "Twenty Twenty-One"
+
 #. translators: %s is the wordpress.org Twenty Twenty-One support article URL.
 #: classes/class-twenty-twenty-one-dark-mode.php:189
 msgid "https://wordpress.org/support/article/twenty-twenty-one/"
@@ -124,9 +133,9 @@ msgid "This theme requires WordPress 5.3 or newer. You are running version %s. P
 msgstr "Este tema necesita WordPress 5.3 o superior. Estás ejecutando la versión %s. Por favor, actualiza."
 
 #. translators: %: page number.
-#: image.php:46 template-parts/content/content-page.php:36
-#: template-parts/content/content-single.php:30
 #: template-parts/content/content.php:36
+#: template-parts/content/content-page.php:36
+#: template-parts/content/content-single.php:30 image.php:46
 msgid "Page %"
 msgstr "Página %"
 
@@ -363,9 +372,9 @@ msgstr "En las páginas de archivo, las entradas muestran:"
 msgid "View all of %2$s's posts."
 msgstr "Ver todas las entradas de %2$s."
 
-#. translators: %s author name.
 #. translators: 1: Author name.
-#: inc/template-tags.php:49 template-parts/post/author-bio.php:15
+#. translators: %s author name.
+#: template-parts/post/author-bio.php:15 inc/template-tags.php:49
 msgid "By %s"
 msgstr "Por %s"
 
@@ -404,7 +413,7 @@ msgstr[0] "Hemos encontrado %d resultado para tu búsqueda."
 msgstr[1] "Hemos encontrado %d resultados para tu búsqueda."
 
 #. translators: %s: search term.
-#: search.php:21 template-parts/content/content-none.php:22
+#: template-parts/content/content-none.php:22 search.php:21
 msgid "Results for \"%s\""
 msgstr "Resultados para «%s»"
 
@@ -425,8 +434,8 @@ msgid ", "
 msgstr ", "
 
 #. translators: %s: Name of current post. Only visible to screen readers.
-#: image.php:68 image.php:93 inc/template-tags.php:92 inc/template-tags.php:135
-#: template-parts/content/content-page.php:48
+#: template-parts/content/content-page.php:48 image.php:68 image.php:93
+#: inc/template-tags.php:92 inc/template-tags.php:135
 msgid "Edit %s"
 msgstr "Editar %s"
 
@@ -553,9 +562,9 @@ msgstr "Tamaño completo"
 msgid "Published %s"
 msgstr "Publicada el %s"
 
-#: image.php:43 template-parts/content/content-page.php:33
-#: template-parts/content/content-single.php:27
 #: template-parts/content/content.php:33
+#: template-parts/content/content-page.php:33
+#: template-parts/content/content-single.php:27 image.php:43
 msgid "Page"
 msgstr "Página"
 
@@ -567,8 +576,8 @@ msgstr "Cerrar"
 msgid "Menu"
 msgstr "Menú"
 
-#: functions.php:76 inc/starter-content.php:154
-#: template-parts/header/site-nav.php:13
+#: template-parts/header/site-nav.php:13 functions.php:76
+#: inc/starter-content.php:154
 msgid "Primary menu"
 msgstr "Menú principal"
 
@@ -689,7 +698,7 @@ msgstr "Muy pequeño"
 msgid "Proudly powered by %s."
 msgstr "Funciona gracias a %s."
 
-#: footer.php:24 functions.php:77 inc/starter-content.php:165
+#: functions.php:77 inc/starter-content.php:165 footer.php:24
 msgid "Secondary menu"
 msgstr "Menú secundario"
 
@@ -717,7 +726,7 @@ msgstr "Mostrar el título del sitio y la descripción corta"
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "Parece que no se ha encontrado nada en esta ubicación. ¿Quieres probar una búsqueda?"
 
-#: 404.php:16 template-parts/content/content-none.php:30
+#: template-parts/content/content-none.php:30 404.php:16
 msgid "Nothing here"
 msgstr "No hay nada aquí"
 
@@ -730,15 +739,6 @@ msgstr "https://es.wordpress.org/"
 msgid "the WordPress team"
 msgstr "el equipo WordPress"
 
-#. Description of the theme
-msgid "Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog."
-msgstr "Twenty Twenty-One es un lienzo en blanco para tus ideas y hace que el editor de bloques sea tu mejor pincel. Con los nuevos patrones de bloques, que te permiten crear un hermoso diseño en cuestión de segundos, los suaves colores de este tema y el diseño llamativo, aunque atemporal, harán que tu trabajo brille. ¡Dale una vuelta! Mira cómo Twenty Twenty-One eleva tu porfolio, tu web de negocios o tu blog personal."
-
 #. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentytwentyone/"
 msgstr "https://es.wordpress.org/themes/twentytwentyone/"
-
-#. Theme Name of the theme
-#: inc/block-patterns.php:20
-msgid "Twenty Twenty-One"
-msgstr "Twenty Twenty-One"
