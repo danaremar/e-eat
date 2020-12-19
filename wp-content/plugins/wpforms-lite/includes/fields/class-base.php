@@ -1985,4 +1985,19 @@ abstract class WPForms_Field {
 
 		wpforms()->frontend->is_choicesjs_enqueued = true;
 	}
+
+	/**
+	 * Whether a Choicesjs search area should be shown.
+	 *
+	 * @since 1.6.4
+	 *
+	 * @param int $choices_count Choices amount.
+	 *
+	 * @return bool
+	 */
+	protected function is_choicesjs_search_enabled( $choices_count ) {
+
+		// We should auto hide/remove search, if less than 8 choices.
+		return $choices_count >= (int) apply_filters( 'wpforms_field_choicesjs_search_enabled_items_min', 8 );
+	}
 }

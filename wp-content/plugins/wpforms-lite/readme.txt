@@ -3,7 +3,7 @@ Contributors: wpforms, jaredatch, smub, slaFFik
 Tags: contact form, contact form plugin, forms, form builder, custom form, contact button, contact me, custom contact form, form manager, form, forms builder, forms creator, captcha, recaptcha, Akismet, email form, web form, feedback form, payment form, survey form, donation form, email submit form, message form, mailchimp, mailchimp form, aweber, aweber form, paypal, paypal form, stripe, stripe form, getresponse, getresponse form, email subscription, contact form widget, user registration form, wordpress registration, wordpress login form, feedback
 Requires at least: 4.9
 Tested up to: 5.5
-Stable tag: 1.6.3.1
+Stable tag: 1.6.4
 Requires PHP: 5.5
 License: GNU General Public License v2.0 or later
 
@@ -108,7 +108,7 @@ Aside from simple order forms, business owners also use WPForms to create custom
 
 We understand that sometimes you may need to create a contact form that require a signature. WPForms comes with a signature field to collect user signature on your WordPress forms or even create custom signature forms.
 
-You can do all of this while still using the same easy-to-use contact form builder that's loved by over 3 million users.
+You can do all of this while still using the same easy-to-use contact form builder that's loved by over 4 million users.
 
 >I am so impressed with this plugin. I decided to give it a shot over some of the other form plugins, and I am so glad I did. It works well, is so easy to use and customize. The support is amazing on top of it all. I got the pro version because I was so pleased. Highly recommend.<br>
 > Micky73 - WordPress user
@@ -404,6 +404,24 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 1.6.4 =
+- Added: hCaptcha support, see WPForms > CAPTCHA settings.
+- Added: Character/word limit validation message control inside Settings > Validation page.
+- Changed: Dropdown fields using the Modern format will only show the search option if at least 8 choices are provided.
+- Changed: Updated jQuery inputmask library to v5.0.6-beta20
+- Changed: Improved Form Builder Help documentation caching.
+- Changed: Only create our Logs database table when specifically enabled in the Tools settings.
+- Changed: Updated WPForms install count and rating information.
+- Changed: Added "Copy to Clipboard" button inside Form Embed modal.
+- Fixed: PHP Warning caused by Email field changes.
+- Fixed: Editing multiline text in Paragraph field breaks new lines in submitted text.
+- Fixed: Javascript conflicts with IE11.
+- Fixed: Possible errors if web host had `set_time_limit()` disabled.
+- Fixed: Email validation issue if form is in a page multiple times.
+- Fixed: Footer links in the Summary email are now working properly.
+- Fixed: Double-click issue for "Add New Account" buttons on the Settings > Integrations page.
+- Fixed: Gutenberg block ignores "Include Form Styling" setting and forces full CSS stylesheet.
 
 = 1.6.3.1 =
 - Added: Native integration with Divi.

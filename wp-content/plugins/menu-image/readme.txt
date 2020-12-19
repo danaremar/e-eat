@@ -3,8 +3,8 @@ Contributors: takanakui, freemius
 Tags: menu, navigation, image, icons, nav menu
 Donate link: https://www.buymeacoffee.com/ruiguerreiro
 Requires at least: 4.4.0
-Tested up to: 5.5
-Stable tag: 2.9.7
+Tested up to: 5.6
+Stable tag: 3.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,28 +18,41 @@ Control the position of the image or icon and also it's size.
 
 With Menu Image plugin you can do more, check some of the features:
 
-
-- Hide Title.
+- [New] FontAwesome Icons
+- [New] DashIcons Icons
+- Hide Title and show only image or icon.
 - Add Image / Icon on the Left of the menu item title.
 - Add Image / Icon on the Right of the menu item title.
 - Add Image / Icon on the Above of the menu item title.
 - Add Image / Icon on the Below of the menu item title.
 - Switch images / icons on mouse over the menu item.
+- [PREMIUM] Convert menu items into Call to action buttons.
+- [PREMIUM] Add count bubble to menu items (Cart total, category total, custom function) menu items.
+- [PREMIUM] Notification badges on the menu items (New, Sale, Hiring, etc).
+- [PREMIUM] Color customization of the buttons, badges and bubbles.
+- [PREMIUM] Disable Menu Image in Mobile devices
 
-It's compatible with WPML and no coding knowledge is required.
+
+= Links =
+
+* [Menu Image Premium](https://www.wpmenuimage.com/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_link)
+* [Documentation](https://www.wpmenuimage.com/knowledgebase/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_link)
+* [Creat support ticket](https://www.wpmenuimage.com/support-contact/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_link)
 
 = Related Plugins =
 * [Mobile Menu](https://www.wpmobilemenu.com/?utm_source=wordpressorg&utm_medium=menu-image&utm_campaign=plugin-description): WP Mobile Menu is the best WordPress responsive mobile menu. Provide to your mobile visitor an easy access to your site content using any device smartphone/tablet/desktop.
 
+What people is saying!
 
-###I need help or I have a doubt, check our Support
-* Great Support, our free support is above the average.
+> `Easy to use and good author support`
+> This plugin is a good solution to easily include an image in a menu. Excellent support from plugin author!
 
- <a target="_blank" href="https://wordpress.org/support/plugin/menu-image">Menu Image Support</a>
+> @dwoolworth824
 
-Bug reports for Menu Image are [welcomed on GitHub](https://github.com/ruiguerreiro79/menu-image). Please note GitHub is not a support forum, and issues that aren’t properly qualified as bugs will be closed.
+> `Best plugin for adding a logo to your navigation`
+> I'd definitely recommend this plugin if you need to add a logo to your navigation in WordPress. The support provided is so 5 stars!
 
-
+> @manmade1
 == Installation ==
 
 1. Upload `menu-image` to the `/wp-content/plugins/` directory
@@ -51,67 +64,48 @@ Bug reports for Menu Image are [welcomed on GitHub](https://github.com/ruiguerre
 
 == Frequently Asked Questions ==
 
-= How to add custom attributes to menu item link (useful for integration with dropdown menus) =
+= How to install Menu Image? =
 
-Use core `nav_menu_link_attributes` and `nav_menu_item_title` filters.
+Check this article in the following [link](https://www.wpmenuimage.com/knowledgebase/getting-started/how-to-install-menu-image/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_faqs_2)
 
-= How to wrap menu link text in `span` html element =
+= How to enable Menu Image? =
 
-Menu link text is already wrapped in `span.menu-image-title`.
+Check this article in the following [link](https://www.wpmenuimage.com/knowledgebase/general-options/how-to-enable-menu-image/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_faqs_2)
 
-= How to add another size for the image? =
+= How to add Icons to Menu Items? =
 
-To add a new size (or remove an old one) add a function to the `menu_image_default_sizes` filter. For example
+Check this article in the following [link](https://www.wpmenuimage.com/knowledgebase/general-options/add-icons-to-menu-items/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_faqs_2)
 
-`
-<?php
-add_filter( 'menu_image_default_sizes', function($sizes) {
+= How to add custom CSS to Menu Image? =
 
-  // remove the default 36x36 size
-  unset($sizes['menu-36x36']);
+Check this article in the following [link](https://www.wpmenuimage.com/knowledgebase/general-options/how-to-add-custom-css-to-menu-image/?utm_source=wprepo-readme&utm_medium=user%20website&utm_campaign=readme_faqs_2)
 
-  // add a new size
-  $sizes['menu-50x50'] = array(50,50);
-
-  // return $sizes (required)
-  return $sizes;
-
-});
-?>
-`
-
-= How to make hovered image visible on current page of menu item? =
-
-Add this link to style.css
-`
-.menu-item.current-menu-item > a.menu-image-hovered img.hovered-image {
-  opacity: 1;
-}
-`
-
-= If you have problem with srcset image problem on Wordpress version >= 4.4 and Azure hosting =
-
-If you srcset property look like this:
-`<img width="36" height="36" src="http://static.mywebsite.com/website/myaction_express_menu_icon-36x36.png" class="attachment-menu-36x36 size-menu-36x36" alt="myaction_express_menu_icon" srcset="http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon-50x50.png 50w, http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon-75x75.png 75w, http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon-24x24.png 24w, http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon-36x36.png 36w, http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon-48x48.png 48w, http://www.mywebsite.com/wp-content/uploads/D:homesitewwwroot/wp-content/uploads/myaction_express_menu_icon.png 80w" sizes="(max-width: 36px) 100vw, 36px">`
-Then you can disable srcset (add it to your function.php):
-`
-/**
- * Fix for broken images on azure & wordpress 4.4
- * @see https://wordpress.org/support/topic/wordpress-adding-absolute-paths
- */
-add_filter( 'wp_calculate_image_srcset', '__return_false' );
-`
 
 == Screenshots ==
 
-1. Admin screen
-2. Menu preview in standard twenty-thirteen theme
+1. Add FontAwesome Icons to menu item
+2. Add DashIcons Icons to menu item
+3. Add images to menu item
 
 == Changelog ==
 
+### 3.0.1 ###
+* New - Add RTL CSS in Admin settings
+* Fix - Image size settings wasn't saving
+* Fix - Avoid HTML Markup in items without Icons or images
+* Fix - Remove FontAwesome Enqueue
+
+### 3.0 ###
+* New - New Settings redesign
+* New - Menu item preview in the settings
+* New - Possible to add FontAwesome Icons
+* New - Possible to add DashIcons Icons
+* Improvment – Update Freemius SDK
+* Improvment – Code clean up
+
 ### 2.9.7 ###
 * Fix - Fix Issue with display title above and below
-* Improvment - Update Freemius SDK to 2.4.0.1
+* Improvment – Update Freemius SDK to 2.4.0.1
 
 ### 2.9.6 ###
 * Fix - Fix compatibility issue with WordPress 5.4.
@@ -151,94 +145,3 @@ add_filter( 'wp_calculate_image_srcset', '__return_false' );
 * Use core `nav_menu_link_attributes`, `nav_menu_item_title` filters to add image and class instead of `walker_nav_menu_start_el` filter.
 * Drop support of core version < 4.4.0.
 
-= 2.7.0 =
-* Remove notification plugin. It was not a good idea btw.
-
-= 2.6.9 =
-* Revert back php <=5.2 support, https://wordpress.org/support/topic/upgrade-to-wp-453-and-268-and-got-this-error. Reported by @itmnetcom and @cjg79
-
-= 2.6.8 =
-* Fix `wp_nav_menu_item_custom_fields` filter usage https://wordpress.org/support/topic/blocked-on-36x36-image. Reported by @vladimir-slonska
-* Fix php warning in notifier component https://wordpress.org/support/topic/invalid-argument-supplied-for-foreach-in-4. Reported by @susanmarshallva
-
-= 2.6.7 =
-* Add `menu_image_link_attributes` filter, fix bug with menu dropdown in Flatsome theme https://wordpress.org/support/topic/bug-image-menu-dropdown. Reported by @apardo
-
-= 2.6.6 =
-* Fix various php errors.
-
-= 2.6.5 =
-* Add notification plugin.
-
-= 2.6.4 =
-* Fixing a clearing bug for WordPress 4.5+. Thanx @kau-boy
-
-= 2.6.3 =
-* Fix php warning 'Invalid Argument foreach()' https://wordpress.org/support/topic/invalid-argument-foreach-in-menu-imagephp-line-126. Thanx @majancart
-
-= 2.6.2 =
-* Update FAQ to dial with srcset and Azure hosting https://wordpress.org/support/topic/wordpress-adding-absolute-paths. Thanx @GeertvanHorrik
-
-= 2.6.1 =
-* Fix php warning https://wordpress.org/support/topic/bug-fix-error-in-the-file-menu-imagephp
-
-= 2.6 =
-* Fix bug on attachment page.
-* Add french translation. Thanx @CreativeJuiz
-
-= 2.5 =
-* Add above and below title. Thanx @alhoseany
-* Add original image size. Thanx @alhoseany
-* Fix the loss of choices on size and title when updating image by ajax. Thanx @alhoseany
-* Fix hidden title on responsive select menu.
-
-= 2.4 =
-* Fix compatibility with some modules and themes to according to [this topic](http://shazdeh.me/2014/06/25/custom-fields-nav-menu-items/)
-* Fix Jetpack Phonon frontend bug
-
-= 2.3 =
-* WPML menus sync support. Thanx @pabois for [feature request](http://wordpress.org/support/topic/very-good-wpml-compliant)
-
-= 2.2 =
-* Added grunt-wp-readme-to-markdown npm package for converting readme to markdown for github users.
-
-= 2.1 =
-* Fix [set-image-button-not-working](http://wordpress.org/support/topic/set-image-button-not-working)
-* Fix [vertical-align-when-using-mouseover-image](ttp://wordpress.org/support/topic/vertical-align-when-using-mouseover-image)
-
-= 2.0 =
-* Added support of media uploader.
-* Fixed php strict warnings.
-* Added .ico image support, thanks to [ivol84](https://github.com/ivol84)
-
-= 1.3 =
-* Added ability to set title position, an example: before, after image or hide
-
-= 1.2 =
-* Fix styles for hovered image
-
-= 1.1 =
-* Added style file with vertical align of menu image item by default
-* Added ability to upload image that which will be replaced on hover
-* Added default image sizes for menu items: 24x24, 36x36 and 48x48
-
-== Upgrade Notice ==
-
-= 2.5 =
-Now you can set link title below and above image, thanx @alhoseany.
-
-= 2.4 =
-If your are using Jetpack Phonon module now menu icons will be look good.
-
-= 2.3 =
-If your are using WPML plugin, now when you sync menus, images will synced too.
-
-= 2.0 =
-WARNING! You need to re-select the images! Now, with media uploader support, it's easy peasy.
-Media uploader support. Upload once, use many times!
-
-= 1.2 =
-Now you can change title text position
-
-= 1.1 =
-Now you can upload image that replaced default on mouse hover

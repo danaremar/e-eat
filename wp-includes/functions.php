@@ -7779,31 +7779,3 @@ function is_php_version_compatible( $required ) {
 function wp_fuzzy_number_match( $expected, $actual, $precision = 1 ) {
 	return abs( (float) $expected - (float) $actual ) <= $precision;
 }
-
-
-/* Add fields to account page */
-add_action('um_after_account_general', 'showUMExtraFields', 100);
-function showUMExtraFields() {
-  $id = um_user('ID');
-  $output = '';
-  $names = array('address');
-
-  $fields = array(); 
-  foreach( $names as $name )
-    $fields[ $name ] = UM()->builtin()->get_specific_field( $name );
-  $fields = apply_filters('um_account_secure_fields', $fields, $id);
-  foreach( $fields as $key => $data )
-    $output .= UM()->fields()->edit_field( $key, $data );
-
-  echo $output;
-}
-
-add_action('um_account_pre_update_profile', 'getUMFormData', 100);
-function getUMFormData(){
-  $id = um_user('ID');
-  $names = array('address');
-
-  foreach( $names as $name )
-    update_user_meta( $id, $name, $_POST[$name] );
-}
-

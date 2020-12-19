@@ -181,8 +181,8 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 			// Load Color Pickers.
 			app.loadColorPickers();
 
-			// Hide/Show reCAPTCHA in form.
-			app.recaptchaToggle();
+			// Hide/Show CAPTCHA in form.
+			app.captchaToggle();
 
 			// Confirmations initial setup
 			app.confirmationsSetup();
@@ -1865,7 +1865,11 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 					$limitDaysOptions = $( '#wpforms-field-option-row-' + id + '-date_limit_days_options' );
 
 				if ( value === 'dropdown' ) {
-					$( '#wpforms-field-option-' + id + '-date_format' ).prop( 'selectedIndex', 0 ).trigger( 'change' );
+					var $dateSelect = $( '#wpforms-field-option-' + id + '-date_format' );
+
+					if ( $dateSelect.find( 'option:selected' ).hasClass( 'datepicker-only' ) ) {
+						$dateSelect.prop( 'selectedIndex', 0 ).trigger( 'change' );
+					}
 
 					$limitDays.hide();
 				} else {
@@ -2460,6 +2464,7 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 		 * Add new field.
 		 *
 		 * @since 1.0.0
+		 * @since 1.6.4 Added hCaptcha support.
 		 */
 		fieldAdd: function(type, options) {
 
@@ -2469,8 +2474,8 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 				return;
 			}
 
-			if ( type === 'recaptcha' ) {
-				app.recaptchaUpdate();
+			if ( -1 !== $.inArray( type, [ 'captcha_hcaptcha', 'captcha_recaptcha', 'captcha_none' ] ) ) {
+				app.captchaUpdate();
 				return;
 			}
 
@@ -2580,16 +2585,16 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 		},
 
 		/**
-		 * Update reCAPTCHA setting.
+		 * Update CAPTCHA form setting.
 		 *
-		 * @since 1.5.7
+		 * @since 1.6.4
 		 *
 		 * @returns {object} jqXHR
 		 */
-		recaptchaUpdate: function() {
+		captchaUpdate: function() {
 
 			var data = {
-				action : 'wpforms_update_field_recaptcha',
+				action : 'wpforms_update_field_captcha',
 				id     : s.formID,
 				nonce  : wpforms_builder.nonce,
 			};
@@ -2616,22 +2621,21 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 						$enableCheckbox = $( '#wpforms-panel-field-settings-recaptcha' ),
 						caseName        = res.data.current;
 
+					$enableCheckbox.data( 'provider', res.data.provider );
+
 					// Possible cases:
 					//
-					// not_configured - IF reCAPTCHA is not configured in the WPForms plugin settings
-					// configured_not_enabled - IF reCAPTCHA is configured in WPForms plugin settings, but wasn't set in form settings
-					// configured_enabled - IF reCAPTCHA is configured in WPForms plugin and form settings
+					// not_configured - IF CAPTCHA is not configured in the WPForms plugin settings
+					// configured_not_enabled - IF CAPTCHA is configured in WPForms plugin settings, but wasn't set in form settings
+					// configured_enabled - IF CAPTCHA is configured in WPForms plugin and form settings
 					if ( 'configured_not_enabled' === caseName || 'configured_enabled' === caseName ) {
 
 						// Get a correct case name.
 						caseName = $enableCheckbox.prop( 'checked' ) ? 'configured_enabled' : 'configured_not_enabled';
 
+						// Check/uncheck a `CAPTCHA` checkbox in form setting.
 						args.buttons.confirm.action = function() {
-
-							// Check/uncheck a `reCAPTCHA` checkbox in form setting.
-							$enableCheckbox
-								.prop( 'checked', ( 'configured_not_enabled' === caseName ) )
-								.trigger( 'change' );
+							$enableCheckbox.prop( 'checked', ( 'configured_not_enabled' === caseName ) ).trigger( 'change' );
 						};
 					}
 
@@ -2648,7 +2652,6 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 
 					// Call a Confirm modal.
 					$.confirm( args );
-
 				} else {
 					console.log( res );
 				}
@@ -3854,9 +3857,9 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 				$('.wpforms-field-submit input[type=submit]').val( $(this).val() );
 			});
 
-			// Toggle form reCAPTCHA setting
+			// Toggle form CAPTCHA setting
 			$builder.on('change', '#wpforms-panel-field-settings-recaptcha', function() {
-				app.recaptchaToggle();
+				app.captchaToggle();
 			});
 
 			// Toggle form confirmation setting fields
@@ -3925,20 +3928,29 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 		},
 
 		/**
-		 * Toggle displaying the ReCAPTCHA.
+		 * Toggle displaying the CAPTCHA.
 		 *
-		 * @since 1.0.0
+		 * @since 1.6.4
 		 */
-		recaptchaToggle: function() {
+		captchaToggle: function() {
 
-			var $recaptchaPreview = $( '.wpforms-field-recaptcha' );
+			var $preview = $builder.find( '.wpforms-field-recaptcha' ),
+				$setting = $( '#wpforms-panel-field-settings-recaptcha' ),
+				provider = $setting.data( 'provider' );
 
-			if ( $recaptchaPreview.length ) {
-				if ( $( '#wpforms-panel-field-settings-recaptcha' ).is( ':checked' ) ) {
-					$recaptchaPreview.show();
-				} else {
-					$recaptchaPreview.hide();
-				}
+			provider = provider || 'recaptcha';
+
+			if ( ! $preview.length ) {
+				return;
+			}
+
+			if ( $setting.is( ':checked' ) ) {
+				$preview
+					.show()
+					.toggleClass( 'is-recaptcha', 'recaptcha' === provider );
+
+			} else {
+				$preview.hide();
 			}
 		},
 
@@ -4678,6 +4690,7 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 			$builder.on( 'change', '#wpforms-panel-field-settings-disable_entries', function( event ) {
 				var $this = $( this );
 				if ( $this.prop( 'checked' ) ) {
+
 					var paymentsEnabled = $( '#wpforms-panel-field-stripe-enable' ).prop( 'checked' ) || $( '#wpforms-panel-field-paypal_standard-enable' ).prop( 'checked' );
 					if ( paymentsEnabled ) {
 						$.confirm( {
@@ -4696,6 +4709,22 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 							},
 						} );
 						$this.prop( 'checked', false );
+					} else {
+						$.alert( {
+							title: wpforms_builder.heads_up,
+							content: wpforms_builder.disable_entries,
+							backgroundDismiss: false,
+							closeIcon: false,
+							icon: 'fa fa-exclamation-circle',
+							type: 'orange',
+							buttons: {
+								confirm: {
+									text: wpforms_builder.ok,
+									btnClass: 'btn-confirm',
+									keys: [ 'enter' ],
+								},
+							},
+						} );
 					}
 				}
 			} );

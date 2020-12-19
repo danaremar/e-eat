@@ -1,5 +1,23 @@
 == Changelog ==
 
+= 1.6.4 =
+- Added: hCaptcha support, see WPForms > CAPTCHA settings.
+- Added: Character/word limit validation message control inside Settings > Validation page.
+- Changed: Dropdown fields using the Modern format will only show the search option if at least 8 choices are provided.
+- Changed: Updated jQuery inputmask library to v5.0.6-beta20
+- Changed: Improved Form Builder Help documentation caching.
+- Changed: Only create our Logs database table when specifically enabled in the Tools settings.
+- Changed: Updated WPForms install count and rating information.
+- Changed: Added "Copy to Clipboard" button inside Form Embed modal.
+- Fixed: PHP Warning caused by Email field changes.
+- Fixed: Editing multiline text in Paragraph field breaks new lines in submitted text.
+- Fixed: Javascript conflicts with IE11.
+- Fixed: Possible errors if web host had `set_time_limit()` disabled.
+- Fixed: Email validation issue if form is in a page multiple times.
+- Fixed: Footer links in the Summary email are now working properly.
+- Fixed: Double-click issue for "Add New Account" buttons on the Settings > Integrations page.
+- Fixed: Gutenberg block ignores "Include Form Styling" setting and forces full CSS stylesheet.
+
 = 1.6.3.1 =
 - Added: Native integration with Divi.
 - Added: Email field Allowlist/Denylist restrictions, see Email field Advanced Options.

@@ -447,6 +447,20 @@ class WPForms_Builder {
 			'error_contact_support'          => esc_html__( 'Please contact the plugin support team if this behavior persists.', 'wpforms-lite' ),
 		);
 
+		$strings['disable_entries'] = sprintf(
+			wp_kses( /* translators: %s - Link to the WPForms.com doc article. */
+				__( 'Disabling entry storage for this form will completely prevent any new submissions from getting saved to your site. If you still intend to keep a record of entries through notification emails, then please <a href="%s" target="_blank" rel="noopener noreferrer">test your form</a> to ensure emails send reliably.', 'wpforms-lite' ),
+				[
+					'a' => [
+						'href'   => [],
+						'rel'    => [],
+						'target' => [],
+					],
+				]
+			),
+			'https://wpforms.com/docs/how-to-properly-test-your-wordpress-forms-before-launching-checklist/'
+		);
+
 		$strings = apply_filters( 'wpforms_builder_strings', $strings, $this->form );
 
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended

@@ -515,6 +515,18 @@ class ListTable extends WP_List_Table {
 	}
 
 	/**
+	 * Check if the database table exist.
+	 *
+	 * @since 1.6.4
+	 *
+	 * @return bool
+	 */
+	public function table_exists() {
+
+		return $this->repository->table_exists();
+	}
+
+	/**
 	 * Get total logs.
 	 *
 	 * @since 1.6.3

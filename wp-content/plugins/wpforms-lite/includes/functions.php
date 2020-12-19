@@ -880,6 +880,7 @@ function wpforms_countries() {
 		'KI' => esc_html__( 'Kiribati', 'wpforms-lite' ),
 		'KP' => esc_html__( 'Korea (Democratic People\'s Republic of)', 'wpforms-lite' ),
 		'KR' => esc_html__( 'Korea (Republic of)', 'wpforms-lite' ),
+		'XK' => esc_html__( 'Kosovo', 'wpforms-lite' ),
 		'KW' => esc_html__( 'Kuwait', 'wpforms-lite' ),
 		'KG' => esc_html__( 'Kyrgyzstan', 'wpforms-lite' ),
 		'LA' => esc_html__( 'Lao People\'s Democratic Republic', 'wpforms-lite' ),
@@ -974,7 +975,7 @@ function wpforms_countries() {
 		'SD' => esc_html__( 'Sudan', 'wpforms-lite' ),
 		'SR' => esc_html__( 'Suriname', 'wpforms-lite' ),
 		'SJ' => esc_html__( 'Svalbard and Jan Mayen', 'wpforms-lite' ),
-		'SZ' => esc_html__( 'Swaziland', 'wpforms-lite' ),
+		'SZ' => esc_html__( 'Eswatini (Kingdom of)', 'wpforms-lite' ),
 		'SE' => esc_html__( 'Sweden', 'wpforms-lite' ),
 		'CH' => esc_html__( 'Switzerland', 'wpforms-lite' ),
 		'SY' => esc_html__( 'Syrian Arab Republic', 'wpforms-lite' ),
@@ -1003,7 +1004,7 @@ function wpforms_countries() {
 		'VU' => esc_html__( 'Vanuatu', 'wpforms-lite' ),
 		'VA' => esc_html__( 'Vatican City State', 'wpforms-lite' ),
 		'VE' => esc_html__( 'Venezuela (Bolivarian Republic of)', 'wpforms-lite' ),
-		'VN' => esc_html__( 'Viet Nam', 'wpforms-lite' ),
+		'VN' => esc_html__( 'Vietnam', 'wpforms-lite' ),
 		'VG' => esc_html__( 'Virgin Islands (British)', 'wpforms-lite' ),
 		'VI' => esc_html__( 'Virgin Islands (U.S.)', 'wpforms-lite' ),
 		'WF' => esc_html__( 'Wallis and Futuna', 'wpforms-lite' ),
@@ -1529,15 +1530,6 @@ function wpforms_debug() {
 
 	if ( ( defined( 'WPFORMS_DEBUG' ) && true === WPFORMS_DEBUG ) && is_super_admin() ) {
 		$debug = true;
-	}
-
-	$debug_option = get_option( 'wpforms_debug' );
-
-	if ( $debug_option ) {
-		$current_user = wp_get_current_user();
-		if ( $current_user->user_login === $debug_option ) {
-			$debug = true;
-		}
 	}
 
 	return apply_filters( 'wpforms_debug', $debug );
@@ -2562,4 +2554,44 @@ function wpforms_can_install( $type ) {
 
 	// Allow addons installation if license is not expired, enabled and valid.
 	return empty( $license['is_expired'] ) && empty( $license['is_disabled'] ) && empty( $license['is_invalid'] );
+}
+
+/**
+ * Retrieve the full config for CAPTCHA.
+ *
+ * @since 1.6.4
+ *
+ * @return array
+ */
+function wpforms_get_captcha_settings() {
+
+	$allowed_captcha_list = [ 'hcaptcha', 'recaptcha' ];
+	$captcha_provider     = wpforms_setting( 'captcha-provider', 'recaptcha' );
+
+	if ( ! in_array( $captcha_provider, $allowed_captcha_list, true ) ) {
+		return [
+			'provider' => 'none',
+		];
+	}
+
+	return [
+		'provider'       => $captcha_provider,
+		'site_key'       => sanitize_text_field( wpforms_setting( "{$captcha_provider}-site-key", '' ) ),
+		'secret_key'     => sanitize_text_field( wpforms_setting( "{$captcha_provider}-secret-key", '' ) ),
+		'recaptcha_type' => wpforms_setting( 'recaptcha-type', 'v2' ),
+	];
+}
+
+/**
+ * Wrapper for set_time_limit to see if it is enabled.
+ *
+ * @since 1.6.4
+ *
+ * @param int $limit Time limit.
+ */
+function wpforms_set_time_limit( $limit = 0 ) {
+
+	if ( function_exists( 'set_time_limit' ) && false === strpos( ini_get( 'disable_functions' ), 'set_time_limit' ) && ! ini_get( 'safe_mode' ) ) { // phpcs:ignore PHPCompatibility.IniDirectives.RemovedIniDirectives.safe_modeDeprecatedRemoved
+		@set_time_limit( $limit ); // @codingStandardsIgnoreLine
+	}
 }

@@ -236,7 +236,7 @@ class SMTP {
 			esc_url( WPFORMS_PLUGIN_URL . 'assets/images/smtp/screenshot-tnail.png' ),
 			esc_attr__( 'WP Mail SMTP screenshot', 'wpforms-lite' ),
 			esc_url( WPFORMS_PLUGIN_URL . 'assets/images/smtp/screenshot-full.png' ),
-			esc_html__( 'Over 1,000,000 websites use WP Mail SMTP.', 'wpforms-lite' ),
+			esc_html__( 'Over 2,000,000 websites use WP Mail SMTP.', 'wpforms-lite' ),
 			esc_html__( 'Send emails authenticated via trusted parties.', 'wpforms-lite' ),
 			esc_html__( 'Transactional Mailers: SMTP.com, Pepipost, SendinBlue, Mailgun, SendGrid, Amazon SES.', 'wpforms-lite' ),
 			esc_html__( 'Web Mailers: Gmail, G Suite, Office 365, Outlook.com.', 'wpforms-lite' )

@@ -221,6 +221,22 @@ class Repository {
 	}
 
 	/**
+	 * Check if the database table exist.
+	 *
+	 * @since 1.6.4
+	 *
+	 * @return bool
+	 */
+	public function table_exists() {
+
+		global $wpdb;
+
+		$table = self::get_table_name();
+
+		return $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table ) ) === $table; // phpcs:ignore WordPress.DB.DirectDatabaseQuery.NoCaching
+	}
+
+	/**
 	 * Get total count of logs.
 	 *
 	 * @since 1.6.3

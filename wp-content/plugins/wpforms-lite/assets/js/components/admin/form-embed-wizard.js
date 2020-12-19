@@ -99,7 +99,8 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 				$videoTutorial:     $( '#wpforms-admin-form-embed-wizard-tutorial' ),
 				$sectionToggles:    $( '#wpforms-admin-form-embed-wizard-section-toggles' ),
 				$sectionGoBack:     $( '#wpforms-admin-form-embed-wizard-section-goback' ),
-				$shortcode:         $( '#wpforms-admin-form-embed-wizard-shortcode' ),
+				$shortcode:         $( '#wpforms-admin-form-embed-wizard-shortcode-wrap' ),
+				$shortcodeInput:    $( '#wpforms-admin-form-embed-wizard-shortcode' ),
 			};
 
 			// Detect the form builder screen and store the flag.
@@ -125,6 +126,9 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 				.on( 'click', '.shortcode-toggle', app.shortcodeToggle )
 				.on( 'click', '.initialstate-toggle', app.initialStateToggle )
 				.on( 'click', '.wpforms-admin-popup-close', app.closePopup );
+
+			document.querySelector( '#wpforms-admin-form-embed-wizard-shortcode-copy' ).addEventListener( 'click', app.copyShortcodeToClipboard );
+
 		},
 
 		/**
@@ -235,8 +239,34 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 
 			el.$videoTutorial.hide();
 			app.tutorialControl( 'Stop' );
-			el.$shortcode.val( '[wpforms id="' + vars.formId + '" title="false" description="false"]' );
+			el.$shortcodeInput.val( '[wpforms id="' + vars.formId + '" title="false"]' );
 			el.$shortcode.toggle();
+		},
+
+
+		/**
+		 * Copies the shortcode embed code to the clipboard.
+		 *
+		 * @since 1.6.4
+		 */
+		copyShortcodeToClipboard: function() {
+
+			// Remove disabled attribute, select the text, and re-add disabled attribute.
+			el.$shortcodeInput
+				.prop( 'disabled', false )
+				.select()
+				.prop( 'disabled', true );
+
+			// Copy it.
+			document.execCommand( 'copy' );
+
+			// Add visual feedback to copy command.
+			$( '#wpforms-admin-form-embed-wizard-shortcode-copy i' ).removeClass( 'fa-files-o' ).addClass( 'fa-check' );
+
+			// Reset visual confirmation back to default state after 2.5 sec.
+			window.setTimeout( function() {
+				$( '#wpforms-admin-form-embed-wizard-shortcode-copy i' ).removeClass( 'fa-check' ).addClass( 'fa-files-o' );
+			}, 2500 );
 		},
 
 		/**
@@ -421,28 +451,25 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 		 */
 		initTooltip: function() {
 
-			var $dot = $( '<span class="wpforms-challenge-dot wpforms-challenge-dot-step5" data-wpforms-challenge-step="5">&nbsp;</span>' ),
+			var $dot = $( '<span class="wpforms-admin-form-embed-wizard-dot">&nbsp;</span>' ),
 				isGutengerg = app.isGutenberg(),
 				anchor = isGutengerg ? '.block-editor .edit-post-header' : '#wp-content-editor-tools .wpforms-insert-form-button';
 
 			var tooltipsterArgs = {
-				content          : $( '#tooltip-content5' ),
+				content          : $( '#wpforms-admin-form-embed-wizard-tooltip-content' ),
 				trigger          : 'custom',
 				interactive      : true,
 				animationDuration: 0,
 				delay            : 0,
-				theme            : [ 'tooltipster-default', 'wpforms-challenge-tooltip' ],
+				theme            : [ 'tooltipster-default', 'wpforms-admin-form-embed-wizard' ],
 				side             : isGutengerg ? 'bottom' : 'right',
 				distance         : 3,
 				functionReady    : function( instance, helper ) {
 
-					// We need this to properly reuse styles from the challenge.
-					$( helper.tooltip ).addClass( 'wpforms-challenge-tooltip-step5' );
-
 					instance._$tooltip.on( 'click', 'button', function() {
 
 						instance.close();
-						$( '.wpforms-challenge-dot.wpforms-challenge-dot-step5' ).remove();
+						$( '.wpforms-admin-form-embed-wizard-dot' ).remove();
 					} );
 
 					instance.reposition();

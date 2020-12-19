@@ -477,6 +477,47 @@
 
 			});
 
+			// Confirm bulk entry deletion.
+			$( document ).on( 'click', '#wpforms-entries-table #doaction', function( event ) {
+
+				var $btn     = $( this ),
+					$form    = $btn.closest( 'form' ),
+					$table   = $form.find( 'table' ),
+					$action  = $form.find( 'select[name=action]' ),
+					$checked = $table.find( 'input[name^=entry_id]:checked' );
+
+				if ( 'delete' !== $action.val() || ! $checked.length ) {
+					return;
+				}
+
+				event.preventDefault();
+
+				// Trigger alert modal to confirm.
+				$.confirm( {
+					title: false,
+					content: wpforms_admin.entry_delete_n_confirm.replace( '{entry_count}', $checked.length ),
+					backgroundDismiss: false,
+					closeIcon: false,
+					icon: 'fa fa-exclamation-circle',
+					type: 'orange',
+					buttons: {
+						confirm: {
+							text: wpforms_admin.ok,
+							btnClass: 'btn-confirm',
+							keys: [ 'enter' ],
+							action: function() {
+
+								$form.submit();
+							},
+						},
+						cancel: {
+							text: wpforms_admin.cancel,
+							keys: [ 'esc' ],
+						},
+					},
+				} );
+			} );
+
 			// Confirm entry deletion.
 			$( document ).on( 'click', '#wpforms-entries-list .wp-list-table .delete', function( event ) {
 
@@ -579,12 +620,26 @@
 
 				event.preventDefault();
 
-				var url = $( this ).attr( 'href' );
+				var url           = $( this ).attr( 'href' ),
+					$table        = $( '#wpforms-entries-table' ),
+					filteredCount = $table.data( 'filtered-count' ) ? parseInt( $table.data( 'filtered-count' ), 10 ) : 0,
+					data          = {
+						'action': 'wpforms_entry_list_process_delete_all',
+						'form_id': $table.find( 'input[name="form_id"]' ).val(),
+						'date': $table.find( 'input[name="date"]' ).val(),
+						'search': {
+							'field': $table.find( 'select[name="search[field]"]' ).val(),
+							'comparison': $table.find( 'select[name="search[comparison]"]' ).val(),
+							'term': $table.find( 'input[name="search[term]"]' ).val(),
+						},
+						'nonce': wpforms_admin.nonce,
+						'url': url,
+					};
 
 				// Trigger alert modal to confirm.
-				$.confirm({
+				$.confirm( {
 					title: wpforms_admin.heads_up,
-					content: wpforms_admin.entry_delete_all_confirm,
+					content: filteredCount && $( '#wpforms-reset-filter' ).length ? wpforms_admin.entry_delete_n_confirm.replace( '{entry_count}', filteredCount ) : wpforms_admin.entry_delete_all_confirm,
 					backgroundDismiss: false,
 					closeIcon: false,
 					icon: 'fa fa-exclamation-circle',
@@ -594,8 +649,20 @@
 							text: wpforms_admin.ok,
 							btnClass: 'btn-confirm',
 							keys: [ 'enter' ],
-							action: function(){
-								window.location = url;
+							action: function() {
+
+								$.get( wpforms_admin.ajax_url, data )
+									.done( function( response ) {
+
+										if ( response.success ) {
+											window.location = ! _.isEmpty( response.data ) ? response.data : url;
+											return;
+										}
+
+										if ( ! _.isEmpty( response.data ) ) {
+											console.error( response.data );
+										}
+									} );
 							}
 						},
 						cancel: {
@@ -603,8 +670,8 @@
 							keys: [ 'esc' ]
 						}
 					}
-				});
-			});
+				} );
+			} );
 
 			// Check for new form entries using Heartbeat API.
 			$( document ).on( 'heartbeat-send', function ( event, data ) {
@@ -1035,26 +1102,71 @@
 						},
 						effect: 'appear'
 					},
-					// reCAPTCHA > Score Threshold.
+
+					// CAPTCHA > Type.
 					{
 						conditions: {
-							element:   'input[name=recaptcha-type]:checked',
+							element:   'input[name=captcha-provider]:checked',
 							type:      'value',
 							operator:  '=',
-							condition: 'v3'
+							condition: 'hcaptcha',
 						},
 						actions: {
-							if: {
-								element: '#wpforms-setting-row-recaptcha-v3-threshold',
-								action:	 'show'
-							},
-							else : {
-								element: '#wpforms-setting-row-recaptcha-v3-threshold',
-								action:	 'hide'
-							}
+							if: [
+								{
+									element: '.wpforms-setting-row',
+									action: 'show',
+								},
+								{
+									element: '.wpforms-setting-recaptcha, #wpforms-setting-row-captcha-provider .desc, #wpforms-setting-row-recaptcha-site-key, #wpforms-setting-row-recaptcha-secret-key, #wpforms-setting-row-recaptcha-fail-msg',
+									action: 'hide',
+								},
+							],
 						},
-						effect: 'appear'
-					}
+						effect: 'appear',
+					},
+					{
+						conditions: {
+							element:   'input[name=captcha-provider]:checked',
+							type:      'value',
+							operator:  '=',
+							condition: 'recaptcha',
+						},
+						actions: {
+							if: [
+								{
+									element: '.wpforms-setting-row',
+									action: 'show',
+								},
+								{
+									element: '#wpforms-setting-row-captcha-provider .desc, #wpforms-setting-row-hcaptcha-heading, #wpforms-setting-row-hcaptcha-site-key, #wpforms-setting-row-hcaptcha-secret-key, #wpforms-setting-row-hcaptcha-fail-msg',
+									action: 'hide',
+								},
+							],
+						},
+						effect: 'appear',
+					},
+					{
+						conditions: {
+							element:   'input[name=captcha-provider]:checked',
+							type:      'value',
+							operator:  '=',
+							condition: 'none',
+						},
+						actions: {
+							if: [
+								{
+									element: '.wpforms-setting-row',
+									action: 'hide',
+								},
+								{
+									element: '.wpforms-setting-captcha-heading, #wpforms-setting-row-captcha-provider, #wpforms-setting-row-captcha-provider .desc',
+									action: 'show',
+								},
+							],
+						},
+						effect: 'appear',
+					},
 				] );
 			});
 
@@ -1142,8 +1254,34 @@
 
 				var $connectFields = $( this ).parent().next( '.wpforms-settings-provider-accounts-connect' );
 				$connectFields.find( 'input[type=text], input[type=password]' ).val('');
-				$connectFields.slideToggle();
+				$connectFields.stop().slideToggle();
 			});
+
+			// CAPTCHA settings page: type toggling.
+			$( document ).on( 'change', '#wpforms-setting-row-captcha-provider input', function() {
+
+				var $preview = $( '#wpforms-setting-row-captcha-preview' );
+
+				if ( 'hcaptcha' === this.value ) {
+					$preview.removeClass( 'wpforms-hidden' );
+				} else if ( 'none' === this.value ) {
+					$preview.addClass( 'wpforms-hidden' );
+				} else {
+					$( '#wpforms-setting-row-recaptcha-type input:checked' ).trigger( 'change' );
+				}
+
+				if ( $preview.find( '.wpforms-captcha-preview' ).length ) {
+					$preview.find( '.wpforms-captcha-preview' ).empty();
+					$preview.find( '.wpforms-captcha-placeholder' ).removeClass( 'wpforms-hidden' );
+				}
+			} );
+
+			// CAPTCHA settings page: reCATCHA type toggling.
+			$( document ).on( 'change', '#wpforms-setting-row-recaptcha-type input', function() {
+
+				$( '#wpforms-setting-row-captcha-preview' ).toggleClass( 'wpforms-hidden', 'v2' !== this.value );
+				$( '#wpforms-setting-row-recaptcha-v3-threshold' ).toggleClass( 'wpforms-hidden', 'v3' !== this.value );
+			} );
 		},
 
 		/**
@@ -1397,42 +1535,38 @@
 					action  : 'wpforms_settings_provider_add_' + $btn.data( 'provider' ),
 					data    : $btn.closest( 'form' ).serialize(),
 					provider: $btn.data( 'provider' ),
-					nonce   : wpforms_admin.nonce
-				};
+					nonce   : wpforms_admin.nonce,
+				},
+				errorMessage = wpforms_admin.provider_auth_error;
 
 			$btn.html( 'Connecting...' ).css( 'width', buttonWidth ).prop( 'disabled', true );
 
-			$.post( wpforms_admin.ajax_url, data, function( res ) {
+			$.post( wpforms_admin.ajax_url, data, function( response ) {
 
-				if ( res.success ){
-					$provider.find( '.wpforms-settings-provider-accounts-list ul' ).append( res.data.html );
+				if ( response.success ) {
+					$provider.find( '.wpforms-settings-provider-accounts-list ul' ).append( response.data.html );
 					$provider.addClass( 'connected' );
 					$btn.closest( '.wpforms-settings-provider-accounts-connect' ).slideToggle();
+
 				} else {
-					var msg = wpforms_admin.provider_auth_error;
-					if ( res.hasOwnProperty( 'data' ) && res.data.hasOwnProperty( 'error_msg' ) ) {
-						msg += "\n" + res.data.error_msg; // jshint ignore:line
+
+					if (
+						Object.prototype.hasOwnProperty.call( response, 'data' ) &&
+						Object.prototype.hasOwnProperty.call( response.data, 'error_msg' )
+					) {
+						errorMessage += '<br>' + response.data.error_msg;
 					}
-					$.alert({
-						title: false,
-						content: msg,
-						icon: 'fa fa-exclamation-circle',
-						type: 'orange',
-						buttons: {
-							confirm: {
-								text: wpforms_admin.ok,
-								btnClass: 'btn-confirm',
-								keys: [ 'enter' ],
-							}
-						}
-					});
+
+					WPFormsAdmin.integrationError( errorMessage );
 				}
 
-				$btn.html( buttonLabel ).css( 'width', 'auto' ).prop( 'disabled', false );
+			} ).fail( function() {
 
-			}).fail( function( xhr ) {
-				console.log( xhr.responseText );
-			});
+				WPFormsAdmin.integrationError( errorMessage );
+			} ).complete( function() {
+
+				$btn.html( buttonLabel ).css( 'width', 'auto' ).prop( 'disabled', false );
+			} );
 		},
 
 		/**
@@ -1442,16 +1576,17 @@
 		 */
 		integrationDisconnect: function( el ) {
 
-			var $this = $( el ),
-				$provider = $this.parents('.wpforms-settings-provider'),
-				data = {
+			var $this     = $( el ),
+				$provider = $this.parents( '.wpforms-settings-provider' ),
+				data      = {
 					action  : 'wpforms_settings_provider_disconnect_' + $this.data( 'provider' ),
 					provider: $this.data( 'provider' ),
-					key     : $this.data( 'key'),
-					nonce   : wpforms_admin.nonce
-				};
+					key     : $this.data( 'key' ),
+					nonce   : wpforms_admin.nonce,
+				},
+				errorMessage = wpforms_admin.provider_delete_error;
 
-			$.confirm({
+			$.confirm( {
 				title: wpforms_admin.heads_up,
 				content: wpforms_admin.provider_delete_confirm,
 				backgroundDismiss: false,
@@ -1463,30 +1598,67 @@
 						text: wpforms_admin.ok,
 						btnClass: 'btn-confirm',
 						keys: [ 'enter' ],
-						action: function(){
-							$.post( wpforms_admin.ajax_url, data, function( res ) {
-								if ( res.success ){
+						action: function() {
+
+							$.post( wpforms_admin.ajax_url, data, function( response ) {
+
+								if ( response.success ) {
 									$this.parent().parent().remove();
 
 									// Hide Connected status label if no more integrations are linked.
 									var numberOfIntegrations = $provider.find( '.wpforms-settings-provider-accounts-list li' ).length;
+
 									if ( typeof numberOfIntegrations === 'undefined' || numberOfIntegrations === 0 ) {
 										$provider.removeClass( 'connected' );
 									}
+
 								} else {
-									console.log( res );
+
+									if (
+										Object.prototype.hasOwnProperty.call( response, 'data' ) &&
+										Object.prototype.hasOwnProperty.call( response.data, 'error_msg' )
+									) {
+										errorMessage += '<br>' + response.data.error_msg;
+									}
+
+									WPFormsAdmin.integrationError( errorMessage );
 								}
-							}).fail( function( xhr ) {
-								console.log( xhr.responseText );
-							});
-						}
+							} ).fail( function() {
+
+								WPFormsAdmin.integrationError( errorMessage );
+							} );
+						},
 					},
 					cancel: {
 						text: wpforms_admin.cancel,
-						keys: [ 'esc' ]
-					}
-				}
-			});
+						keys: [ 'esc' ],
+					},
+				},
+			} );
+		},
+
+		/**
+		 * Error handling.
+		 *
+		 * @since 1.6.4
+		 *
+		 * @param {string} error Error message.
+		 */
+		integrationError: function( error ) {
+
+			$.alert( {
+				title: false,
+				content: error,
+				icon: 'fa fa-exclamation-circle',
+				type: 'orange',
+				buttons: {
+					confirm: {
+						text: wpforms_admin.ok,
+						btnClass: 'btn-confirm',
+						keys: [ 'enter' ],
+					},
+				},
+			} );
 		},
 
 		//--------------------------------------------------------------------//
