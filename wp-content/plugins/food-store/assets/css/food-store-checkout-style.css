@@ -1,0 +1,65 @@
+/* Checkout Page Services UI */
+#wfs_checkout_fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 15px;
+}
+
+#wfs_checkout_fields .wfs_co_service_type {
+	grid-column: span 2;
+}
+
+#wfs_checkout_fields .wfs_co_service_type input[type="radio"] {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper,
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper > .woocommerce-radio-wrapper {
+	display: flex;
+	width: 100%;
+}
+
+#wfs_checkout_fields .wfs_co_service_type br {
+	display: none;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper label {
+	flex: 1;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	margin-left:0;
+	margin-right:0;
+	background-color: #cccccc;
+    color: #000000;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .input-radio:checked + label, 
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper label.active {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper label[for="wfs_service_type_pickup"] {
+	border-radius: 5px 0 0 5px;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper label[for="wfs_service_type_delivery"] {
+	border-radius: 0 5px 5px 0;
+}
+
+#wfs_checkout_fields .wfs_co_service_type.delivery_only .woocommerce-input-wrapper label,
+#wfs_checkout_fields .wfs_co_service_type.pickup_only .woocommerce-input-wrapper label {
+	border-radius: 5px 5px 5px 5px;
+}
+
+#wfs_checkout_fields .wfs_co_service_type .input-radio:checked + label, 
+#wfs_checkout_fields .wfs_co_service_type .woocommerce-input-wrapper label.active_type{
+	font-weight: bold;
+}
+/* Checkout Page Services UI Ends*/
+
+.woocommerce .woocommerce-order-details table td.product-name > span {
+	display: block;
+}

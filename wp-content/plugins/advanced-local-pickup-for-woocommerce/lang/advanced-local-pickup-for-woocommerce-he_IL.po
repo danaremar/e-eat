@@ -1,0 +1,552 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Local Pickup for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 05:09+0000\n"
+"PO-Revision-Date: 2020-12-24 10:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.6-RC5-49768"
+
+#: include/views/wclp_locations_tab.php:63
+msgid " Get to the Advanced Local Pickup Pro"
+msgstr ""
+"לרכישה של תוסף הפרו\n"
+
+#: include/views/wclp-edit-location-form.php:278
+#: include/views/wclp-edit-location-form.php:391
+#: include/views/wclp_pickup_location_instruction_preview.php:173
+#: templates/emails/pickup-instruction.php:115
+#: templates/myaccount/pickup-instruction.php:115
+#: templates/emails/plain/pickup-instruction.php:115
+#| msgid " to"
+msgid " To"
+msgstr "עד"
+
+#: include/views/wclp-edit-location-form.php:298
+msgid "12 hour"
+msgstr ""
+"12 שעות\n"
+
+#: include/views/wclp-edit-location-form.php:297
+msgid "24 hour"
+msgstr ""
+"24 שעות\n"
+
+#: woo-advanced-local-pickup.php:510
+#, php-format
+msgid ""
+"<strong>Note:</strong> - If you use the custom order status, when you "
+"deactivate the plugin, you must register the order status, otherwise these "
+"orders will not display on your orders admin. You can find more information "
+"and the code <a href=\"%s\" target=\"blank\">snippet</a> to use in functions."
+"php here."
+msgstr ""
+"שימו לב - אם אתם משתמש בסטטוסים מותאמים אישית, כאשר אתם מסירים את התוסף, יש "
+"לרשום את הסטטוסים ידנית כדי שהההזמנות שמסומנות בסטטוסים האלו יוצגו במסך "
+"ההזמנות. תוכל למצוא מידע נוסף ואת הקוד לשימוש בקובץ functions.php בלינק <a "
+"href=\"%s\" target=\"blank\">הבא</a>.\n"
+
+#: include/views/wclp_locations_tab.php:53
+msgid "Add Location "
+msgstr ""
+"הוסף נקודת איסוף\n"
+
+#: include/wc-local-pickup-admin.php:122 include/wc-local-pickup-admin.php:135
+#: include/wc-local-pickup-admin.php:136
+msgid "Add-ons"
+msgstr "תוספים"
+
+#: include/wc-local-pickup-admin.php:952 include/wc-local-pickup-admin.php:953
+#: include/wc-local-pickup-admin.php:957
+msgid "Additional content on processing email in case of local pickup orders"
+msgstr "תוכן נוסף באימייל אישור הזמנה במקרה של הזמנות איסוף עצמי"
+
+#: include/views/wclp-edit-location-form.php:57
+msgid "Address"
+msgstr "כתובת"
+
+#: include/wc-local-pickup-admin.php:118
+msgid "Advanced Local Pickup"
+msgstr ""
+"תוסף איסוף עצמי מתקדם\n"
+
+#: include/views/wclp-edit-location-form.php:106
+msgid "An additional, optional address line for your business location."
+msgstr ""
+"שורה אופציונלית נוספת למיקום העסק שלך.\n"
+
+#: include/wc-local-pickup-admin.php:883
+#: include/views/wclp-edit-location-form.php:427
+msgid "Apply & close"
+msgstr ""
+"החל וסגור\n"
+
+#: include/customizer/wc-pickup-email-customizer.php:205
+#: include/customizer/wc-pickup-email-customizer.php:228
+#: include/customizer/wc-pickup-email-customizer.php:271
+#: include/customizer/wc-ready-pickup-email-customizer.php:211
+#: include/customizer/wc-ready-pickup-email-customizer.php:234
+#: include/customizer/wc-ready-pickup-email-customizer.php:277
+msgid "Available variables:"
+msgstr "משתנים זמינים:"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:450
+msgid "Background color"
+msgstr "צבע רקע"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:120
+#: include/customizer/wclp-pickup-instruction-customizer.php:277
+#: include/customizer/wclp-pickup-instruction-customizer.php:350
+#: include/customizer/wclp-pickup-instruction-customizer.php:365
+#: include/customizer/wclp-pickup-instruction-customizer.php:512
+#: include/views/wclp-edit-location-form.php:175
+msgid "Business Hours"
+msgstr ""
+"שעות עסקים\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:358
+msgid "Business Hours header text"
+msgstr ""
+"טקסט כותרת שעות עסקים\n"
+
+#: include/wc-local-pickup-admin.php:428
+msgid "Change status to Picked up"
+msgstr "שנה סטטוס הזמנה לנאספה"
+
+#: include/wc-local-pickup-admin.php:424
+msgid "Change status to Ready for pickup"
+msgstr "שנה סטטוס הזמנה למוכנה לאיסוף"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:489
+msgid "Content font color"
+msgstr ""
+"צבע גופן של התוכן\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:467
+msgid "Content font size"
+msgstr ""
+"גודל גופן של התוכן\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:505
+msgid "Content line height"
+msgstr ""
+"גובה שורת התוכן\n"
+
+#: include/views/wclp_setting_tab.php:55
+msgid "Custom Order Statuses"
+msgstr ""
+"סטטוסים להזמנה בהתאמה אישית\n"
+
+#: include/wc-local-pickup-admin.php:937
+msgid "Customer account > order history > order details page"
+msgstr "חשבון לקוח > היסטוריית הזמנות > עמוד פרטי ההזמנה"
+
+#: include/views/wclp_setting_tab.php:18
+msgid "Customer View"
+msgstr ""
+"תצוגת לקוח\n"
+
+#: include/views/wclp_setting_tab.php:157
+msgid ""
+"Customize  the pickup Instructions display on the  order emails and my-"
+"account."
+msgstr ""
+"התאם אישית את הוראות האיסוף המוצגות בדוא\"ל ההזמנה ובחשבון שלי.\n"
+
+#: include/views/wclp_setting_tab.php:93 include/views/wclp_setting_tab.php:134
+msgid "Dark Font"
+msgstr "גופן כהה"
+
+#: include/views/wclp-edit-location-form.php:445
+msgid "DELETE LOCATION"
+msgstr ""
+"מחק את המיקום\n"
+
+#: include/views/wclp-edit-location-form.php:292
+msgid "Display Time Format"
+msgstr ""
+"פורמט זמן תצוגה\n"
+
+#: include/wc-local-pickup-admin.php:139
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: include/views/wclp_setting_tab.php:99 include/views/wclp_setting_tab.php:140
+msgid "edit email"
+msgstr ""
+"ערוך דוא\"ל\n"
+
+#: include/views/wclp-edit-location-form.php:14
+msgid "Edit Pickup Location"
+msgstr ""
+"ערוך את נקודת האיסוף\n"
+
+#: include/customizer/wc-pickup-email-customizer.php:249
+#: include/customizer/wc-ready-pickup-email-customizer.php:255
+msgid "Email content"
+msgstr "תוכן אימייל"
+
+#: include/customizer/wc-pickup-email-customizer.php:161
+msgid "Enable Picked up order status email"
+msgstr "אפשר דוא\"ל לסטטוס הזמנה נאספה"
+
+#: include/customizer/wc-ready-pickup-email-customizer.php:170
+msgid "Enable Ready for Pickup order status email"
+msgstr "אפשר דוא\"ל לסטטוס הזמנה מוכנה לאיסוף"
+
+#: include/views/wclp-edit-location-form.php:390
+msgid "From"
+msgstr ""
+"מ-\n"
+
+#: include/views/wclp_setting_tab.php:9
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:380
+msgid "Headers Background color"
+msgstr ""
+"כותרות צבע רקע\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:420
+msgid "Headers font color"
+msgstr ""
+"כותרת צבע גופן\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:398
+msgid "Headers font size"
+msgstr ""
+"גודל גופן של כותרות\n"
+
+#: include/customizer/wc-pickup-email-customizer.php:119
+#: include/emails/pickup-order.php:177
+msgid ""
+"Hi there. we thought you'd like to know that your recent order from "
+"{site_title} has been picked up."
+msgstr "שלום, חשבנו שתרצה לדעת שההזמנה האחרונה שלך מ- {site_title} נאספה."
+
+#: include/customizer/wc-ready-pickup-email-customizer.php:119
+#: include/emails/ready-pickup-order.php:180
+msgid ""
+"Hi there. we thought you'd like to know that your recent order from "
+"{site_title} has been ready for pickup."
+msgstr ""
+"שלום, חשבנו שתרצה לדעת שההזמנה האחרונה שלך מ- {site_title} מוכנה לאיסוף."
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:214
+msgid "Hide Local Pickup Section Heading"
+msgstr ""
+"הסתר את כותרת מדור האיסוף המקומי\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:316
+msgid "Hide Table Headers"
+msgstr ""
+"הסתר כותרות לשולחן\n"
+
+#: include/views/wclp_admin_sidebar.php:5
+msgid ""
+"If you enjoy using the Advanced Local Pickup plugin, please take a minute to "
+"share your review"
+msgstr ""
+"אם אתה נהנה מהתוסף איסוף עצמי, אנא הקדש דקה לשתף את החוויה שלך עם משתמשים "
+"אחרים\n"
+
+#: include/views/wclp_setting_tab.php:160
+msgid "Launch Customizer"
+msgstr ""
+"הפעל התאמה אישית\n"
+
+#: include/views/wclp_setting_tab.php:92 include/views/wclp_setting_tab.php:133
+msgid "Light Font"
+msgstr "גופן קל"
+
+#: include/customizer/wclp-customizer.php:32
+msgid "Local Pickup Order Status Emails"
+msgstr " דוא\"ל להזמנות איסוף עצמי"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:233
+msgid "Local Pickup section heading text"
+msgstr ""
+"כותרת למקטע איסוף עצמי\n"
+
+#: include/views/wclp-edit-location-form.php:36
+msgid "Location Name"
+msgstr ""
+"שם נקודת האיסוף\n"
+
+#: include/wc-local-pickup-admin.php:1287
+msgid "Mark order as picked up"
+msgstr "סמן את ההזמנה נאספה ע״י הלקוח"
+
+#: include/wc-local-pickup-admin.php:1273
+msgid "Mark order as ready for pickup"
+msgstr "סמן הזמנה כמוכנה לאיסוף עצמי"
+
+#: include/views/wclp-edit-location-form.php:20
+msgid "Name & Special Instructions"
+msgstr ""
+"שם והוראות מיוחדות\n"
+
+#: include/views/wclp_locations_tab.php:63
+msgid "Need additional pickup locations?"
+msgstr ""
+"זקוק למיקומי איסוף נוספים?\n"
+
+#: include/wc-local-pickup-admin.php:936
+msgid "Order received page"
+msgstr "עמוד אישור הזמנה"
+
+#: include/wc-local-pickup-admin.php:381 include/wc-local-pickup-admin.php:412
+#: include/views/wclp_setting_tab.php:114
+msgid "Picked up"
+msgstr "נאספה"
+
+#: include/emails/pickup-order.php:32
+msgid "Picked up order"
+msgstr "הזמנה נאספה"
+
+#: include/emails/pickup-order.php:33
+msgid ""
+"Picked up Order emails are sent to customers when their orders are marked "
+"picked up."
+msgstr ""
+"דוא\"ל על הזמנות שנאספו נשלח ללקוחות כאשר ההזמנה מסומנת כנאספה.\n"
+
+#: include/customizer/wclp-customizer.php:54
+msgid "Picked up order status email"
+msgstr "אימייל לסטטוס הזמנה נאספה"
+
+#: include/customizer/wc-pickup-email-customizer.php:144
+msgid "Picked up status email"
+msgstr "איסוף דוא\"ל סטטוס"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:119
+#: include/customizer/wclp-pickup-instruction-customizer.php:327
+#: include/customizer/wclp-pickup-instruction-customizer.php:342
+msgid "Pickup Address"
+msgstr ""
+"כתובת איסוף\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:335
+#| msgid "PickUp Address header text"
+msgid "Pickup address header text"
+msgstr ""
+"טקסט כותרת כתובת PickUp\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:130
+#: include/customizer/wclp-pickup-instruction-customizer.php:225
+#: include/customizer/wclp-pickup-instruction-customizer.php:239
+#: include/customizer/wc-ready-pickup-email-customizer.php:124
+msgid "Pickup Instruction"
+msgstr "הוראות איסוף"
+
+#: include/views/wclp_setting_tab.php:156
+msgid "Pickup Instructions Display"
+msgstr ""
+"תצוגת הוראות איסוף\n"
+
+#: include/customizer/wclp-customizer.php:62
+msgid "Pickup Instructions Layout"
+msgstr ""
+"הוראות פריסת איסוף\n"
+
+#: include/wc-local-pickup-admin.php:121 include/wc-local-pickup-admin.php:133
+#: include/wc-local-pickup-admin.php:134
+#: include/views/wclp_locations_tab.php:14
+msgid "Pickup Locations"
+msgstr "נקודות איסוף"
+
+#: woo-advanced-local-pickup.php:79
+#, php-format
+msgid ""
+"Please install and activate %sWooCommerce%s for WC local pickup to work!"
+msgstr "אנא התקן והפעל את %sWooCommerce%s כדי שהתוסף יעבוד!"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:196
+#: include/customizer/wc-pickup-email-customizer.php:184
+#: include/customizer/wc-ready-pickup-email-customizer.php:192
+msgid "Please select a order..."
+msgstr "אנא בחר הזמנה ..."
+
+#: include/customizer/wc-pickup-email-customizer.php:305
+#: include/customizer/wc-pickup-email-customizer.php:313
+#: include/customizer/wc-ready-pickup-email-customizer.php:310
+#: include/customizer/wc-ready-pickup-email-customizer.php:318
+msgid "Please select order to preview."
+msgstr "אנא בחר סדר לתצוגה מקדימה."
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:192
+#: include/customizer/wc-pickup-email-customizer.php:180
+#: include/customizer/wc-ready-pickup-email-customizer.php:188
+msgid "Preview order"
+msgstr "תצוגה מקדימה"
+
+#: include/wc-local-pickup-admin.php:935
+msgid "Processing order email"
+msgstr "אימייל אישור הזמנה"
+
+#: include/wc-local-pickup-admin.php:369 include/wc-local-pickup-admin.php:405
+msgid "Ready for Pickup"
+msgstr ""
+"מוכנה לאיסוף\n"
+
+#: include/views/wclp_setting_tab.php:73
+msgid "Ready for pickup"
+msgstr ""
+"מוכן לאיסוף\n"
+
+#: include/emails/ready-pickup-order.php:33
+msgid "Ready for Pickup order"
+msgstr "הזמנה מוכנה לאיסוף"
+
+#: include/emails/ready-pickup-order.php:34
+msgid "Ready for Pickup Order emails are sent to customers."
+msgstr "דוא\"ל לסטטוס הזמנה מוכנה לאיסוף נשלח ללקוח"
+
+#: include/customizer/wclp-customizer.php:46
+#: include/customizer/wc-ready-pickup-email-customizer.php:153
+msgid "Ready for Pickup order status email"
+msgstr "אימייל לסטטוס הזמנה מוכנה לאיסוף"
+
+#: include/views/wclp-edit-location-form.php:23
+#: include/views/wclp-edit-location-form.php:60
+#: include/views/wclp-edit-location-form.php:178
+msgid "Save & close"
+msgstr ""
+"שמור וסגור\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:193
+msgid "Select an order to preview and design the pickup instructions display."
+msgstr ""
+"בחר הזמנה לתצוגה מקדימה ולעצב את תצוגת הוראות האיסוף.\n"
+
+#: include/customizer/wclp-customizer.php:241
+#: include/customizer/wclp-pickup-instruction-customizer.php:144
+msgid "Select order to preview"
+msgstr "בחר סדר לתצוגה מקדימה"
+
+#: include/views/wclp-edit-location-form.php:292
+msgid ""
+"Select time format which you want to display in business hours for customers."
+msgstr ""
+"בחר פורמט זמן לתצוגת שעות הפעילות\n"
+
+#: include/views/wclp_setting_tab.php:97 include/views/wclp_setting_tab.php:138
+msgid "Send Email"
+msgstr "שלח אימייל"
+
+#: include/views/wclp-edit-location-form.php:45
+msgid "Special Instruction"
+msgstr "הוראות מיוחדות"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:254
+msgid "Table Border color"
+msgstr "צבע הגבול של הטבלה"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:270
+msgid "Table Border size"
+msgstr ""
+"גודל הגבול של הטבלה\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:435
+#| msgid "Table Content"
+msgid "TABLE CONTENT"
+msgstr ""
+"תוכן הטבלה\n"
+
+#: include/customizer/wclp-pickup-instruction-customizer.php:300
+#| msgid "Table Header"
+msgid "TABLE HEADERS"
+msgstr ""
+"כותרות הטבלה\n"
+
+#. Description of the plugin
+msgid ""
+"The Advanced Local Pickup (ALP) helps you handle local pickup orders more "
+"conveniently by extending the WooCommerce Local Pickup shipping method."
+msgstr ""
+"תוסף האיסוף העצמי יסייע לך לטפל בהזמנות איסוף מקומיות בצורה נוחה יותר על ידי "
+"הרחבת שיטת המשלוח לאיסוף עצמי של ווקומרס ויצירת סדר הזמנות ייעודי להזמות "
+"איסוף עצמי."
+
+#: include/views/wclp-edit-location-form.php:36
+msgid "The location name for your business location."
+msgstr ""
+"שם נקודת האיסוף של מיקום העסק שלך.\n"
+
+#: include/views/wclp-edit-location-form.php:307
+msgid "the select for working days of your store."
+msgstr "בחר לימי עבודה בחנות שלך."
+
+#: include/views/wclp-edit-location-form.php:45
+msgid "The special instruction for your store."
+msgstr ""
+"ההוראות המיוחדות לחנות שלך.\n"
+
+#: include/customizer/wc-pickup-email-customizer.php:145
+#: include/customizer/wc-ready-pickup-email-customizer.php:154
+msgid "This section lets you customize the Email Content."
+msgstr "סעיף זה מאפשר לך להתאים אישית את תוכן הדוא\"ל."
+
+#: woo-advanced-local-pickup.php:500
+#, php-format
+msgid ""
+"We detected %s orders that use the Picked up order status, You can reassign "
+"these orders to a different status"
+msgstr ""
+"זיהינו% s הזמנות המשתמשות בסטטוס ההזמנה הרים, אתה יכול להקצות הזמנות אלה "
+"לסטטוס אחר\n"
+
+#: woo-advanced-local-pickup.php:488
+#, php-format
+msgid ""
+"We detected %s orders that use the Ready for pickup order status, You can "
+"reassign these orders to a different status"
+msgstr ""
+"זיהינו% s הזמנות המשתמשות בסטטוס הזמנה לאיסוף, ניתן להקצות הזמנות אלה לסטטוס "
+"אחר\n"
+
+#: include/views/wclp-edit-location-form.php:307
+msgid "Work Hours"
+msgstr "שעות עבודה"
+
+#: include/wc-local-pickup-admin.php:956
+msgid "You will receive an email when your order is ready for pickup."
+msgstr ""
+"תקבל דוא\"ל כאשר ההזמנה שלך מוכנה לאיסוף.\n"
+
+#: include/views/wclp_admin_sidebar.php:4
+msgid "Your Opinion Meters!"
+msgstr ""
+"דעתך חשובה!\n"
+
+#: include/emails/pickup-order.php:93
+msgid "Your Order is picked up"
+msgstr "ההזמנה שלך נאספה"
+
+#: include/customizer/wc-ready-pickup-email-customizer.php:118
+#: include/emails/ready-pickup-order.php:95
+msgid "Your Order is Ready for pickup"
+msgstr ""
+"ההזמנה שלך מוכנה לאיסוף\n"
+
+#: include/emails/pickup-order.php:83
+msgid "Your {site_title} order is now picked up"
+msgstr "הזמנתך מ- {site_title} נאספה"
+
+#: include/customizer/wc-ready-pickup-email-customizer.php:117
+#: include/emails/ready-pickup-order.php:85
+msgid "Your {site_title} order is now Ready for pickup"
+msgstr ""
+"ההזמנה שלך מ- {site_title} מוכנה כעת לאיסוף\n"
+
+#: include/customizer/wc-pickup-email-customizer.php:117
+msgid "Your {site_title} order is picked up"
+msgstr "ההזמנה שלך {site_title} נאספת"

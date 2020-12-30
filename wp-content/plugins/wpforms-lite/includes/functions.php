@@ -1939,6 +1939,14 @@ function wpforms_get_providers_all() {
 			'license'     => 'elite',
 		],
 		[
+			'name'        => 'Sendinblue',
+			'slug'        => 'sendinblue',
+			'img'         => 'addon-icon-sendinblue.png',
+			'plugin'      => 'wpforms-sendinblue/wpforms-sendinblue.php',
+			'plugin_slug' => 'wpforms-sendinblue',
+			'license'     => 'pro',
+		],
+		[
 			'name'        => 'Zapier',
 			'slug'        => 'zapier',
 			'img'         => 'addon-icon-zapier.png',

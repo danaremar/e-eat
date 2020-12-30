@@ -70,12 +70,15 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 		 */
 		load: function() {
 
-			// Initialize tooltip.
+			// Initialize tooltip in page editor.
 			if ( wpforms_admin_form_embed_wizard.is_edit_page === '1' && ! vars.isChallengeActive ) {
 				app.initTooltip();
 			}
 
-			app.initialStateToggle();
+			// Initialize wizard state in the form builder only.
+			if ( vars.isBuilder ) {
+				app.initialStateToggle();
+			}
 		},
 
 		/**
@@ -101,6 +104,7 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 				$sectionGoBack:     $( '#wpforms-admin-form-embed-wizard-section-goback' ),
 				$shortcode:         $( '#wpforms-admin-form-embed-wizard-shortcode-wrap' ),
 				$shortcodeInput:    $( '#wpforms-admin-form-embed-wizard-shortcode' ),
+				$shortcodeCopy:     $( '#wpforms-admin-form-embed-wizard-shortcode-copy' ),
 			};
 
 			// Detect the form builder screen and store the flag.
@@ -120,15 +124,18 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 		 */
 		events: function() {
 
+			// Skip wizard events in the page editor.
+			if ( ! el.$wizard.length ) {
+				return;
+			}
+
 			el.$wizard
 				.on( 'click', 'button', app.popupButtonsClick )
 				.on( 'click', '.tutorial-toggle', app.tutorialToggle )
 				.on( 'click', '.shortcode-toggle', app.shortcodeToggle )
 				.on( 'click', '.initialstate-toggle', app.initialStateToggle )
-				.on( 'click', '.wpforms-admin-popup-close', app.closePopup );
-
-			document.querySelector( '#wpforms-admin-form-embed-wizard-shortcode-copy' ).addEventListener( 'click', app.copyShortcodeToClipboard );
-
+				.on( 'click', '.wpforms-admin-popup-close', app.closePopup )
+				.on( 'click', '#wpforms-admin-form-embed-wizard-shortcode-copy', app.copyShortcodeToClipboard );
 		},
 
 		/**
@@ -260,12 +267,14 @@ var WPFormsFormEmbedWizard = window.WPFormsFormEmbedWizard || ( function( docume
 			// Copy it.
 			document.execCommand( 'copy' );
 
+			var $icon = el.$shortcodeCopy.find( 'i' );
+
 			// Add visual feedback to copy command.
-			$( '#wpforms-admin-form-embed-wizard-shortcode-copy i' ).removeClass( 'fa-files-o' ).addClass( 'fa-check' );
+			$icon.removeClass( 'fa-files-o' ).addClass( 'fa-check' );
 
 			// Reset visual confirmation back to default state after 2.5 sec.
 			window.setTimeout( function() {
-				$( '#wpforms-admin-form-embed-wizard-shortcode-copy i' ).removeClass( 'fa-check' ).addClass( 'fa-files-o' );
+				$icon.removeClass( 'fa-check' ).addClass( 'fa-files-o' );
 			}, 2500 );
 		},
 

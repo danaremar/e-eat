@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 1.6.4.1 =
+- Added: Frontend form warning indicating missing WPForms JS (visible to admin only).
+- Changed: Help hCaptcha process all requests in a more efficient way, so bot detection will work better.
+- Fixed: Improve pagination on Tools > Logs page inside the plugin admin area.
+- Fixed: Various JavaScript issues on create post/page/form pages in WordPress 5.6.
+- Fixed: Edge cases when custom fields mapping for providers was broken.
+
 = 1.6.4 =
 - Added: hCaptcha support, see WPForms > CAPTCHA settings.
 - Added: Character/word limit validation message control inside Settings > Validation page.

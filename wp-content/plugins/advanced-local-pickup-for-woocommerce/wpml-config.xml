@@ -1,0 +1,19 @@
+<wpml-config>
+	<admin-texts>		
+		<key name="wclp_processing_additional_content"></key>
+		<key name="wclp_store_instruction"></key>
+		<key name="woocommerce_customer_ready_pickup_order_settings">
+			<key name="heading" />
+			<key name="subject" />
+			<key name="additional_content" />
+		</key>
+		<key name="woocommerce_customer_pickup_order_settings">
+			<key name="heading" />
+			<key name="subject" />
+			<key name="additional_content" />
+		</key>	
+		<key name="pickup_instruction_display_settings">
+			<key name="location_box_heading" />
+		</key>
+	</admin-texts>		
+</wpml-config>

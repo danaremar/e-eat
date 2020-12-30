@@ -1,4 +1,4 @@
-/* globals ajaxurl, wpforms_admin */
+/* global ajaxurl, wpforms_admin */
 
 /**
  * WPForms Admin Education module.

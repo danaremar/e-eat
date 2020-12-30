@@ -1,0 +1,62 @@
+<wpml-config>
+	<admin-texts>		
+		<key name="woocommerce_customer_delivered_order_settings">
+			<key name="heading" />
+			<key name="subject" />	
+			<key name="wcast_delivered_email_content" />				
+		</key>
+		<key name="woocommerce_customer_partial_shipped_order_settings">
+			<key name="heading" />
+			<key name="subject" />
+			<key name="wcast_partial_shipped_email_content" />
+		</key>
+		<key name="woocommerce_customer_updated_tracking_order_settings">
+			<key name="heading" />
+			<key name="subject" />
+			<key name="wcast_updated_tracking_email_content" />
+		</key>
+		<key name="tracking_info_settings">
+			<key name="header_text_change" />
+			<key name="additional_header_text" />
+			<key name="provider_header_text" />
+			<key name="tracking_number_header_text" />
+			<key name="shipped_date_header_text" />
+			<key name="track_header_text" />
+		</key>	
+		<key name="wcast_intransit_email_settings">
+			<key name="wcast_intransit_email_subject" />
+			<key name="wcast_intransit_email_heading" />
+			<key name="wcast_intransit_email_content" />
+		</key>
+		<key name="wcast_returntosender_email_settings">
+			<key name="wcast_returntosender_email_subject" />
+			<key name="wcast_returntosender_email_heading" />
+			<key name="wcast_returntosender_email_content" />
+		</key>
+		<key name="wcast_availableforpickup_email_settings">
+			<key name="wcast_availableforpickup_email_subject" />
+			<key name="wcast_availableforpickup_email_heading" />
+			<key name="wcast_availableforpickup_email_content" />
+		</key>
+		<key name="wcast_outfordelivery_email_settings">
+			<key name="wcast_outfordelivery_email_subject" />
+			<key name="wcast_outfordelivery_email_heading" />
+			<key name="wcast_outfordelivery_email_content" />
+		</key>
+		<key name="wcast_delivered_email_settings">
+			<key name="wcast_delivered_status_email_subject" />
+			<key name="wcast_delivered_status_email_heading" />
+			<key name="wcast_delivered_status_email_content" />
+		</key>	
+		<key name="wcast_failure_email_settings">
+			<key name="wcast_failure_email_subject" />
+			<key name="wcast_failure_email_heading" />
+			<key name="wcast_failure_email_content" />
+		</key>
+		<key name="late_shipments_email_settings">
+			<key name="wcast_late_shipments_email_subject" />
+			<key name="wcast_late_shipments_email_heading" />
+			<key name="wcast_late_shipments_email_content" />
+		</key>	
+	</admin-texts>		
+</wpml-config>

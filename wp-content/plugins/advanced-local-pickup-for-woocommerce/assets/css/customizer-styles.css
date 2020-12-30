@@ -1,0 +1,213 @@
+#accordion-section-default_controls_section>h3:before{
+	content: ' ';
+    background-image: url(icons/ast-icon.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+#accordion-section-customer_partial_shipped_email>h3:before{
+	content: ' ';
+    background-image: url(icons/partial-shipped-icon.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+#accordion-section-customer_updated_tracking_email>h3:before{
+	content: ' ';
+    background-image: url(icons/updated-tracking-icon.png);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+#accordion-panel-wcast_emails_panel>h3:before,#accordion-panel-wcast_admin_emails_panel>h3:before,#accordion-panel-wcast_naviation_panel>h3:before{
+	font-family: 'Dashicons';
+    font-size: 20px;
+    font-weight: thin !important;
+    position: relative;
+    line-height: 0;
+    vertical-align: middle;
+    opacity: .6;
+    top: -1px;
+	content: "\f465";
+}
+#accordion-panel-ast_tracking_display_panel>h3:before{
+	font-family: 'Dashicons';
+    font-size: 20px;
+    font-weight: thin !important;
+    position: relative;
+    line-height: 0;
+    vertical-align: middle;
+    opacity: .6;
+    top: -1px;
+	content: "\f231";
+}
+#accordion-section-customer_delivered_email>h3:before{
+	content: ' ';
+    background-image: url(icons/Delivered-o.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_failure_email>h3:before{
+	content: ' ';
+    background-image: url(icons/failure-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_intransit_email>h3:before{
+	content: ' ';
+    background-image: url(icons/in-transit-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_outfordelivery_email>h3:before{
+	content: ' ';
+    background-image: url(icons/out-for-delivery-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_delivered_status_email>h3:before{
+	content: ' ';
+    background-image: url(icons/delivered-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_returntosender_email>h3:before{
+	content: ' ';
+    background-image: url(icons/return-to-sender-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-customer_availableforpickup_email>h3:before{
+	content: ' ';
+    background-image: url(icons/available-for-picup-v4.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+#accordion-section-admin_late_shipments_email>h3:before{
+	content: ' ';
+    background-image: url(icons/late-shipment-v3.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#accordion-section-tracking_page_section>h3:before{
+	font-family: 'Dashicons';
+    font-size: 20px;
+    font-weight: thin !important;
+    position: relative;
+    line-height: 0;
+    vertical-align: middle;
+    opacity: .6;
+    top: -1px;
+	content: "\f231";
+}
+
+/* Mobile preview */
+.preview-mobile #customize-preview iframe {
+	width:606px;
+    height: 1500px;
+    -ms-transform: scale(0.50);
+    -moz-transform: scale(0.50);
+    -o-transform: scale(0.50);
+    -webkit-transform: scale(0.50);
+    transform: scale(0.50);
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.preview-mobile .wp-full-overlay-main {
+    overflow-y:scroll;
+    overflow-x:auto;
+}
+
+/* Template Control */
+.customize-control-kwdtemplateload .image-radio-select label {
+	display: block;
+    height: auto;
+    float: none;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px 8px 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+#customize-controls .customize-control-kwdtemplateload label img {
+	border: 4px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: auto;
+    max-width: 100%;
+    padding: 1px;
+}
+#customize-controls .customize-control-kwdtemplateload label.ktactive img {
+	border-color: #00a0d2;
+}
+.customize-control-kwdtemplateload .kt-template-woomail-load-controls:after {
+    clear: both;
+    display: table;
+    content: '';
+}
+.customize-control code {
+    padding: 10px;
+    display: block;
+	background: #f9f9f9;
+    color: #505050;
+}
+#customize-controls li.customize-control h3{
+	margin-top: 0px;
+	margin-bottom: 0;
+}
+#customize-controls li.customize-control h3.control_heading{
+	margin-bottom:14px;
+}
+ul#sub-accordion-section-pickup_instaruction li.customize-control h3.control_heading {
+	margin-bottom:0;
+}
+.customize-control-description{
+	font-size: 12px;
+}
+.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-display_shipment_provider_name,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-table_header_block,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-hide_table_header,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-table_header,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-table_padding,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-shipment_link_header,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-tracking_link_font_color,.customize-control+.customize-control:not(.customize-control-kirki-code)#customize-control-tracking_info_settings-table_content_header{
+    border-top: 0;
+    padding-top: 0;	
+}
+#customize-control-pickup_instruction_display_settings-location_box_border_size select, #customize-control-pickup_instruction_display_settings-location_box_content_line_height select {
+    width: 100px;
+}
+#customize-control-pickup_instruction_display_settings-hide_table_header, #customize-control-pickup_instruction_display_settings-location_box_background_color {
+    border-top: 0;
+}

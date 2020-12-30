@@ -182,7 +182,7 @@ class WPForms_Process {
 				$post_key         = 'g-recaptcha-response';
 			}
 
-			/* translators: %s - The CATCHA provider name */
+			/* translators: %s - The CAPTCHA provider name. */
 			$error           = wpforms_setting( "{$captcha_settings['provider']}-fail-msg", sprintf( esc_html__( '%s verification failed, please try again later.', 'wpforms-lite' ), $captcha_provider ) );
 			$token           = ! empty( $_POST[ $post_key ] ) ? $_POST[ $post_key ] : false; // phpcs:ignore
 			$is_recaptcha_v3 = 'recaptcha' === $captcha_settings['provider'] && 'v3' === $captcha_settings['recaptcha_type'];
@@ -194,8 +194,27 @@ class WPForms_Process {
 			$verify_query_arg = [
 				'secret'   => $captcha_settings['secret_key'],
 				'response' => $token,
+				'remoteip' => wpforms_get_ip(),
 			];
-			$verify_url       = add_query_arg( $verify_query_arg, $verify_url_raw );
+
+			/*
+			 * hCaptcha uses user IP to better detect bots and their attacks on a form.
+			 * Majority of our users have GDPR disabled.
+			 * So we remove this data from the request only when it's not needed:
+			 * 1) when GDPR is enabled AND globally disabled user details storage;
+			 * 2) when GDPR is enabled AND IP address processing is disabled on per form basis.
+			 */
+			if (
+				wpforms_setting( 'gdpr', false ) &&
+				(
+					wpforms_setting( 'gdpr-disable-details', false ) ||
+					! empty( $this->form_data['settings']['disable_ip'] )
+				)
+			) {
+				unset( $verify_query_arg['remoteip'] );
+			}
+
+			$verify_url = add_query_arg( $verify_query_arg, $verify_url_raw );
 
 			/**
 			 * Filter the CAPTCHA verify URL.

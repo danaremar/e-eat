@@ -84,6 +84,7 @@ class WPForms_Frontend {
 		add_action( 'wpforms_frontend_output', array( $this, 'foot' ), 25, 5 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'assets_header' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'recaptcha_noconflict' ), 9999 );
+		add_action( 'wp_head', array( $this, 'missing_assets_error_js' ) );
 		add_action( 'wp_footer', array( $this, 'assets_footer' ), 15 );
 		add_action( 'wp_footer', array( $this, 'recaptcha_noconflict' ), 19 );
 		add_action( 'wp_footer', array( $this, 'footer_end' ), 99 );
@@ -1118,6 +1119,7 @@ class WPForms_Frontend {
 	 * @since 1.0.0
 	 */
 	public function assets_js() {
+
 		if ( wpforms_is_amp() ) {
 			return;
 		}
@@ -1134,6 +1136,7 @@ class WPForms_Frontend {
 		);
 
 		// Load jQuery date/time libraries.
+		// TODO: should be moved out of here.
 		if (
 			$this->assets_global() ||
 			true === wpforms_has_field_type( 'date-time', $this->forms, true )
@@ -1184,6 +1187,7 @@ class WPForms_Frontend {
 		}
 
 		// Load CC payment library - https://github.com/stripe/jquery.payment/.
+		// TODO: should be moved out of here.
 		if (
 			$this->assets_global() ||
 			true === wpforms_has_field_type( 'credit-card', $this->forms, true )
@@ -1406,7 +1410,9 @@ class WPForms_Frontend {
 			'mailcheck_enabled'          => (bool) apply_filters( 'wpforms_mailcheck_enabled', true ),
 			'mailcheck_domains'          => array_map( 'sanitize_text_field', (array) apply_filters( 'wpforms_mailcheck_domains', array() ) ),
 			'mailcheck_toplevel_domains' => array_map( 'sanitize_text_field', (array) apply_filters( 'wpforms_mailcheck_toplevel_domains', array( 'dev' ) ) ),
+			'is_ssl'                     => is_ssl(),
 		);
+
 		// Include payment related strings if needed.
 		if ( function_exists( 'wpforms_get_currencies' ) ) {
 			$currency                       = wpforms_setting( 'currency', 'USD' );
@@ -1436,7 +1442,10 @@ class WPForms_Frontend {
 	 */
 	public function footer_end() {
 
-		if ( ( empty( $this->forms ) && ! $this->assets_global() ) || wpforms_is_amp() ) {
+		if (
+			( empty( $this->forms ) && ! $this->assets_global() ) ||
+			wpforms_is_amp()
+		) {
 			return;
 		}
 
@@ -1526,5 +1535,94 @@ class WPForms_Frontend {
 		$this->output( $atts['id'], $atts['title'], $atts['description'] );
 
 		return ob_get_clean();
+	}
+
+	/**
+	 * Inline a script to check if our main js is loaded and display a warning message otherwise.
+	 *
+	 * @since 1.6.4.1
+	 */
+	public function missing_assets_error_js() {
+
+		if ( ! wpforms_current_user_can() ) {
+			return;
+		}
+
+		printf( $this->get_missing_assets_error_script(), $this->get_missing_assets_error_message() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+
+	/**
+	 * Get missing assets error script.
+	 *
+	 * @since 1.6.4.1
+	 *
+	 * @return string
+	 */
+	private function get_missing_assets_error_script() {
+
+		return "<script>
+				( function() {
+					function wpforms_js_error_loading() {
+						
+						if ( typeof window.wpforms !== 'undefined' ) {
+							return;
+						}
+						
+						var forms = document.querySelectorAll( '.wpforms-form' );
+						
+						if ( ! forms.length ) {
+							return;
+						}
+						
+						var error = document.createElement( 'div' );
+
+						error.classList.add( 'wpforms-error-container' );
+						error.innerHTML = '%s';
+
+						forms.forEach( function( form ) {
+						
+							if ( ! form.querySelector( '.wpforms-error-container' ) ) {
+								form.insertBefore( error.cloneNode( true ), form.firstChild );
+							}
+						} );
+					};
+				
+					if ( document.readyState === 'loading' ) {
+						document.addEventListener( 'DOMContentLoaded', wpforms_js_error_loading );
+					} else {
+						wpforms_js_error_loading();
+					}
+				}() );
+			</script>";
+	}
+
+	/**
+	 * Get missing assets error message.
+	 *
+	 * @since 1.6.4.1
+	 *
+	 * @return string
+	 */
+	private function get_missing_assets_error_message() {
+
+		$message = wp_kses(
+			sprintf( /* translators: %s - URL to the troubleshooting guide. */
+				__( 'Heads up! WPForms has detected an issue with JavaScript on this page. JavaScript is required for this form to work properly, so this form may not work as expected. See our <a href="%s" target="_blank" rel="noopener noreferrer">troubleshooting guide</a> to learn more or contact support.', 'wpforms-lite' ),
+				'https://wpforms.com/docs/getting-support-wpforms/'
+			),
+			[
+				'a' => [
+					'href'   => [],
+					'target' => [],
+					'rel'    => [],
+				],
+			]
+		);
+
+		$message .= '<p>';
+		$message .= esc_html__( 'This message is only displayed to site administrators.', 'wpforms-lite' );
+		$message .= '</p>';
+
+		return $message;
 	}
 }

@@ -3,7 +3,7 @@ Contributors: wpforms, jaredatch, smub, slaFFik
 Tags: contact form, contact form plugin, forms, form builder, custom form, contact button, contact me, custom contact form, form manager, form, forms builder, forms creator, captcha, recaptcha, Akismet, email form, web form, feedback form, payment form, survey form, donation form, email submit form, message form, mailchimp, mailchimp form, aweber, aweber form, paypal, paypal form, stripe, stripe form, getresponse, getresponse form, email subscription, contact form widget, user registration form, wordpress registration, wordpress login form, feedback
 Requires at least: 4.9
 Tested up to: 5.5
-Stable tag: 1.6.4
+Stable tag: 1.6.4.1
 Requires PHP: 5.5
 License: GNU General Public License v2.0 or later
 
@@ -404,6 +404,13 @@ Thank you
 Syed Balkhi
 
 == Changelog ==
+
+= 1.6.4.1 =
+- Added: Frontend form warning indicating missing WPForms JS (visible to admin only).
+- Changed: Help hCaptcha process all requests in a more efficient way, so bot detection will work better.
+- Fixed: Improve pagination on Tools > Logs page inside the plugin admin area.
+- Fixed: Various JavaScript issues on create post/page/form pages in WordPress 5.6.
+- Fixed: Edge cases when custom fields mapping for providers was broken.
 
 = 1.6.4 =
 - Added: hCaptcha support, see WPForms > CAPTCHA settings.

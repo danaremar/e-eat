@@ -1,0 +1,292 @@
+form.order_track_form label {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+form.order_track_form input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.progress {
+	display: -ms-flexbox;
+    display: flex;    
+    overflow: hidden;    
+	background-color: #C1C1C1;
+}
+.progress-bar {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #C1C1C1;
+	transition: width 0.6s ease
+}
+.tracking-detail .text-center {
+	text-align: center;
+}
+.tracking-detail .text-right {
+	text-align: right;
+}
+.col.tracking-detail {
+    margin: 15px auto 0;
+    padding: 0;
+    border: 1px solid #ccc;
+	max-width: 800px;
+	position: relative;
+}
+.trackship_branding {
+    text-align: center;
+	border-top: 1px solid #e0e0e0;
+    padding: 10px;
+}
+.trackship_branding p{
+	margin: 0;
+	color: #3c4758;
+}
+.trackship_branding img{
+	width: 80px;
+	display: inline-block;
+    vertical-align: middle;
+}
+.tracking-header {
+    margin: 20px 0;
+	padding: 0 20px;
+}
+.tracking-detail .tracking-number {
+    font-weight: 400;  
+    color: #757575;	
+	font-size: 14px;
+}
+.tracking-detail .h4-heading{
+	border-bottom: 1px solid #eee;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 100;
+}
+.track-order-section{
+	text-align: left;
+}
+.shipment-header{
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    font-weight: 600;
+	display: flex;	
+}
+.shipment_heading{
+	margin-bottom: 0;
+	flex: 1;
+}
+.shipment_status_heading{	
+    font-weight: 600;
+    color: #35609a;
+	font-size: 36px;
+	margin-bottom: 0;
+}
+.shipment_status_heading.in_transit{
+	color: #53c3bd;
+}
+.shipment_status_heading.out_for_delivery{
+	color: #90ca5e;
+}
+.shipment_status_heading.return_to_sender{
+	color: #a8414a;
+}
+.shipment_status_heading.available_for_pickup{
+	color: #f49d1d;
+}
+.shipment_status_heading.delivered{
+	color: #0f8042;
+}
+.shipment_status_heading.on_hold{
+	color: #ffde00;
+}
+.shipment_status_heading.failure{
+	color: #cd2128;
+}
+.tracker-progress-bar{
+	padding: 0 20px;
+	margin-bottom: 2rem;
+}
+/**** Layout 1 Progressbar CSS ***/
+.tracker-progress-bar.tracking_layout_1 .progress{
+	height: 15px;
+	border-radius: 10px;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar:before{	
+    display: inline-block;
+    position: absolute;    
+    width: 30px;
+    height: 30px;    
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.pre_transit:before{
+    content: url(icons/pre-transit-v4.png);    
+    left: 2%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.in_transit:before{
+    content: url(icons/in-transit-v4.png);    
+    left: 33%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.available_for_pickup:before{
+    content: url(icons/available-for-picup-v4.png);    
+    left: 64%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.on_hold:before{
+    content: url(icons/On-hold-v3.png);    
+    left: 33%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.out_for_delivery:before{
+    content: url(icons/out-for-delivery-v4.png);    
+    left: 64%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.delivered:before{
+    content: url(icons/delivered-v4.png);    
+	right: 2.5%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.return_to_sender:before{
+    content: url(icons/return-to-sender-v4.png);    
+	left: 64%;
+}
+.tracker-progress-bar.tracking_layout_1 .progress .progress-bar.failure:before{
+    content: url(icons/failure-v4.png);    
+	left: 4%;
+}
+
+/**** Layout 2 CSS ***/
+.tracker-progress-bar .progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    overflow: hidden;    
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #35609a;
+    transition: width 0.6s ease;
+	box-shadow: none;
+}
+.progress-bar.in_transit{
+	background-color: #53c3bd;
+}
+.progress-bar.out_for_delivery{
+	background-color: #90ca5e;
+} 
+.progress-bar.return_to_sender{
+	background-color: #a8414a;
+}
+.progress-bar.available_for_pickup{
+	background-color: #f49d1d;
+} 
+.progress-bar.delivered{
+	background-color: #0f8042;
+} 
+.progress-bar.on_hold{
+	background-color: #ffde00;
+} 
+.progress-bar.failure{
+	background-color: #cd2128;
+} 
+.tracking_destination_details_by_date {
+    margin-bottom: 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.tracking-detail .provider_image{
+	width: 45px;
+    border-radius: 5px;
+}
+.tracking-detail .tracking-details {
+    padding: 0 20px;
+	font-size: 14px;
+}
+ul.timeline {
+    list-style: none!important;
+    position: relative;
+	padding: 0 0 0 20px !important;
+	margin: 0 0 20px;
+}
+ul.timeline:before {
+	content: ' ';
+    background: #ccc;
+    display: inline-block;
+    position: absolute;
+    left: 9px;
+    width: 2px;
+    height: 100%;    
+}
+ul.timeline > li {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: url('../images/timeline-round.png');		
+    display: inline-block;
+    position: absolute;    
+    left: 0px;
+    width: 20px;
+    height: 20px;    
+}
+ul.timeline > li > p{
+	margin-bottom: 0;
+	font-size: 90%;
+}
+.provider_image_div {
+    display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 10px 0;
+}
+.tracking_number_div {
+    display: inline-block;
+    vertical-align: middle;
+	margin-bottom: 10px;
+}
+.tracking_number_div ul{
+	list-style: none !important;
+	margin: 0;
+}
+.tracking_number_div ul li{
+	margin: 0;
+}
+/*** RTL CSS ***/
+
+.rtl .track-order-section{
+	text-align: right;
+}
+.rtl .col.tracking-detail{
+	text-align: right;
+}
+.rtl .tracking-detail .text-right{
+	text-align: left;
+}
+.rtl .provider_image_div{
+	margin: 0 0 20px 10px;
+}
+.rtl ul.timeline{
+	padding-left: 0;
+    padding-right: 20px;
+}
+.rtl ul.timeline:before{
+	right: 9px;
+}
+.rtl ul.timeline > li:before{
+	right: 0px;
+}
+.rtl ul.timeline > li{
+	padding-right: 30px;
+	padding-left: 0;
+}
+/*** END OF RTL CSS ***/

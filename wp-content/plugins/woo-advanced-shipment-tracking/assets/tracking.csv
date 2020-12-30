@@ -1,0 +1,4 @@
+order_id,tracking_provider,tracking_number,date_shipped,status_shipped
+1,UPS,number123,12/03/2020,1
+2,USPS,dfsdf23123,12/03/2020,1
+3,DHL,dfsdf45swd,12/03/2020,0

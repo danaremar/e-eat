@@ -1,13 +1,13 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPForms Lite 1.6.4\n"
+"Project-Id-Version: WPForms Lite 1.6.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpforms-lite\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-12-17T16:13:09+03:00\n"
+"POT-Creation-Date: 2020-12-28T14:51:05+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wpforms-lite\n"
@@ -858,7 +858,7 @@ msgid "You need to <a href=\"#\" class=\"wpforms-panel-switch\" data-panel=\"set
 msgstr ""
 
 #: includes/admin/builder/panels/class-fields.php:149
-#: includes/class-frontend.php:860
+#: includes/class-frontend.php:861
 #: includes/class-process.php:177
 #: src/Admin/Settings/Captcha.php:136
 #: src/Lite/Admin/Builder/Education.php:208
@@ -1986,7 +1986,7 @@ msgid "Required"
 msgstr ""
 
 #: includes/admin/class-settings.php:386
-#: includes/class-frontend.php:1380
+#: includes/class-frontend.php:1384
 #: includes/functions.php:1735
 msgid "This field is required."
 msgstr ""
@@ -1996,12 +1996,12 @@ msgid "Website URL"
 msgstr ""
 
 #: includes/admin/class-settings.php:392
-#: includes/class-frontend.php:1381
+#: includes/class-frontend.php:1385
 msgid "Please enter a valid URL."
 msgstr ""
 
 #: includes/admin/class-settings.php:398
-#: includes/class-frontend.php:1382
+#: includes/class-frontend.php:1386
 msgid "Please enter a valid email address."
 msgstr ""
 
@@ -2010,7 +2010,7 @@ msgid "Email Suggestion"
 msgstr ""
 
 #: includes/admin/class-settings.php:404
-#: includes/class-frontend.php:1383
+#: includes/class-frontend.php:1387
 msgid "Did you mean {suggestion}?"
 msgstr ""
 
@@ -2019,7 +2019,7 @@ msgid "Email Restricted"
 msgstr ""
 
 #: includes/admin/class-settings.php:410
-#: includes/class-frontend.php:1385
+#: includes/class-frontend.php:1389
 #: includes/fields/class-email.php:544
 msgid "This email address is not allowed."
 msgstr ""
@@ -2029,7 +2029,7 @@ msgid "Number"
 msgstr ""
 
 #: includes/admin/class-settings.php:416
-#: includes/class-frontend.php:1386
+#: includes/class-frontend.php:1390
 #: includes/fields/class-number.php:159
 msgid "Please enter a valid number."
 msgstr ""
@@ -2039,7 +2039,7 @@ msgid "Confirm Value"
 msgstr ""
 
 #: includes/admin/class-settings.php:422
-#: includes/class-frontend.php:1387
+#: includes/class-frontend.php:1391
 msgid "Field values do not match."
 msgstr ""
 
@@ -2048,7 +2048,7 @@ msgid "Input Mask Incomplete"
 msgstr ""
 
 #: includes/admin/class-settings.php:428
-#: includes/class-frontend.php:1399
+#: includes/class-frontend.php:1403
 msgid "Please fill out all blanks."
 msgstr ""
 
@@ -2057,7 +2057,7 @@ msgid "Checkbox Selection Limit"
 msgstr ""
 
 #: includes/admin/class-settings.php:434
-#: includes/class-frontend.php:1395
+#: includes/class-frontend.php:1399
 #: includes/fields/class-checkbox.php:589
 msgid "You have exceeded the number of allowed selections: {#}."
 msgstr ""
@@ -2596,7 +2596,7 @@ msgstr ""
 #: includes/admin/importers/class-ninja-forms.php:138
 #: includes/admin/importers/class-pirate-forms.php:454
 #: includes/class-form.php:293
-#: includes/class-process.php:523
+#: includes/class-process.php:542
 #: includes/templates/class-contact.php:66
 #: lite/wpforms-lite.php:271
 #: lite/wpforms-lite.php:321
@@ -2845,67 +2845,76 @@ msgid "Sending..."
 msgstr ""
 
 #. translators: %s - URL to a non-amp version of a page with the form.
-#: includes/class-frontend.php:168
+#: includes/class-frontend.php:169
 msgid "<a href=\"%s\">Go to the full page</a> to view and submit the form."
 msgstr ""
 
-#: includes/class-frontend.php:417
+#: includes/class-frontend.php:418
 msgid "Please enable JavaScript in your browser to complete this form."
 msgstr ""
 
-#: includes/class-frontend.php:860
+#: includes/class-frontend.php:861
 msgid "Google reCAPTCHA v2"
 msgstr ""
 
 #. translators: %1$s - CAPTCHA provider name; %2$s - URL to reCAPTCHA documentation.
-#: includes/class-frontend.php:865
+#: includes/class-frontend.php:866
 msgid "%1$s is not supported by AMP and is currently disabled.<br><a href=\"%2$s\" rel=\"noopener noreferrer\" target=\"_blank\">Upgrade to reCAPTCHA v3</a> for full AMP support. <br><em>Please note: this message is only displayed to site administrators.</em>"
 msgstr ""
 
-#: includes/class-frontend.php:1384
+#: includes/class-frontend.php:1388
 msgid "Click to accept this suggestion."
 msgstr ""
 
-#: includes/class-frontend.php:1388
+#: includes/class-frontend.php:1392
 msgid "File type is not allowed."
 msgstr ""
 
-#: includes/class-frontend.php:1389
+#: includes/class-frontend.php:1393
 msgid "File exceeds max size allowed. File was not uploaded."
 msgstr ""
 
-#: includes/class-frontend.php:1390
+#: includes/class-frontend.php:1394
 msgid "Please enter time in 12-hour AM/PM format (eg 8:45 AM)."
 msgstr ""
 
-#: includes/class-frontend.php:1391
+#: includes/class-frontend.php:1395
 msgid "Please enter time in 24-hour format (eg 22:45)."
 msgstr ""
 
-#: includes/class-frontend.php:1392
+#: includes/class-frontend.php:1396
 msgid "Payment is required."
 msgstr ""
 
-#: includes/class-frontend.php:1393
+#: includes/class-frontend.php:1397
 msgid "Please enter a valid credit card number."
 msgstr ""
 
-#: includes/class-frontend.php:1394
-#: includes/class-process.php:650
+#: includes/class-frontend.php:1398
+#: includes/class-process.php:669
 msgid "The total size of the selected files {totalSize} Mb exceeds the allowed limit {maxSize} Mb."
 msgstr ""
 
-#: includes/class-frontend.php:1396
+#: includes/class-frontend.php:1400
 msgid "{count} of {limit} max characters."
 msgstr ""
 
-#: includes/class-frontend.php:1397
+#: includes/class-frontend.php:1401
 msgid "{count} of {limit} max words."
 msgstr ""
 
-#: includes/class-frontend.php:1398
+#: includes/class-frontend.php:1402
 #: src/Admin/Settings/Captcha.php:203
 msgid "Google reCAPTCHA verification failed, please try again later."
+msgstr ""
+
+#. translators: %s - URL to the troubleshooting guide.
+#: includes/class-frontend.php:1610
+msgid "Heads up! WPForms has detected an issue with JavaScript on this page. JavaScript is required for this form to work properly, so this form may not work as expected. See our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">troubleshooting guide</a> to learn more or contact support."
+msgstr ""
+
+#: includes/class-frontend.php:1623
+msgid "This message is only displayed to site administrators."
 msgstr ""
 
 #: includes/class-process.php:137
@@ -2916,27 +2925,27 @@ msgstr ""
 msgid "Google reCAPTCHA"
 msgstr ""
 
-#. translators: %s - The CATCHA provider name
+#. translators: %s - The CAPTCHA provider name.
 #: includes/class-process.php:186
 msgid "%s verification failed, please try again later."
 msgstr ""
 
-#: includes/class-process.php:288
-#: includes/class-process.php:365
-#: includes/class-process.php:649
+#: includes/class-process.php:307
+#: includes/class-process.php:384
+#: includes/class-process.php:668
 msgid "Form has not been submitted, please see the errors below."
 msgstr ""
 
-#: includes/class-process.php:426
+#: includes/class-process.php:445
 msgid "Uploaded files combined size exceeds allowed maximum."
 msgstr ""
 
-#: includes/class-process.php:580
+#: includes/class-process.php:599
 msgid "Redirecting…"
 msgstr ""
 
 #. translators: %s - form name.
-#: includes/class-process.php:722
+#: includes/class-process.php:741
 #: lite/wpforms-lite.php:57
 msgid "New %s Entry"
 msgstr ""
@@ -6165,8 +6174,12 @@ msgstr ""
 msgid "Form token is invalid. Please refresh the page."
 msgstr ""
 
+#: src/Forms/Token.php:252
+msgid "The form was unable to submit. Please contact the site administrator."
+msgstr ""
+
 #. translators: placeholders are links.
-#: src/Forms/Token.php:248
+#: src/Forms/Token.php:274
 msgid "Please check out our %1$stroubleshooting guide%2$s for details on resolving this issue."
 msgstr ""
 

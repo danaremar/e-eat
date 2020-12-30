@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="195px" height="190px" viewBox="0 0 195 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Food Store Empty Cart</title>
+    <desc>Your cart is empty | Food Store</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Checkout-step-3-Copy-2" transform="translate(-377.000000, -206.000000)">
+            <g id="Group-5" transform="translate(378.000000, 197.000000)">
+                <g id="Group-4">
+                    <text id="+" font-family="ProductSans-Black, Product Sans Black" font-size="22" font-weight="700" fill="#0095F8">
+                        <tspan x="135" y="21">+</tspan>
+                    </text>
+                    <text id="+-copy" font-family="ProductSans-Black, Product Sans Black" font-size="22" font-weight="700" fill="#0095F8">
+                        <tspan x="157" y="199">+</tspan>
+                    </text>
+                    <text id="+-copy-2" font-family="ProductSans-Black, Product Sans Black" font-size="22" font-weight="700" fill="#0095F8">
+                        <tspan x="22" y="87">+</tspan>
+                    </text>
+                    <text id="*" font-family="ProductSans-Black, Product Sans Black" font-size="22" font-weight="700" fill="#0095F8">
+                        <tspan x="63" y="205">*</tspan>
+                    </text>
+                    <text id="*-copy" font-family="ProductSans-Black, Product Sans Black" font-size="22" font-weight="700" fill="#0095F8">
+                        <tspan x="184" y="87">*</tspan>
+                    </text>
+                    <circle id="Oval" stroke="#0095F8" cx="170" cy="121" r="6"></circle>
+                    <circle id="Oval-Copy-2" stroke="#0095F8" cx="63.5" cy="19.5" r="4.5"></circle>
+                    <circle id="Oval-Copy-3" stroke="#0095F8" cx="4.5" cy="121.5" r="4.5"></circle>
+                    <rect id="Rectangle" stroke="#0095F8" stroke-width="2" x="66" y="156" width="55" height="10" rx="2"></rect>
+                    <g id="Group-3" transform="translate(73.000000, 122.000000)">
+                        <g id="Group-2" fill="#0095F8">
+                            <circle id="Oval" cx="4" cy="4" r="4"></circle>
+                            <circle id="Oval-Copy" cx="38" cy="4" r="4"></circle>
+                        </g>
+                        <path d="M14,17.5 C19.2749342,15.0374646 24.2012735,14.9174035 28.7254172,17.5" id="Path-3" stroke="#0095F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                    <path d="M93.5,48 L93.5,71.2651549" id="Path-4" stroke="#0095F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M128.691087,64.418033 L124.915064,78.5103454" id="Path-4-Copy" stroke="#0095F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(126.915064, 71.745191) rotate(-330.000000) translate(-126.915064, -71.745191) "></path>
+                    <path d="M59.5212143,64.5879059 L55.7451905,78.6802184" id="Path-4-Copy-2" stroke="#0095F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(57.745191, 71.915064) rotate(-60.000000) translate(-57.745191, -71.915064) "></path>
+                    <path d="M154.6359,111.5 L32.7075059,111.5 C32.7102207,111.637008 32.7137634,111.787524 32.7180626,111.954929 C32.7312339,112.467805 32.7357359,112.702282 32.7357359,113 L32.7357359,120 C32.7357359,139.041304 54.487775,156.5 76,156.5 L111,156.5 C132.581602,156.5 154.615456,138.994501 154.615456,120 L154.615456,112.5 C154.615456,112.196137 154.620739,111.958979 154.633451,111.573614 C154.634333,111.547206 154.635146,111.522763 154.6359,111.5 Z" id="Path" stroke="#0095F8" stroke-width="3"></path>
+                    <path d="" id="Path-5" stroke="#979797"></path>
+                </g>
+                <ellipse id="Oval" fill="#D2E4F4" cx="94" cy="180.5" rx="37" ry="1.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

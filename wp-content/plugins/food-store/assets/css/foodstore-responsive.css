@@ -1,0 +1,103 @@
+/* Media Queries */
+
+/* Device: Desktops */
+@media (min-width: 1200px) {
+
+}
+
+/* Device: Laptops, Desktops */
+@media (min-width: 1025px) and (max-width: 1199px) {
+	.wfs-cart-overview-description {
+		width: 20%;
+	}
+}
+
+/* Device: Tablets, iPads (Portrait) */
+@media (min-width: 992px) and (max-width: 1024px) {
+
+}
+
+/* Device: Tablets, iPads (Portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Device: Tablets, iPads (Landscape) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	.wfs-cart-overview-description {
+		width: 24%;
+	}
+}
+
+/* Device: Tablets, iPads (Landscape) to Large Desktops */
+@media (min-width: 768px) {
+	.wfs-food-item-summery .button-add-to-cart,
+	.wfs-food-item-summery .wfs-text-out-of-stock {
+		display: none;
+	}
+	.wfs-cart-purchase-actions-mobile {
+		display: none;
+	}
+}
+
+/* Device: Small screen Mobiles to Tablets, iPads (Landscape) */
+@media (max-width: 767px) {
+	.wfs-food-item-cart-action .button-add-to-cart,
+	.wfs-food-item-cart-action .wfs-text-out-of-stock {
+		display: none;
+	}
+	.wfs-cart-purchase-actions,
+	.wfs-cart-overview-description,
+	.wfs-cart-service-settings {
+		display: none;
+	}
+	.wfs-cart-overview {
+		box-shadow: none;
+	}
+	.wfs-cart-overview-row {
+		padding: 0;
+	}
+	.wfs-cart-overview > div.fs-container {
+		padding-right: 5px;
+    	padding-left: 10px;
+	}
+	#foodstore > .fs-row,
+	.wfsmodal .modal-content-wrapper,
+	.wfs-cart-content-area {
+		display: block;
+	}
+	.cart-content-left {
+		width: 97%;
+	}
+	.cart-content-right {
+		width: 100%;
+	}
+	.wfs-cart-totals-container {
+		padding-left: 0;
+	}
+	.wfs-cart-expanded .fs-container {
+		padding-left: 20px;
+	}
+}
+
+/* Device: Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Device: Smart phone and small screen devices */
+@media (max-width: 480px) {
+	.wfs-food-item-description {
+		display: none;
+	}
+	.wfs-modal-count {
+		margin-right: 10px;
+	}
+}
+
+/* Device: Most of the Smartphones Mobiles (Portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+}
+
+/* Device: Small screen Mobiles (Portrait) */
+@media (max-width: 319px) {
+}

@@ -1,4 +1,4 @@
-/* globals wpforms_builder_lite, wpforms_builder */
+/* global wpforms_builder_lite, wpforms_builder */
 /**
  * WPForms Form Builder Education function.
  *

@@ -1192,7 +1192,6 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 				page2      = page,
 				next       = page + 1,
 				prev       = page - 1,
-				formID     = $this.data( 'formid' ),
 				$form      = $this.closest( '.wpforms-form' ),
 				$page      = $form.find( '.wpforms-page-' + page ),
 				$submit    = $form.find( '.wpforms-submit-container' ),
@@ -1323,6 +1322,8 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 *
 		 * @since 1.5.0
 		 * @since 1.6.4 Added hCaptcha support.
+		 *
+		 * @param {string} optinId OptinMonster ID.
 		 */
 		optinMonsterRecaptchaReset: function( optinId ) {
 
@@ -1359,6 +1360,9 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 *
 		 * @since 1.2.3
 		 * @since 1.5.1 Added support for payment-checkbox field.
+		 *
+		 * @param {object} el jQuery DOM object.
+		 * @param {boolean} validate Whether to validate or not.
 		 */
 		amountTotal: function( el, validate ) {
 
@@ -1415,6 +1419,10 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 * Sanitize amount and convert to standard format for calculations.
 		 *
 		 * @since 1.2.6
+		 *
+		 * @param {string} amount Amount to sanitize.
+		 *
+		 * @returns {string} Sanitized amount.
 		 */
 		amountSanitize: function( amount ) {
 
@@ -1440,6 +1448,10 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 * Format amount.
 		 *
 		 * @since 1.2.6
+		 *
+		 * @param {string} amount Amount to format.
+		 *
+		 * @returns {string} Formatted amount.
 		 */
 		amountFormat: function( amount ) {
 
@@ -1471,6 +1483,8 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 * Get site currency settings.
 		 *
 		 * @since 1.2.6
+		 *
+		 * @returns {object} Currency settings.
 		 */
 		getCurrency: function() {
 
@@ -1505,8 +1519,16 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		/**
 		 * Format number.
 		 *
-		 * @link http://locutus.io/php/number_format/
+		 * @see http://locutus.io/php/number_format/
+		 *
 		 * @since 1.2.6
+		 *
+		 * @param {string} number Number to format.
+		 * @param {number} decimals How many decimals?
+		 * @param {string} decimalSep Decimals separator.
+		 * @param {string} thousandsSep Thousands separator.
+		 *
+		 * @returns {string} Formatted number.
 		 */
 		numberFormat: function( number, decimals, decimalSep, thousandsSep ) {
 
@@ -1538,8 +1560,13 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		/**
 		 * Empty check similar to PHP.
 		 *
-		 * @link http://locutus.io/php/empty/
+		 * @see http://locutus.io/php/empty/
+		 *
 		 * @since 1.2.6
+		 *
+		 * @param {mixed} mixedVar Variable to check.
+		 *
+		 * @returns {boolean} Whether the var is empty or not.
 		 */
 		empty: function( mixedVar ) {
 
@@ -1606,24 +1633,29 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		createCookie: function( name, value, days ) {
 
 			var expires = '';
+			var secure = '';
+
+			if ( wpforms_settings.is_ssl ) {
+				secure = ';secure';
+			}
 
 			// If we have a days value, set it in the expiry of the cookie.
 			if ( days ) {
 
-				// If -1 is our value, set a session based cookie instead of a persistent cookie.
+				// If -1 is our value, set a session-based cookie instead of a persistent cookie.
 				if ( '-1' === days ) {
 					expires = '';
 				} else {
 					var date = new Date();
 					date.setTime( date.getTime() + ( days * 24 * 60 * 60 * 1000 ) );
-					expires = '; expires=' + date.toGMTString();
+					expires = ';expires=' + date.toGMTString();
 				}
 			} else {
-				expires = '; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+				expires = ';expires=Thu, 01 Jan 1970 00:00:01 GMT';
 			}
 
 			// Write the cookie.
-			document.cookie = name + '=' + value + expires + '; path=/; samesite=strict';
+			document.cookie = name + '=' + value + expires + ';path=/;samesite=strict' + secure;
 		},
 
 		/**
@@ -1670,7 +1702,7 @@ var wpforms = window.wpforms || ( function( document, window, $ ) {
 		 *
 		 * @since 1.5.2
 		 *
-		 * @returns {String} Language code.
+		 * @returns {string} Language code.
 		 */
 		getFirstBrowserLanguage: function() {
 			var nav = window.navigator,

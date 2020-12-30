@@ -1,0 +1,773 @@
+# Copyright (C) 2020 WP Scripts
+# This file is distributed under the same license as the Food Store - Online Food Delivery & Pickup plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Food Store - Online Food Delivery & Pickup 1.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/food-store\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-08-06T14:38:22+00:00\n"
+"PO-Revision-Date: 2020-08-08 10:26+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: food-store\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.4.1; wp-5.4.2"
+
+#. Plugin Name of the plugin
+msgid "Food Store - Online Food Delivery & Pickup"
+msgstr "Tienda de comidas: entrega y recogida de alimentos en línea"
+
+#. Description of the plugin
+msgid ""
+"Food Store is complete online food ordering platform with all your favourite "
+"WooCommerce functionalities."
+msgstr ""
+"Food Store es una plataforma completa de pedidos de alimentos en línea con "
+"todas sus funcionalidades favoritas de WooCommerce."
+
+#. Author of the plugin
+msgid "WP Scripts"
+msgstr "WP Scripts"
+
+#: includes/class-wfs-services.php:114 includes/class-wfs-services.php:129
+#: includes/class-wfs-services.php:143 includes/class-wfs-services.php:272
+#: includes/class-wfs-services.php:282 includes/class-wfs-services.php:293
+#: includes/admin/class-wfs-admin.php:81
+msgid "Service Type"
+msgstr "Tipo de servicio"
+
+#: includes/class-wfs-services.php:157 includes/class-wfs-services.php:270
+#: includes/class-wfs-services.php:280 includes/class-wfs-services.php:291
+msgid "Date"
+msgstr "Fecha"
+
+#: includes/class-wfs-services.php:167 includes/class-wfs-services.php:271
+#: includes/class-wfs-services.php:281 includes/class-wfs-services.php:292
+msgid "Time"
+msgstr "Tiempo"
+
+#: includes/class-wfs-services.php:235
+msgid "Please choose service date for your Order."
+msgstr "Elija la fecha de servicio para su pedido."
+
+#: includes/class-wfs-services.php:238
+msgid "Please choose service time for your Order."
+msgstr "Elija el tiempo de servicio para su pedido."
+
+#: includes/class-food-store.php:248
+msgid "Food Store requires <a href=\""
+msgstr "La tienda de alimentos requiere <a href = \""
+
+#: includes/class-wfs-ajax.php:269
+msgid "%s added to cart"
+msgstr "%s añadido al carrito"
+
+#: includes/class-wfs-ajax.php:385
+msgid "%s updated in cart"
+msgstr "%s actualizado en el carrito"
+
+#: includes/class-wfs-ajax.php:421
+msgid "%s has been removed from cart"
+msgstr "%s ha sido eliminado del carrito"
+
+#: includes/class-wfs-metaboxes.php:53
+msgid "Selection Choice"
+msgstr "Elección"
+
+#: includes/class-wfs-metaboxes.php:58
+msgid "Single"
+msgstr "único"
+
+#: includes/class-wfs-metaboxes.php:59
+msgid "Multiple"
+msgstr "Múltiple"
+
+#: includes/class-wfs-metaboxes.php:61
+msgid ""
+"Please choose how you want this addon to be associated with the food item."
+msgstr "Elija cómo desea que este complemento se asocie con el plato."
+
+#: includes/class-wfs-metaboxes.php:82
+msgid "Price"
+msgstr "Precio"
+
+#: includes/class-wfs-metaboxes.php:86
+msgid "Add a Price for this addon item."
+msgstr "Agregue un precio para este artículo adicional."
+
+#: includes/class-wfs-metaboxes.php:120
+msgid "Food Options"
+msgstr "Opciones de comida"
+
+#: includes/admin/class-wfs-admin-menus.php:37
+msgid "Food Store"
+msgstr "Tienda de comidas"
+
+#: includes/admin/class-wfs-admin-menus.php:39
+#: includes/admin/settings/class-wfs-settings-services.php:38
+#: includes/admin/settings/class-wfs-settings-general.php:25
+msgid "General"
+msgstr "General"
+
+#: includes/admin/class-wfs-admin-menus.php:41
+#: includes/admin/settings/class-wfs-settings-services.php:25
+msgid "Services"
+msgstr "Servicios"
+
+#: includes/admin/class-wfs-admin-menus.php:43
+#: includes/admin/settings/class-wfs-settings-styling.php:25
+msgid "Layout & Styling"
+msgstr "Diseño y estilo"
+
+#: includes/admin/class-wfs-admin-menus.php:45
+#: includes/admin/settings/class-wfs-settings-advanced.php:25
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: includes/admin/settings/class-wfs-settings-services.php:39
+#: includes/admin/settings/class-wfs-settings-services.php:89
+msgid "Pickup Service"
+msgstr "Servicio de Recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:40
+#: includes/admin/settings/class-wfs-settings-services.php:170
+msgid "Delivery Service"
+msgstr "Delivery Service"
+
+#: includes/admin/settings/class-wfs-settings-services.php:92
+msgid "Pickup Service is <b><i>Enabled</i></b> by default."
+msgstr ""
+"\n"
+"El Servicio de recogida está <b><i> Habilitado</i> </b> de forma "
+"predeterminada."
+
+#: includes/admin/settings/class-wfs-settings-services.php:96
+msgid "Enable Pickup"
+msgstr "Habilitar recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:99
+msgid "Enable Pickup Service"
+msgstr "Habilitar servicio de recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:104
+msgid "Pickup Label"
+msgstr "Etiqueta recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:107
+#: includes/wfs-core-functions.php:551
+msgid "Pickup"
+msgstr "Recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:111
+msgid "Preparation Time"
+msgstr "Tiempo de preparación"
+
+#: includes/admin/settings/class-wfs-settings-services.php:114
+msgid "Set food preparation time"
+msgstr "Establecer el tiempo de preparación de los platos"
+
+#: includes/admin/settings/class-wfs-settings-services.php:125
+msgid "Pickup Time Interval"
+msgstr "Intervalo de tiempo de recogida"
+
+#: includes/admin/settings/class-wfs-settings-services.php:129
+msgid "Enter pickup time interval in mins"
+msgstr "Ingrese el intervalo de tiempo de recogida en minutos"
+
+#: includes/admin/settings/class-wfs-settings-services.php:138
+#: includes/admin/settings/class-wfs-settings-services.php:203
+msgid "Minimum Order Amount"
+msgstr "Importe mínimo de pedido"
+
+#: includes/admin/settings/class-wfs-settings-services.php:141
+msgid "Minimum order amount for pickup service."
+msgstr "Importe mínimo de pedido para servicio de recogida."
+
+#: includes/admin/settings/class-wfs-settings-services.php:145
+#: includes/admin/settings/class-wfs-settings-services.php:212
+msgid "Minimum Order Amount Error"
+msgstr "Error de importe mínimo de pedido"
+
+#: includes/admin/settings/class-wfs-settings-services.php:149
+#: includes/admin/settings/class-wfs-settings-services.php:216
+msgid "Minimum order price for {service_type} is {min_order_amount}"
+msgstr "El precio mínimo de pedido para {service_type} es {min_order_amount}"
+
+#: includes/admin/settings/class-wfs-settings-services.php:150
+#: includes/admin/settings/class-wfs-settings-services.php:217
+msgid ""
+"Error message for minimum order amount. You can use variable {service_type} "
+"and {min_order_amount}"
+msgstr ""
+"Mensaje de error por el importe mínimo del pedido. Puede utilizar la "
+"variable {service_type} y {min_order_amount}"
+
+#: includes/admin/settings/class-wfs-settings-services.php:176
+msgid "Enable Delivery"
+msgstr "Habilitar entrega"
+
+#: includes/admin/settings/class-wfs-settings-services.php:179
+msgid "Enable Delivery Service"
+msgstr "Habilitar servicio de entrega"
+
+#: includes/admin/settings/class-wfs-settings-services.php:183
+msgid "Delivery Label"
+msgstr "Etiqueta de entrega"
+
+#: includes/admin/settings/class-wfs-settings-services.php:186
+#: includes/wfs-core-functions.php:552
+msgid "Delivery"
+msgstr "Servicio a domicilio"
+
+#: includes/admin/settings/class-wfs-settings-services.php:190
+msgid "Delivery Time Interval"
+msgstr "Intervalo de tiempo de entrega"
+
+#: includes/admin/settings/class-wfs-settings-services.php:194
+msgid "Enter delivery time interval in mins"
+msgstr "Ingrese el intervalo de tiempo de entrega en minutos"
+
+#: includes/admin/settings/class-wfs-settings-services.php:208
+msgid "Enter order amount for delivery service"
+msgstr "Ingrese el importe mínimo del pedido para el servicio de entrega"
+
+#: includes/admin/settings/class-wfs-settings-services.php:234
+msgid "Service Settings"
+msgstr "Configuración de servicio"
+
+#: includes/admin/settings/class-wfs-settings-services.php:240
+msgid "Store Open Time"
+msgstr "Hora de apertura de la tienda"
+
+#: includes/admin/settings/class-wfs-settings-services.php:246
+msgid "Set store open time."
+msgstr "Establecer la hora de apertura de la tienda"
+
+#: includes/admin/settings/class-wfs-settings-services.php:250
+msgid "Store Close Time"
+msgstr "Hora de cierre de la tienda"
+
+#: includes/admin/settings/class-wfs-settings-services.php:256
+msgid "Set store close time."
+msgstr "Establecer la hora de cierre de la tienda."
+
+#: includes/admin/settings/class-wfs-settings-services.php:260
+msgid "Store Time Format"
+msgstr "Formato de hora de la tienda"
+
+#: includes/admin/settings/class-wfs-settings-services.php:264
+msgid "24 Hrs"
+msgstr "24 Hrs"
+
+#: includes/admin/settings/class-wfs-settings-services.php:265
+msgid "12 Hrs"
+msgstr "12 Hrs"
+
+#: includes/admin/settings/class-wfs-settings-services.php:268
+msgid "Set store time format."
+msgstr "Establecer formato de hora"
+
+#: includes/admin/settings/class-wfs-settings-services.php:272
+msgid "Store Closed Message"
+msgstr "Mensaje de tienda cerrada"
+
+#: includes/admin/settings/class-wfs-settings-services.php:274
+msgid "Sorry, we are closed now."
+msgstr "Lo sentimos, estamos cerrados ahora."
+
+#: includes/admin/settings/class-wfs-settings-services.php:277
+msgid "Set message for users to see when your store is closed."
+msgstr ""
+"Configure un mensaje para que los usuarios vean cuándo su tienda está "
+"cerrada."
+
+#: includes/admin/settings/class-wfs-settings-services.php:281
+msgid "Service Modal Settings"
+msgstr "Configuración modal de servicio"
+
+#: includes/admin/settings/class-wfs-settings-services.php:285
+msgid "Hide completely on items page."
+msgstr "Ocultar completamente en la página de artículos."
+
+#: includes/admin/settings/class-wfs-settings-services.php:286
+msgid "Set available service type and time."
+msgstr "Configure el tipo de servicio disponible y la hora."
+
+#: includes/admin/settings/class-wfs-settings-services.php:287
+msgid "Open modal once items page is loaded."
+msgstr "Abrir modal una vez que se carga la página de artículos."
+
+#: includes/admin/settings/class-wfs-settings-services.php:288
+msgid "Open modal when add to cart is clicked."
+msgstr "Abrir modal cuando se hace clic en Agregar al carrito."
+
+#: includes/admin/settings/class-wfs-settings-services.php:291
+msgid "Choose how you want your customers to select the Service Settings."
+msgstr ""
+"Elija cómo desea que sus clientes seleccionen la Configuración del servicio."
+
+#: includes/admin/settings/class-wfs-settings-general.php:42
+msgid "General Options"
+msgstr "Opciones generales"
+
+#: includes/admin/settings/class-wfs-settings-general.php:57
+msgid "Enable Catalog Mode"
+msgstr "Habilitar el modo de catálogo"
+
+#: includes/admin/settings/class-wfs-settings-general.php:58
+msgid "Present your Restaurant Menu without the Add to Cart button."
+msgstr "Presenta tu menú de restaurante sin el botón Agregar al carrito."
+
+#: includes/admin/settings/class-wfs-settings-general.php:65
+msgid "Exclude Categories"
+msgstr "Excluir categorías"
+
+#: includes/admin/settings/class-wfs-settings-general.php:66
+msgid ""
+"This would exclude the categories from the frontend categories menu and "
+"items under those."
+msgstr ""
+"Esto excluiría las categorías del menú de categorías de la interfaz y los "
+"elementos debajo de ellas."
+
+#: includes/admin/settings/class-wfs-settings-general.php:75
+msgid "Enable Special Instructions"
+msgstr "Habilitar instrucciones especiales"
+
+#: includes/admin/settings/class-wfs-settings-general.php:76
+msgid "Allow customers to add notes for each item during order."
+msgstr ""
+"Permita que los clientes agreguen notas para cada artículo durante el pedido."
+
+#: includes/admin/settings/class-wfs-settings-general.php:83
+msgid "Purchase Button Redirect"
+msgstr "Redireccionamiento del botón de compra"
+
+#: includes/admin/settings/class-wfs-settings-general.php:84
+msgid "Redirect page when customer clicks on Purchase from Food Store Cart."
+msgstr ""
+"Redirigir la página cuando el cliente haga clic en Comprar en el carrito de "
+"la tienda de alimentos."
+
+#: includes/admin/settings/class-wfs-settings-general.php:89
+msgid "Cart"
+msgstr "Pedido"
+
+#: includes/admin/settings/class-wfs-settings-general.php:90
+msgid "Checkout"
+msgstr "Finalizar y pagar"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:38
+msgid "Layouts"
+msgstr "Diseños"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:39
+msgid "Customize"
+msgstr "Personalizar"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:87
+msgid "Styling Settings"
+msgstr "Configuración de estilo"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:93
+msgid "Primary Color Scheme"
+msgstr "Esquema de colores primarios"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:94
+msgid "Selected color will be used for Links, Buttons and Active Classes etc."
+msgstr ""
+"El color seleccionado se utilizará para enlaces, botones y clases activas, "
+"etc."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:102
+msgid "Secondary Color Scheme"
+msgstr "Esquema de color secundario"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:103
+msgid "This will be mostly used with Button/Link Hovers, Borders etc."
+msgstr ""
+"Esto se utilizará principalmente con botones / enlaces flotantes, bordes, "
+"etc."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:111
+msgid "Add your own CSS"
+msgstr "Agrega tu propio CSS"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:112
+msgid ""
+"Add your css to override any styling option given by theme or plugin as per "
+"your need."
+msgstr ""
+"Agregue su CSS para anular cualquier opción de estilo dada por tema o "
+"complemento según sus necesidades."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:134
+msgid "Layout Settings"
+msgstr "Opciones de diseño"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:140
+msgid "Number of Columns"
+msgstr "Número de columnas"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:141
+msgid ""
+"Please select number of columns for Food Items. Suitable for desktop view."
+msgstr ""
+"Seleccione el número de columnas para Alimentos. Adecuado para vista de "
+"escritorio."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:146
+msgid "One"
+msgstr "Una"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:147
+msgid "Two"
+msgstr "Dos"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:148
+msgid "Three"
+msgstr "Tres"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:155
+msgid "Hide Bottom Cart"
+msgstr "Ocultar botón del carrito"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:156
+msgid ""
+"Disable bottom cart on items page. Users can manage items using WooCommerce "
+"mini cart."
+msgstr ""
+"Desactivar el carrito inferior en la página de artículos. Los usuarios "
+"pueden administrar artículos usando el mini carrito de WooCommerce."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:168
+msgid "Usability Tweaks"
+msgstr "Ajustes de usabilidad"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:174
+msgid "Sticky Categories"
+msgstr "Fijar categorias"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:175
+msgid "Make the categories area stick to its position while scrolling."
+msgstr ""
+"Haga que el área de categorías se mantenga en su posición mientras se "
+"desplaza."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:182
+msgid "Show Items Count"
+msgstr "Mostrar recuento de artículos"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:183
+msgid "Displays the number of items available for the category."
+msgstr "Muestra el número de elementos disponibles para la categoría."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:190
+msgid "Food Item Image"
+msgstr "Imagen de artículo alimenticio"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:191
+msgid "Please select how would you like to show the item images on frontend."
+msgstr ""
+"Seleccione cómo le gustaría mostrar las imágenes del artículo en la interfaz."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:196
+msgid "Medium Image"
+msgstr "Imagen mediana"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:197
+msgid "Small Image"
+msgstr "Imagen pequeña"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:198
+msgid "Hide Image Completely"
+msgstr "Ocultar imagen completamente"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:205
+msgid "Enable Lazy Load"
+msgstr "Habilitar carga diferida"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:206
+msgid ""
+"Item image will be loaded once you scroll to it. Loads your items page "
+"faster."
+msgstr ""
+"La imagen del artículo se cargará una vez que se desplace hasta ella. Carga "
+"su página de artículos más rápido."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:213
+msgid "Enable Popup from Title"
+msgstr "Habilitar ventana emergente desde el título"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:214
+msgid "If enabled popup can be opened by clicking on item title or image."
+msgstr ""
+"Si está habilitado, la ventana emergente se puede abrir haciendo clic en el "
+"título o la imagen del elemento."
+
+#: includes/admin/settings/class-wfs-settings-styling.php:221
+msgid "Show Image in Popup"
+msgstr "Mostrar imagen en ventana emergente"
+
+#: includes/admin/settings/class-wfs-settings-styling.php:222
+msgid "Display item image/gallery in popup."
+msgstr "Muestra la imagen / galería del elemento en una ventana emergente."
+
+#: includes/admin/settings/class-wfs-settings-advanced.php:71
+msgid "Advanced Settings"
+msgstr "Ajustes avanzados"
+
+#: includes/admin/settings/class-wfs-settings-advanced.php:77
+msgid "Other Product Types"
+msgstr "Otro tipo de productos"
+
+#: includes/admin/settings/class-wfs-settings-advanced.php:78
+msgid ""
+"Keep other product options like <i>Grouped</i>, <i>External</i>, <i>"
+"Virtual</i> etc."
+msgstr ""
+"Mantenga otras opciones de productos como <i>Grouped</i>, <i>External</i>, "
+"<i>Virtual</i> etc."
+
+#: includes/admin/settings/class-wfs-settings-advanced.php:85
+msgid "Purge Settings !!"
+msgstr "Configuración de purga !!"
+
+#: includes/admin/settings/class-wfs-settings-advanced.php:86
+msgid "Remove Food Store data when plugin is deactivated."
+msgstr ""
+"Elimina los datos de la tienda de alimentos cuando el complemento está "
+"desactivado."
+
+#: includes/admin/class-wfs-admin-assets.php:74
+msgid "FoodStore"
+msgstr "Tienda de comidas"
+
+#: includes/admin/class-wfs-admin-settings.php:74
+msgid "Your settings have been saved."
+msgstr "Su configuración ha sido guardada."
+
+#: includes/admin/class-wfs-admin-settings.php:513
+msgid "Select a page&hellip;"
+msgstr "Seleccione una página&hellip;"
+
+#: includes/admin/class-wfs-admin.php:82
+msgid "Service Time"
+msgstr "Tiempo de servicio"
+
+#: includes/admin/views/html-product-data-food-options.php:17
+msgid "Variation Pricing Label"
+msgstr "Etiqueta de precio de variación"
+
+#: includes/admin/views/html-product-data-food-options.php:20
+msgid "Customized text to display on price selection label."
+msgstr ""
+"Texto personalizado para mostrar en la etiqueta de selección de precios."
+
+#: includes/admin/views/html-product-data-food-options.php:26
+msgid "Food Type"
+msgstr "Tipo de comida"
+
+#: includes/admin/views/html-product-data-food-options.php:28
+msgid "Please select"
+msgstr "Elija porfavor"
+
+#: includes/admin/views/html-product-data-food-options.php:29
+msgid "Vegetarian"
+msgstr "Vegetariano"
+
+#: includes/admin/views/html-product-data-food-options.php:30
+msgid "Non Vegiterian"
+msgstr "No vegetariano"
+
+#: includes/admin/views/html-product-data-food-options.php:40
+msgid "Disable Instructions"
+msgstr "Desactivar instrucciones"
+
+#: includes/admin/views/html-admin-settings.php:46
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: includes/class-wfs-frontend.php:206
+msgid "Special Note"
+msgstr "Nota especial"
+
+#: includes/class-wfs-frontend.php:283
+msgid "Choose Price Option"
+msgstr "Elija la opción de precio"
+
+#: includes/wfs-core-functions.php:98
+msgid "Add"
+msgstr "Añadir"
+
+#: includes/wfs-core-functions.php:108
+msgid "Add To Cart"
+msgstr "Añadir al carrito"
+
+#: includes/wfs-core-functions.php:118
+msgid "Update Cart"
+msgstr "Actualizar carrito"
+
+#: includes/wfs-core-functions.php:128
+msgid "Please wait"
+msgstr "Porfavor espere"
+
+#: includes/wfs-core-functions.php:138
+msgid "Clear all"
+msgstr "Limpiar todo"
+
+#: includes/wfs-core-functions.php:147
+msgid "Your cart is empty"
+msgstr "Tu carrito está vacío"
+
+#: includes/wfs-core-functions.php:175
+msgid ""
+"<span class=\"wfs-service-type\">%1s</span> at <span class=\"wfs-service-"
+"time\">%2s</span> <a class=\"wfs-change-service\" href=\"%3s\">Change?</a>"
+msgstr ""
+"<span class=\"wfs-service-type\">%1s</span> at <span class=\"wfs-service-"
+"time\">%2s</span> <a class=\"wfs-change-service\" href=\"%3s\">Cambiar?</a>"
+
+#: includes/class-wfs-install.php:73
+msgid "View FoodStore settings"
+msgstr "Ver configuración de la tienda"
+
+#: includes/class-wfs-install.php:73
+msgid "Settings"
+msgstr "Conifguraciones"
+
+#: includes/class-wfs-taxonomies.php:43
+msgctxt "Taxonomy General Name"
+msgid "Addons"
+msgstr "Complement"
+
+#: includes/class-wfs-taxonomies.php:44
+msgctxt "Taxonomy Singular Name"
+msgid "Addon"
+msgstr "Añadir"
+
+#: includes/class-wfs-taxonomies.php:45
+msgid "Addons"
+msgstr "Complementos"
+
+#: includes/class-wfs-taxonomies.php:46
+msgid "All Addons"
+msgstr "Todos los complementos"
+
+#: includes/class-wfs-taxonomies.php:47
+msgid "Parent Addon"
+msgstr "Complemento padre"
+
+#: includes/class-wfs-taxonomies.php:48
+msgid "Parent Addon:"
+msgstr "Complemento padre:"
+
+#: includes/class-wfs-taxonomies.php:49
+msgid "New Addon Name"
+msgstr "Nuevo complemento nombre"
+
+#: includes/class-wfs-taxonomies.php:50
+msgid "Add New Addon"
+msgstr "Añadir un nuevo complemento"
+
+#: includes/class-wfs-taxonomies.php:51
+msgid "Edit Addon"
+msgstr "Editar complemento"
+
+#: includes/class-wfs-taxonomies.php:52
+msgid "Update Addon"
+msgstr "Actualizar complemento"
+
+#: includes/class-wfs-taxonomies.php:53
+msgid "View Addon"
+msgstr "Ver complemento"
+
+#: includes/class-wfs-taxonomies.php:54
+msgid "Separate addons with commas"
+msgstr "Separe los complementos con comas"
+
+#: includes/class-wfs-taxonomies.php:55
+msgid "Add or remove addons"
+msgstr "Añadir o eliminar complementos"
+
+#: includes/class-wfs-taxonomies.php:56
+msgid "Choose from the most used"
+msgstr "Elige entre los más usados"
+
+#: includes/class-wfs-taxonomies.php:57
+msgid "Popular Addons"
+msgstr "Complementos populares"
+
+#: includes/class-wfs-taxonomies.php:58
+msgid "Search Addons"
+msgstr "Buscar complementos"
+
+#: includes/class-wfs-taxonomies.php:59
+msgid "Not Found"
+msgstr "No encontrado"
+
+#: includes/class-wfs-taxonomies.php:60
+msgid "No addons"
+msgstr "Sin complementos"
+
+#: includes/class-wfs-taxonomies.php:61
+msgid "Addons list"
+msgstr "Lista de complementos"
+
+#: includes/class-wfs-taxonomies.php:62
+msgid "Addons list navigation"
+msgstr "Navegación de la lista de complementos"
+
+#: templates/content-listing-details.php:38
+#: templates/single-product/add-cart-button.php:25
+msgid "Wait..."
+msgstr "Espere..."
+
+#: templates/content-search.php:22
+msgid "Search dishes.."
+msgstr "Buscar platos .."
+
+#: templates/cart/cart-contents.php:69
+msgid "Special Note : %s"
+msgstr "Nota especial : %s"
+
+#: templates/cart/wfs-cart.php:40
+msgid "Order Details"
+msgstr "Detalles del pedido"
+
+#: templates/cart/wfs-cart.php:81
+msgid "Your Orders (%s)"
+msgstr "Tus pedidos (%s)"
+
+#: templates/cart/wfs-cart.php:83
+msgid "Your Order"
+msgstr "Tu pedido"
+
+#: templates/cart/wfs-cart.php:93 templates/cart/wfs-cart.php:104
+msgid "Total:&nbsp;"
+msgstr "Total:"
+
+#: templates/cart/wfs-cart.php:98
+msgid "Continue"
+msgstr "Continuar"
+
+#: templates/single-product/add-to-cart/addons.php:85
+msgid "Special notes if any.. eg: Need extra sauce.."
+msgstr "Algún comentario sobre tu pedido?"
+
+#: templates/services/service-types.php:42
+#: templates/services/service-types.php:56
+msgid "Select %1s Time"
+msgstr "Seleccione %1s tiempo"
+
+#: templates/services/service-modal.php:23
+msgid "Your Order Settings"
+msgstr "Configuración de su pedido"
+
+#: templates/services/service-modal.php:38
+msgid "Update"
+msgstr "Actualizar"

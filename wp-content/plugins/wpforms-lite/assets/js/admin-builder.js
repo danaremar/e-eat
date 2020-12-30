@@ -77,8 +77,6 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 					},
 				} );
 			}
-
-			app.initSomeFieldOptions();
 		},
 
 		/**
@@ -205,10 +203,12 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 				useBootstrap: false,
 				theme: 'modern',
 				boxWidth: '400px',
-				animateFromElement: false
+				animateFromElement: false,
 			};
 
 			app.dropdownField.init();
+
+			app.initSomeFieldOptions();
 		},
 
 		/**
@@ -4848,8 +4848,10 @@ var WPFormsBuilder = window.WPFormsBuilder || ( function( document, window, $ ) 
 		 */
 		toggleAllOptionGroups: function( $context ) {
 
+			$context = $context || $builder || $( '#wpforms-builder' ) || $( 'body' );
+
 			if ( ! $context ) {
-				$context = $builder;
+				return;
 			}
 
 			// Show a toggled bodies.
