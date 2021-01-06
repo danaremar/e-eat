@@ -170,4 +170,14 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 	.wclp_mail_address{
 		background: <?php echo $location_box_background_color; ?>; 
 	}	
+	@media screen and (max-width: 500px) {
+	.wclp_location_box2{
+		border-left: <?php echo $location_box_border_size; ?> solid <?php echo $location_box_border_color; ?> !important;
+		border-top: 0 !important;
+	}
+	.wclp_location_box{
+		display: block;
+	    width: 100%;
+	}
+	}
 </style>

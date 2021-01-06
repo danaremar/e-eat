@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Advanced Local Pickup for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 05:09+0000\n"
-"PO-Revision-Date: 2020-12-24 10:04+0000\n"
+"PO-Revision-Date: 2021-01-06 04:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.0; wp-5.6-RC5-49768"
+"X-Loco-Version: 2.5.0; wp-5.7-alpha-49931"
 
 #: include/views/wclp_locations_tab.php:63
 msgid " Get to the Advanced Local Pickup Pro"
@@ -21,9 +21,9 @@ msgstr ""
 
 #: include/views/wclp-edit-location-form.php:278
 #: include/views/wclp-edit-location-form.php:391
-#: include/views/wclp_pickup_location_instruction_preview.php:173
-#: templates/emails/pickup-instruction.php:115
-#: templates/myaccount/pickup-instruction.php:115
+#: include/views/wclp_pickup_location_instruction_preview.php:192
+#: templates/emails/pickup-instruction.php:134
+#: templates/myaccount/pickup-instruction.php:134
 #: templates/emails/plain/pickup-instruction.php:115
 #| msgid " to"
 msgid " To"
@@ -31,27 +31,12 @@ msgstr "עד"
 
 #: include/views/wclp-edit-location-form.php:298
 msgid "12 hour"
-msgstr ""
-"12 שעות\n"
+msgstr "12 שעות"
 
 #: include/views/wclp-edit-location-form.php:297
 msgid "24 hour"
 msgstr ""
 "24 שעות\n"
-
-#: woo-advanced-local-pickup.php:510
-#, php-format
-msgid ""
-"<strong>Note:</strong> - If you use the custom order status, when you "
-"deactivate the plugin, you must register the order status, otherwise these "
-"orders will not display on your orders admin. You can find more information "
-"and the code <a href=\"%s\" target=\"blank\">snippet</a> to use in functions."
-"php here."
-msgstr ""
-"שימו לב - אם אתם משתמש בסטטוסים מותאמים אישית, כאשר אתם מסירים את התוסף, יש "
-"לרשום את הסטטוסים ידנית כדי שהההזמנות שמסומנות בסטטוסים האלו יוצגו במסך "
-"ההזמנות. תוכל למצוא מידע נוסף ואת הקוד לשימוש בקובץ functions.php בלינק <a "
-"href=\"%s\" target=\"blank\">הבא</a>.\n"
 
 #: include/views/wclp_locations_tab.php:53
 msgid "Add Location "
@@ -139,7 +124,7 @@ msgid "Content line height"
 msgstr ""
 "גובה שורת התוכן\n"
 
-#: include/views/wclp_setting_tab.php:55
+#: include/views/wclp_setting_tab.php:51
 msgid "Custom Order Statuses"
 msgstr ""
 "סטטוסים להזמנה בהתאמה אישית\n"
@@ -153,21 +138,24 @@ msgid "Customer View"
 msgstr ""
 "תצוגת לקוח\n"
 
-#: include/views/wclp_setting_tab.php:157
+#: include/views/wclp_setting_tab.php:160
+#| msgid ""
+#| "Customize  the pickup Instructions display on the  order emails and my-"
+#| "account."
 msgid ""
-"Customize  the pickup Instructions display on the  order emails and my-"
+"Customize the pickup Instructions display on the  order emails and my-"
 "account."
 msgstr ""
 "התאם אישית את הוראות האיסוף המוצגות בדוא\"ל ההזמנה ובחשבון שלי.\n"
 
-#: include/views/wclp_setting_tab.php:93 include/views/wclp_setting_tab.php:134
+#: include/views/wclp_setting_tab.php:163
+msgid "Customizer"
+msgstr ""
+"התאמה אישית\n"
+
+#: include/views/wclp_setting_tab.php:89 include/views/wclp_setting_tab.php:130
 msgid "Dark Font"
 msgstr "גופן כהה"
-
-#: include/views/wclp-edit-location-form.php:445
-msgid "DELETE LOCATION"
-msgstr ""
-"מחק את המיקום\n"
 
 #: include/views/wclp-edit-location-form.php:292
 msgid "Display Time Format"
@@ -178,12 +166,12 @@ msgstr ""
 msgid "Documentation"
 msgstr "תיעוד"
 
-#: include/views/wclp_setting_tab.php:99 include/views/wclp_setting_tab.php:140
+#: include/views/wclp_setting_tab.php:95 include/views/wclp_setting_tab.php:136
 msgid "edit email"
 msgstr ""
 "ערוך דוא\"ל\n"
 
-#: include/views/wclp-edit-location-form.php:14
+#: include/views/wclp-edit-location-form.php:13
 msgid "Edit Pickup Location"
 msgstr ""
 "ערוך את נקודת האיסוף\n"
@@ -258,12 +246,7 @@ msgstr ""
 "אם אתה נהנה מהתוסף איסוף עצמי, אנא הקדש דקה לשתף את החוויה שלך עם משתמשים "
 "אחרים\n"
 
-#: include/views/wclp_setting_tab.php:160
-msgid "Launch Customizer"
-msgstr ""
-"הפעל התאמה אישית\n"
-
-#: include/views/wclp_setting_tab.php:92 include/views/wclp_setting_tab.php:133
+#: include/views/wclp_setting_tab.php:88 include/views/wclp_setting_tab.php:129
 msgid "Light Font"
 msgstr "גופן קל"
 
@@ -276,20 +259,20 @@ msgid "Local Pickup section heading text"
 msgstr ""
 "כותרת למקטע איסוף עצמי\n"
 
-#: include/views/wclp-edit-location-form.php:36
+#: include/views/wclp-edit-location-form.php:35
 msgid "Location Name"
 msgstr ""
 "שם נקודת האיסוף\n"
 
-#: include/wc-local-pickup-admin.php:1287
+#: include/wc-local-pickup-admin.php:1233
 msgid "Mark order as picked up"
 msgstr "סמן את ההזמנה נאספה ע״י הלקוח"
 
-#: include/wc-local-pickup-admin.php:1273
+#: include/wc-local-pickup-admin.php:1219
 msgid "Mark order as ready for pickup"
 msgstr "סמן הזמנה כמוכנה לאיסוף עצמי"
 
-#: include/views/wclp-edit-location-form.php:20
+#: include/views/wclp-edit-location-form.php:19
 msgid "Name & Special Instructions"
 msgstr ""
 "שם והוראות מיוחדות\n"
@@ -304,7 +287,7 @@ msgid "Order received page"
 msgstr "עמוד אישור הזמנה"
 
 #: include/wc-local-pickup-admin.php:381 include/wc-local-pickup-admin.php:412
-#: include/views/wclp_setting_tab.php:114
+#: include/views/wclp_setting_tab.php:110
 msgid "Picked up"
 msgstr "נאספה"
 
@@ -347,7 +330,7 @@ msgstr ""
 msgid "Pickup Instruction"
 msgstr "הוראות איסוף"
 
-#: include/views/wclp_setting_tab.php:156
+#: include/views/wclp_setting_tab.php:150
 msgid "Pickup Instructions Display"
 msgstr ""
 "תצוגת הוראות איסוף\n"
@@ -359,6 +342,7 @@ msgstr ""
 
 #: include/wc-local-pickup-admin.php:121 include/wc-local-pickup-admin.php:133
 #: include/wc-local-pickup-admin.php:134
+#: include/views/wclp-edit-location-form.php:13
 #: include/views/wclp_locations_tab.php:14
 msgid "Pickup Locations"
 msgstr "נקודות איסוף"
@@ -397,7 +381,7 @@ msgid "Ready for Pickup"
 msgstr ""
 "מוכנה לאיסוף\n"
 
-#: include/views/wclp_setting_tab.php:73
+#: include/views/wclp_setting_tab.php:69
 msgid "Ready for pickup"
 msgstr ""
 "מוכן לאיסוף\n"
@@ -415,7 +399,7 @@ msgstr "דוא\"ל לסטטוס הזמנה מוכנה לאיסוף נשלח לל
 msgid "Ready for Pickup order status email"
 msgstr "אימייל לסטטוס הזמנה מוכנה לאיסוף"
 
-#: include/views/wclp-edit-location-form.php:23
+#: include/views/wclp-edit-location-form.php:22
 #: include/views/wclp-edit-location-form.php:60
 #: include/views/wclp-edit-location-form.php:178
 msgid "Save & close"
@@ -438,7 +422,7 @@ msgid ""
 msgstr ""
 "בחר פורמט זמן לתצוגת שעות הפעילות\n"
 
-#: include/views/wclp_setting_tab.php:97 include/views/wclp_setting_tab.php:138
+#: include/views/wclp_setting_tab.php:93 include/views/wclp_setting_tab.php:134
 msgid "Send Email"
 msgstr "שלח אימייל"
 
@@ -476,7 +460,7 @@ msgstr ""
 "הרחבת שיטת המשלוח לאיסוף עצמי של ווקומרס ויצירת סדר הזמנות ייעודי להזמות "
 "איסוף עצמי."
 
-#: include/views/wclp-edit-location-form.php:36
+#: include/views/wclp-edit-location-form.php:35
 msgid "The location name for your business location."
 msgstr ""
 "שם נקודת האיסוף של מיקום העסק שלך.\n"
@@ -516,6 +500,11 @@ msgstr ""
 #: include/views/wclp-edit-location-form.php:307
 msgid "Work Hours"
 msgstr "שעות עבודה"
+
+#: include/views/wclp-edit-location-form.php:39
+msgid "you must add location name and save to proceed"
+msgstr ""
+"עליך להוסיף שם מיקום ולשמור כדי להמשיך\n"
 
 #: include/wc-local-pickup-admin.php:956
 msgid "You will receive an email when your order is ready for pickup."

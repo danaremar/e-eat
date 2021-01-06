@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Delivery Drivers for WooCommerce\n"
-"POT-Creation-Date: 2020-08-16 12:32-0400\n"
-"PO-Revision-Date: 2020-08-16 12:32-0400\n"
+"POT-Creation-Date: 2020-12-26 20:07-0500\n"
+"PO-Revision-Date: 2020-12-26 20:07-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: delivery-drivers-for-woocommerce.php\n"
@@ -19,16 +19,33 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: admin/class-ddwc-admin.php:96 admin/ddwc-metaboxes.php:24
 #: admin/ddwc-woocommerce-driver-ratings.php:40
 msgid "Delivery Driver"
 msgstr ""
 
-#: admin/class-ddwc-admin.php:271
+#: admin/class-ddwc-admin.php:263
+msgid "Change status to driver assigned"
+msgstr ""
+
+#: admin/class-ddwc-admin.php:264
+msgid "Change status to out for delivery"
+msgstr ""
+
+#: admin/class-ddwc-admin.php:265
+msgid "Change status to order returned"
+msgstr ""
+
+#: admin/class-ddwc-admin.php:275
 #, php-format
 msgid "Set %1$s as driver"
+msgstr ""
+
+#: admin/class-ddwc-admin.php:305 admin/class-ddwc-admin.php:319
+#: admin/class-ddwc-admin.php:333
+msgid "That's what happened by bulk edit:"
 msgstr ""
 
 #: admin/ddwc-dashboard-shortcode.php:105
@@ -220,7 +237,7 @@ msgstr ""
 msgid "Available"
 msgstr ""
 
-#: admin/ddwc-functions.php:404
+#: admin/ddwc-functions.php:409
 msgid "edit"
 msgstr ""
 
@@ -443,6 +460,10 @@ msgstr ""
 
 #: delivery-drivers-for-woocommerce.php:91
 msgid "Settings"
+msgstr ""
+
+#: delivery-drivers-for-woocommerce.php:133
+msgid "Orders"
 msgstr ""
 
 #: delivery-drivers-for-woocommerce.php:134

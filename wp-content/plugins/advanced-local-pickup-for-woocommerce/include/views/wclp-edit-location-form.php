@@ -2,7 +2,6 @@
 $location_id = isset( $_REQUEST['id'] ) ? $_REQUEST['id'] : '0';
 $location = array();
 $location = wc_local_pickup()->admin->get_data_byid($location_id);
-
 ?>
 <section class="pickup-location-setting">
 	<div class="location-setting">
@@ -11,7 +10,7 @@ $location = wc_local_pickup()->admin->get_data_byid($location_id);
 				<tbody>
 					<tr valign="top">
 						<td>
-							<h3 style=""><?php _e( 'Edit Pickup Location', 'advanced-local-pickup-for-woocommerce' ); ?></h3>
+							<h3 style=""><a href="<?php echo admin_url().'admin.php?page=local_pickup&tab=locations';  ?>" class="link decoration"><?php _e( 'Pickup Locations', 'advanced-local-pickup-for-woocommerce' ); ?></a> > <?php _e( 'Edit Pickup Location', 'advanced-local-pickup-for-woocommerce' ); ?></h3>
 						</td>
 					</tr>
 				</tbody>
@@ -37,6 +36,7 @@ $location = wc_local_pickup()->admin->get_data_byid($location_id);
 							<td class="forminp">                                            
 								<fieldset>
 									<input class="input-text regular-input " type="text" name="wclp_store_name" id="wclp_store_name" style="" value="<?php if(isset( $location->store_name )) {echo stripslashes($location->store_name);} ?>" placeholder="">
+									<span class="alp_error_msg" style="display:none;"><?php _e( 'you must add location name and save to proceed', 'advanced-local-pickup-for-woocommerce' ); ?></span>
 								</fieldset>
 							</td>
 						</tr>
@@ -79,12 +79,12 @@ $location = wc_local_pickup()->admin->get_data_byid($location_id);
 					if(!empty( $location->store_address_2 )) {echo ', ';echo $location->store_address_2;} 
 					if(!empty( $location->store_city )) {echo ', ';echo $location->store_city;} 
 					if( (class_exists('Advanced_local_pickup_PRO') && isset( $location->store_display_country ) && $location->store_display_country != '1')) {
-						if(!empty($state)){echo ', ';echo WC()->countries->get_states( $country )[$state];}
+						if(!empty($state) && !empty( $location->store_name )){echo ', ';echo WC()->countries->get_states( $country )[$state];}
 					}
 					
 					if(!empty( $location->store_postcode )){echo ' - ';echo $location->store_postcode;}
 					if( (class_exists('Advanced_local_pickup_PRO') && isset( $location->store_display_country ) && $location->store_display_country != '1') || !isset( $location->store_display_country ) ) {
-						if($country){echo ', ';echo WC()->countries->countries[$country].'.';}
+						if($country && !empty( $location->store_name )){echo ', ';echo WC()->countries->countries[$country].'.';}
 					} ?>
                 </span>
 			</div>
@@ -185,7 +185,7 @@ $location = wc_local_pickup()->admin->get_data_byid($location_id);
                 <span class="heading-subtitle">
 				<?php
 					$store_days = isset($location->store_days) ? unserialize($location->store_days) : get_option('wclp_store_days');
-					if(!empty($store_days)) {
+					if(!empty($store_days) && !empty( $location->store_name )) {
 						$all_days = array(
 						'sunday' => __( 'Sunday', 'default' ),
 						'monday' => __( 'Monday', 'default'),
@@ -441,9 +441,6 @@ $location = wc_local_pickup()->admin->get_data_byid($location_id);
 				</table>
 			</div>
 			<?php do_action('wclp_add_setting_html_hook', $location);?>
-            <?php if(class_exists( 'Advanced_local_pickup_PRO' ) && isset( $location->id ) && $location->id > 0 ) { ?>
-            <span id="<?php echo $location->id;?>" class="location-delete  delete-btn"><a id="<?php echo $location->id;?>" href="admin.php?page=local_pickup&tab=locations" class="link location-delete" ><?php _e( 'DELETE LOCATION', 'advanced-local-pickup-for-woocommerce' ); ?></a></span>
-            <?php } ?>
 		</form>
 	</div>
 </section>

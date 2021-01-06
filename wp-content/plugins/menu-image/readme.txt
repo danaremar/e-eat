@@ -89,6 +89,10 @@ Check this article in the following [link](https://www.wpmenuimage.com/knowledge
 
 == Changelog ==
 
+### 3.0.2 ###
+* Fix - Load Dashicons when the user isn't logged in
+* Fix - General improvments
+
 ### 3.0.1 ###
 * New - Add RTL CSS in Admin settings
 * Fix - Image size settings wasn't saving

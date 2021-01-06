@@ -2,7 +2,7 @@
 
 /**
  * @package Menu_Image
- * @version 3.0.1
+ * @version 3.0.2
  * @licence GPLv2
  */
 /*
@@ -10,14 +10,14 @@ Plugin Name: Menu Image
 Plugin URI: https://www.wpmenuimage.com
 Description: Improve your navigation menu items with images, logos, icons, buttons.
 Author: Rui Guerreiro
-Version: 3.0.1
+Version: 3.0.2
 Author URI: https://www.wpmenuimage.com
 * License: GPLv2
 */
 if ( !defined( 'ABSPATH' ) ) {
     die;
 }
-define( 'MENU_IMAGE_VERSION', '3.0.1' );
+define( 'MENU_IMAGE_VERSION', '3.0.2' );
 define( 'MENU_IMAGE_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MENU_IMAGE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 /**
@@ -988,6 +988,7 @@ class WP_Menu_Image
             MENU_IMAGE_VERSION
         );
         wp_enqueue_style( 'menu-image' );
+        wp_enqueue_style( 'dashicons' );
     }
     
     public function wp_menu_image_fontawesome_admin_notice()

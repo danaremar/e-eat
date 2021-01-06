@@ -22,7 +22,7 @@
     padding-left: 10px;
 }
 
-.menu-image-title.menu-image-title-above, .menu-image-title.menu-image-title-below {
+.menu-image-title.menu-image-title-above, .menu-image-title.menu-image-title-below, .menu-image-title-below, .menu-image-title-above {
     text-align: center;
     display: block;
 }
@@ -97,4 +97,7 @@ ul li.menu-item > .menu-image-title-above.menu-link, ul li.menu-item > .menu-ima
     border-radius: 25px;
     padding: 1px 6px 3px 5px;
     text-align: center;
+}
+.menu-image-title-before.elementor-item, .menu-image-title-after.elementor-item, .menu-image-title-above.elementor-item , .menu-image-title-below.elementor-item {
+    display: inline-grid;
 }

@@ -3,11 +3,7 @@
 $data = wc_local_pickup()->admin->get_data();
 $location_id = get_option('location_defualt', min($data)->id);
 
-foreach($data as $value){
-	if($value->id == $location_id) {
-		$location = $value;
-	}
-}
+$location = wc_local_pickup()->admin->get_data_byid($location_id);
 
 $country_code = isset($location) ? $location->store_country : get_option('woocommerce_default_country');
 
@@ -35,7 +31,7 @@ foreach($store_days as $key => $val) {
 	}
 }
 		
-$wclp_default_time_format = isset($location) ? $location->store_time_format : '24';
+$wclp_default_time_format = isset($location->store_time_format) ? $location->store_time_format : '24';
 if($wclp_default_time_format == '12'){
 	foreach($w_day as $key=>$val){	
 		if(isset($val['wclp_store_hour'])){
@@ -111,6 +107,10 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 <?php if($hide_instruction_heading != 'yes') { ?>
 	<h2 class="local_pickup_email_title"><?php echo $location_box_heading; ?></h2>
 <?php } ?>
+
+<?php if(class_exists('Advanced_local_pickup_PRO')) {?>
+	<span style="color:<?php echo $location_box_font_color;?>;font-size: <?php echo $location_box_font_size; ?>;"><strong><?php _e('Products:', 'woocommerce'); ?></strong> <?php echo 'Product Name(SKU) x Qty'; ?></span>
+<?php } ?>
 <div class="wclp_mail_address">
 	<div class="wclp_location_box <?php if(!empty($new_array)){	echo 'wclp_location_box1'; }?>">
 		<?php if($hide_table_header != 'yes') { ?>
@@ -122,11 +122,30 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
             	<?php do_action('wclp_location_address_display_html', $location, $store_state, $store_country);?>
          <?php } else { ?>
          	 <div class="wclp_location_box_content">
-                <p class="wclp_pickup_adress_p"><?php if($location->store_name){ echo $location->store_name; }?></p>
-                <p class="wclp_pickup_adress_p"><?php if($location->store_address){echo ', ';echo $location->store_address;} if($location->store_address_2){echo', '; echo $location->store_address_2; }?></p>
-                <p class="wclp_pickup_adress_p"><?php if($location->store_address){ echo ', ';echo $location->store_city;} if($store_state != ''){ echo ', ';echo WC()->countries->get_states( $store_country )[$store_state];}if($store_country){echo ', '; echo WC()->countries->countries[$store_country];}  if($location->store_postcode){echo ', '; echo $location->store_postcode; }?></p>
-                <?php if($location->store_phone){ ?><p class="wclp_pickup_adress_p"><?php echo $location->store_phone;?></p><?php } ?>
-                <?php if($location->store_instruction){ ?><p class="wclp_pickup_adress_p"><?php echo $location->store_instruction;?></p><?php } ?>
+                <p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_name)){ echo $location->store_name;echo ', '; }?>
+				</p>
+                
+				<p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_address)){echo $location->store_address;if(!empty($location->store_address_2)){echo', ';}} 
+						if(!empty($location->store_address_2)){ echo $location->store_address_2; echo ', '; }
+					?>
+				</p>
+                
+				<p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_city)){echo $location->store_city;if($store_state != ''){echo ', ';}}
+						if($store_state != ''){ echo WC()->countries->get_states( $store_country )[$store_state];}if($store_country){echo ', ';}
+						if($store_country){ echo WC()->countries->countries[$store_country];if(!empty($location->store_postcode)){echo ', ';}} 
+						if(!empty($location->store_postcode)){ echo $location->store_postcode;}
+					?>
+				</p>
+                
+				<?php if(!empty($location->store_phone)){ ?>
+					<p class="wclp_pickup_adress_p"><?php echo $location->store_phone;?></p>
+				<?php } ?>
+				<?php if(!empty($location->store_instruction)){ ?>
+					<p class="wclp_pickup_adress_p"><?php echo $location->store_instruction;?></p>
+				<?php } ?>
             </div>
          <?php }?>
 	</div>				
@@ -175,6 +194,11 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 							
 					<?php 										
 					} }	
+				}
+				if(class_exists('Advanced_local_pickup_PRO')) {
+					if(!empty($location->store_holiday_message)){ ?>
+                    	<p class="wclp_pickup_adress_p"><?php echo $location->store_holiday_message;?></p>
+					<?php };
 				}
 			?>	
 		</div>		
@@ -231,5 +255,15 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 	}
 	.wclp_mail_address{
 		background: <?php echo $location_box_background_color; ?>; 
-	}	
+	}
+	@media screen and (max-width: 500px) {
+	.wclp_location_box2{
+		border-left: <?php echo $location_box_border_size; ?> solid <?php echo $location_box_border_color; ?> !important;
+		border-top: 0 !important;
+	}
+	.wclp_location_box{
+		display: block;
+	    width: 100%;
+	}
+	}
 </style>

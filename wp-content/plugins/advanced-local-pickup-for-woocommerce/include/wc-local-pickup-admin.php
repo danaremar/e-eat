@@ -68,7 +68,7 @@ class WC_Local_Pickup_admin {
 		
 		add_action( 'woocommerce_view_order', array( $this, 'add_location_address_detail_order' ), 10, 2 );
 		
-		add_action( 'woocommerce_order_details_after_order_table', array( $this, 'add_location_address_detail_order_received' ), 10, 2 );
+		add_action( 'woocommerce_order_details_before_order_table', array( $this, 'add_location_address_detail_order_received' ), 10, 2 );
 		
 		add_action( 'admin_footer', array( $this, 'footer_function'),1 );
 		
@@ -938,7 +938,7 @@ class WC_Local_Pickup_admin {
 		);
 		$settings = array(						
 			'wclp_show_pickup_instruction' => array(
-				'title'    => __( '', 'advanced-local-pickup-for-woocommerce' ),				
+				//'title'    => __( '', 'advanced-local-pickup-for-woocommerce' ),				
 				'id'       => 'wclp_show_pickup_instruction',
 				'css'      => 'min-width:50px;',
 				'default'  => '',
@@ -973,200 +973,146 @@ class WC_Local_Pickup_admin {
 		
 		$checked = '';
 		?>
-		<table class="form-table html-layout-2">
-			<tbody>
-            	<?php foreach( (array)$arrays as $id => $array ){
-					if($array['show']){	
-					?> 
-                <?php //if(!empty($array['title'])){ ?>               	
-                <tr valign="top" class="html2_title_row <?php echo $array['class']; ?>">
-					<?php if( !empty($array['title']) && $array['type'] != 'desc' ){ ?>										
-					<th><span class="row-label">
-						<label for=""><?php echo $array['title']?><?php if(isset($array['title_link'])){ echo $array['title_link']; } ?>
-							<?php if( isset($array['tooltip']) ){?>
-                            	<span class="woocommerce-help-tip tipTip" title="<?php echo $array['tooltip']?>"></span>
-                            <?php } ?>
-                        </label>
-                        <?php if( isset($array['desc_tip']) ){?>
-                            	<p class="description"><?php echo $array['desc_tip']?></p>
-                            <?php } ?>
-                        <?php if( isset( $array['type'] ) && $array['type'] == 'dropdown' ){?>
-                        	<?php
-								if( isset($array['multiple']) ){
-									$multiple = 'multiple';
-									$field_id = $array['multiple'];
-								} else {
-									$multiple = '';
-									$field_id = $id;
-								}
-							?>
-                        	<fieldset>
-								<select class="select select2" id="<?php echo $field_id?>" name="<?php echo $id?>" <?php echo $multiple;?> style="width:150px;"> <?php foreach((array)$array['options'] as $key => $val ){?>
-                                    	<?php
-											$selected = '';
-											if( isset($array['multiple']) ){
-												if (in_array($key, (array)$this->data->$field_id ))$selected = 'selected';
-											} else {
-												if( get_option($array['id']) == (string)$key )$selected = 'selected';
-											}
-                                        
-										?>
-										<option value="<?php echo $key?>" <?php echo $selected?> ><?php echo $val?></option>
-                                    <?php } ?><p class="description"><?php echo (isset($array['desc']))? $array['desc']: ''?></p>
-								</select>
-							</fieldset>
-                        <?php } ?></span>
-					</th>
+		
+		<?php foreach( (array)$arrays as $id => $array ){
+			if($array['show']){	
+			?> 
+		<?php if($array['type'] == 'dropdown'){ ?>               	
+			<tr valign="top" class="html2_title_row <?php echo $array['class']; ?>">
+				<?php if( !empty($array['title']) && isset($array['title'])){ ?>										
+				<th><span class="row-label">
+					<label for=""><?php echo $array['title']?><?php if(isset($array['title_link'])){ echo $array['title_link']; } ?>
+						<?php if( isset($array['tooltip']) ){?>
+							<span class="woocommerce-help-tip tipTip" title="<?php echo $array['tooltip']?>"></span>
+						<?php } ?>
+					</label>
+					<?php if( isset($array['desc_tip']) ){?>
+							<p class="description"><?php echo $array['desc_tip']?></p>
+						<?php } ?>
+					<?php if( isset( $array['type'] ) && $array['type'] == 'dropdown' ){?>
+						<?php
+							if( isset($array['multiple']) ){
+								$multiple = 'multiple';
+								$field_id = $array['multiple'];
+							} else {
+								$multiple = '';
+								$field_id = $id;
+							}
+						?>
+						<fieldset>
+							<select class="select select2" id="<?php echo $field_id?>" name="<?php echo $id?>" <?php echo $multiple;?> style="width:150px;"> <?php foreach((array)$array['options'] as $key => $val ){?>
+									<?php
+										$selected = '';
+										if( isset($array['multiple']) ){
+											if (in_array($key, (array)$this->data->$field_id ))$selected = 'selected';
+										} else {
+											if( get_option($array['id']) == (string)$key )$selected = 'selected';
+										}
+									
+									?>
+									<option value="<?php echo $key?>" <?php echo $selected?> ><?php echo $val?></option>
+								<?php } ?><p class="description"><?php echo (isset($array['desc']))? $array['desc']: ''?></p>
+							</select>
+						</fieldset>
+					<?php } ?></span>
+				</th>
+				<?php } ?>
+			</tr>
+		<?php }
+		if( !empty($array['title']) && $array['type'] == 'textarea' ){ ?>	             	
+		<tr valign="top" class="html2_title_row <?php echo $array['class']; ?>">
+			<th><span class="row-label">
+				<label for=""><?php echo $array['title']?><?php if(isset($array['title_link'])){ echo $array['title_link']; } ?>
+					<?php if( isset($array['tooltip']) ){?>
+						<span class="woocommerce-help-tip tipTip" title="<?php echo $array['tooltip']?>"></span>
 					<?php } ?>
-				</tr>
-                <?php if($array['type'] == 'dropdown') continue; ?>
-				<tr class="<?php echo $array['class'];?>">	
-					<td class="forminp"  <?php if($array['type'] == 'desc'){ ?> colspan=2 <?php } ?>>
-                    	<?php if( $array['type'] == 'checkbox' ){								
-																						
-								if(get_option($array['id'])){
-									$checked = 'checked';
-								} else{
-									$checked = '';
-								} 
-							
-							if(isset($array['disabled']) && $array['disabled'] == true){
-								$disabled = 'disabled';
-								$checked = '';
+				</label>
+				<?php if( isset($array['desc_tip']) ){?>
+						<p class="description"><?php echo $array['desc_tip']?></p>
+					<?php } ?>
+				</span>
+			</th>
+		</tr>
+		<tr valign="top" class="html2_title_row <?php echo $array['class']; ?>">
+			<td class="forminp"  <?php if($array['type'] == 'desc'){ ?> colspan=2 <?php } ?>>
+				<fieldset>
+					<textarea rows="4" cols="20" class="input-text regular-input" type="textarea" name="<?php echo $id?>" id="<?php echo $id?>" style="" placeholder="<?php if(!empty($array['placeholder'])){echo $array['placeholder'];} ?>"><?php echo stripslashes(get_option($array['id'],$array['default'])); ?></textarea>
+				</fieldset>
+			</td>
+		</tr>
+		<?php } ?>
+		<?php if($array['type'] != 'dropdown' && $array['type'] != 'textarea'){ ?>
+			<tr class="<?php echo $array['class'];?>">
+				<td class="forminp"  <?php if($array['type'] == 'desc'){ ?> colspan=2 <?php } ?>>
+					<?php if( $array['type'] == 'checkbox' ){								
+																					
+							if(get_option($array['id'])){
+								$checked = 'checked';
 							} else{
-								$disabled = '';
-							}							
-							?>
-						<?php if($array['class'] == 'toggle'){?>
-						<span class="mdl-list__item-secondary-action">
-							<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="<?php echo $id?>">
+								$checked = '';
+							} 
+						
+						if(isset($array['disabled']) && $array['disabled'] == true){
+							$disabled = 'disabled';
+							$checked = '';
+						} else{
+							$disabled = '';
+						}							
+						?>
+					<?php if($array['class'] == 'toggle'){?>
+					<span class="mdl-list__item-secondary-action">
+						<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="<?php echo $id?>">
+							<input type="hidden" name="<?php echo $id?>" value="0"/>
+							<input type="checkbox" id="<?php echo $id?>" name="<?php echo $id?>" class="mdl-switch__input" <?php echo $checked ?> value="1" <?php echo $disabled; ?>/>
+						</label><p class="description"><?php echo (isset($array['desc']))? $array['desc']: ''?></p>
+					</span>
+					<?php } else { ?>
+						<span class="checkbox">
+							<label class="checkbx-label" for="<?php echo $id?>">
 								<input type="hidden" name="<?php echo $id?>" value="0"/>
-								<input type="checkbox" id="<?php echo $id?>" name="<?php echo $id?>" class="mdl-switch__input" <?php echo $checked ?> value="1" <?php echo $disabled; ?>/>
+								<input type="checkbox" id="<?php echo $id?>" name="<?php echo $id?>" class="checkbox-input" <?php echo $checked ?> value="1" <?php echo $disabled; ?>/>
 							</label><p class="description"><?php echo (isset($array['desc']))? $array['desc']: ''?></p>
 						</span>
-						<?php } else { ?>
-							<span class="checkbox">
-								<label class="checkbx-label" for="<?php echo $id?>">
-									<input type="hidden" name="<?php echo $id?>" value="0"/>
-									<input type="checkbox" id="<?php echo $id?>" name="<?php echo $id?>" class="checkbox-input" <?php echo $checked ?> value="1" <?php echo $disabled; ?>/>
-								</label><p class="description"><?php echo (isset($array['desc']))? $array['desc']: ''?></p>
-							</span>
-						<?php } ?>
-						<?php } elseif( $array['type'] == 'textarea' ){ ?>
-									<fieldset>
-										<textarea rows="4" cols="20" class="input-text regular-input" type="textarea" name="<?php echo $id?>" id="<?php echo $id?>" style="" placeholder="<?php if(!empty($array['placeholder'])){echo $array['placeholder'];} ?>"><?php echo stripslashes(get_option($array['id'],$array['default'])); ?></textarea>
-									</fieldset>
-                        <?php }  elseif( $array['type'] == 'multiple_checkbox' ) { ?>
-							<?php
-								$op = 1;	
-								foreach((array)$array['options'] as $key => $val ){									
-										$multi_checkbox_data = get_option($id);
-										if(isset($multi_checkbox_data[$key]) && $multi_checkbox_data[$key] == 1){
-											$checked="checked";
-										} else{
-											$checked="";
-										}?>
-								<div class="wplp_multiple <?php echo $array['class']?>">
-									<span class="wplp_multiple_checkbox">
-										<label class="" for="<?php echo $key?>">
-											<input type="hidden" name="<?php echo $id?>[<?php echo $key?>]" value="0"/>
-											<input type="checkbox" id="<?php echo $key?>" name="<?php echo $id?>[<?php echo $key?>]" class=""  <?php echo $checked; ?> value="1"/>
-											<span class="multiple_label"><?php echo $val; ?></span>	
-											</br>
-										</label>																		
-									</span>
-								</div>								
-						<?php } 
-						
-						}
-						elseif( $array['type'] == 'pickup_day_time' ) { ?>
-						
-							<?php
-								$op = 1;	
-								foreach((array)$array['options'] as $key => $val ){									
-										
-										$multi_checkbox_data = get_option($id);										
-										if(isset($multi_checkbox_data[$key]['checked']) && $multi_checkbox_data[$key]['checked'] == 1){
-											$checked="checked";
-										} else{
-											$checked="";
-										}
-										
-										$send_time_array = array();										
-										for ( $hour = 0; $hour < 24; $hour++ ) {
-											for ( $min = 0; $min < 60; $min = $min + 30 ) {
-												$this_time = date( 'H:iA', strtotime( "$hour:$min" ) );
-												$send_time_array[ $this_time ] = $this_time;
-											}	
-										}
-										?>
-								<div class="wplp_pickup_duration">
-									<label class="" for="<?php echo $key?>">
-										<input type="checkbox" id="<?php echo $key?>" name="<?php echo $id?>[<?php echo $key?>][checked]" class="pickup_days_checkbox"  <?php echo $checked; ?> value="1"/>
-										<span class="pickup_days_lable"><?php echo $val; ?></span>	
-										<fieldset class="wclp_pickup_time_fieldset">
-											<select class="select wclp_pickup_time_select" name="<?php echo $id?>[<?php echo $key?>][wclp_store_hour]"> 
-												<option value="" ><?php _e('Select', 'woocommerce'); ?></option>
-												<?php foreach((array)$send_time_array as $key1 => $val1 ){ ?>
-												<option value="<?php echo $key1?>" <?php if(isset($multi_checkbox_data[$key]['wclp_store_hour']) && $multi_checkbox_data[$key]['wclp_store_hour'] == $key1){ echo 'selected'; }?>><?php echo $val1?></option>
-												<?php } ?>
-											</select>
-											<span> - </span>
-											<select class="select wclp_pickup_time_select" name="<?php echo $id?>[<?php echo $key?>][wclp_store_hour_end]">    <option value="" ><?php _e('Select', 'woocommerce'); ?></option>
-												<?php foreach((array)$send_time_array as $key2 => $val2 ){?>			
-													<option value="<?php echo $key2?>" <?php if(isset($multi_checkbox_data[$key]['wclp_store_hour_end']) && $multi_checkbox_data[$key]['wclp_store_hour_end'] == $key2){ echo 'selected'; }?>><?php echo $val2?></option>
-												<?php } ?>
-											</select>
-											<select class="select wclp_pickup_time_select" name="<?php echo $id?>[<?php echo $key?>][wclp_store_hour]"> 
-												<option value="" ><?php _e('Select', 'woocommerce'); ?></option>
-												<?php foreach((array)$send_time_array as $key1 => $val1 ){ ?>
-												<option value="<?php echo $key1?>" <?php if(isset($multi_checkbox_data[$key]['wclp_store_hour']) && $multi_checkbox_data[$key]['wclp_store_hour'] == $key1){ echo 'selected'; }?>><?php echo $val1?></option>
-												<?php } ?>
-											</select>
-											<span> - </span>
-											<select class="select wclp_pickup_time_select" name="<?php echo $id?>[<?php echo $key?>][wclp_store_hour_end]">    <option value="" ><?php _e('Select', 'woocommerce'); ?></option>
-												<?php foreach((array)$send_time_array as $key2 => $val2 ){?>			
-													<option value="<?php echo $key2?>" <?php if(isset($multi_checkbox_data[$key]['wclp_store_hour_end']) && $multi_checkbox_data[$key]['wclp_store_hour_end'] == $key2){ echo 'selected'; }?>><?php echo $val2?></option>
-												<?php } ?>
-											</select>
-										</fieldset>	
-									</label>																		
-								</div>												
-						<?php } 
-						
-						}
-						elseif( $array['type'] == 'single_select_country' ) { ?>
-						
-						<?php
-							$country_setting = get_option($id, get_option('woocommerce_default_country'));
-							if ( strstr( $country_setting, ':' ) ) {
-								$country_setting = explode( ':', $country_setting );
-								$country         = current( $country_setting );
-								$state           = end( $country_setting );
-							} else {
-								$country = $country_setting;
-								$state   = '*';
-							}
-							?>
+					<?php } ?>
+					<?php } elseif( $array['type'] == 'textarea' ){ ?>
 								<fieldset>
-									<select name="<?php echo esc_attr( $array['id'] ); ?>" style="" data-placeholder="<?php esc_attr_e( 'Choose a country / region&hellip;', 'woocommerce' ); ?>" aria-label="<?php esc_attr_e( 'Country / Region', 'woocommerce' ); ?>" class="wc-enhanced-select">
-										<?php WC()->countries->country_dropdown_options( $country, $state ); ?>
-									</select>
+									<textarea rows="4" cols="20" class="input-text regular-input" type="textarea" name="<?php echo $id?>" id="<?php echo $id?>" style="" placeholder="<?php if(!empty($array['placeholder'])){echo $array['placeholder'];} ?>"><?php echo stripslashes(get_option($array['id'],$array['default'])); ?></textarea>
 								</fieldset>
-						<?php }
-						else { ?>
-                                                    
-                        	<fieldset>
-                                <input class="input-text regular-input " type="text" name="<?php echo $id?>" id="<?php echo $id?>" style="" value="<?php echo get_option($array['id'], get_option($array['default']))?>" placeholder="<?php if(!empty($array['placeholder'])){echo $array['placeholder'];} ?>">
-                            </fieldset>
-                        <?php } ?>
-                        
-					</td>
-				</tr>
-			<?php } } ?>
-			</tbody>
-		</table>
-		<?php 
+					<?php }  elseif( $array['type'] == 'multiple_checkbox' ) { ?>
+						<?php
+							$op = 1;	
+							foreach((array)$array['options'] as $key => $val ){									
+									$multi_checkbox_data = get_option($id);
+									if(isset($multi_checkbox_data[$key]) && $multi_checkbox_data[$key] == 1){
+										$checked="checked";
+									} else{
+										$checked="";
+									}?>
+							<div class="wplp_multiple <?php echo $array['class']?>">
+								<span class="wplp_multiple_checkbox">
+									<label class="" for="<?php echo $key?>">
+										<input type="hidden" name="<?php echo $id?>[<?php echo $key?>]" value="0"/>
+										<input type="checkbox" id="<?php echo $key?>" name="<?php echo $id?>[<?php echo $key?>]" class=""  <?php echo $checked; ?> value="1"/>
+										<span class="multiple_label"><?php echo $val; ?></span>	
+										</br>
+									</label>																		
+								</span>
+							</div>								
+					<?php } 
+					
+					} else if($array['type'] == 'text') { ?>
+												
+						<fieldset>
+							<input class="input-text regular-input " type="text" name="<?php echo $id?>" id="<?php echo $id?>" style="" value="<?php echo get_option($array['id'], get_option($array['default']))?>" placeholder="<?php if(!empty($array['placeholder'])){echo $array['placeholder'];} ?>">
+						</fieldset>
+					<?php } ?>
+					
+				</td>
+			</tr>
+		<?php } ?>
+	<?php } } ?>
+	
+<?php 
 	}
 	
 	/*

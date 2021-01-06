@@ -64,11 +64,30 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
             	<?php do_action('wclp_location_address_display_html', $location, $store_state, $store_country);?>
          <?php } else { ?>
          	 <div class="wclp_location_box_content">
-                <p class="wclp_pickup_adress_p"><?php if($location->store_name){ echo $location->store_name; }?></p>
-                <p class="wclp_pickup_adress_p"><?php if($location->store_address){echo ', ';echo $location->store_address;} if($location->store_address_2){echo', '; echo $location->store_address_2; }?></p>
-                <p class="wclp_pickup_adress_p"><?php if($location->store_address){ echo ', ';echo $location->store_city;} if($store_state != ''){ echo ', ';echo WC()->countries->get_states( $store_country )[$store_state];}if($store_country){echo ', '; echo WC()->countries->countries[$store_country];}  if($location->store_postcode){echo ', '; echo $location->store_postcode; }?></p>
-                <?php if($location->store_phone){ ?><p class="wclp_pickup_adress_p"><?php echo $location->store_phone;?></p><?php } ?>
-                <?php if($location->store_instruction){ ?><p class="wclp_pickup_adress_p"><?php echo $location->store_instruction;?></p><?php } ?>
+                <p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_name)){ echo $location->store_name;echo ', '; }?>
+				</p>
+                
+				<p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_address)){echo $location->store_address;if(!empty($location->store_address_2)){echo', ';}} 
+						if(!empty($location->store_address_2)){ echo $location->store_address_2; echo ', '; }
+					?>
+				</p>
+                
+				<p class="wclp_pickup_adress_p">
+					<?php if(!empty($location->store_city)){echo $location->store_city;if($store_state != ''){echo ', ';}}
+						if($store_state != ''){ echo WC()->countries->get_states( $store_country )[$store_state];}if($store_country){echo ', ';}
+						if($store_country){ echo WC()->countries->countries[$store_country];if(!empty($location->store_postcode)){echo ', ';}} 
+						if(!empty($location->store_postcode)){ echo $location->store_postcode;}
+					?>
+				</p>
+                
+				<?php if(!empty($location->store_phone)){ ?>
+					<p class="wclp_pickup_adress_p"><?php echo $location->store_phone;?></p>
+				<?php } ?>
+				<?php if(!empty($location->store_instruction)){ ?>
+					<p class="wclp_pickup_adress_p"><?php echo $location->store_instruction;?></p>
+				<?php } ?>
             </div>
          <?php }?>
 	</div>				
@@ -119,8 +138,8 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 					} }	
 				}
 				if(class_exists('Advanced_local_pickup_PRO')) {
-					if($location->store_holiday_message){ ?>
-                    	<br><p class="wclp_pickup_adress_p"><?php echo $location->store_holiday_message;?></p>
+					if(!empty($location->store_holiday_message)){ ?>
+                    	<p class="wclp_pickup_adress_p"><?php echo $location->store_holiday_message;?></p>
 					<?php };
 				}
 			?>	
@@ -175,4 +194,14 @@ $location_box_background_color = $alp->get_option_value_from_array('pickup_instr
 	.wclp_mail_address{
 		background: <?php echo $location_box_background_color; ?>; 
 	}	
+	@media screen and (max-width: 500px) {
+	.wclp_location_box2{
+		border-left: <?php echo $location_box_border_size; ?> solid <?php echo $location_box_border_color; ?> !important;
+		border-top: 0 !important;
+	}
+	.wclp_location_box{
+		display: block;
+	    width: 100%;
+	}
+	}
 </style>

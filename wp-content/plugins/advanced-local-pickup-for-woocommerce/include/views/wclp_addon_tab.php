@@ -65,13 +65,13 @@ $pro_plugins = array(
 );
 
 $free_plugins = array(
-	0 => array(
+	/*0 => array(
 		'title' => 'Advanced Shipment Tracking',
 		'description' => 'Advanced Shipment Tracking (AST) for WooCommerce lets you add tracking information to orders and provides your customers an easy way to track their orders. AST provides powerful features that let WooCommerce shop owners to better manage and automate their post-shipping orders flow, reduce time spent on customer service and increase customer satisfaction..',
 		'image' => 'ast-icon.png',
 		'url' => 'https://wordpress.org/plugins/woo-advanced-shipment-tracking/',
 		'file' => 'woo-advanced-shipment-tracking/woocommerce-advanced-shipment-tracking.php'
-	),
+	),*/
 	1 => array(
 		'title' => 'Advanced Local Pickup',
 		'description' => 'Advanced Local Pickup lets you mark your WooCommerce order status as “Ready for Pickup” and adds the pickup instructions to the email sent to your customers.',
@@ -130,73 +130,102 @@ $free_plugins = array(
 		<section id="content_tab_addons" class="<?php if ( class_exists( 'Advanced_local_pickup_PRO' ) ) { ?>inner_tab_section<?php } ?>">			
 			
         	<div class="section-content">
-            
 				<div class="alp_row">
-                <?php if ( !class_exists( 'Advanced_local_pickup_PRO' ) ) { ?>
                	 <div class="alp_addon_section">
+				 	<?php if ( !class_exists( 'Advanced_local_pickup_PRO' ) ) { ?>
                         <div class="alp_col_inner">
-                            <div class="plugin_description">
-                                <h3 class="plugin_title">Advanced Local Pickup Pro</h3>
-                                <p>The Advanced Local Pickup Pro extends the free version and lets you set up multiple pickup locations, apply discounts for local pickup, display local pickup messages, split the business hours, allow customers to choose pickup location per product during checkout and more..</p>
-                                <?php 
-                                if ( is_plugin_active( 'advanced-local-pickup-pro/advanced-local-pickup-pro.php' ) ) { ?>
-                                    <button type="button" class="button button-disabled" disabled="disabled">Installed</button>
-                                <?php } else{ ?>
-                                    <a href="https://www.zorem.com/product/advanced-local-pickup-for-woocommerce/?utm_source=wp-admin&utm_medium=ALPPRO&utm_campaign=add-ons" class="install-now button-primary" target="blank">Get Addon</a>
-                                <?php } ?>								
-                            </div>
-							<div class="plugin_banner">
-                               	<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/alp-addon-banner.png" width="100%">						
+                            <div class="plugin_details">
+								<div class="plugin_logo">
+									<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/ALP-addon-icon.png" width="85px">						
+								</div>
+								<div class="plugin_description">
+									<h3 class="plugin_title">Advanced Local Pickup Pro</h3>
+									<p>The Advanced Local Pickup Pro extends the free version and lets you set up multiple pickup locations, apply discounts for local pickup, display local pickup messages, split the business hours, allow customers to choose pickup location per product during checkout and more..</p>
+									<?php 
+									if ( is_plugin_active( 'advanced-local-pickup-pro/advanced-local-pickup-pro.php' ) ) { ?>
+										<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
+									<?php } else{ ?>
+										<a href="https://www.zorem.com/product/advanced-local-pickup-for-woocommerce/?utm_source=wp-admin&utm_medium=ALPPRO&utm_campaign=add-ons" class="install-now button-primary" target="blank">Get Addon</a>
+									<?php } ?>					
+								</div>			
                             </div>
                         </div>
+					<?php } ?>
+					<div class="alp_col_inner">
+						<div class="plugin_details">
+							<div class="plugin_logo">
+								<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/ast-logo.png" width="150px" style="margin: 18px;">						
+							</div>
+							<div class="plugin_description">
+								<h3 class="plugin_title">Advanced Shipment Tracking</h3>
+								<p>Advanced Shipment Tracking (AST) for WooCommerce lets you add tracking information to orders and provides your customers an easy way to track their orders. AST provides powerful features that let WooCommerce shop owners to better manage and automate their post-shipping orders flow, reduce time spent on customer service and increase customer satisfaction..</p>
+								<?php 
+								if ( is_plugin_active( 'woo-advanced-shipment-tracking/woocommerce-advanced-shipment-tracking.php' ) ) { ?>
+									<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
+								<?php } else{ ?>
+									<a href="https://wordpress.org/plugins/woo-advanced-shipment-tracking/" class="install-now button-primary" target="blank">Install</a>
+								<?php } ?>					
+							</div>			
+						</div>
+					</div>
                     </div>
-                  <?php } ?>
 				</div>
 			</div>
-			<h2 class="addons_page_title">WooCommerce plugins by zorem</h2>	 
-			<div class="plugins_section free_plugin_section">
-				<?php foreach($pro_plugins as $plugin){ ?>
-					<div class="single_plugin">
-						<div class="free_plugin_inner">
-							<div class="plugin_image">
-								<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/<?php echo $plugin['image']; ?>">
-							</div>
-							<div class="plugin_description">
-								<h3 class="plugin_title"><?php echo $plugin['title']; ?></h3>
-								<p><?php echo $plugin['description']; ?></p>
-								<?php 
-								if ( is_plugin_active( $plugin['file'] ) ) { ?>
-									<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
-								<?php } else{ ?>
-									<a href="<?php echo $plugin['url']; ?>" class="install-now button-primary" target="blank">Get Addon</a>
-								<?php } ?>								
-							</div>
+			<div class="section-content wclp_tab_inner_container">
+				<table class="form-table header-table">
+					<tbody>
+						<tr valign="top" class="heading-box border_1">
+							<td>
+								<h2 class="addons_page_title"><?php _e( 'WooCommerce plugins by zorem', '' ); ?></h2>
+								<p class="description">Improve your store, automate your workflow and save time managing your store</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="plugins_section free_plugin_section">
+					<?php foreach($pro_plugins as $plugin){ ?>
+						<div class="single_plugin">
+							<div class="free_plugin_inner">
+								<div class="plugin_image">
+									<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/<?php echo $plugin['image']; ?>">
+								</div>
+								<div class="plugin_description">
+									<h3 class="plugin_title"><?php echo $plugin['title']; ?></h3>
+									<p><?php echo $plugin['description']; ?></p>
+									<?php 
+									if ( is_plugin_active( $plugin['file'] ) ) { ?>
+										<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
+									<?php } else{ ?>
+										<a href="<?php echo $plugin['url']; ?>" class="install-now button-primary" target="blank">Get Addon</a>
+									<?php } ?>								
+								</div>
+							</div>	
 						</div>	
-					</div>	
-				<?php } ?>						
-			</div>				
-			
-			<div class="plugins_section free_plugin_section">
-				<?php foreach($free_plugins as $plugin){ ?>
-					<div class="single_plugin">
-						<div class="free_plugin_inner">
-							<div class="plugin_image">
-								<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/<?php echo $plugin['image']; ?>">
-							</div>
-							<div class="plugin_description">
-								<h3 class="plugin_title"><?php echo $plugin['title']; ?></h3>
-								<p><?php echo $plugin['description']; ?></p>
-								<?php 
-								if ( is_plugin_active( $plugin['file'] ) ) { ?>
-									<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
-								<?php } else{ ?>
-									<a href="<?php echo $plugin['url']; ?>" class="install-now button-primary" target="blank">Install</a>
-								<?php } ?>								
-							</div>
+					<?php } ?>						
+				</div>				
+				
+				<div class="plugins_section free_plugin_section">
+					<?php foreach($free_plugins as $plugin){ ?>
+						<div class="single_plugin">
+							<div class="free_plugin_inner">
+								<div class="plugin_image">
+									<img src="<?php echo  wc_local_pickup()->plugin_dir_url()?>assets/images/<?php echo $plugin['image']; ?>">
+								</div>
+								<div class="plugin_description">
+									<h3 class="plugin_title"><?php echo $plugin['title']; ?></h3>
+									<p><?php echo $plugin['description']; ?></p>
+									<?php 
+									if ( is_plugin_active( $plugin['file'] ) ) { ?>
+										<button type="button" class="button button-disabled" disabled="disabled">Installed</button>
+									<?php } else{ ?>
+										<a href="<?php echo $plugin['url']; ?>" class="install-now button-primary" target="blank">Install</a>
+									<?php } ?>								
+								</div>
+							</div>	
 						</div>	
-					</div>	
-				<?php } ?>						
-			</div>		
+					<?php } ?>						
+				</div>
+			</div>	
 		</section>
         <section id="content_tab_license" class="inner_tab_section">
 			<?php do_action('wclp_license_tab_content_data_array'); ?>

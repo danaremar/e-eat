@@ -26,13 +26,9 @@
 						</tr>
 					</tbody>
 				</table>
-				<table class="form-table">
-					<tbody>
-						<tr valign="top">
-							<td class="border_1">
-								<?php $this->get_html2( $this->wclp_general_setting_fields_func() ); ?>
-							</td>
-						</tr>
+				<table class="form-table html-layout-2">
+					<tbody class="border_1">
+						<?php $this->get_html2( $this->wclp_general_setting_fields_func() ); ?>
 					</tbody>
 				</table>
 				<?php 
@@ -147,17 +143,24 @@
 				<input type="hidden" name="action" value="wclp_osm_form_update">
 			</div>		
         </form>
-
 		<table class="form-table header-table">
+			<tbody>
+				<tr valign="top" class="heading-box border_1">
+					<td>
+						<h3 style=""><?php _e( 'Pickup Instructions Display', 'advanced-local-pickup-for-woocommerce' ); ?></h3>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="form-table">
 			<tbody>
 				<tr valign="top" class="border_1">
 					<td>
                     	<div class="row header-label">
-                        	<label style=""><?php _e( 'Pickup Instructions Display', 'advanced-local-pickup-for-woocommerce' ); ?></label>
-							<p class="description"><?php _e( 'Customize  the pickup Instructions display on the  order emails and my-account.', 'advanced-local-pickup-for-woocommerce' ); ?></p>
+							<p class="description"><?php _e( 'Customize the pickup Instructions display on the  order emails and my-account.', 'advanced-local-pickup-for-woocommerce' ); ?></p>
 						</div>
 						<div class="row submit wclp-btn">
-							<a href="<?php echo wclp_pickup_instruction_customizer::get_customizer_url('pickup_instaruction'); ?>" class="button-secondary launch-customizer"><?php _e( 'Launch Customizer', 'advanced-local-pickup-for-woocommerce' ); ?></a>
+							<a href="<?php echo wclp_pickup_instruction_customizer::get_customizer_url('pickup_instaruction'); ?>" class="button-secondary launch-customizer"><?php _e( 'Customizer', 'advanced-local-pickup-for-woocommerce' ); ?></a>
 						</div>
 					</td>
 				</tr>

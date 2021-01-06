@@ -5,7 +5,7 @@
 * Description: The Advanced Local Pickup (ALP) helps you handle local pickup orders more conveniently by extending the WooCommerce Local Pickup shipping method.
 * Author: zorem
 * Author URI: https://www.zorem.com/
-* Version: 1.2.4
+* Version: 1.2.5
 * Text Domain: advanced-local-pickup-for-woocommerce
 * Domain Path: /lang/
 * WC requires at least: 4.0
@@ -23,7 +23,7 @@ class Woocommerce_Local_Pickup {
 	 *
 	 * @var string
 	 */
-	public $version = '1.2.4';
+	public $version = '1.2.5';
 	
 	/**
 	 * Constructor
@@ -38,8 +38,9 @@ class Woocommerce_Local_Pickup {
 			$this->includes();
 			$this->init();			
 			add_action( 'plugins_loaded', array( $this, 'on_plugins_loaded' ) );
+			add_action( 'admin_footer', array( $this, 'uninstall_notice') );
 		}
-		add_action( 'admin_footer', array( $this, 'uninstall_notice') );
+
 	}
 	
 	/**
@@ -507,7 +508,7 @@ class Woocommerce_Local_Pickup {
 						</select>
 					
 					<?php } ?>				
-					<!--p><?php echo sprintf(__('<strong>Note:</strong> - If you use the custom order status, when you deactivate the plugin, you must register the order status, otherwise these orders will not display on your orders admin. You can find more information and the code <a href="%s" target="blank">snippet</a> to use in functions.php here.', 'advanced-local-pickup-for-woocommerce'), 'https://www.zorem.com/docs/advanced-local-pickup-for-woocommerce/plugin-settings/#code-snippets'); ?></p-->
+					<!--p></p-->
 					<p class="" style="text-align:left;">
 						<input type="hidden" name="action" value="reassign_order_status">
 						<input type="button" value="Uninstall" class="alp_uninstall_plugin button-primary btn_green">

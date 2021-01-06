@@ -52,6 +52,9 @@ The Advanced Local Pickup for WooCommerce plugin is localized/ translatable by d
 
 == Changelog ==
 
+= 1.2.5 =
+* Enhancement - updated design in setting.
+
 = 1.2.4 =
 * Enhancement - updated design in setting.
 * Localization - Updated translations files

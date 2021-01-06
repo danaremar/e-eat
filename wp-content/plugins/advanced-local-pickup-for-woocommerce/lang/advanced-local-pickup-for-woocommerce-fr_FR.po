@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Advanced Local Pickup for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-24 05:09+0000\n"
-"PO-Revision-Date: 2020-12-24 10:04+0000\n"
+"PO-Revision-Date: 2021-01-06 04:43+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -21,9 +21,9 @@ msgstr ""
 
 #: include/views/wclp-edit-location-form.php:278
 #: include/views/wclp-edit-location-form.php:391
-#: include/views/wclp_pickup_location_instruction_preview.php:173
-#: templates/emails/pickup-instruction.php:115
-#: templates/myaccount/pickup-instruction.php:115
+#: include/views/wclp_pickup_location_instruction_preview.php:192
+#: templates/emails/pickup-instruction.php:134
+#: templates/myaccount/pickup-instruction.php:134
 #: templates/emails/plain/pickup-instruction.php:115
 #| msgid " to"
 msgid " To"
@@ -38,22 +38,6 @@ msgstr ""
 msgid "24 hour"
 msgstr ""
 "24 heures\n"
-
-#: woo-advanced-local-pickup.php:510
-#, php-format
-msgid ""
-"<strong>Note:</strong> - If you use the custom order status, when you "
-"deactivate the plugin, you must register the order status, otherwise these "
-"orders will not display on your orders admin. You can find more information "
-"and the code <a href=\"%s\" target=\"blank\">snippet</a> to use in functions."
-"php here."
-msgstr ""
-"<strong> Remarque: </strong> - Si vous utilisez le statut de commande "
-"personnalisé, lorsque vous désactivez le plugin, vous devez enregistrer le "
-"statut de la commande, sinon ces commandes ne s'afficheront pas sur votre "
-"administrateur de commandes. Vous pouvez trouver plus d'informations et le "
-"<a href=\"%s\" target=\"blank\"> extrait de code </a> à utiliser dans "
-"functions.php ici."
 
 #: include/views/wclp_locations_tab.php:53
 msgid "Add Location "
@@ -144,7 +128,7 @@ msgid "Content line height"
 msgstr ""
 "Hauteur de la ligne de contenu\n"
 
-#: include/views/wclp_setting_tab.php:55
+#: include/views/wclp_setting_tab.php:51
 msgid "Custom Order Statuses"
 msgstr ""
 "Statuts des commandes personnalisées\n"
@@ -159,22 +143,24 @@ msgid "Customer View"
 msgstr ""
 "Vue client\n"
 
-#: include/views/wclp_setting_tab.php:157
+#: include/views/wclp_setting_tab.php:160
+#| msgid ""
+#| "Customize  the pickup Instructions display on the  order emails and my-"
+#| "account."
 msgid ""
-"Customize  the pickup Instructions display on the  order emails and my-"
+"Customize the pickup Instructions display on the  order emails and my-"
 "account."
 msgstr ""
 "Personnalisez l'affichage des instructions de ramassage sur les e-mails de "
 "commande et mon-compte.\n"
 
-#: include/views/wclp_setting_tab.php:93 include/views/wclp_setting_tab.php:134
+#: include/views/wclp_setting_tab.php:163
+msgid "Customizer"
+msgstr "Personnalisateur"
+
+#: include/views/wclp_setting_tab.php:89 include/views/wclp_setting_tab.php:130
 msgid "Dark Font"
 msgstr "Police sombre"
-
-#: include/views/wclp-edit-location-form.php:445
-msgid "DELETE LOCATION"
-msgstr ""
-"SUPPRIMER L'EMPLACEMENT\n"
 
 #: include/views/wclp-edit-location-form.php:292
 msgid "Display Time Format"
@@ -185,12 +171,12 @@ msgstr ""
 msgid "Documentation"
 msgstr "Documentation"
 
-#: include/views/wclp_setting_tab.php:99 include/views/wclp_setting_tab.php:140
+#: include/views/wclp_setting_tab.php:95 include/views/wclp_setting_tab.php:136
 msgid "edit email"
 msgstr ""
 "modifier l'e-mail\n"
 
-#: include/views/wclp-edit-location-form.php:14
+#: include/views/wclp-edit-location-form.php:13
 msgid "Edit Pickup Location"
 msgstr ""
 "Modifier le lieu de ramassage\n"
@@ -267,12 +253,7 @@ msgstr ""
 "Si vous aimez utiliser le plugin Advanced Local Pickup, veuillez prendre une "
 "minute pour partager votre avis\n"
 
-#: include/views/wclp_setting_tab.php:160
-msgid "Launch Customizer"
-msgstr ""
-"Lancer Customizer\n"
-
-#: include/views/wclp_setting_tab.php:92 include/views/wclp_setting_tab.php:133
+#: include/views/wclp_setting_tab.php:88 include/views/wclp_setting_tab.php:129
 msgid "Light Font"
 msgstr "Police claire"
 
@@ -285,20 +266,20 @@ msgid "Local Pickup section heading text"
 msgstr ""
 "Texte de l'en-tête de la section Ramassage local\n"
 
-#: include/views/wclp-edit-location-form.php:36
+#: include/views/wclp-edit-location-form.php:35
 msgid "Location Name"
 msgstr ""
 "Nom de la localisation\n"
 
-#: include/wc-local-pickup-admin.php:1287
+#: include/wc-local-pickup-admin.php:1233
 msgid "Mark order as picked up"
 msgstr "Marquer la commande comme récupérée"
 
-#: include/wc-local-pickup-admin.php:1273
+#: include/wc-local-pickup-admin.php:1219
 msgid "Mark order as ready for pickup"
 msgstr "Marquer la commande comme prête pour l'enlèvement"
 
-#: include/views/wclp-edit-location-form.php:20
+#: include/views/wclp-edit-location-form.php:19
 msgid "Name & Special Instructions"
 msgstr ""
 "Nom et instructions spéciales\n"
@@ -313,7 +294,7 @@ msgid "Order received page"
 msgstr "Page de commande reçue"
 
 #: include/wc-local-pickup-admin.php:381 include/wc-local-pickup-admin.php:412
-#: include/views/wclp_setting_tab.php:114
+#: include/views/wclp_setting_tab.php:110
 msgid "Picked up"
 msgstr "Ramassé"
 
@@ -357,7 +338,7 @@ msgstr ""
 msgid "Pickup Instruction"
 msgstr "Instruction de ramassage"
 
-#: include/views/wclp_setting_tab.php:156
+#: include/views/wclp_setting_tab.php:150
 msgid "Pickup Instructions Display"
 msgstr ""
 "Affichage des instructions de ramassage\n"
@@ -369,6 +350,7 @@ msgstr ""
 
 #: include/wc-local-pickup-admin.php:121 include/wc-local-pickup-admin.php:133
 #: include/wc-local-pickup-admin.php:134
+#: include/views/wclp-edit-location-form.php:13
 #: include/views/wclp_locations_tab.php:14
 msgid "Pickup Locations"
 msgstr "Lieux de ramassage"
@@ -408,7 +390,7 @@ msgstr "Traitement de l'e-mail de commande"
 msgid "Ready for Pickup"
 msgstr "Prêt pour le ramassage"
 
-#: include/views/wclp_setting_tab.php:73
+#: include/views/wclp_setting_tab.php:69
 msgid "Ready for pickup"
 msgstr ""
 "Prêt pour le ramassage\n"
@@ -426,7 +408,7 @@ msgstr "Les e-mails prêts pour la collecte sont envoyés aux clients."
 msgid "Ready for Pickup order status email"
 msgstr "E-mail d'état de la commande Prêt à ramasser"
 
-#: include/views/wclp-edit-location-form.php:23
+#: include/views/wclp-edit-location-form.php:22
 #: include/views/wclp-edit-location-form.php:60
 #: include/views/wclp-edit-location-form.php:178
 msgid "Save & close"
@@ -451,7 +433,7 @@ msgstr ""
 "Sélectionnez le format d'heure que vous souhaitez afficher en heures "
 "ouvrables pour les clients.\n"
 
-#: include/views/wclp_setting_tab.php:97 include/views/wclp_setting_tab.php:138
+#: include/views/wclp_setting_tab.php:93 include/views/wclp_setting_tab.php:134
 msgid "Send Email"
 msgstr "Envoyer un e-mail"
 
@@ -490,7 +472,7 @@ msgstr ""
 "commandes de ramassage locales en étendant la méthode d'expédition de "
 "ramassage local de WooCommerce.\n"
 
-#: include/views/wclp-edit-location-form.php:36
+#: include/views/wclp-edit-location-form.php:35
 msgid "The location name for your business location."
 msgstr ""
 "Le nom de l'emplacement de votre entreprise.\n"
@@ -531,6 +513,11 @@ msgstr ""
 #: include/views/wclp-edit-location-form.php:307
 msgid "Work Hours"
 msgstr "Heures de travail"
+
+#: include/views/wclp-edit-location-form.php:39
+msgid "you must add location name and save to proceed"
+msgstr ""
+"vous devez ajouter le nom de l'emplacement et enregistrer pour continuer\n"
 
 #: include/wc-local-pickup-admin.php:956
 msgid "You will receive an email when your order is ready for pickup."

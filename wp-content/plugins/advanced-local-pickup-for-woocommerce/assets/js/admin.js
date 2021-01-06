@@ -41,14 +41,12 @@ jQuery(document).ready(function(){
 	});
 	
 	if(jQuery('#wclp_store_name').val() === ''){
-		jQuery(".address-special").trigger('click');
 		jQuery(".address-special").addClass('active');
 		jQuery(".address-special").next('.panel').addClass('active').slideDown("slow");
 		jQuery(".address-special").css('cursor', 'default');
 		jQuery(".address-special").find('span.wclp-btn').show();
 		jQuery(".address-special").find('span.dashicons').removeClass('dashicons-arrow-right-alt2');
-		//jQuery(this).find('span.dashicons').addClass('dashicons-arrow-down-alt2');
-		jQuery(".address-special").find('label').css('color','#395da4');
+		jQuery(".address-special").find('label').css('color','#212121');
 	}
 	
 });
@@ -56,17 +54,22 @@ jQuery(document).ready(function(){
 jQuery(document).on("click", ".accordion", function(){
 	"use strict";
 	var location_name = jQuery('#wclp_store_name').val();
+	if(location_name === ''){
+		jQuery('#wclp_store_name').next(".alp_error_msg").show();
+		jQuery('#wclp_store_name').css('border-color','red');
+		jQuery('#wclp_store_name').css('display','block');
+	}
 	if(location_name !== ''){
-		var panel = jQuery(this).next('.panel');
 		if (jQuery(this).next('.panel').hasClass('active')) {
 			//
 		} else {
+			jQuery('#wclp_store_name').next(".alp_error_msg").hide();
+			jQuery('#wclp_store_name').css('border-color','');
 			jQuery(".accordion").css('border-color','');
 			jQuery(".accordion").removeClass('active');
 			jQuery(".accordion").next('.panel').removeClass('active').slideUp("slow");
 			jQuery(".accordion").css('cursor', '');
 			jQuery(".accordion").find('span.wclp-btn').hide();
-			//jQuery(".accordion").find('span.dashicons').removeClass('dashicons-arrow-down-alt2');
 			jQuery(".accordion").find('span.dashicons').addClass('dashicons-arrow-right-alt2');
 			jQuery(".accordion").find('label').css('color','');
 			jQuery(this).addClass('active');
@@ -74,8 +77,7 @@ jQuery(document).on("click", ".accordion", function(){
 			jQuery(this).css('cursor', 'default');
 			jQuery(this).find('span.wclp-btn').show();
 			jQuery(this).find('span.dashicons').removeClass('dashicons-arrow-right-alt2');
-			//jQuery(this).find('span.dashicons').addClass('dashicons-arrow-down-alt2');
-			jQuery(this).find('label').css('color','#395da4');
+			jQuery(this).find('label').css('color','#212121');
 		}
 	}
 });
@@ -188,7 +190,7 @@ function save_custom_order_status(){
 jQuery(document).on("click", "#wclp_location_tab_form .btn_location_submit", function(){
 	"use strict";
 	
-	jQuery(".alp_error_msg").remove();
+	jQuery(".alp_error_msg").hide();
 	var validation = true;
 	var days = [ 'saturday', 'friday', 'thursday', 'wednesday', 'tuesday', 'monday', 'sunday' ];		
 	for ( var i = 0, l = days.length; i < l; i++ ) {		
@@ -204,17 +206,14 @@ jQuery(document).on("click", "#wclp_location_tab_form .btn_location_submit", fun
 			if(wclp_store_hour == ''){
 				jQuery('#'+days[ i ]).parent().parent().parent().css('border-color','red');
 				jQuery(".location-setting .accordion.heading.business-hours").trigger("click");	
-				//jQuery('.btn_location_submit').after('<div class="alp_error_msg">Please select Working start working hours for '+days[ i ]+'</div>');
 				jQuery('select[name="wclp_store_days['+days[ i ]+'][wclp_store_hour]"]').css('border-color','red');
 				jQuery('.alp_error_msg').show();
 				validation=false;
 			}
 			if(wclp_store_hour_end == ''){
-				//console.log(jQuery('#'+days[ i ]).parent().parent().parent().css('border-color','red'));
 				jQuery('#'+days[ i ]).parent().parent().parent().css('border-color','red');
 				jQuery(".location-setting .accordion.heading.business-hours").trigger("click");	
 				jQuery('select[name="wclp_store_days['+days[ i ]+'][wclp_store_hour_end]"]').css('border-color','red');
-				//jQuery('.btn_location_submit').after('<div class="alp_error_msg">Please select Working end working hours for '+days[ i ]+'</div>');
 				jQuery('.alp_error_msg').show();
 				validation=false;
 			}
@@ -226,7 +225,6 @@ jQuery(document).on("click", "#wclp_location_tab_form .btn_location_submit", fun
 					jQuery(".location-setting .accordion.heading.business-hours").trigger("click");	
 					jQuery('select[name="wclp_store_days['+days[ i ]+'][wclp_store_hour]"]').css('border-color','red');
 					jQuery('select[name="wclp_store_days['+days[ i ]+'][wclp_store_hour_end]"]').css('border-color','red');
-					//jQuery('.btn_location_submit').after('<div class="alp_error_msg">End time must be greater than start time for '+days[ i ]+'</div>');
 					jQuery('.alp_error_msg').show();
 					validation=false;
 				}
@@ -241,7 +239,6 @@ jQuery(document).on("click", "#wclp_location_tab_form .btn_location_submit", fun
 		}		
 		jQuery('#wclp_store_name').css('border-color','red');
 		jQuery('#wclp_store_name').css('display','block');
-		jQuery('#wclp_store_name').after('<span class="alp_error_msg">you must choose location name before you can proceed.</div>');
 		jQuery('.alp_error_msg').show();
 		validation=false;
 	} else {
@@ -515,18 +512,6 @@ jQuery(document).on("click", ".wclp-apply", function(){
 		wclp_store_hour2: wclp_store_hour2.val(),
 		wclp_store_hour_end2: wclp_store_hour_end2.val(),
 	};
-	/*if(wclp_store_hour.val() === '' && hasClassMorning === false ){
-		jQuery(this).after('<div class="alp_error_msg">Please select start working hours');
-		jQuery(wclp_store_hour).css('border-color','red');
-		jQuery('.alp_error_msg').show();
-		validation=false;
-	}
-	if(wclp_store_hour_end.val() === '' && hasClassMorning === false ){
-		jQuery(wclp_store_hour_end).css('border-color','red');
-		jQuery(this).after('<div class="alp_error_msg">Please select end working hours');
-		jQuery('.alp_error_msg').show();
-		validation=false;
-	}*/
 	if(wclp_store_hour.val() !== '' && wclp_store_hour_end.val() !== '' && hasClassMorning === false ){
 		var st1 = minFromMidnight(wclp_store_hour.val());
 		var et1 = minFromMidnight(wclp_store_hour_end.val());
@@ -550,18 +535,6 @@ jQuery(document).on("click", ".wclp-apply", function(){
 			validation=false;
 		}
 	}
-	/*if(wclp_store_hour2.val() === '' && hasClassAfternoon === false ){
-		jQuery(this).after('<div class="alp_error_msg">Please select start interval working hours');
-		jQuery(wclp_store_hour2).css('border-color','red');
-		jQuery('.alp_error_msg').show();
-		validation=false;
-	}
-	if(wclp_store_hour_end2.val() === '' && hasClassAfternoon === false){
-		jQuery(wclp_store_hour_end2).css('border-color','red');
-		jQuery(this).after('<div class="alp_error_msg">Please select end interval working hours');
-		jQuery('.alp_error_msg').show();
-		validation=false;
-	}*/
 	if(wclp_store_hour2.val() && wclp_store_hour_end2.val() && hasClassAfternoon === false){
 		var st2 = minFromMidnight(wclp_store_hour2.val());
 		var et2 = minFromMidnight(wclp_store_hour_end2.val());
