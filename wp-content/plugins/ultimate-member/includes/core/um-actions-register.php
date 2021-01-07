@@ -422,6 +422,7 @@ function um_submit_form_register( $args ) {
 		if ( ! in_array( $args['role'], $exclude_roles ) ) {
 			$user_role = $args['role'];
 		}
+			
 	}
 
 	/**
@@ -447,6 +448,10 @@ function um_submit_form_register( $args ) {
 	 * ?>
 	 */
 	$user_role = apply_filters( 'um_registration_user_role', $user_role, $args );
+	
+	if ($user_role == 'um_repartidor'){
+		$user_role = 'driver';
+	};
 
 	$userdata = array(
 		'user_login'    => $user_login,

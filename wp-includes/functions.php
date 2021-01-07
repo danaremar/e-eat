@@ -7779,3 +7779,92 @@ function is_php_version_compatible( $required ) {
 function wp_fuzzy_number_match( $expected, $actual, $precision = 1 ) {
 	return abs( (float) $expected - (float) $actual ) <= $precision;
 }
+
+
+	
+add_action( 'woocommerce_register_form', 'wc_extra_registation_fields' );
+function wc_extra_registation_fields() {
+	?>
+		<p class="form-row form-row-first">
+			<label for="reg_role"><?php _e( 'Tipo de cuenta', 'woocommerce' ); ?></label>
+			<select class="input-text" name="role" id="reg_role">
+				<option <?php if ( ! empty( $_POST['role'] ) && $_POST['role'] == 'customer') esc_attr_e( 'selected' ); ?> value="customer">Cliente</option>
+				<option <?php if ( ! empty( $_POST['role'] ) && $_POST['role'] == 'wcfm_vendor') esc_attr_e( 'selected' ); ?> value="wcfm_vendor">Establecimiento</option>
+				<option <?php if ( ! empty( $_POST['role'] ) && $_POST['role'] == 'driver') esc_attr_e( 'selected' ); ?> value="driver">Repartidor</option>
+			</select>
+		</p>
+		
+		<p class="form-row form-row-first">
+			<label for="reg_first_name"><?php _e( 'Nombre', 'woocommerce' ); ?></label>
+			<input type="first_name" class="woocommerce-Input woocommerce-Input--text input-text" name="first_name" id="reg_first_name" autocomplete="first_name" value="<?php echo ( ! empty( $_POST['first_name'] ) ) ? esc_attr( wp_unslash( $_POST['first_name'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+		</p>
+		
+		<p class="form-row form-row-first">
+			<label for="reg_last_name"><?php _e( 'Apellidos', 'woocommerce' ); ?></label>
+			<input type="last_name" class="woocommerce-Input woocommerce-Input--text input-text" name="last_name" id="reg_last_name" autocomplete="last_name" value="<?php echo ( ! empty( $_POST['last_name'] ) ) ? esc_attr( wp_unslash( $_POST['last_name'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+		</p>
+		
+		<p class="form-row form-row-first">
+			<label for="reg_address"><?php _e( 'Dirección', 'woocommerce' ); ?></label>
+			<input type="address" class="woocommerce-Input woocommerce-Input--text input-text" name="address" id="reg_address" autocomplete="address" value="<?php echo ( ! empty( $_POST['address'] ) ) ? esc_attr( wp_unslash( $_POST['address'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+		</p>
+		
+	<?php
+}
+
+// Validate WooCommerce registration form custom fields.
+add_action( 'woocommerce_register_post', 'wc_validate_reg_form_fields', 10, 3 );
+function wc_validate_reg_form_fields($username, $email, $validation_errors) {
+	if (isset($_POST['role']) && empty($_POST['role']) ) {
+		$validation_errors->add('role_error', __('Por favor, seleccione un tipo de cuenta', 'woocommerce'));
+	}
+	
+	if (isset($_POST['first_name']) && empty($_POST['first_name']) ) {
+		$validation_errors->add('first_name_error', __('Por favor, introduzca su nombre', 'woocommerce'));
+	}
+	
+	if (isset($_POST['last_name']) && empty($_POST['last_name']) ) {
+		$validation_errors->add('last_name_error', __('Por favor, introduzca sus apellidos', 'woocommerce'));
+	}
+	
+	if (isset($_POST['address']) && empty($_POST['address']) ) {
+		$validation_errors->add('address_error', __('Por favor, introduzca su dirección', 'woocommerce'));
+	}
+	
+	return $validation_errors;
+}
+?>
+	
+		
+<?php
+
+	// To save WooCommerce registration form custom fields.
+	add_action( 'woocommerce_created_customer', 'wc_save_registration_form_fields' );
+	function wc_save_registration_form_fields( $customer_id ) {
+		if ( isset($_POST['role']) ) {
+			if( $_POST['role'] == 'wcfm_vendor' ){
+				$user = new WP_User($customer_id);
+				$user->set_role('wcfm_vendor');
+			}else if ( $_POST['role'] == 'driver' ){
+				$user = new WP_User($customer_id);
+				$user->set_role('driver');
+			}
+		}
+		
+		if ( isset($_POST['first_name']) ) {
+			update_user_meta($customer_id, 'shipping_first_name', $_POST['first_name']);
+			update_user_meta($customer_id, 'billing_first_name', $_POST['first_name']);
+		}
+		
+		if ( isset($_POST['last_name']) ) {
+			update_user_meta($customer_id, 'shipping_last_name', $_POST['last_name']);
+			update_user_meta($customer_id, 'billing_last_name', $_POST['last_name']);
+		}
+		
+		if ( isset($_POST['address']) ) {
+			update_user_meta($customer_id, 'shipping_address_1', $_POST['address']);
+			update_user_meta($customer_id, 'billing_address_1', $_POST['address']);
+		}
+		
+	}
+?>

@@ -101,6 +101,9 @@ if ( ! function_exists( 'wc_create_new_customer' ) ) {
 		if ( is_wp_error( $customer_id ) ) {
 			return $customer_id;
 		}
+		
+		
+		
 
 		do_action( 'woocommerce_created_customer', $customer_id, $new_customer_data, $password_generated );
 
