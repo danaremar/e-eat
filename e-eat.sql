@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2021 at 09:49 PM
+-- Generation Time: Jan 09, 2021 at 12:37 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -1017,7 +1017,10 @@ INSERT INTO `wp_actionscheduler_actions` (`action_id`, `hook`, `status`, `schedu
 (1038, 'wc-admin_delete_user_customers', 'complete', '2021-01-08 20:00:04', '2021-01-08 20:00:04', '[11]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1610136004;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1610136004;}', 4, 1, '2021-01-08 20:01:17', '2021-01-08 20:01:17', 0, NULL),
 (1039, 'wp_mail_smtp_admin_notifications_update', 'failed', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '{\"tasks_meta_id\":425}', 'O:28:\"ActionScheduler_NullSchedule\":0:{}', 3, 1, '2021-01-08 20:01:17', '2021-01-08 20:01:17', 0, NULL),
 (1040, 'wp_mail_smtp_admin_notifications_update', 'failed', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '{\"tasks_meta_id\":426}', 'O:28:\"ActionScheduler_NullSchedule\":0:{}', 3, 1, '2021-01-08 20:11:11', '2021-01-08 20:11:11', 0, NULL),
-(1041, 'wpforms_admin_notifications_update', 'failed', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '{\"tasks_meta_id\":431}', 'O:28:\"ActionScheduler_NullSchedule\":0:{}', 2, 1, '2021-01-08 20:11:13', '2021-01-08 20:11:13', 0, NULL);
+(1041, 'wpforms_admin_notifications_update', 'failed', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '{\"tasks_meta_id\":431}', 'O:28:\"ActionScheduler_NullSchedule\":0:{}', 2, 1, '2021-01-08 20:11:13', '2021-01-08 20:11:13', 0, NULL),
+(1042, 'wc-admin_import_orders', 'complete', '2021-01-08 21:50:58', '2021-01-08 21:50:58', '[225]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1610142658;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1610142658;}', 4, 1, '2021-01-08 21:51:05', '2021-01-08 21:51:05', 0, NULL),
+(1043, 'wc-admin_import_orders', 'complete', '2021-01-08 21:51:00', '2021-01-08 21:51:00', '[226]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1610142660;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1610142660;}', 4, 1, '2021-01-08 21:51:05', '2021-01-08 21:51:05', 0, NULL),
+(1044, 'wc-admin_import_orders', 'complete', '2021-01-08 21:51:00', '2021-01-08 21:51:00', '[227]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1610142660;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1610142660;}', 4, 1, '2021-01-08 21:51:06', '2021-01-08 21:51:06', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -4001,7 +4004,16 @@ INSERT INTO `wp_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_da
 (2889, 1040, 'acción empezada vía WP Cron', '2021-01-08 20:11:11', '2021-01-08 20:11:11'),
 (2890, 1040, 'apagado inesperado: Error fatal de PHP Uncaught Error: Unknown named parameter $tasks_meta_id in C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php:287\nStack trace:\n#0 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#1 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(551): WP_Hook->do_action(Array)\n#2 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\actions\\ActionScheduler_Action.php(22): do_action_ref_array(\'wp_mail_smtp_ad...\', Array)\n#3 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\abstracts\\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()\n#4 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(1040, \'WP Cron\')\n#5 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, \'WP Cron\')\n#6 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(287): ActionScheduler_QueueRunner->run(\'WP Cron\')\n#7 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#8 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(551): WP_Hook->do_action(Array)\n#9 C:\\xampp\\htdocs\\e-eat\\wp-cron.php(138): do_action_ref_array(\'action_schedule...\', Array)\n#10 {main}\n  thrown en C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php en la línea 287', '2021-01-08 20:11:11', '2021-01-08 20:11:11'),
 (2891, 1041, 'acción empezada vía Async Request', '2021-01-08 20:11:13', '2021-01-08 20:11:13'),
-(2892, 1041, 'apagado inesperado: Error fatal de PHP Uncaught Error: Unknown named parameter $tasks_meta_id in C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php:287\nStack trace:\n#0 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#1 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(551): WP_Hook->do_action(Array)\n#2 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\actions\\ActionScheduler_Action.php(22): do_action_ref_array(\'wpforms_admin_n...\', Array)\n#3 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\abstracts\\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()\n#4 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(1041, \'Async Request\')\n#5 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, \'Async Request\')\n#6 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(287): ActionScheduler_QueueRunner->run(\'Async Request\')\n#7 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#8 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(484): WP_Hook->do_action(Array)\n#9 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_AsyncRequest_QueueRunner.php(52): do_action(\'action_schedule...\', \'Async Request\')\n#10 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\includes\\libraries\\wp-async-request.php(147): ActionScheduler_AsyncRequest_QueueRunner->handle()\n#11 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(287): WP_Async_Request->maybe_handle(\'\')\n#12 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#13 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(484): WP_Hook->do_action(Array)\n#14 C:\\xampp\\htdocs\\e-eat\\wp-admin\\admin-ajax.php(184): do_action(\'wp_ajax_as_asyn...\')\n#15 {main}\n  thrown en C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php en la línea 287', '2021-01-08 20:11:14', '2021-01-08 20:11:14');
+(2892, 1041, 'apagado inesperado: Error fatal de PHP Uncaught Error: Unknown named parameter $tasks_meta_id in C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php:287\nStack trace:\n#0 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#1 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(551): WP_Hook->do_action(Array)\n#2 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\actions\\ActionScheduler_Action.php(22): do_action_ref_array(\'wpforms_admin_n...\', Array)\n#3 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\abstracts\\ActionScheduler_Abstract_QueueRunner.php(65): ActionScheduler_Action->execute()\n#4 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(162): ActionScheduler_Abstract_QueueRunner->process_action(1041, \'Async Request\')\n#5 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_QueueRunner.php(132): ActionScheduler_QueueRunner->do_batch(25, \'Async Request\')\n#6 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(287): ActionScheduler_QueueRunner->run(\'Async Request\')\n#7 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#8 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(484): WP_Hook->do_action(Array)\n#9 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\packages\\action-scheduler\\classes\\ActionScheduler_AsyncRequest_QueueRunner.php(52): do_action(\'action_schedule...\', \'Async Request\')\n#10 C:\\xampp\\htdocs\\e-eat\\wp-content\\plugins\\woocommerce\\includes\\libraries\\wp-async-request.php(147): ActionScheduler_AsyncRequest_QueueRunner->handle()\n#11 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(287): WP_Async_Request->maybe_handle(\'\')\n#12 C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php(311): WP_Hook->apply_filters(\'\', Array)\n#13 C:\\xampp\\htdocs\\e-eat\\wp-includes\\plugin.php(484): WP_Hook->do_action(Array)\n#14 C:\\xampp\\htdocs\\e-eat\\wp-admin\\admin-ajax.php(184): do_action(\'wp_ajax_as_asyn...\')\n#15 {main}\n  thrown en C:\\xampp\\htdocs\\e-eat\\wp-includes\\class-wp-hook.php en la línea 287', '2021-01-08 20:11:14', '2021-01-08 20:11:14'),
+(2893, 1042, 'acción creada', '2021-01-08 21:50:53', '2021-01-08 21:50:53'),
+(2894, 1043, 'acción creada', '2021-01-08 21:50:55', '2021-01-08 21:50:55'),
+(2895, 1044, 'acción creada', '2021-01-08 21:50:55', '2021-01-08 21:50:55'),
+(2896, 1042, 'acción empezada vía WP Cron', '2021-01-08 21:51:04', '2021-01-08 21:51:04'),
+(2897, 1042, 'acción completa vía WP Cron', '2021-01-08 21:51:05', '2021-01-08 21:51:05'),
+(2898, 1043, 'acción empezada vía WP Cron', '2021-01-08 21:51:05', '2021-01-08 21:51:05'),
+(2899, 1043, 'acción completa vía WP Cron', '2021-01-08 21:51:05', '2021-01-08 21:51:05'),
+(2900, 1044, 'acción empezada vía WP Cron', '2021-01-08 21:51:05', '2021-01-08 21:51:05'),
+(2901, 1044, 'acción completa vía WP Cron', '2021-01-08 21:51:06', '2021-01-08 21:51:06');
 
 -- --------------------------------------------------------
 
@@ -4127,7 +4139,10 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 (36, 219, 'WooCommerce', '', '', '', '2021-01-08 18:35:52', '2021-01-08 18:35:52', 'El estado del pedido cambió de Procesando a Rep. asignado.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
 (37, 219, 'WooCommerce', '', '', '', '2021-01-08 18:36:23', '2021-01-08 18:36:23', 'El estado del pedido cambió de Rep. asignado a Listo para la entrega.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
 (38, 219, 'WooCommerce', '', '', '', '2021-01-08 18:36:24', '2021-01-08 18:36:24', 'Nota del repartidor: Terminado', 0, '1', 'WooCommerce', 'order_note', 0, 0),
-(39, 219, 'WooCommerce', '', '', '', '2021-01-08 18:37:15', '2021-01-08 18:37:15', 'El estado del pedido cambió de Listo para la entrega a Completado.', 0, '1', 'WooCommerce', 'order_note', 0, 0);
+(39, 219, 'WooCommerce', '', '', '', '2021-01-08 18:37:15', '2021-01-08 18:37:15', 'El estado del pedido cambió de Listo para la entrega a Completado.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
+(40, 225, 'WooCommerce', '', '', '', '2021-01-08 21:50:54', '2021-01-08 21:50:54', 'El pedido sin pagar ha sido cancelado - se ha alcanzado el limite de tiempo. El estado del pedido cambió de Pendiente de pago a Cancelado.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
+(41, 226, 'WooCommerce', '', '', '', '2021-01-08 21:50:55', '2021-01-08 21:50:55', 'El pedido sin pagar ha sido cancelado - se ha alcanzado el limite de tiempo. El estado del pedido cambió de Pendiente de pago a Cancelado.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
+(42, 227, 'WooCommerce', '', '', '', '2021-01-08 21:50:56', '2021-01-08 21:50:56', 'El pedido sin pagar ha sido cancelado - se ha alcanzado el limite de tiempo. El estado del pedido cambió de Pendiente de pago a Cancelado.', 0, '1', 'WooCommerce', 'order_note', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -4277,7 +4292,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (105, 'widget_archives', 'a:2:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (106, 'widget_meta', 'a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (107, 'sidebars_widgets', 'a:8:{s:19:\"wp_inactive_widgets\";a:6:{i:0;s:10:\"archives-2\";i:1;s:6:\"meta-2\";i:2;s:8:\"search-2\";i:3;s:12:\"categories-2\";i:4;s:14:\"recent-posts-2\";i:5;s:17:\"recent-comments-2\";}s:9:\"sidebar-1\";a:0:{}s:8:\"header-1\";a:0:{}s:8:\"footer-1\";a:0:{}s:8:\"footer-2\";a:0:{}s:8:\"footer-3\";a:0:{}s:8:\"footer-4\";a:0:{}s:13:\"array_version\";i:3;}', 'yes'),
-(108, 'cron', 'a:26:{i:1610138933;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1610140427;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610140433;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610140530;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1610141326;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610141634;a:1:{s:29:\"wcj_download_tcpdf_fonts_hook\";a:1:{s:32:\"26b69dc9b9c77e4c1647111635ada6f2\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:1:{i:0;s:6:\"hourly\";}s:8:\"interval\";i:3600;}}}i:1610142432;a:1:{s:26:\"um_hourly_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610144027;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610150400;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610154827;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610156832;a:2:{s:25:\"um_daily_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"um_twicedaily_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610158193;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610177326;a:2:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610177327;a:1:{s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610219627;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610219637;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610219714;a:2:{s:26:\"wpo_minify_purge_old_cache\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:29:\"wpo_smush_clear_backup_images\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610220525;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610220557;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610224644;a:1:{s:20:\"jetpack_v2_heartbeat\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610373600;a:1:{s:28:\"wpforms_email_summaries_cron\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:30:\"wpforms_email_summaries_weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610478914;a:1:{s:21:\"wpo_weekly_cron_tasks\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610565287;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}i:1610588832;a:1:{s:26:\"um_weekly_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610652525;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
+(108, 'cron', 'a:26:{i:1610149073;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1610149632;a:1:{s:26:\"um_hourly_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610149977;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1610150400;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610151227;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610151233;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610152126;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1610152434;a:1:{s:29:\"wcj_download_tcpdf_fonts_hook\";a:1:{s:32:\"26b69dc9b9c77e4c1647111635ada6f2\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:1:{i:0;s:6:\"hourly\";}s:8:\"interval\";i:3600;}}}i:1610154827;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610156832;a:2:{s:25:\"um_daily_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"um_twicedaily_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610158193;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610177326;a:2:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610177327;a:1:{s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1610219627;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610219637;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610219714;a:2:{s:26:\"wpo_minify_purge_old_cache\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:29:\"wpo_smush_clear_backup_images\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610220525;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610220557;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610224644;a:1:{s:20:\"jetpack_v2_heartbeat\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610230427;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1610373600;a:1:{s:28:\"wpforms_email_summaries_cron\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:30:\"wpforms_email_summaries_weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610478914;a:1:{s:21:\"wpo_weekly_cron_tasks\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610565287;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}i:1610588832;a:1:{s:26:\"um_weekly_scheduled_events\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1610652525;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}s:7:\"version\";i:2;}', 'yes'),
 (109, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (110, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (111, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -4342,13 +4357,13 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (518, 'wpforms_version', '1.6.3.1', 'yes'),
 (519, 'wpforms_version_lite', '1.6.3.1', 'yes'),
 (520, 'wpforms_activated', 'a:1:{s:4:\"lite\";i:1607792153;}', 'yes'),
-(523, 'action_scheduler_lock_async-request-runner', '1610138943', 'yes'),
+(523, 'action_scheduler_lock_async-request-runner', '1610149091', 'yes'),
 (524, 'widget_wpforms-widget', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (529, 'wpforms_review', 'a:2:{s:4:\"time\";i:1609269415;s:9:\"dismissed\";b:1;}', 'yes'),
 (570, 'wpforms_crypto_secret_key', '+XAwGpGv3MPR6PG/16Hl/VMNBziEt/FrG5L9AxYzuGw=', 'yes'),
 (670, 'wp_mail_smtp_initial_version', '2.5.1', 'no'),
 (671, 'wp_mail_smtp_version', '2.5.1', 'no'),
-(672, 'wp_mail_smtp', 'a:7:{s:4:\"mail\";a:6:{s:10:\"from_email\";s:20:\"dp.grupo33@gmail.com\";s:9:\"from_name\";s:0:\"\";s:6:\"mailer\";s:5:\"gmail\";s:11:\"return_path\";b:0;s:16:\"from_email_force\";b:1;s:15:\"from_name_force\";b:0;}s:4:\"smtp\";a:7:{s:7:\"autotls\";s:3:\"yes\";s:4:\"auth\";s:3:\"yes\";s:4:\"host\";s:0:\"\";s:10:\"encryption\";s:4:\"none\";s:4:\"port\";s:0:\"\";s:4:\"user\";s:0:\"\";s:4:\"pass\";s:0:\"\";}s:7:\"smtpcom\";a:2:{s:7:\"api_key\";s:0:\"\";s:7:\"channel\";s:0:\"\";}s:10:\"sendinblue\";a:1:{s:7:\"api_key\";s:0:\"\";}s:7:\"mailgun\";a:3:{s:7:\"api_key\";s:0:\"\";s:6:\"domain\";s:0:\"\";s:6:\"region\";s:2:\"US\";}s:8:\"sendgrid\";a:1:{s:7:\"api_key\";s:0:\"\";}s:5:\"gmail\";a:5:{s:9:\"client_id\";s:72:\"521889923123-g2eto3jbntc7h042hg1sovoesl2ks86d.apps.googleusercontent.com\";s:13:\"client_secret\";s:24:\"fw8aJMItLkDCQAmrWwQNz_Q1\";s:9:\"auth_code\";s:73:\"4/0AY0e-g7QUvRqSKLHcPkF9c_oGzasudv5csS5ZAVH9dME5uzoqPwgVx3qgPZLiwSHo9ME4w\";s:12:\"access_token\";a:6:{s:12:\"access_token\";s:179:\"ya29.a0AfH6SMBBJvrYO6DPgmJKECo0MUzHLn5nqcj7im4iaAZBcoYJQQlXYuMYP7VQTmgF3jl0D6vgib03bMoGqlMe7qdClTKvrkNUMGMbKoC_zAupYVmopacu9PF9anUtaPRnHrh-kgm89H4W3EwjYTzzFev_cIGgdj_I01ayHWDepwrj\";s:10:\"expires_in\";i:3599;s:5:\"scope\";s:24:\"https://mail.google.com/\";s:10:\"token_type\";s:6:\"Bearer\";s:7:\"created\";i:1610136261;s:13:\"refresh_token\";s:103:\"1//03fAhkKBwzHuaCgYIARAAGAMSNwF-L9IrjNGNGA9l85BVbAyyPZ6AmEdZNN7DjTISmkerCpmBxKVCgwTOOPmgbJAMoBPkZDAer54\";}s:13:\"refresh_token\";s:103:\"1//03fAhkKBwzHuaCgYIARAAGAMSNwF-L9IrjNGNGA9l85BVbAyyPZ6AmEdZNN7DjTISmkerCpmBxKVCgwTOOPmgbJAMoBPkZDAer54\";}}', 'no'),
+(672, 'wp_mail_smtp', 'a:7:{s:4:\"mail\";a:6:{s:10:\"from_email\";s:20:\"dp.grupo33@gmail.com\";s:9:\"from_name\";s:0:\"\";s:6:\"mailer\";s:5:\"gmail\";s:11:\"return_path\";b:0;s:16:\"from_email_force\";b:1;s:15:\"from_name_force\";b:0;}s:4:\"smtp\";a:7:{s:7:\"autotls\";s:3:\"yes\";s:4:\"auth\";s:3:\"yes\";s:4:\"host\";s:0:\"\";s:10:\"encryption\";s:4:\"none\";s:4:\"port\";s:0:\"\";s:4:\"user\";s:0:\"\";s:4:\"pass\";s:0:\"\";}s:7:\"smtpcom\";a:2:{s:7:\"api_key\";s:0:\"\";s:7:\"channel\";s:0:\"\";}s:10:\"sendinblue\";a:1:{s:7:\"api_key\";s:0:\"\";}s:7:\"mailgun\";a:3:{s:7:\"api_key\";s:0:\"\";s:6:\"domain\";s:0:\"\";s:6:\"region\";s:2:\"US\";}s:8:\"sendgrid\";a:1:{s:7:\"api_key\";s:0:\"\";}s:5:\"gmail\";a:5:{s:9:\"client_id\";s:72:\"521889923123-g2eto3jbntc7h042hg1sovoesl2ks86d.apps.googleusercontent.com\";s:13:\"client_secret\";s:24:\"fw8aJMItLkDCQAmrWwQNz_Q1\";s:9:\"auth_code\";s:73:\"4/0AY0e-g7QUvRqSKLHcPkF9c_oGzasudv5csS5ZAVH9dME5uzoqPwgVx3qgPZLiwSHo9ME4w\";s:12:\"access_token\";a:6:{s:12:\"access_token\";s:179:\"ya29.a0AfH6SMAgKC6sgXApAm_9vI1e55as8z0tLYBdPQVqVeWW4DVrZSvWzFliYiVda-g6QB8d1L4AXtSGSNmzOv591h6eYB7nBpSixR4XrBgh10LChSnO3BYzHa5ovbmWzVRDlx0TjSbJczKK1ngEi3SYb3eW58coZtCYPoyzf54mC74K\";s:10:\"expires_in\";i:3599;s:5:\"scope\";s:24:\"https://mail.google.com/\";s:10:\"token_type\";s:6:\"Bearer\";s:7:\"created\";i:1610148123;s:13:\"refresh_token\";s:103:\"1//03fAhkKBwzHuaCgYIARAAGAMSNwF-L9IrjNGNGA9l85BVbAyyPZ6AmEdZNN7DjTISmkerCpmBxKVCgwTOOPmgbJAMoBPkZDAer54\";}s:13:\"refresh_token\";s:103:\"1//03fAhkKBwzHuaCgYIARAAGAMSNwF-L9IrjNGNGA9l85BVbAyyPZ6AmEdZNN7DjTISmkerCpmBxKVCgwTOOPmgbJAMoBPkZDAer54\";}}', 'no'),
 (673, 'wp_mail_smtp_activated_time', '1607797400', 'no'),
 (674, 'wp_mail_smtp_activated', 'a:1:{s:4:\"lite\";i:1607797400;}', 'yes'),
 (675, 'wp_mail_smtp_migration_version', '2', 'yes'),
@@ -4520,7 +4535,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (1570, 'wc_remote_inbox_notifications_stored_state', 'O:8:\"stdClass\":2:{s:22:\"there_were_no_products\";b:1;s:22:\"there_are_now_products\";b:1;}', 'yes'),
 (1572, 'wc_blocks_db_schema_version', '260', 'yes'),
 (1573, 'woocommerce_meta_box_errors', 'a:0:{}', 'yes'),
-(1578, '_transient_woocommerce_reports-transient-version', '1610136076', 'yes'),
+(1578, '_transient_woocommerce_reports-transient-version', '1610142666', 'yes'),
 (1587, 'woocommerce_onboarding_profile', 'a:10:{s:7:\"skipped\";b:1;s:12:\"setup_client\";b:0;s:8:\"industry\";a:1:{i:0;a:1:{s:4:\"slug\";s:10:\"food-drink\";}}s:13:\"product_types\";a:1:{i:0;s:8:\"physical\";}s:13:\"product_count\";s:6:\"11-100\";s:14:\"selling_venues\";s:2:\"no\";s:19:\"business_extensions\";a:0:{}s:5:\"theme\";s:10:\"storefront\";s:7:\"plugins\";s:9:\"installed\";s:9:\"completed\";b:1;}', 'yes'),
 (1596, 'woocommerce_task_list_welcome_modal_dismissed', 'yes', 'yes'),
 (1602, 'woocommerce_tracker_last_send', '1609933866', 'yes'),
@@ -4562,8 +4577,8 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (1701, 'foodstore_version', '1.3.3', 'yes'),
 (1703, '_site_transient_timeout_locked_1', '1924630195', 'no'),
 (1704, '_site_transient_locked_1', '1', 'no'),
-(1760, '_transient_product_query-transient-version', '1610137749', 'yes'),
-(1761, '_transient_product-transient-version', '1610137749', 'yes'),
+(1760, '_transient_product_query-transient-version', '1610149026', 'yes'),
+(1761, '_transient_product-transient-version', '1610149026', 'yes'),
 (1768, '_transient_shipping-transient-version', '1609274586', 'yes'),
 (1769, '_transient_timeout_wc_shipping_method_count_legacy', '1611866609', 'no'),
 (1770, '_transient_wc_shipping_method_count_legacy', 'a:2:{s:7:\"version\";s:10:\"1609274586\";s:5:\"value\";i:2;}', 'no'),
@@ -4648,7 +4663,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (2350, 'wplp_review_notice_ignore', 'true', 'yes'),
 (2352, 'wplp_pro_notice_ignore', 'true', 'yes'),
 (2357, 'wclp_processing_additional_content', 'Recibirá un correo electrónico cuando su pedido esté listo para ser recogido.', 'yes'),
-(2359, '_transient_orders-transient-version', '1610134330', 'yes'),
+(2359, '_transient_orders-transient-version', '1610142656', 'yes'),
 (2371, 'woocommerce_admin_last_orders_milestone', '10', 'yes'),
 (2408, 'rpress_settings', 'a:0:{}', 'yes'),
 (2409, 'rpress_use_php_sessions', '1', 'yes'),
@@ -5048,7 +5063,6 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (5679, 'themeisle_sdk_notifications', 'a:2:{s:17:\"last_notification\";a:2:{s:2:\"id\";s:16:\"neve_review_flag\";s:10:\"display_at\";i:1610129901;}s:24:\"last_notification_active\";i:0;}', 'yes'),
 (5878, '_transient_timeout_wc_order_224_needs_processing', '1610217288', 'no'),
 (5879, '_transient_wc_order_224_needs_processing', '1', 'no'),
-(5983, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:0;s:3:\"all\";i:0;s:9:\"moderated\";i:0;s:8:\"approved\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
 (6119, '_site_transient_timeout_theme_roots', '1610136047', 'no'),
 (6120, '_site_transient_theme_roots', 'a:6:{s:4:\"neve\";s:7:\"/themes\";s:10:\"storefront\";s:7:\"/themes\";s:14:\"twentynineteen\";s:7:\"/themes\";s:15:\"twentyseventeen\";s:7:\"/themes\";s:12:\"twentytwenty\";s:7:\"/themes\";s:15:\"twentytwentyone\";s:7:\"/themes\";}', 'no'),
 (6128, '_transient_timeout_wc_related_174', '1610220654', 'no'),
@@ -5056,10 +5070,6 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (6132, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:63:\"https://downloads.wordpress.org/release/es_ES/wordpress-5.6.zip\";s:6:\"locale\";s:5:\"es_ES\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:63:\"https://downloads.wordpress.org/release/es_ES/wordpress-5.6.zip\";s:10:\"no_content\";s:0:\"\";s:11:\"new_bundled\";s:0:\"\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:3:\"5.6\";s:7:\"version\";s:3:\"5.6\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.6\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1610134257;s:15:\"version_checked\";s:3:\"5.6\";s:12:\"translations\";a:0:{}}', 'no'),
 (6133, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1610134258;s:7:\"checked\";a:6:{s:4:\"neve\";s:5:\"2.9.5\";s:10:\"storefront\";s:5:\"3.1.0\";s:14:\"twentynineteen\";s:3:\"1.9\";s:15:\"twentyseventeen\";s:3:\"2.5\";s:12:\"twentytwenty\";s:3:\"1.6\";s:15:\"twentytwentyone\";s:3:\"1.1\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:6:{s:4:\"neve\";a:6:{s:5:\"theme\";s:4:\"neve\";s:11:\"new_version\";s:5:\"2.9.5\";s:3:\"url\";s:34:\"https://wordpress.org/themes/neve/\";s:7:\"package\";s:52:\"https://downloads.wordpress.org/theme/neve.2.9.5.zip\";s:8:\"requires\";b:0;s:12:\"requires_php\";s:5:\"5.4.0\";}s:10:\"storefront\";a:6:{s:5:\"theme\";s:10:\"storefront\";s:11:\"new_version\";s:5:\"3.1.0\";s:3:\"url\";s:40:\"https://wordpress.org/themes/storefront/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/storefront.3.1.0.zip\";s:8:\"requires\";b:0;s:12:\"requires_php\";s:5:\"5.6.0\";}s:14:\"twentynineteen\";a:6:{s:5:\"theme\";s:14:\"twentynineteen\";s:11:\"new_version\";s:3:\"1.9\";s:3:\"url\";s:44:\"https://wordpress.org/themes/twentynineteen/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/theme/twentynineteen.1.9.zip\";s:8:\"requires\";s:5:\"4.9.6\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentyseventeen\";a:6:{s:5:\"theme\";s:15:\"twentyseventeen\";s:11:\"new_version\";s:3:\"2.5\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentyseventeen/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentyseventeen.2.5.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:12:\"twentytwenty\";a:6:{s:5:\"theme\";s:12:\"twentytwenty\";s:11:\"new_version\";s:3:\"1.6\";s:3:\"url\";s:42:\"https://wordpress.org/themes/twentytwenty/\";s:7:\"package\";s:58:\"https://downloads.wordpress.org/theme/twentytwenty.1.6.zip\";s:8:\"requires\";s:3:\"4.7\";s:12:\"requires_php\";s:5:\"5.2.4\";}s:15:\"twentytwentyone\";a:6:{s:5:\"theme\";s:15:\"twentytwentyone\";s:11:\"new_version\";s:3:\"1.1\";s:3:\"url\";s:45:\"https://wordpress.org/themes/twentytwentyone/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/theme/twentytwentyone.1.1.zip\";s:8:\"requires\";s:3:\"5.3\";s:12:\"requires_php\";s:3:\"5.6\";}}s:12:\"translations\";a:0:{}}', 'no'),
 (6134, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1610134262;s:7:\"checked\";a:13:{s:25:\"adminimize/adminimize.php\";s:6:\"1.11.7\";s:67:\"advanced-local-pickup-for-woocommerce/woo-advanced-local-pickup.php\";s:5:\"1.2.5\";s:73:\"woo-advanced-shipment-tracking/woocommerce-advanced-shipment-tracking.php\";s:7:\"3.2.0.1\";s:69:\"delivery-drivers-for-woocommerce/delivery-drivers-for-woocommerce.php\";s:3:\"3.1\";s:25:\"menu-image/menu-image.php\";s:5:\"3.0.2\";s:35:\"ultimate-member/ultimate-member.php\";s:6:\"2.1.15\";s:43:\"wc-frontend-manager/wc_frontend_manager.php\";s:5:\"6.5.6\";s:57:\"wc-multivendor-marketplace/wc-multivendor-marketplace.php\";s:5:\"3.4.6\";s:55:\"wc-multivendor-membership/wc-multivendor-membership.php\";s:5:\"2.9.5\";s:27:\"woocommerce/woocommerce.php\";s:5:\"4.8.0\";s:27:\"wp-optimize/wp-optimize.php\";s:5:\"3.1.6\";s:24:\"wpforms-lite/wpforms.php\";s:7:\"1.6.4.1\";s:29:\"wp-mail-smtp/wp_mail_smtp.php\";s:5:\"2.5.1\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:3:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:19:\"wc-frontend-manager\";s:8:\"language\";s:5:\"es_ES\";s:7:\"version\";s:5:\"6.5.6\";s:7:\"updated\";s:19:\"2020-05-08 11:09:39\";s:7:\"package\";s:86:\"https://downloads.wordpress.org/translation/plugin/wc-frontend-manager/6.5.6/es_ES.zip\";s:10:\"autoupdate\";b:1;}i:1;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:26:\"wc-multivendor-marketplace\";s:8:\"language\";s:5:\"es_ES\";s:7:\"version\";s:5:\"3.4.6\";s:7:\"updated\";s:19:\"2020-05-13 15:54:40\";s:7:\"package\";s:93:\"https://downloads.wordpress.org/translation/plugin/wc-multivendor-marketplace/3.4.6/es_ES.zip\";s:10:\"autoupdate\";b:1;}i:2;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:25:\"wc-multivendor-membership\";s:8:\"language\";s:5:\"es_ES\";s:7:\"version\";s:5:\"2.9.5\";s:7:\"updated\";s:19:\"2020-02-08 08:29:30\";s:7:\"package\";s:92:\"https://downloads.wordpress.org/translation/plugin/wc-multivendor-membership/2.9.5/es_ES.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:13:{s:25:\"adminimize/adminimize.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:24:\"w.org/plugins/adminimize\";s:4:\"slug\";s:10:\"adminimize\";s:6:\"plugin\";s:25:\"adminimize/adminimize.php\";s:11:\"new_version\";s:6:\"1.11.7\";s:3:\"url\";s:41:\"https://wordpress.org/plugins/adminimize/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/adminimize.1.11.7.zip\";s:5:\"icons\";a:1:{s:7:\"default\";s:61:\"https://s.w.org/plugins/geopattern-icon/adminimize_000000.svg\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:65:\"https://ps.w.org/adminimize/assets/banner-772x250.png?rev=1118207\";}s:11:\"banners_rtl\";a:0:{}}s:67:\"advanced-local-pickup-for-woocommerce/woo-advanced-local-pickup.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:51:\"w.org/plugins/advanced-local-pickup-for-woocommerce\";s:4:\"slug\";s:37:\"advanced-local-pickup-for-woocommerce\";s:6:\"plugin\";s:67:\"advanced-local-pickup-for-woocommerce/woo-advanced-local-pickup.php\";s:11:\"new_version\";s:5:\"1.2.5\";s:3:\"url\";s:68:\"https://wordpress.org/plugins/advanced-local-pickup-for-woocommerce/\";s:7:\"package\";s:80:\"https://downloads.wordpress.org/plugin/advanced-local-pickup-for-woocommerce.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:90:\"https://ps.w.org/advanced-local-pickup-for-woocommerce/assets/icon-256x256.png?rev=2304195\";s:2:\"1x\";s:90:\"https://ps.w.org/advanced-local-pickup-for-woocommerce/assets/icon-128x128.png?rev=2304195\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:92:\"https://ps.w.org/advanced-local-pickup-for-woocommerce/assets/banner-772x250.png?rev=2337382\";}s:11:\"banners_rtl\";a:0:{}}s:73:\"woo-advanced-shipment-tracking/woocommerce-advanced-shipment-tracking.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:44:\"w.org/plugins/woo-advanced-shipment-tracking\";s:4:\"slug\";s:30:\"woo-advanced-shipment-tracking\";s:6:\"plugin\";s:73:\"woo-advanced-shipment-tracking/woocommerce-advanced-shipment-tracking.php\";s:11:\"new_version\";s:7:\"3.2.0.1\";s:3:\"url\";s:61:\"https://wordpress.org/plugins/woo-advanced-shipment-tracking/\";s:7:\"package\";s:73:\"https://downloads.wordpress.org/plugin/woo-advanced-shipment-tracking.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:83:\"https://ps.w.org/woo-advanced-shipment-tracking/assets/icon-256x256.png?rev=2166296\";s:2:\"1x\";s:83:\"https://ps.w.org/woo-advanced-shipment-tracking/assets/icon-128x128.png?rev=2166296\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:85:\"https://ps.w.org/woo-advanced-shipment-tracking/assets/banner-772x250.png?rev=2337390\";}s:11:\"banners_rtl\";a:0:{}}s:69:\"delivery-drivers-for-woocommerce/delivery-drivers-for-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:46:\"w.org/plugins/delivery-drivers-for-woocommerce\";s:4:\"slug\";s:32:\"delivery-drivers-for-woocommerce\";s:6:\"plugin\";s:69:\"delivery-drivers-for-woocommerce/delivery-drivers-for-woocommerce.php\";s:11:\"new_version\";s:3:\"3.1\";s:3:\"url\";s:63:\"https://wordpress.org/plugins/delivery-drivers-for-woocommerce/\";s:7:\"package\";s:79:\"https://downloads.wordpress.org/plugin/delivery-drivers-for-woocommerce.3.1.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:85:\"https://ps.w.org/delivery-drivers-for-woocommerce/assets/icon-128x128.jpg?rev=1934651\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:87:\"https://ps.w.org/delivery-drivers-for-woocommerce/assets/banner-772x250.jpg?rev=1934651\";}s:11:\"banners_rtl\";a:0:{}}s:25:\"menu-image/menu-image.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:24:\"w.org/plugins/menu-image\";s:4:\"slug\";s:10:\"menu-image\";s:6:\"plugin\";s:25:\"menu-image/menu-image.php\";s:11:\"new_version\";s:5:\"3.0.2\";s:3:\"url\";s:41:\"https://wordpress.org/plugins/menu-image/\";s:7:\"package\";s:59:\"https://downloads.wordpress.org/plugin/menu-image.3.0.2.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:63:\"https://ps.w.org/menu-image/assets/icon-128x128.png?rev=2123398\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:65:\"https://ps.w.org/menu-image/assets/banner-772x250.png?rev=2441835\";}s:11:\"banners_rtl\";a:0:{}}s:35:\"ultimate-member/ultimate-member.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:29:\"w.org/plugins/ultimate-member\";s:4:\"slug\";s:15:\"ultimate-member\";s:6:\"plugin\";s:35:\"ultimate-member/ultimate-member.php\";s:11:\"new_version\";s:6:\"2.1.15\";s:3:\"url\";s:46:\"https://wordpress.org/plugins/ultimate-member/\";s:7:\"package\";s:65:\"https://downloads.wordpress.org/plugin/ultimate-member.2.1.15.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:68:\"https://ps.w.org/ultimate-member/assets/icon-256x256.png?rev=2143339\";s:2:\"1x\";s:68:\"https://ps.w.org/ultimate-member/assets/icon-128x128.png?rev=2143339\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:71:\"https://ps.w.org/ultimate-member/assets/banner-1544x500.png?rev=2143172\";s:2:\"1x\";s:70:\"https://ps.w.org/ultimate-member/assets/banner-772x250.png?rev=2143172\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"wc-frontend-manager/wc_frontend_manager.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/wc-frontend-manager\";s:4:\"slug\";s:19:\"wc-frontend-manager\";s:6:\"plugin\";s:43:\"wc-frontend-manager/wc_frontend_manager.php\";s:11:\"new_version\";s:5:\"6.5.6\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/wc-frontend-manager/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/wc-frontend-manager.6.5.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/wc-frontend-manager/assets/icon-256x256.jpg?rev=1800818\";s:2:\"1x\";s:72:\"https://ps.w.org/wc-frontend-manager/assets/icon-128x128.jpg?rev=1800818\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:74:\"https://ps.w.org/wc-frontend-manager/assets/banner-772x250.jpg?rev=1800818\";}s:11:\"banners_rtl\";a:0:{}}s:57:\"wc-multivendor-marketplace/wc-multivendor-marketplace.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:40:\"w.org/plugins/wc-multivendor-marketplace\";s:4:\"slug\";s:26:\"wc-multivendor-marketplace\";s:6:\"plugin\";s:57:\"wc-multivendor-marketplace/wc-multivendor-marketplace.php\";s:11:\"new_version\";s:5:\"3.4.6\";s:3:\"url\";s:57:\"https://wordpress.org/plugins/wc-multivendor-marketplace/\";s:7:\"package\";s:75:\"https://downloads.wordpress.org/plugin/wc-multivendor-marketplace.3.4.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/wc-multivendor-marketplace/assets/icon-256x256.png?rev=1925332\";s:2:\"1x\";s:79:\"https://ps.w.org/wc-multivendor-marketplace/assets/icon-128x128.png?rev=1925332\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:81:\"https://ps.w.org/wc-multivendor-marketplace/assets/banner-772x250.jpg?rev=1925332\";}s:11:\"banners_rtl\";a:0:{}}s:55:\"wc-multivendor-membership/wc-multivendor-membership.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:39:\"w.org/plugins/wc-multivendor-membership\";s:4:\"slug\";s:25:\"wc-multivendor-membership\";s:6:\"plugin\";s:55:\"wc-multivendor-membership/wc-multivendor-membership.php\";s:11:\"new_version\";s:5:\"2.9.5\";s:3:\"url\";s:56:\"https://wordpress.org/plugins/wc-multivendor-membership/\";s:7:\"package\";s:74:\"https://downloads.wordpress.org/plugin/wc-multivendor-membership.2.9.5.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/wc-multivendor-membership/assets/icon-256x256.jpg?rev=1804240\";s:2:\"1x\";s:78:\"https://ps.w.org/wc-multivendor-membership/assets/icon-128x128.jpg?rev=1804240\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:80:\"https://ps.w.org/wc-multivendor-membership/assets/banner-772x250.png?rev=1804241\";}s:11:\"banners_rtl\";a:0:{}}s:27:\"woocommerce/woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:6:\"plugin\";s:27:\"woocommerce/woocommerce.php\";s:11:\"new_version\";s:5:\"4.8.0\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/woocommerce/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/woocommerce.4.8.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-256x256.png?rev=2366418\";s:2:\"1x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-128x128.png?rev=2366418\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woocommerce/assets/banner-1544x500.png?rev=2366418\";s:2:\"1x\";s:66:\"https://ps.w.org/woocommerce/assets/banner-772x250.png?rev=2366418\";}s:11:\"banners_rtl\";a:0:{}}s:27:\"wp-optimize/wp-optimize.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/wp-optimize\";s:4:\"slug\";s:11:\"wp-optimize\";s:6:\"plugin\";s:27:\"wp-optimize/wp-optimize.php\";s:11:\"new_version\";s:5:\"3.1.6\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/wp-optimize/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/wp-optimize.3.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/wp-optimize/assets/icon-256x256.png?rev=1552899\";s:2:\"1x\";s:64:\"https://ps.w.org/wp-optimize/assets/icon-128x128.png?rev=1552899\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/wp-optimize/assets/banner-1544x500.png?rev=2125385\";s:2:\"1x\";s:66:\"https://ps.w.org/wp-optimize/assets/banner-772x250.png?rev=2125385\";}s:11:\"banners_rtl\";a:0:{}}s:24:\"wpforms-lite/wpforms.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:26:\"w.org/plugins/wpforms-lite\";s:4:\"slug\";s:12:\"wpforms-lite\";s:6:\"plugin\";s:24:\"wpforms-lite/wpforms.php\";s:11:\"new_version\";s:7:\"1.6.4.1\";s:3:\"url\";s:43:\"https://wordpress.org/plugins/wpforms-lite/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/wpforms-lite.1.6.4.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:65:\"https://ps.w.org/wpforms-lite/assets/icon-256x256.png?rev=1371112\";s:2:\"1x\";s:65:\"https://ps.w.org/wpforms-lite/assets/icon-128x128.png?rev=1371112\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:68:\"https://ps.w.org/wpforms-lite/assets/banner-1544x500.png?rev=1371112\";s:2:\"1x\";s:67:\"https://ps.w.org/wpforms-lite/assets/banner-772x250.png?rev=1371112\";}s:11:\"banners_rtl\";a:0:{}}s:29:\"wp-mail-smtp/wp_mail_smtp.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:26:\"w.org/plugins/wp-mail-smtp\";s:4:\"slug\";s:12:\"wp-mail-smtp\";s:6:\"plugin\";s:29:\"wp-mail-smtp/wp_mail_smtp.php\";s:11:\"new_version\";s:5:\"2.5.1\";s:3:\"url\";s:43:\"https://wordpress.org/plugins/wp-mail-smtp/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/wp-mail-smtp.2.5.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:65:\"https://ps.w.org/wp-mail-smtp/assets/icon-256x256.png?rev=1755440\";s:2:\"1x\";s:65:\"https://ps.w.org/wp-mail-smtp/assets/icon-128x128.png?rev=1755440\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:68:\"https://ps.w.org/wp-mail-smtp/assets/banner-1544x500.png?rev=2120094\";s:2:\"1x\";s:67:\"https://ps.w.org/wp-mail-smtp/assets/banner-772x250.png?rev=2120094\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no'),
-(6167, '_transient_timeout_wc_report_sales_by_date', '1610220871', 'no'),
-(6168, '_transient_wc_report_sales_by_date', 'a:8:{s:32:\"47e3a1e6d423c760a673d71ea6e7f6a8\";a:3:{i:0;O:8:\"stdClass\":2:{s:5:\"count\";s:1:\"3\";s:9:\"post_date\";s:19:\"2021-01-06 19:11:08\";}i:1;O:8:\"stdClass\":2:{s:5:\"count\";s:1:\"1\";s:9:\"post_date\";s:19:\"2021-01-07 17:48:49\";}i:2;O:8:\"stdClass\":2:{s:5:\"count\";s:1:\"2\";s:9:\"post_date\";s:19:\"2021-01-08 18:16:16\";}}s:32:\"3b1a4905cf8299ba4145a295f45334c6\";a:0:{}s:32:\"43d469ba7d1667c383460245a45cd447\";a:3:{i:0;O:8:\"stdClass\":2:{s:16:\"order_item_count\";s:3:\"170\";s:9:\"post_date\";s:19:\"2021-01-06 19:11:08\";}i:1;O:8:\"stdClass\":2:{s:16:\"order_item_count\";s:1:\"2\";s:9:\"post_date\";s:19:\"2021-01-07 17:48:49\";}i:2;O:8:\"stdClass\":2:{s:16:\"order_item_count\";s:1:\"3\";s:9:\"post_date\";s:19:\"2021-01-08 18:16:16\";}}s:32:\"16fb229fcdfd624fd3b55e759942f548\";N;s:32:\"a7ec4e7b7bfa2534f1b3847a916e3aa8\";a:3:{i:0;O:8:\"stdClass\":5:{s:11:\"total_sales\";s:3:\"370\";s:14:\"total_shipping\";s:1:\"0\";s:9:\"total_tax\";s:1:\"0\";s:18:\"total_shipping_tax\";s:1:\"0\";s:9:\"post_date\";s:19:\"2021-01-06 19:11:08\";}i:1;O:8:\"stdClass\":5:{s:11:\"total_sales\";s:2:\"10\";s:14:\"total_shipping\";s:1:\"0\";s:9:\"total_tax\";s:1:\"0\";s:18:\"total_shipping_tax\";s:1:\"0\";s:9:\"post_date\";s:19:\"2021-01-07 17:48:49\";}i:2;O:8:\"stdClass\":5:{s:11:\"total_sales\";s:2:\"63\";s:14:\"total_shipping\";s:1:\"0\";s:9:\"total_tax\";s:1:\"0\";s:18:\"total_shipping_tax\";s:1:\"0\";s:9:\"post_date\";s:19:\"2021-01-08 18:16:16\";}}s:32:\"9ca698749fa5b88e2267fe9e1e87daa7\";a:0:{}s:32:\"067cf2421f9414bd7f8b7b15ee59f3cc\";a:1:{i:0;O:8:\"stdClass\":10:{s:9:\"refund_id\";s:3:\"149\";s:12:\"total_refund\";s:6:\"170.00\";s:9:\"post_date\";s:19:\"2021-01-06 19:14:46\";s:9:\"item_type\";N;s:11:\"total_sales\";s:7:\"-170.00\";s:14:\"total_shipping\";s:1:\"0\";s:9:\"total_tax\";s:1:\"0\";s:18:\"total_shipping_tax\";s:1:\"0\";s:16:\"order_item_count\";N;s:10:\"net_refund\";d:170;}}s:32:\"a0956e0c2529d8db614e3c45a8c3aef9\";a:1:{i:0;O:8:\"stdClass\":9:{s:9:\"refund_id\";s:3:\"149\";s:12:\"total_refund\";s:6:\"170.00\";s:9:\"post_date\";s:19:\"2021-01-06 19:14:46\";s:9:\"item_type\";N;s:11:\"total_sales\";s:7:\"-170.00\";s:14:\"total_shipping\";s:1:\"0\";s:9:\"total_tax\";s:1:\"0\";s:18:\"total_shipping_tax\";s:1:\"0\";s:16:\"order_item_count\";N;}}}', 'no'),
-(6169, '_transient_timeout_wc_admin_report', '1610220872', 'no'),
-(6170, '_transient_wc_admin_report', 'a:2:{s:32:\"ee0ef13469c2c60f8e3b3c0c868c3310\";a:3:{i:0;O:8:\"stdClass\":2:{s:15:\"sparkline_value\";s:3:\"200\";s:9:\"post_date\";s:19:\"2021-01-06 19:11:08\";}i:1;O:8:\"stdClass\":2:{s:15:\"sparkline_value\";s:2:\"10\";s:9:\"post_date\";s:19:\"2021-01-07 17:48:49\";}i:2;O:8:\"stdClass\":2:{s:15:\"sparkline_value\";s:2:\"63\";s:9:\"post_date\";s:19:\"2021-01-08 18:16:16\";}}s:32:\"57e5043645ddb72211d134f6cc6695a8\";a:1:{i:0;O:8:\"stdClass\":3:{s:10:\"product_id\";s:3:\"119\";s:15:\"sparkline_value\";s:3:\"100\";s:9:\"post_date\";s:19:\"2021-01-06 19:43:56\";}}}', 'no'),
 (6395, '_transient_timeout_wc_tracks_blog_details', '1610222395', 'no'),
 (6396, '_transient_wc_tracks_blog_details', 'a:4:{s:3:\"url\";s:22:\"http://localhost/e-eat\";s:9:\"blog_lang\";s:5:\"es_ES\";s:7:\"blog_id\";N;s:14:\"products_count\";s:1:\"6\";}', 'no'),
 (6426, '_transient_wcfm-notification-message-33', '0', 'yes'),
@@ -5067,7 +5077,16 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (6428, '_transient_timeout_wc_term_counts', '1612728585', 'no'),
 (6429, '_transient_wc_term_counts', 'a:3:{i:52;s:0:\"\";i:18;s:1:\"3\";i:51;s:0:\"\";}', 'no'),
 (6607, '_transient_wcfm-notification-message-34', '0', 'yes'),
-(6608, '_transient_wcfm-notification-enquiry-34', '0', 'yes');
+(6608, '_transient_wcfm-notification-enquiry-34', '0', 'yes'),
+(6619, '_transient_timeout_wc_order_225_needs_processing', '1610229053', 'no'),
+(6620, '_transient_wc_order_225_needs_processing', '1', 'no'),
+(6621, '_transient_timeout_wc_order_226_needs_processing', '1610229055', 'no'),
+(6622, '_transient_wc_order_226_needs_processing', '1', 'no'),
+(6623, '_transient_timeout_wc_order_227_needs_processing', '1610229055', 'no'),
+(6624, '_transient_wc_order_227_needs_processing', '1', 'no'),
+(6638, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:0;s:3:\"all\";i:0;s:9:\"moderated\";i:0;s:8:\"approved\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
+(6788, '_transient_wcfm-notification-message-35', '0', 'yes'),
+(6789, '_transient_wcfm-notification-enquiry-35', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -6500,7 +6519,445 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1687, 254, '_wp_attached_file', '2021/01/burger-king.png'),
 (1688, 254, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:223;s:6:\"height\";i:226;s:4:\"file\";s:23:\"2021/01/burger-king.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
 (1689, 255, '_wp_attached_file', '2021/01/burger-king-banner.jpg'),
-(1690, 255, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:585;s:6:\"height\";i:86;s:4:\"file\";s:30:\"2021/01/burger-king-banner.jpg\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}');
+(1690, 255, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:585;s:6:\"height\";i:86;s:4:\"file\";s:30:\"2021/01/burger-king-banner.jpg\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1691, 256, '_wp_attached_file', '2021/01/Whopper®-Vegetal.png'),
+(1692, 256, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:29:\"2021/01/Whopper®-Vegetal.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1693, 257, '_wcfm_product_author', '34'),
+(1694, 257, '_regular_price', '7.95'),
+(1695, 257, 'total_sales', '0'),
+(1696, 257, '_tax_status', 'taxable'),
+(1697, 257, '_tax_class', ''),
+(1698, 257, '_manage_stock', 'no'),
+(1699, 257, '_backorders', 'no'),
+(1700, 257, '_sold_individually', 'no'),
+(1701, 257, '_virtual', 'no'),
+(1702, 257, '_downloadable', 'no'),
+(1703, 257, '_download_limit', '-1'),
+(1704, 257, '_download_expiry', '-1'),
+(1705, 257, '_stock', NULL),
+(1706, 257, '_stock_status', 'instock'),
+(1707, 257, '_wc_average_rating', '0'),
+(1708, 257, '_wc_review_count', '0'),
+(1709, 257, '_product_version', '4.8.0'),
+(1710, 257, '_price', '7.95'),
+(1711, 257, '_thumbnail_id', '256'),
+(1712, 256, '_wp_old_slug', 'whopper-vegetal'),
+(1713, 257, '_product_image_gallery', ''),
+(1714, 257, '_wcfm_new_product_notified', 'yes'),
+(1715, 257, '_catalog', 'no'),
+(1716, 257, 'disable_add_to_cart', 'no'),
+(1717, 257, 'disable_price', 'no'),
+(1718, 257, '_wcfmmp_processing_time', ''),
+(1719, 257, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1720, 258, '_wp_attached_file', '2021/01/King-Jr™.png'),
+(1721, 258, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:22:\"2021/01/King-Jr™.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1722, 259, '_wcfm_product_author', '34'),
+(1723, 259, '_regular_price', '4.95'),
+(1724, 259, 'total_sales', '0'),
+(1725, 259, '_tax_status', 'taxable'),
+(1726, 259, '_tax_class', ''),
+(1727, 259, '_manage_stock', 'no'),
+(1728, 259, '_backorders', 'no'),
+(1729, 259, '_sold_individually', 'no'),
+(1730, 259, '_virtual', 'no'),
+(1731, 259, '_downloadable', 'no'),
+(1732, 259, '_download_limit', '-1'),
+(1733, 259, '_download_expiry', '-1'),
+(1734, 259, '_stock', NULL),
+(1735, 259, '_stock_status', 'instock'),
+(1736, 259, '_wc_average_rating', '0'),
+(1737, 259, '_wc_review_count', '0'),
+(1738, 259, '_product_version', '4.8.0'),
+(1739, 259, '_price', '4.95'),
+(1740, 259, '_thumbnail_id', '258'),
+(1741, 258, '_wp_old_slug', 'king-jr'),
+(1742, 259, '_product_image_gallery', ''),
+(1743, 259, '_wcfm_new_product_notified', 'yes'),
+(1744, 259, '_catalog', 'no'),
+(1745, 259, 'disable_add_to_cart', 'no'),
+(1746, 259, 'disable_price', 'no'),
+(1747, 259, '_wcfmmp_processing_time', ''),
+(1748, 259, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1749, 260, '_wp_attached_file', '2021/01/Cubo-de-patatas-clasicas.png'),
+(1750, 260, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:36:\"2021/01/Cubo-de-patatas-clasicas.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1751, 261, '_wcfm_product_author', '34'),
+(1752, 261, 'total_sales', '0'),
+(1753, 261, '_tax_status', 'taxable'),
+(1754, 261, '_tax_class', ''),
+(1755, 261, '_manage_stock', 'no'),
+(1756, 261, '_backorders', 'no'),
+(1757, 261, '_sold_individually', 'no'),
+(1758, 261, '_virtual', 'no'),
+(1759, 261, '_downloadable', 'no'),
+(1760, 261, '_download_limit', '-1'),
+(1761, 261, '_download_expiry', '-1'),
+(1762, 261, '_stock', NULL),
+(1763, 261, '_stock_status', 'instock'),
+(1764, 261, '_wc_average_rating', '0'),
+(1765, 261, '_wc_review_count', '0'),
+(1766, 261, '_product_version', '4.8.0'),
+(1767, 261, '_thumbnail_id', '260'),
+(1768, 260, '_wp_old_slug', 'cubo-de-patatas-clasicas'),
+(1769, 261, '_product_image_gallery', ''),
+(1770, 261, '_wcfm_new_product_notified', 'yes'),
+(1771, 261, '_catalog', 'no'),
+(1772, 261, 'disable_add_to_cart', 'no'),
+(1773, 261, 'disable_price', 'no'),
+(1774, 261, '_wcfmmp_processing_time', ''),
+(1775, 261, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1776, 261, '_regular_price', '4'),
+(1777, 261, '_price', '4'),
+(1778, 262, '_wp_attached_file', '2021/01/Doble-Cheese-Burger-BBQ.png'),
+(1779, 262, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:35:\"2021/01/Doble-Cheese-Burger-BBQ.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1780, 263, '_wcfm_product_author', '34'),
+(1781, 263, '_regular_price', '4.6'),
+(1782, 263, 'total_sales', '0'),
+(1783, 263, '_tax_status', 'taxable'),
+(1784, 263, '_tax_class', ''),
+(1785, 263, '_manage_stock', 'no'),
+(1786, 263, '_backorders', 'no'),
+(1787, 263, '_sold_individually', 'no'),
+(1788, 263, '_virtual', 'no'),
+(1789, 263, '_downloadable', 'no'),
+(1790, 263, '_download_limit', '-1'),
+(1791, 263, '_download_expiry', '-1'),
+(1792, 263, '_stock', NULL),
+(1793, 263, '_stock_status', 'instock'),
+(1794, 263, '_wc_average_rating', '0'),
+(1795, 263, '_wc_review_count', '0'),
+(1796, 263, '_product_version', '4.8.0'),
+(1797, 263, '_price', '4.6'),
+(1798, 263, '_thumbnail_id', '262'),
+(1799, 262, '_wp_old_slug', 'doble-cheese-burger-bbq'),
+(1800, 263, '_product_image_gallery', ''),
+(1801, 263, '_wcfm_new_product_notified', 'yes'),
+(1802, 263, '_catalog', 'no'),
+(1803, 263, 'disable_add_to_cart', 'no'),
+(1804, 263, 'disable_price', 'no'),
+(1805, 263, '_wcfmmp_processing_time', ''),
+(1806, 263, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1807, 264, '_wp_attached_file', '2021/01/Fanta®-Limon.png'),
+(1808, 264, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:25:\"2021/01/Fanta®-Limon.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1809, 265, '_wcfm_product_author', '34'),
+(1810, 265, '_regular_price', '2.95'),
+(1811, 265, 'total_sales', '0'),
+(1812, 265, '_tax_status', 'taxable'),
+(1813, 265, '_tax_class', ''),
+(1814, 265, '_manage_stock', 'no'),
+(1815, 265, '_backorders', 'no'),
+(1816, 265, '_sold_individually', 'no'),
+(1817, 265, '_virtual', 'no'),
+(1818, 265, '_downloadable', 'no'),
+(1819, 265, '_download_limit', '-1'),
+(1820, 265, '_download_expiry', '-1'),
+(1821, 265, '_stock', NULL),
+(1822, 265, '_stock_status', 'instock'),
+(1823, 265, '_wc_average_rating', '0'),
+(1824, 265, '_wc_review_count', '0'),
+(1825, 265, '_product_version', '4.8.0'),
+(1826, 265, '_price', '2.95'),
+(1827, 265, '_thumbnail_id', '264'),
+(1828, 264, '_wp_old_slug', 'fanta-limon'),
+(1829, 265, '_product_image_gallery', ''),
+(1830, 265, '_wcfm_new_product_notified', 'yes'),
+(1831, 265, '_catalog', 'no'),
+(1832, 265, 'disable_add_to_cart', 'no'),
+(1833, 265, 'disable_price', 'no'),
+(1834, 265, '_wcfmmp_processing_time', ''),
+(1835, 265, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1836, 266, '_wp_attached_file', '2021/01/Menu-Long-Chicken®.png'),
+(1837, 266, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:31:\"2021/01/Menu-Long-Chicken®.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1838, 267, '_wcfm_product_author', '34'),
+(1839, 267, '_regular_price', '7.5'),
+(1840, 267, 'total_sales', '0'),
+(1841, 267, '_tax_status', 'taxable'),
+(1842, 267, '_tax_class', ''),
+(1843, 267, '_manage_stock', 'no'),
+(1844, 267, '_backorders', 'no'),
+(1845, 267, '_sold_individually', 'no'),
+(1846, 267, '_virtual', 'no'),
+(1847, 267, '_downloadable', 'no'),
+(1848, 267, '_download_limit', '-1'),
+(1849, 267, '_download_expiry', '-1'),
+(1850, 267, '_stock', NULL),
+(1851, 267, '_stock_status', 'instock'),
+(1852, 267, '_wc_average_rating', '0'),
+(1853, 267, '_wc_review_count', '0'),
+(1854, 267, '_product_version', '4.8.0'),
+(1855, 267, '_price', '7.5'),
+(1856, 267, '_thumbnail_id', '266'),
+(1857, 266, '_wp_old_slug', 'menu-long-chicken'),
+(1858, 267, '_product_image_gallery', ''),
+(1859, 267, '_wcfm_new_product_notified', 'yes'),
+(1860, 267, '_catalog', 'no'),
+(1861, 267, 'disable_add_to_cart', 'no'),
+(1862, 267, 'disable_price', 'no'),
+(1863, 267, '_wcfmmp_processing_time', ''),
+(1864, 267, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1865, 268, '_wp_attached_file', '2021/01/Salsa-queso.png'),
+(1866, 268, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:676;s:6:\"height\";i:400;s:4:\"file\";s:23:\"2021/01/Salsa-queso.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1867, 269, '_wcfm_product_author', '34'),
+(1868, 269, '_regular_price', '0.6'),
+(1869, 269, 'total_sales', '0'),
+(1870, 269, '_tax_status', 'taxable'),
+(1871, 269, '_tax_class', ''),
+(1872, 269, '_manage_stock', 'no'),
+(1873, 269, '_backorders', 'no'),
+(1874, 269, '_sold_individually', 'no'),
+(1875, 269, '_virtual', 'no'),
+(1876, 269, '_downloadable', 'no'),
+(1877, 269, '_download_limit', '-1'),
+(1878, 269, '_download_expiry', '-1'),
+(1879, 269, '_stock', NULL),
+(1880, 269, '_stock_status', 'instock'),
+(1881, 269, '_wc_average_rating', '0'),
+(1882, 269, '_wc_review_count', '0'),
+(1883, 269, '_product_version', '4.8.0'),
+(1884, 269, '_price', '0.6'),
+(1885, 269, '_thumbnail_id', '268'),
+(1886, 268, '_wp_old_slug', 'salsa-queso'),
+(1887, 269, '_product_image_gallery', '');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1888, 269, '_wcfm_new_product_notified', 'yes'),
+(1889, 269, '_catalog', 'no'),
+(1890, 269, 'disable_add_to_cart', 'no'),
+(1891, 269, 'disable_price', 'no'),
+(1892, 269, '_wcfmmp_processing_time', ''),
+(1893, 269, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1894, 270, '_wp_attached_file', '2021/01/mcd_mcbites.jpg'),
+(1895, 270, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:888;s:6:\"height\";i:355;s:4:\"file\";s:23:\"2021/01/mcd_mcbites.jpg\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1896, 271, '_wp_attached_file', '2021/01/download-1.png'),
+(1897, 271, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:300;s:6:\"height\";i:168;s:4:\"file\";s:22:\"2021/01/download-1.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1898, 272, '_wp_attached_file', '2021/01/CBO™.png'),
+(1899, 272, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:18:\"2021/01/CBO™.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1900, 273, '_wcfm_product_author', '35'),
+(1901, 273, '_regular_price', '5.65'),
+(1902, 273, 'total_sales', '0'),
+(1903, 273, '_tax_status', 'taxable'),
+(1904, 273, '_tax_class', ''),
+(1905, 273, '_manage_stock', 'no'),
+(1906, 273, '_backorders', 'no'),
+(1907, 273, '_sold_individually', 'no'),
+(1908, 273, '_virtual', 'no'),
+(1909, 273, '_downloadable', 'no'),
+(1910, 273, '_download_limit', '-1'),
+(1911, 273, '_download_expiry', '-1'),
+(1912, 273, '_stock', NULL),
+(1913, 273, '_stock_status', 'instock'),
+(1914, 273, '_wc_average_rating', '0'),
+(1915, 273, '_wc_review_count', '0'),
+(1916, 273, '_product_version', '4.8.0'),
+(1917, 273, '_price', '5.65'),
+(1918, 273, '_thumbnail_id', '272'),
+(1919, 272, '_wp_old_slug', 'cbo'),
+(1920, 273, '_product_image_gallery', ''),
+(1921, 273, '_wcfm_new_product_notified', 'yes'),
+(1922, 273, '_catalog', 'no'),
+(1923, 273, 'disable_add_to_cart', 'no'),
+(1924, 273, 'disable_price', 'no'),
+(1925, 273, '_wcfmmp_processing_time', ''),
+(1926, 273, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1927, 274, '_wp_attached_file', '2021/01/McFlurry®-Oreo-con-Chocolate-Blanco.png'),
+(1928, 274, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:48:\"2021/01/McFlurry®-Oreo-con-Chocolate-Blanco.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1929, 275, '_wcfm_product_author', '35'),
+(1930, 275, 'total_sales', '0'),
+(1931, 275, '_tax_status', 'taxable'),
+(1932, 275, '_tax_class', ''),
+(1933, 275, '_manage_stock', 'no'),
+(1934, 275, '_backorders', 'no'),
+(1935, 275, '_sold_individually', 'no'),
+(1936, 275, '_virtual', 'no'),
+(1937, 275, '_downloadable', 'no'),
+(1938, 275, '_download_limit', '-1'),
+(1939, 275, '_download_expiry', '-1'),
+(1940, 275, '_stock', NULL),
+(1941, 275, '_stock_status', 'instock'),
+(1942, 275, '_wc_average_rating', '0'),
+(1943, 275, '_wc_review_count', '0'),
+(1944, 275, '_product_version', '4.8.0'),
+(1945, 275, '_thumbnail_id', '274'),
+(1946, 274, '_wp_old_slug', 'mcflurry-oreo-con-chocolate-blanco'),
+(1947, 275, '_product_image_gallery', ''),
+(1948, 275, '_wcfm_new_product_notified', 'yes'),
+(1949, 275, '_catalog', 'no'),
+(1950, 275, 'disable_add_to_cart', 'no'),
+(1951, 275, 'disable_price', 'no'),
+(1952, 275, '_wcfmmp_processing_time', ''),
+(1953, 275, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1954, 276, '_wp_attached_file', '2021/01/1-Principal-2-Complementos.png'),
+(1955, 276, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:38:\"2021/01/1-Principal-2-Complementos.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1956, 277, '_wcfm_product_author', '35'),
+(1957, 277, '_regular_price', '3.95'),
+(1958, 277, 'total_sales', '0'),
+(1959, 277, '_tax_status', 'taxable'),
+(1960, 277, '_tax_class', ''),
+(1961, 277, '_manage_stock', 'no'),
+(1962, 277, '_backorders', 'no'),
+(1963, 277, '_sold_individually', 'no'),
+(1964, 277, '_virtual', 'no'),
+(1965, 277, '_downloadable', 'no'),
+(1966, 277, '_download_limit', '-1'),
+(1967, 277, '_download_expiry', '-1'),
+(1968, 277, '_stock', NULL),
+(1969, 277, '_stock_status', 'instock'),
+(1970, 277, '_wc_average_rating', '0'),
+(1971, 277, '_wc_review_count', '0'),
+(1972, 277, '_product_version', '4.8.0'),
+(1973, 277, '_price', '3.95'),
+(1974, 277, '_thumbnail_id', '276'),
+(1975, 276, '_wp_old_slug', '1-principal-2-complementos'),
+(1976, 277, '_product_image_gallery', ''),
+(1977, 277, '_wcfm_new_product_notified', 'yes'),
+(1978, 277, '_catalog', 'no'),
+(1979, 277, 'disable_add_to_cart', 'no'),
+(1980, 277, 'disable_price', 'no'),
+(1981, 277, '_wcfmmp_processing_time', ''),
+(1982, 277, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(1983, 278, '_wp_attached_file', '2021/01/Top-Fries-Bacon-Cheese-Deluxe-para-Compartir.png'),
+(1984, 278, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:500;s:6:\"height\";i:500;s:4:\"file\";s:56:\"2021/01/Top-Fries-Bacon-Cheese-Deluxe-para-Compartir.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1985, 279, '_wcfm_product_author', '35'),
+(1986, 279, '_regular_price', '3.85'),
+(1987, 279, 'total_sales', '0'),
+(1988, 279, '_tax_status', 'taxable'),
+(1989, 279, '_tax_class', ''),
+(1990, 279, '_manage_stock', 'no'),
+(1991, 279, '_backorders', 'no'),
+(1992, 279, '_sold_individually', 'no'),
+(1993, 279, '_virtual', 'no'),
+(1994, 279, '_downloadable', 'no'),
+(1995, 279, '_download_limit', '-1'),
+(1996, 279, '_download_expiry', '-1'),
+(1997, 279, '_stock', NULL),
+(1998, 279, '_stock_status', 'instock'),
+(1999, 279, '_wc_average_rating', '0'),
+(2000, 279, '_wc_review_count', '0'),
+(2001, 279, '_product_version', '4.8.0'),
+(2002, 279, '_price', '3.85'),
+(2003, 279, '_thumbnail_id', '278'),
+(2004, 278, '_wp_old_slug', 'top-fries-bacon-cheese-deluxe-para-compartir'),
+(2005, 279, '_product_image_gallery', ''),
+(2006, 279, '_wcfm_new_product_notified', 'yes'),
+(2007, 279, '_catalog', 'no'),
+(2008, 279, 'disable_add_to_cart', 'no'),
+(2009, 279, 'disable_price', 'no'),
+(2010, 279, '_wcfmmp_processing_time', ''),
+(2011, 279, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(2012, 280, '_wp_attached_file', '2021/01/Patatas-Fritas-Grandes.png'),
+(2013, 280, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:34:\"2021/01/Patatas-Fritas-Grandes.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(2014, 281, '_wcfm_product_author', '35'),
+(2015, 281, '_regular_price', '3.2'),
+(2016, 281, 'total_sales', '0'),
+(2017, 281, '_tax_status', 'taxable'),
+(2018, 281, '_tax_class', ''),
+(2019, 281, '_manage_stock', 'no'),
+(2020, 281, '_backorders', 'no'),
+(2021, 281, '_sold_individually', 'no'),
+(2022, 281, '_virtual', 'no'),
+(2023, 281, '_downloadable', 'no'),
+(2024, 281, '_download_limit', '-1'),
+(2025, 281, '_download_expiry', '-1'),
+(2026, 281, '_stock', NULL),
+(2027, 281, '_stock_status', 'instock'),
+(2028, 281, '_wc_average_rating', '0'),
+(2029, 281, '_wc_review_count', '0'),
+(2030, 281, '_product_version', '4.8.0'),
+(2031, 281, '_price', '3.2'),
+(2032, 281, '_thumbnail_id', '280'),
+(2033, 280, '_wp_old_slug', 'patatas-fritas-grandes'),
+(2034, 281, '_product_image_gallery', ''),
+(2035, 281, '_wcfm_new_product_notified', 'yes'),
+(2036, 281, '_catalog', 'no'),
+(2037, 281, 'disable_add_to_cart', 'no'),
+(2038, 281, 'disable_price', 'no'),
+(2039, 281, '_wcfmmp_processing_time', ''),
+(2040, 281, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(2041, 282, '_wp_attached_file', '2021/01/Iced-Coffee-Gr..png'),
+(2042, 282, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:27:\"2021/01/Iced-Coffee-Gr..png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(2043, 283, '_wcfm_product_author', '35'),
+(2044, 283, 'total_sales', '0'),
+(2045, 283, '_tax_status', 'taxable'),
+(2046, 283, '_tax_class', ''),
+(2047, 283, '_manage_stock', 'no'),
+(2048, 283, '_backorders', 'no'),
+(2049, 283, '_sold_individually', 'no'),
+(2050, 283, '_virtual', 'no'),
+(2051, 283, '_downloadable', 'no'),
+(2052, 283, '_download_limit', '-1'),
+(2053, 283, '_download_expiry', '-1'),
+(2054, 283, '_stock', NULL),
+(2055, 283, '_stock_status', 'instock'),
+(2056, 283, '_wc_average_rating', '0'),
+(2057, 283, '_wc_review_count', '0'),
+(2058, 283, '_product_version', '4.8.0'),
+(2059, 283, '_thumbnail_id', '282'),
+(2060, 282, '_wp_old_slug', 'iced-coffee-gr'),
+(2061, 283, '_product_image_gallery', ''),
+(2062, 283, '_wcfm_new_product_notified', 'yes'),
+(2063, 283, '_catalog', 'no'),
+(2064, 283, 'disable_add_to_cart', 'no'),
+(2065, 283, 'disable_price', 'no'),
+(2066, 283, '_wcfmmp_processing_time', ''),
+(2067, 283, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(2068, 284, '_wp_attached_file', '2021/01/Sundae-Chocolate.png'),
+(2069, 284, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:28:\"2021/01/Sundae-Chocolate.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(2070, 285, '_wcfm_product_author', '35'),
+(2071, 285, '_regular_price', '2.8'),
+(2072, 285, 'total_sales', '0'),
+(2073, 285, '_tax_status', 'taxable'),
+(2074, 285, '_tax_class', ''),
+(2075, 285, '_manage_stock', 'no'),
+(2076, 285, '_backorders', 'no'),
+(2077, 285, '_sold_individually', 'no'),
+(2078, 285, '_virtual', 'no'),
+(2079, 285, '_downloadable', 'no'),
+(2080, 285, '_download_limit', '-1'),
+(2081, 285, '_download_expiry', '-1'),
+(2082, 285, '_stock', NULL),
+(2083, 285, '_stock_status', 'instock'),
+(2084, 285, '_wc_average_rating', '0'),
+(2085, 285, '_wc_review_count', '0'),
+(2086, 285, '_product_version', '4.8.0'),
+(2087, 285, '_price', '2.8'),
+(2088, 285, '_thumbnail_id', '284'),
+(2089, 284, '_wp_old_slug', 'sundae-chocolate'),
+(2090, 285, '_product_image_gallery', ''),
+(2091, 285, '_wcfm_new_product_notified', 'yes'),
+(2092, 285, '_catalog', 'no'),
+(2093, 285, 'disable_add_to_cart', 'no'),
+(2094, 285, 'disable_price', 'no'),
+(2095, 285, '_wcfmmp_processing_time', ''),
+(2096, 285, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(2097, 286, '_wp_attached_file', '2021/01/4-Alitas.png'),
+(2098, 286, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:550;s:6:\"height\";i:440;s:4:\"file\";s:20:\"2021/01/4-Alitas.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(2099, 287, '_wcfm_product_author', '35'),
+(2100, 287, '_regular_price', '2.45'),
+(2101, 287, 'total_sales', '0'),
+(2102, 287, '_tax_status', 'taxable'),
+(2103, 287, '_tax_class', ''),
+(2104, 287, '_manage_stock', 'no'),
+(2105, 287, '_backorders', 'no'),
+(2106, 287, '_sold_individually', 'no'),
+(2107, 287, '_virtual', 'no'),
+(2108, 287, '_downloadable', 'no'),
+(2109, 287, '_download_limit', '-1'),
+(2110, 287, '_download_expiry', '-1'),
+(2111, 287, '_stock', NULL),
+(2112, 287, '_stock_status', 'instock'),
+(2113, 287, '_wc_average_rating', '0'),
+(2114, 287, '_wc_review_count', '0'),
+(2115, 287, '_product_version', '4.8.0'),
+(2116, 287, '_price', '2.45'),
+(2117, 287, '_thumbnail_id', '286'),
+(2118, 286, '_wp_old_slug', '4-alitas'),
+(2119, 287, '_product_image_gallery', ''),
+(2120, 287, '_wcfm_new_product_notified', 'yes'),
+(2121, 287, '_catalog', 'no'),
+(2122, 287, 'disable_add_to_cart', 'no'),
+(2123, 287, 'disable_price', 'no'),
+(2124, 287, '_wcfmmp_processing_time', ''),
+(2125, 287, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(2126, 283, '_regular_price', '2.85'),
+(2127, 283, '_price', '2.85');
 
 -- --------------------------------------------------------
 
@@ -6665,9 +7122,9 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (222, 1, '2021-01-08 18:34:15', '2021-01-08 18:34:15', '{\n    \"nav_menu_item[205]\": {\n        \"value\": {\n            \"menu_item_parent\": 0,\n            \"object_id\": 106,\n            \"object\": \"page\",\n            \"type\": \"post_type\",\n            \"type_label\": \"P\\u00e1gina de mi cuenta\",\n            \"url\": \"http://localhost/e-eat/my-account/\",\n            \"title\": \"\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"thumbnail_id\": 0,\n            \"thumbnail_hover_id\": \"\",\n            \"image_size\": \"\",\n            \"title_position\": \"\",\n            \"menu_image_icon_type\": \"\",\n            \"nav_menu_term_id\": 2,\n            \"position\": 5,\n            \"status\": \"publish\",\n            \"original_title\": \"My account\",\n            \"_invalid\": false\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-01-08 18:34:15\"\n    },\n    \"nav_menu_item[-2958311893645035500]\": {\n        \"value\": {\n            \"object_id\": 104,\n            \"object\": \"page\",\n            \"menu_item_parent\": 0,\n            \"position\": 4,\n            \"type\": \"post_type\",\n            \"title\": \"Cart\",\n            \"url\": \"http://localhost/e-eat/cart/\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"status\": \"publish\",\n            \"original_title\": \"Cart\",\n            \"nav_menu_term_id\": 2,\n            \"_invalid\": false,\n            \"type_label\": \"P\\u00e1gina del carrito\"\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2021-01-08 18:34:15\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', 'a58cbddc-0254-45e4-a491-7f34fd233b46', '', '', '2021-01-08 18:34:15', '2021-01-08 18:34:15', '', 0, 'http://localhost/e-eat/2021/01/08/a58cbddc-0254-45e4-a491-7f34fd233b46/', 0, 'customize_changeset', '', 0),
 (223, 1, '2021-01-08 18:34:15', '2021-01-08 18:34:15', ' ', '', '', 'publish', 'closed', 'closed', '', '223', '', '', '2021-01-08 18:34:15', '2021-01-08 18:34:15', '', 0, 'http://localhost/e-eat/2021/01/08/223/', 4, 'nav_menu_item', '', 0),
 (224, 1, '2021-01-08 18:34:47', '2021-01-08 18:34:47', '', 'Order &ndash; enero 8, 2021 @ 06:34 PM', '', 'wc-processing', 'open', 'closed', 'wc_order_rnwWF1ZuJkbVl', 'pedido-jan-08-2021-0634-pm', '', '', '2021-01-08 18:34:48', '2021-01-08 18:34:48', '', 0, 'http://localhost/e-eat/?post_type=shop_order&#038;p=224', 0, 'shop_order', '', 1),
-(225, 1, '2021-01-08 19:21:43', '2021-01-08 19:21:43', '', 'Order &ndash; enero 8, 2021 @ 07:21 PM', '', 'wc-pending', 'open', 'closed', 'wc_order_7RTxdVC1LuftN', 'pedido-jan-08-2021-0721-pm', '', '', '2021-01-08 19:21:43', '2021-01-08 19:21:43', '', 0, 'http://localhost/e-eat/?post_type=shop_order&p=225', 0, 'shop_order', '', 0),
-(226, 1, '2021-01-08 19:25:58', '2021-01-08 19:25:58', '', 'Order &ndash; enero 8, 2021 @ 07:25 PM', '', 'wc-pending', 'open', 'closed', 'wc_order_jWgaCT5Ajqmmb', 'pedido-jan-08-2021-0725-pm', '', '', '2021-01-08 19:25:58', '2021-01-08 19:25:58', '', 0, 'http://localhost/e-eat/?post_type=shop_order&p=226', 0, 'shop_order', '', 0),
-(227, 1, '2021-01-08 19:32:08', '2021-01-08 19:32:08', '', 'Order &ndash; enero 8, 2021 @ 07:32 PM', '', 'wc-pending', 'open', 'closed', 'wc_order_0a5QLu5hEm7Ay', 'pedido-jan-08-2021-0732-pm', '', '', '2021-01-08 19:32:08', '2021-01-08 19:32:08', '', 0, 'http://localhost/e-eat/?post_type=shop_order&p=227', 0, 'shop_order', '', 0),
+(225, 1, '2021-01-08 19:21:43', '2021-01-08 19:21:43', '', 'Order &ndash; enero 8, 2021 @ 07:21 PM', '', 'wc-cancelled', 'open', 'closed', 'wc_order_7RTxdVC1LuftN', 'pedido-jan-08-2021-0721-pm', '', '', '2021-01-08 21:50:53', '2021-01-08 21:50:53', '', 0, 'http://localhost/e-eat/?post_type=shop_order&#038;p=225', 0, 'shop_order', '', 1),
+(226, 1, '2021-01-08 19:25:58', '2021-01-08 19:25:58', '', 'Order &ndash; enero 8, 2021 @ 07:25 PM', '', 'wc-cancelled', 'open', 'closed', 'wc_order_jWgaCT5Ajqmmb', 'pedido-jan-08-2021-0725-pm', '', '', '2021-01-08 21:50:55', '2021-01-08 21:50:55', '', 0, 'http://localhost/e-eat/?post_type=shop_order&#038;p=226', 0, 'shop_order', '', 1),
+(227, 1, '2021-01-08 19:32:08', '2021-01-08 19:32:08', '', 'Order &ndash; enero 8, 2021 @ 07:32 PM', '', 'wc-cancelled', 'open', 'closed', 'wc_order_0a5QLu5hEm7Ay', 'pedido-jan-08-2021-0732-pm', '', '', '2021-01-08 21:50:55', '2021-01-08 21:50:55', '', 0, 'http://localhost/e-eat/?post_type=shop_order&#038;p=227', 0, 'shop_order', '', 1),
 (228, 1, '2021-01-08 19:38:32', '2021-01-08 19:38:32', '[ultimatemember form_id=\"31\"]', 'Miembros', '', 'inherit', 'closed', 'closed', '', '35-revision-v1', '', '', '2021-01-08 19:38:32', '2021-01-08 19:38:32', '', 35, 'http://localhost/e-eat/2021/01/08/35-revision-v1/', 0, 'revision', '', 0),
 (229, 1, '2021-01-08 19:38:32', '2021-01-08 19:38:32', '[foodstore]', 'Order Online', '', 'inherit', 'closed', 'closed', '', '107-revision-v1', '', '', '2021-01-08 19:38:32', '2021-01-08 19:38:32', '', 107, 'http://localhost/e-eat/2021/01/08/107-revision-v1/', 0, 'revision', '', 0),
 (230, 1, '2021-01-08 19:38:32', '2021-01-08 19:38:32', '', 'Shop', '', 'inherit', 'closed', 'closed', '', '103-revision-v1', '', '', '2021-01-08 19:38:32', '2021-01-08 19:38:32', '', 103, 'http://localhost/e-eat/2021/01/08/103-revision-v1/', 0, 'revision', '', 0),
@@ -6695,7 +7152,40 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (252, 33, '2021-01-08 20:29:01', '2021-01-08 20:29:01', '', 'Capri-Sun Multivitaminas', '', 'inherit', 'open', 'closed', '', 'capri-sun-multivitaminas-2', '', '', '2021-01-08 20:29:09', '2021-01-08 20:29:09', '', 253, 'http://localhost/e-eat/wp-content/uploads/2021/01/Capri-Sun-Multivitaminas.jpeg', 0, 'attachment', 'image/jpeg', 0),
 (253, 33, '2021-01-08 20:29:06', '2021-01-08 20:29:06', '', 'Capri-Sun Multivitaminas', '', 'publish', 'open', 'closed', '', 'capri-sun-multivitaminas', '', '', '2021-01-08 20:29:08', '2021-01-08 20:29:08', '', 0, 'http://localhost/e-eat/product/capri-sun-multivitaminas/', 0, 'product', '', 0),
 (254, 34, '2021-01-08 20:43:33', '2021-01-08 20:43:33', '', 'burger king', '', 'inherit', 'open', 'closed', '', 'burger-king', '', '', '2021-01-08 20:43:33', '2021-01-08 20:43:33', '', 0, 'http://localhost/e-eat/wp-content/uploads/2021/01/burger-king.png', 0, 'attachment', 'image/png', 0),
-(255, 34, '2021-01-08 20:44:20', '2021-01-08 20:44:20', '', 'burger king banner', '', 'inherit', 'open', 'closed', '', 'burger-king-banner', '', '', '2021-01-08 20:44:20', '2021-01-08 20:44:20', '', 0, 'http://localhost/e-eat/wp-content/uploads/2021/01/burger-king-banner.jpg', 0, 'attachment', 'image/jpeg', 0);
+(255, 34, '2021-01-08 20:44:20', '2021-01-08 20:44:20', '', 'burger king banner', '', 'inherit', 'open', 'closed', '', 'burger-king-banner', '', '', '2021-01-08 20:44:20', '2021-01-08 20:44:20', '', 0, 'http://localhost/e-eat/wp-content/uploads/2021/01/burger-king-banner.jpg', 0, 'attachment', 'image/jpeg', 0),
+(256, 34, '2021-01-08 21:54:05', '2021-01-08 21:54:05', '', 'Whopper® Vegetal', '', 'inherit', 'open', 'closed', '', 'whopper-vegetal-2', '', '', '2021-01-08 22:08:23', '2021-01-08 22:08:23', '', 257, 'http://localhost/e-eat/wp-content/uploads/2021/01/Whopper®-Vegetal.png', 0, 'attachment', 'image/png', 0),
+(257, 34, '2021-01-08 21:55:34', '2021-01-08 21:55:34', '<p><br></p>', 'Whopper® Vegetal', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: #000000; font-family: UberMoveText-Regular, sans-serif; font-size: medium;\" data-mce-style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: #000000; font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: #545454; padding-top: 16px;\" data-mce-style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: #545454; padding-top: 16px;\">100% Whopper. 100% Vegetal. Si eres cero de carne y mucho de plantas, te va a flipar el Whopper® Vegetal. El Whopper® de toda la vida, pero hecho a base de plantas. Eso sí, igualmente a la parrilla. ¿Sabrás diferenciarlo?</div></div>', 'publish', 'open', 'closed', '', 'whopper-vegetal', '', '', '2021-01-08 22:08:23', '2021-01-08 22:08:23', '', 0, 'http://localhost/e-eat/product/whopper-vegetal/', 0, 'product', '', 0),
+(258, 34, '2021-01-08 22:09:13', '2021-01-08 22:09:13', '', 'King Jr™', '', 'inherit', 'open', 'closed', '', 'king-jr-2', '', '', '2021-01-08 22:09:32', '2021-01-08 22:09:32', '', 259, 'http://localhost/e-eat/wp-content/uploads/2021/01/King-Jr™.png', 0, 'attachment', 'image/png', 0),
+(259, 34, '2021-01-08 22:09:29', '2021-01-08 22:09:29', '<p><br data-mce-bogus=\"1\"></p>', 'King Jr™', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: rgb(0, 0, 0); font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: rgb(84, 84, 84); padding-top: 16px;\">King Jr Meal te trae la fórmula perfecta. Un menú completo y diversión sin fin con la sorpresa que esconde en su interior. La mejor opción para cubrir las necesidades tanto de padres como de los más pequeños.</div><p><br></p></div>', 'publish', 'open', 'closed', '', 'king-jr', '', '', '2021-01-08 22:09:31', '2021-01-08 22:09:31', '', 0, 'http://localhost/e-eat/product/king-jr/', 0, 'product', '', 0),
+(260, 34, '2021-01-08 22:11:05', '2021-01-08 22:11:05', '', 'Cubo de patatas clásicas', '', 'inherit', 'open', 'closed', '', 'cubo-de-patatas-clasicas-2', '', '', '2021-01-08 22:23:32', '2021-01-08 22:23:32', '', 261, 'http://localhost/e-eat/wp-content/uploads/2021/01/Cubo-de-patatas-clasicas.png', 0, 'attachment', 'image/png', 0),
+(261, 34, '2021-01-08 22:11:15', '2021-01-08 22:11:15', '<p><br></p>', 'Cubo de patatas clásicas', '<p><span style=\"color: #545454; font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\" data-mce-style=\"color: #545454; font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Unas patatas siempre están bien. Pero un cubo repleto de patatas es otro rollo. Vamos, acompaña tu Cubo de Patatas Clásicas con 3 de nuestras mejores salsas y vuélvete a enamorar de su sabor</span></p>', 'publish', 'open', 'closed', '', 'cubo-de-patatas-clasicas', '', '', '2021-01-08 22:23:31', '2021-01-08 22:23:31', '', 0, 'http://localhost/e-eat/product/cubo-de-patatas-clasicas/', 0, 'product', '', 0),
+(262, 34, '2021-01-08 22:24:01', '2021-01-08 22:24:01', '', 'Doble Cheese Burger BBQ', '', 'inherit', 'open', 'closed', '', 'doble-cheese-burger-bbq-2', '', '', '2021-01-08 22:24:25', '2021-01-08 22:24:25', '', 263, 'http://localhost/e-eat/wp-content/uploads/2021/01/Doble-Cheese-Burger-BBQ.png', 0, 'attachment', 'image/png', 0),
+(263, 34, '2021-01-08 22:24:22', '2021-01-08 22:24:22', '<p><br data-mce-bogus=\"1\"></p>', 'Doble Cheese Burger BBQ', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: rgb(0, 0, 0); font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: rgb(84, 84, 84); padding-top: 16px;\">Es la mezcla perfecta. Doble de carne para los más hambrientos Y doble de queso para los más detallistas. Y con una deliciosa salsa barbacoa. La Doble Cheeseburger BBQ lo tiene todo.</div><p><br></p></div>', 'publish', 'open', 'closed', '', 'doble-cheese-burger-bbq', '', '', '2021-01-08 22:24:24', '2021-01-08 22:24:24', '', 0, 'http://localhost/e-eat/product/doble-cheese-burger-bbq/', 0, 'product', '', 0);
+INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
+(264, 34, '2021-01-08 22:26:31', '2021-01-08 22:26:31', '', 'Fanta® Limón', '', 'inherit', 'open', 'closed', '', 'fanta-limon-2', '', '', '2021-01-08 22:40:20', '2021-01-08 22:40:20', '', 265, 'http://localhost/e-eat/wp-content/uploads/2021/01/Fanta®-Limon.png', 0, 'attachment', 'image/png', 0),
+(265, 34, '2021-01-08 22:26:48', '2021-01-08 22:26:48', '<p><br></p>', 'Fanta® Limón', '<p><span style=\"color: #545454; font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\" data-mce-style=\"color: #545454; font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Fanta Limón botella 500ml. Envase 100% reciclable</span></p>', 'publish', 'open', 'closed', '', 'fanta-limon', '', '', '2021-01-08 22:40:15', '2021-01-08 22:40:15', '', 0, 'http://localhost/e-eat/product/fanta-limon/', 0, 'product', '', 0),
+(266, 34, '2021-01-08 22:54:13', '2021-01-08 22:54:13', '', 'Menu Long Chicken®', '', 'inherit', 'open', 'closed', '', 'menu-long-chicken-2', '', '', '2021-01-08 22:54:22', '2021-01-08 22:54:22', '', 267, 'http://localhost/e-eat/wp-content/uploads/2021/01/Menu-Long-Chicken®.png', 0, 'attachment', 'image/png', 0),
+(267, 34, '2021-01-08 22:54:20', '2021-01-08 22:54:20', '<p><br data-mce-bogus=\"1\"></p>', 'Menu Long Chicken®', '<p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Uno de los más demandados en nuestros restaurantes, ¿Por qué será?. Pan de semilla alargado que alberga pollo crujiente empanado ligeramente especiado, lechuga y mayonesa. ¡Todo un clásico!</span><br data-mce-bogus=\"1\"></p>', 'publish', 'open', 'closed', '', 'menu-long-chicken', '', '', '2021-01-08 22:54:21', '2021-01-08 22:54:21', '', 0, 'http://localhost/e-eat/product/menu-long-chicken/', 0, 'product', '', 0),
+(268, 34, '2021-01-08 22:58:50', '2021-01-08 22:58:50', '', 'Salsa queso', '', 'inherit', 'open', 'closed', '', 'salsa-queso-2', '', '', '2021-01-08 23:16:17', '2021-01-08 23:16:17', '', 269, 'http://localhost/e-eat/wp-content/uploads/2021/01/Salsa-queso.png', 0, 'attachment', 'image/png', 0),
+(269, 34, '2021-01-08 23:16:14', '2021-01-08 23:16:14', '<p><br data-mce-bogus=\"1\"></p>', 'Salsa queso', '<p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 12px;\">Alergias alimentarias o necesidades dietéticas especiales: Antes de realizar su pedido, contacte directamente con el restaurante.</span><br data-mce-bogus=\"1\"></p><p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 12px;\"><br></span></p>', 'publish', 'open', 'closed', '', 'salsa-queso', '', '', '2021-01-08 23:16:16', '2021-01-08 23:16:16', '', 0, 'http://localhost/e-eat/product/salsa-queso/', 0, 'product', '', 0),
+(270, 35, '2021-01-08 23:23:45', '2021-01-08 23:23:45', '', 'mcdonald banner', '', 'inherit', 'open', 'closed', '', 'mcd_mcbites', '', '', '2021-01-08 23:23:58', '2021-01-08 23:23:58', '', 0, 'http://localhost/e-eat/wp-content/uploads/2021/01/mcd_mcbites.jpg', 0, 'attachment', 'image/jpeg', 0),
+(271, 35, '2021-01-08 23:24:04', '2021-01-08 23:24:04', '', 'mcdonald', '', 'inherit', 'open', 'closed', '', 'download-3', '', '', '2021-01-08 23:24:10', '2021-01-08 23:24:10', '', 0, 'http://localhost/e-eat/wp-content/uploads/2021/01/download-1.png', 0, 'attachment', 'image/png', 0),
+(272, 35, '2021-01-08 23:29:47', '2021-01-08 23:29:47', '', 'CBO™', '', 'inherit', 'open', 'closed', '', 'cbo-2', '', '', '2021-01-08 23:29:57', '2021-01-08 23:29:57', '', 273, 'http://localhost/e-eat/wp-content/uploads/2021/01/CBO™.png', 0, 'attachment', 'image/png', 0),
+(273, 35, '2021-01-08 23:29:54', '2021-01-08 23:29:54', '<p><br data-mce-bogus=\"1\"></p>', 'CBO™', '<p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Bacon, cebolla, lechuga y sabroso pollo supreme</span><br data-mce-bogus=\"1\"></p>', 'publish', 'open', 'closed', '', 'cbo', '', '', '2021-01-08 23:29:56', '2021-01-08 23:29:56', '', 0, 'http://localhost/e-eat/product/cbo/', 0, 'product', '', 0),
+(274, 35, '2021-01-08 23:30:17', '2021-01-08 23:30:17', '', 'McFlurry® Oreo con Chocolate Blanco', '', 'inherit', 'open', 'closed', '', 'mcflurry-oreo-con-chocolate-blanco-2', '', '', '2021-01-08 23:30:27', '2021-01-08 23:30:27', '', 275, 'http://localhost/e-eat/wp-content/uploads/2021/01/McFlurry®-Oreo-con-Chocolate-Blanco.png', 0, 'attachment', 'image/png', 0),
+(275, 35, '2021-01-08 23:30:25', '2021-01-08 23:30:25', '<p><br data-mce-bogus=\"1\"></p>', 'McFlurry® Oreo con Chocolate Blanco', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: rgb(0, 0, 0); font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: rgb(84, 84, 84); padding-top: 16px;\">Galleta Oreo y topping con chocolate blanco</div><p><br></p></div>', 'publish', 'open', 'closed', '', 'mcflurry-oreo-con-chocolate-blanco', '', '', '2021-01-08 23:30:26', '2021-01-08 23:30:26', '', 0, 'http://localhost/e-eat/product/mcflurry-oreo-con-chocolate-blanco/', 0, 'product', '', 0),
+(276, 35, '2021-01-08 23:31:04', '2021-01-08 23:31:04', '', '1 Principal + 2 Complementos', '', 'inherit', 'open', 'closed', '', '1-principal-2-complementos-2', '', '', '2021-01-08 23:32:14', '2021-01-08 23:32:14', '', 277, 'http://localhost/e-eat/wp-content/uploads/2021/01/1-Principal-2-Complementos.png', 0, 'attachment', 'image/png', 0),
+(277, 35, '2021-01-08 23:31:45', '2021-01-08 23:31:45', '<p><br data-mce-bogus=\"1\"></p>', '1 Principal + 2 Complementos', '<p><br data-mce-bogus=\"1\"></p>', 'publish', 'open', 'closed', '', '1-principal-2-complementos', '', '', '2021-01-08 23:32:12', '2021-01-08 23:32:12', '', 0, 'http://localhost/e-eat/product/1-principal-2-complementos/', 0, 'product', '', 0),
+(278, 35, '2021-01-08 23:32:49', '2021-01-08 23:32:49', '', 'Top Fries Bacon & Cheese Deluxe para Compartir', '', 'inherit', 'open', 'closed', '', 'top-fries-bacon-cheese-deluxe-para-compartir-2', '', '', '2021-01-08 23:33:03', '2021-01-08 23:33:03', '', 279, 'http://localhost/e-eat/wp-content/uploads/2021/01/Top-Fries-Bacon-Cheese-Deluxe-para-Compartir.png', 0, 'attachment', 'image/png', 0),
+(279, 35, '2021-01-08 23:33:01', '2021-01-08 23:33:01', '<p><br data-mce-bogus=\"1\"></p>', 'Top Fries Bacon & Cheese Deluxe para Compartir', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: rgb(0, 0, 0); font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: rgb(84, 84, 84); padding-top: 16px;\">Patatas  deluxe con salsa de queso y bacon</div><p><br></p></div>', 'publish', 'open', 'closed', '', 'top-fries-bacon-cheese-deluxe-para-compartir', '', '', '2021-01-08 23:33:02', '2021-01-08 23:33:02', '', 0, 'http://localhost/e-eat/product/top-fries-bacon-cheese-deluxe-para-compartir/', 0, 'product', '', 0),
+(280, 35, '2021-01-08 23:33:30', '2021-01-08 23:33:30', '', 'Patatas Fritas Grandes', '', 'inherit', 'open', 'closed', '', 'patatas-fritas-grandes-2', '', '', '2021-01-08 23:33:46', '2021-01-08 23:33:46', '', 281, 'http://localhost/e-eat/wp-content/uploads/2021/01/Patatas-Fritas-Grandes.png', 0, 'attachment', 'image/png', 0),
+(281, 35, '2021-01-08 23:33:44', '2021-01-08 23:33:44', '<p><br data-mce-bogus=\"1\"></p>', 'Patatas Fritas Grandes', '<p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Sabrosas patatas fritas con aceite vegetal</span><br data-mce-bogus=\"1\"></p>', 'publish', 'open', 'closed', '', 'patatas-fritas-grandes', '', '', '2021-01-08 23:33:45', '2021-01-08 23:33:45', '', 0, 'http://localhost/e-eat/product/patatas-fritas-grandes/', 0, 'product', '', 0),
+(282, 35, '2021-01-08 23:34:25', '2021-01-08 23:34:25', '', 'Iced Coffee Gr.', '', 'inherit', 'open', 'closed', '', 'iced-coffee-gr-2', '', '', '2021-01-08 23:37:06', '2021-01-08 23:37:06', '', 283, 'http://localhost/e-eat/wp-content/uploads/2021/01/Iced-Coffee-Gr..png', 0, 'attachment', 'image/png', 0),
+(283, 35, '2021-01-08 23:34:34', '2021-01-08 23:34:34', '<p><br></p>', 'Iced Coffee Gr.', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: #000000; font-family: UberMoveText-Regular, sans-serif; font-size: medium;\" data-mce-style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: #000000; font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: #545454; padding-top: 16px;\" data-mce-style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: #545454; padding-top: 16px;\">Café con leche con sabor a canela y hielo</div></div>', 'publish', 'open', 'closed', '', 'iced-coffee-gr', '', '', '2021-01-08 23:37:06', '2021-01-08 23:37:06', '', 0, 'http://localhost/e-eat/product/iced-coffee-gr/', 0, 'product', '', 0),
+(284, 35, '2021-01-08 23:35:04', '2021-01-08 23:35:04', '', 'Sundae Chocolate', '', 'inherit', 'open', 'closed', '', 'sundae-chocolate-2', '', '', '2021-01-08 23:35:14', '2021-01-08 23:35:14', '', 285, 'http://localhost/e-eat/wp-content/uploads/2021/01/Sundae-Chocolate.png', 0, 'attachment', 'image/png', 0),
+(285, 35, '2021-01-08 23:35:12', '2021-01-08 23:35:12', '<p><br data-mce-bogus=\"1\"></p>', 'Sundae Chocolate', '<div class=\"nd\" style=\"-webkit-font-smoothing: antialiased; padding: 24px 24px 32px; color: rgb(0, 0, 0); font-family: UberMoveText-Regular, sans-serif; font-size: medium;\"><div class=\"f5 dn d0 i2 ne\" style=\"-webkit-font-smoothing: antialiased; line-height: 20px; font-size: 14px; color: rgb(84, 84, 84); padding-top: 16px;\">Helado sabor vainilla con topping de chocolate</div><p><br></p></div>', 'publish', 'open', 'closed', '', 'sundae-chocolate', '', '', '2021-01-08 23:35:13', '2021-01-08 23:35:13', '', 0, 'http://localhost/e-eat/product/sundae-chocolate/', 0, 'product', '', 0),
+(286, 35, '2021-01-08 23:36:15', '2021-01-08 23:36:15', '', '4 Alitas', '', 'inherit', 'open', 'closed', '', '4-alitas-2', '', '', '2021-01-08 23:36:30', '2021-01-08 23:36:30', '', 287, 'http://localhost/e-eat/wp-content/uploads/2021/01/4-Alitas.png', 0, 'attachment', 'image/png', 0),
+(287, 35, '2021-01-08 23:36:26', '2021-01-08 23:36:26', '<p><br data-mce-bogus=\"1\"></p>', '4 Alitas', '<p><span style=\"color: rgb(84, 84, 84); font-family: UberMoveText-Regular, sans-serif; font-size: 14px;\">Alitas de pollo con sabor barbacoa</span><br data-mce-bogus=\"1\"></p>', 'publish', 'open', 'closed', '', '4-alitas', '', '', '2021-01-08 23:36:29', '2021-01-08 23:36:29', '', 0, 'http://localhost/e-eat/product/4-alitas/', 0, 'product', '', 0);
 
 -- --------------------------------------------------------
 
@@ -6838,7 +7328,22 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (247, 4, 0),
 (249, 4, 0),
 (251, 4, 0),
-(253, 4, 0);
+(253, 4, 0),
+(257, 4, 0),
+(259, 4, 0),
+(261, 4, 0),
+(263, 4, 0),
+(265, 4, 0),
+(267, 4, 0),
+(269, 4, 0),
+(273, 4, 0),
+(275, 4, 0),
+(277, 4, 0),
+(279, 4, 0),
+(281, 4, 0),
+(283, 4, 0),
+(285, 4, 0),
+(287, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -6862,7 +7367,7 @@ CREATE TABLE `wp_term_taxonomy` (
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 0),
 (2, 2, 'nav_menu', '', 0, 5),
-(4, 4, 'product_type', '', 0, 10),
+(4, 4, 'product_type', '', 0, 25),
 (5, 5, 'product_type', '', 0, 0),
 (6, 6, 'product_type', '', 0, 0),
 (7, 7, 'product_type', '', 0, 0),
@@ -7156,7 +7661,6 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (1019, 34, 'billing_last_name', 'Tiro de Linea'),
 (1020, 34, 'shipping_address_1', 'Av. Manuel Siurot, 5, 41013 Sevilla'),
 (1021, 34, 'billing_address_1', 'Av. Manuel Siurot, 5, 41013 Sevilla'),
-(1022, 34, 'session_tokens', 'a:1:{s:64:\"29450a7e466e91a8362977d85dcc18ad761a536665f2ce590cc6da32735c5540\";a:4:{s:10:\"expiration\";i:1611348199;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36\";s:5:\"login\";i:1610138599;}}'),
 (1023, 34, 'wc_last_active', '1610064000'),
 (1024, 34, '_store_setup', 'yes'),
 (1025, 34, '_wcfm_street_1', 'Av. Manuel Siurot, 5, 41013 Sevilla'),
@@ -7170,7 +7674,43 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (1033, 34, 'wcfmmp_profile_settings', 'a:10:{s:8:\"gravatar\";s:3:\"254\";s:6:\"banner\";s:3:\"255\";s:10:\"store_name\";s:22:\"burger-king-tiro-linea\";s:11:\"store_email\";s:30:\"xehtlgsg0rn8jcwu@bombamail.icu\";s:5:\"phone\";s:0:\"\";s:7:\"address\";a:6:{s:8:\"street_1\";s:35:\"Av. Manuel Siurot, 5, 41013 Sevilla\";s:8:\"street_2\";s:0:\"\";s:4:\"city\";s:7:\"Sevilla\";s:3:\"zip\";s:6:\"41013 \";s:7:\"country\";s:2:\"ES\";s:5:\"state\";s:2:\"SE\";}s:14:\"store_location\";s:44:\"Calle Cardenal Bueno Monreal, Seville, 41005\";s:9:\"store_lat\";s:17:\"37.36778676927098\";s:9:\"store_lng\";s:19:\"-5.9848880767822275\";s:6:\"social\";a:8:{s:7:\"twitter\";s:0:\"\";s:2:\"fb\";s:0:\"\";s:9:\"instagram\";s:0:\"\";s:7:\"youtube\";s:0:\"\";s:8:\"linkedin\";s:0:\"\";s:5:\"gplus\";s:0:\"\";s:8:\"snapchat\";s:0:\"\";s:9:\"pinterest\";s:0:\"\";}}'),
 (1034, 34, '_store_description', ''),
 (1035, 34, 'wcfm_policy_vendor_options', 'a:1:{i:0;s:0:\"\";}'),
-(1036, 34, '_wcfm_vendor_tax_migrated', 'yes');
+(1036, 34, '_wcfm_vendor_tax_migrated', 'yes'),
+(1037, 34, '_woocommerce_tracks_anon_id', 'woo:8m+zgmd0WEH29THEWHKflSz1'),
+(1038, 35, 'nickname', 'mcdonald-puerta-jerez'),
+(1039, 35, 'first_name', ''),
+(1040, 35, 'last_name', ''),
+(1041, 35, 'description', ''),
+(1042, 35, 'rich_editing', 'true'),
+(1043, 35, 'syntax_highlighting', 'true'),
+(1044, 35, 'comment_shortcuts', 'false'),
+(1045, 35, 'admin_color', 'fresh'),
+(1046, 35, 'use_ssl', '0'),
+(1047, 35, 'show_admin_bar_front', 'true'),
+(1048, 35, 'locale', ''),
+(1049, 35, 'wp_capabilities', 'a:1:{s:11:\"wcfm_vendor\";b:1;}'),
+(1050, 35, 'wp_user_level', '6'),
+(1051, 35, 'shipping_first_name', 'McDonald\'s'),
+(1052, 35, 'billing_first_name', 'McDonald\'s'),
+(1053, 35, 'shipping_last_name', 'Puerta Jerez'),
+(1054, 35, 'billing_last_name', 'Puerta Jerez'),
+(1055, 35, 'shipping_address_1', 'Paseo de las Delicias, 5, 41001 Sevilla'),
+(1056, 35, 'billing_address_1', 'Paseo de las Delicias, 5, 41001 Sevilla'),
+(1057, 35, 'session_tokens', 'a:1:{s:64:\"ad4d9d5393b73a47834457e7784e979706aca40e6e7dec6fe7bfd71b93845138\";a:4:{s:10:\"expiration\";i:1611357724;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36\";s:5:\"login\";i:1610148124;}}'),
+(1058, 35, 'wc_last_active', '1610064000'),
+(1059, 35, '_store_setup', 'yes'),
+(1060, 35, '_wcfm_street_1', 'Paseo de las Delicias, 5'),
+(1061, 35, '_wcfm_street_2', ''),
+(1062, 35, '_wcfm_city', 'Sevilla'),
+(1063, 35, '_wcfm_zip', '41001 '),
+(1064, 35, '_wcfm_country', 'ES'),
+(1065, 35, '_wcfm_state', 'SE'),
+(1066, 35, 'store_name', 'mcdonald-puerta-jerez'),
+(1067, 35, 'wcfmmp_store_name', 'mcdonald-puerta-jerez'),
+(1068, 35, 'wcfmmp_profile_settings', 'a:10:{s:8:\"gravatar\";s:3:\"271\";s:6:\"banner\";s:3:\"270\";s:10:\"store_name\";s:21:\"mcdonald-puerta-jerez\";s:11:\"store_email\";s:19:\"warebof635@vu38.com\";s:5:\"phone\";s:0:\"\";s:7:\"address\";a:6:{s:8:\"street_1\";s:24:\"Paseo de las Delicias, 5\";s:8:\"street_2\";s:0:\"\";s:4:\"city\";s:7:\"Sevilla\";s:3:\"zip\";s:6:\"41001 \";s:7:\"country\";s:2:\"ES\";s:5:\"state\";s:2:\"SE\";}s:14:\"store_location\";s:91:\"Paseo de las Delicias, Santa Cruz, Casco Antiguo, Seville, Sevilla, Andalusia, 41001, Spain\";s:9:\"store_lat\";s:10:\"37.3822654\";s:9:\"store_lng\";s:10:\"-5.9958621\";s:7:\"payment\";a:3:{s:6:\"method\";s:7:\"by_cash\";s:6:\"paypal\";a:1:{s:5:\"email\";s:0:\"\";}s:6:\"skrill\";a:1:{s:5:\"email\";s:0:\"\";}}}'),
+(1069, 35, '_store_description', ''),
+(1070, 35, 'wcfm_policy_vendor_options', 'a:1:{i:0;s:0:\"\";}'),
+(1071, 35, '_woocommerce_tracks_anon_id', 'woo:veNfNcF4z4qS4uqzzRuilooC'),
+(1072, 35, '_wcfm_vendor_tax_migrated', 'yes');
 
 -- --------------------------------------------------------
 
@@ -7199,7 +7739,8 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 (1, 'e-eat', '$P$BR8i0AqyjHlck8FoDGx8Bke/RPdIua0', 'e-eat', 'dp.grupo33@gmail.com', 'http://localhost/e-eat', '2020-12-09 19:28:42', '', 0, 'e-eat'),
 (31, 'dominos-pizza', '$P$BfN3tKOtA09CiIMAzE67T6ja/0oy0d/', 'dominos-pizza', 'elsentoyo@gmail.com', '', '2021-01-08 17:20:09', '', 0, 'dominos-pizza'),
 (33, 'taco-bell-puerta_jerez', '$P$BtmBn65Vy8v4OD4dMgXlALoh4T6H2A0', 'taco-bell-puerta_jerez', 'troslecloc@memeil.top', '', '2021-01-08 20:03:50', '', 0, 'taco-bell-puerta_jerez'),
-(34, 'burger-king-tiro-linea', '$P$B8sFDRbJfZGrYPZUnmJJhOAMMzK2yB0', 'burger-king-tiro-linea', 'xehtlgsg0rn8jcwu@bombamail.icu', '', '2021-01-08 20:43:16', '', 0, 'burger-king-tiro-linea');
+(34, 'burger-king-tiro-linea', '$P$B8sFDRbJfZGrYPZUnmJJhOAMMzK2yB0', 'burger-king-tiro-linea', 'xehtlgsg0rn8jcwu@bombamail.icu', '', '2021-01-08 20:43:16', '', 0, 'burger-king-tiro-linea'),
+(35, 'mcdonald-puerta-jerez', '$P$BLYgEjhCxudR.NI48.j4XjKq4AZvy..', 'mcdonald-puerta-jerez', 'warebof635@vu38.com', '', '2021-01-08 23:21:36', '', 0, 'mcdonald-puerta-jerez');
 
 -- --------------------------------------------------------
 
@@ -7239,7 +7780,8 @@ INSERT INTO `wp_wcfm_daily_analysis` (`ID`, `is_shop`, `is_store`, `is_product`,
 (43, 0, 1, 0, 0, 31, 12, '2021-01-08'),
 (58, 0, 0, 1, 174, 31, 9, '2021-01-08'),
 (81, 0, 1, 0, 0, 33, 1, '2021-01-08'),
-(82, 0, 1, 0, 0, 34, 1, '2021-01-08');
+(82, 0, 1, 0, 0, 34, 2, '2021-01-08'),
+(84, 0, 1, 0, 0, 35, 1, '2021-01-08');
 
 -- --------------------------------------------------------
 
@@ -7348,7 +7890,9 @@ INSERT INTO `wp_wcfm_detailed_analysis` (`ID`, `is_shop`, `is_store`, `is_produc
 (79, 1, 0, 0, 0, 1, 'http://localhost/e-eat/wp-admin/edit.php?post_type=page', '84.232.56.53', '', '', '', '2021-01-08 19:37:11'),
 (80, 1, 0, 0, 0, 1, '', '84.232.56.53', '', '', '', '2021-01-08 19:48:10'),
 (81, 0, 1, 0, 0, 33, 'http://localhost/e-eat/', '84.232.56.53', '', '', '', '2021-01-08 20:33:42'),
-(82, 0, 1, 0, 0, 34, 'http://localhost/e-eat/store-manager/', '84.232.56.53', '', '', '', '2021-01-08 20:48:02');
+(82, 0, 1, 0, 0, 34, 'http://localhost/e-eat/store-manager/', '84.232.56.53', '', '', '', '2021-01-08 20:48:02'),
+(83, 0, 1, 0, 0, 34, 'http://localhost/e-eat/store-manager/', '84.232.56.53', '', '', '', '2021-01-08 23:17:13'),
+(84, 0, 1, 0, 0, 35, 'http://localhost/e-eat/store-manager/products-manage/283/', '84.232.56.53', '', '', '', '2021-01-08 23:37:13');
 
 -- --------------------------------------------------------
 
@@ -7554,9 +8098,9 @@ INSERT INTO `wp_wcfm_marketplace_orders` (`ID`, `vendor_id`, `order_id`, `custom
 (1, 13, 169, 1, 'cod', 168, 0, 2, '5', '5', 19, 'line_item', '10', '10', '0', '0', '0', '9', '0', '', '0', '', 0, 0, '0', '0', '9', 'completed', 'pending', 'completed', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-07 16:48:52'),
 (2, 31, 219, 1, 'cod', 174, 0, 1, '21', '21', 21, 'line_item', '21', '21', '0', '0', '0', '18.9', '0', '', '0', '', 0, 0, '0', '0', '18.9', 'completed', 'pending', 'completed', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-08 17:16:16'),
 (3, 31, 224, 1, 'cod', 174, 0, 2, '21', '21', 23, 'line_item', '42', '42', '0', '0', '0', '37.8', '0', '', '0', '', 0, 0, '0', '0', '37.8', 'processing', 'pending', 'processing', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-08 17:34:48'),
-(4, 31, 225, 0, 'paypal', 174, 0, 2, '21', '21', 25, 'line_item', '42', '42', '0', '0', '0', '37.8', '0', '', '0', '', 0, 0, '0', '0', '37.8', 'pending', 'pending', 'pending', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-08 18:21:45'),
-(5, 31, 226, 0, 'paypal', 174, 0, 1, '0.01', '0.01', 27, 'line_item', '0.01', '0.01', '0', '0', '0', '0.01', '0', '', '0', '', 0, 0, '0', '0', '0.01', 'pending', 'pending', 'pending', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-08 18:26:01'),
-(6, 31, 227, 0, 'paypal', 174, 0, 1, '0.01', '0.01', 29, 'line_item', '0.01', '0.01', '0', '0', '0', '0.01', '0', '', '0', '', 0, 0, '0', '0', '0.01', 'pending', 'pending', 'pending', 'pending', 'pending', 0, 0, 1, 0, 0, NULL, '2021-01-08 18:32:10');
+(4, 31, 225, 0, 'paypal', 174, 0, 2, '21', '21', 25, 'line_item', '42', '42', '0', '0', '0', '37.8', '0', '', '0', '', 0, 0, '0', '0', '37.8', 'cancelled', 'pending', 'cancelled', 'pending', 'pending', 0, 0, 1, 0, 1, NULL, '2021-01-08 18:21:45'),
+(5, 31, 226, 0, 'paypal', 174, 0, 1, '0.01', '0.01', 27, 'line_item', '0.01', '0.01', '0', '0', '0', '0.01', '0', '', '0', '', 0, 0, '0', '0', '0.01', 'cancelled', 'pending', 'cancelled', 'pending', 'pending', 0, 0, 1, 0, 1, NULL, '2021-01-08 18:26:01'),
+(6, 31, 227, 0, 'paypal', 174, 0, 1, '0.01', '0.01', 29, 'line_item', '0.01', '0.01', '0', '0', '0', '0.01', '0', '', '0', '', 0, 0, '0', '0', '0.01', 'cancelled', 'pending', 'cancelled', 'pending', 'pending', 0, 0, 1, 0, 1, NULL, '2021-01-08 18:32:10');
 
 -- --------------------------------------------------------
 
@@ -7858,9 +8402,9 @@ INSERT INTO `wp_wcfm_marketplace_vendor_ledger` (`ID`, `vendor_id`, `credit`, `d
 (1, 13, '9', '0', 1, 'order', 'Earning for <b>Edumig a la plancha</b> order #<b>169</b>.', 'completed', '2021-01-07 16:51:04', '2021-01-07 16:48:53'),
 (2, 31, '18.9', '0', 2, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>219</b>.', 'completed', '2021-01-08 17:37:15', '2021-01-08 17:16:16'),
 (3, 31, '37.8', '0', 3, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>224</b>.', 'processing', '2021-01-08 17:34:49', '2021-01-08 17:34:48'),
-(4, 31, '37.8', '0', 4, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>225</b>.', 'pending', NULL, '2021-01-08 18:21:45'),
-(5, 31, '0.009', '0', 5, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>226</b>.', 'pending', NULL, '2021-01-08 18:26:01'),
-(6, 31, '0.009', '0', 6, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>227</b>.', 'pending', NULL, '2021-01-08 18:32:11');
+(4, 31, '37.8', '0', 4, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>225</b>.', 'cancelled', '2021-01-08 20:50:54', '2021-01-08 18:21:45'),
+(5, 31, '0.009', '0', 5, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>226</b>.', 'cancelled', '2021-01-08 20:50:55', '2021-01-08 18:26:01'),
+(6, 31, '0.009', '0', 6, 'order', 'Earning for <b>Pizza Hawaiana</b> order #<b>227</b>.', 'cancelled', '2021-01-08 20:50:57', '2021-01-08 18:32:11');
 
 -- --------------------------------------------------------
 
@@ -7973,7 +8517,22 @@ INSERT INTO `wp_wcfm_messages` (`ID`, `message`, `author_id`, `reply_to`, `messa
 (25, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/pack-4-personas/\">Pack 4 Personas</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/taco-bell-puerta_jerez/\">taco-bell-puerta_jerez</a></b>', 33, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 19:25:22'),
 (26, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/menu-crunchywrap-supreme/\">Menú Crunchywrap Supreme</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/taco-bell-puerta_jerez/\">taco-bell-puerta_jerez</a></b>', 33, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 19:26:33'),
 (27, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/ensalada-pollo-crujiente/\">Ensalada Pollo Crujiente</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/taco-bell-puerta_jerez/\">taco-bell-puerta_jerez</a></b>', 33, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 19:28:00'),
-(28, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/capri-sun-multivitaminas/\">Capri-Sun Multivitaminas</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/taco-bell-puerta_jerez/\">taco-bell-puerta_jerez</a></b>', 33, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 19:29:09');
+(28, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/capri-sun-multivitaminas/\">Capri-Sun Multivitaminas</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/taco-bell-puerta_jerez/\">taco-bell-puerta_jerez</a></b>', 33, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 19:29:09'),
+(29, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/whopper-vegetal/\">Whopper® Vegetal</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 20:56:35'),
+(30, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/king-jr/\">King Jr™</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 21:09:32'),
+(31, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/cubo-de-patatas-clasicas/\">Cubo de patatas clásicas</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 21:11:18'),
+(32, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/doble-cheese-burger-bbq/\">Doble Cheese Burger BBQ</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 21:24:25'),
+(33, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/fanta-limon/\">Fanta® Limón</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 21:26:51'),
+(34, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/menu-long-chicken/\">Menu Long Chicken®</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 21:54:22'),
+(35, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/salsa-queso/\">Salsa queso</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/burger-king-tiro-linea/\">burger-king-tiro-linea</a></b>', 34, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:16:17'),
+(36, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/cbo/\">CBO™</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:29:58'),
+(37, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/mcflurry-oreo-con-chocolate-blanco/\">McFlurry® Oreo con Chocolate Blanco</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:30:27'),
+(38, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/1-principal-2-complementos/\">1 Principal + 2 Complementos</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:32:14'),
+(39, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/top-fries-bacon-cheese-deluxe-para-compartir/\">Top Fries Bacon &#038; Cheese Deluxe para Compartir</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:33:04'),
+(40, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/patatas-fritas-grandes/\">Patatas Fritas Grandes</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:33:46'),
+(41, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/iced-coffee-gr/\">Iced Coffee Gr.</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:34:37'),
+(42, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/sundae-chocolate/\">Sundae Chocolate</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:35:14'),
+(43, 'A new product <b><a class=\"wcfm_dashboard_item_title\" href=\"http://localhost/e-eat/product/4-alitas/\">4 Alitas</a></b> added by <b><a class=\"wcfm_dashboard_item_title\" target=\"_blank\" href=\"http://localhost/e-eat/establecimiento/mcdonald-puerta-jerez/\">mcdonald-puerta-jerez</a></b>', 35, 0, 0, 0, 1, 0, 0, 1, 0, 'new_product', '2021-01-08 22:36:30');
 
 -- --------------------------------------------------------
 
@@ -8008,7 +8567,22 @@ INSERT INTO `wp_wcfm_messages_modifier` (`ID`, `message`, `is_read`, `read_by`, 
 (9, 25, 1, 33, '2021-01-08 19:25:22', 0, 0, '0000-00-00 00:00:00'),
 (10, 26, 1, 33, '2021-01-08 19:26:33', 0, 0, '0000-00-00 00:00:00'),
 (11, 27, 1, 33, '2021-01-08 19:28:01', 0, 0, '0000-00-00 00:00:00'),
-(12, 28, 1, 33, '2021-01-08 19:29:09', 0, 0, '0000-00-00 00:00:00');
+(12, 28, 1, 33, '2021-01-08 19:29:09', 0, 0, '0000-00-00 00:00:00'),
+(13, 29, 1, 34, '2021-01-08 20:56:35', 0, 0, '0000-00-00 00:00:00'),
+(14, 30, 1, 34, '2021-01-08 21:09:32', 0, 0, '0000-00-00 00:00:00'),
+(15, 31, 1, 34, '2021-01-08 21:11:18', 0, 0, '0000-00-00 00:00:00'),
+(16, 32, 1, 34, '2021-01-08 21:24:26', 0, 0, '0000-00-00 00:00:00'),
+(17, 33, 1, 34, '2021-01-08 21:26:51', 0, 0, '0000-00-00 00:00:00'),
+(18, 34, 1, 34, '2021-01-08 21:54:22', 0, 0, '0000-00-00 00:00:00'),
+(19, 35, 1, 34, '2021-01-08 22:16:17', 0, 0, '0000-00-00 00:00:00'),
+(20, 36, 1, 35, '2021-01-08 22:29:58', 0, 0, '0000-00-00 00:00:00'),
+(21, 37, 1, 35, '2021-01-08 22:30:27', 0, 0, '0000-00-00 00:00:00'),
+(22, 38, 1, 35, '2021-01-08 22:32:14', 0, 0, '0000-00-00 00:00:00'),
+(23, 39, 1, 35, '2021-01-08 22:33:04', 0, 0, '0000-00-00 00:00:00'),
+(24, 40, 1, 35, '2021-01-08 22:33:46', 0, 0, '0000-00-00 00:00:00'),
+(25, 41, 1, 35, '2021-01-08 22:34:37', 0, 0, '0000-00-00 00:00:00'),
+(26, 42, 1, 35, '2021-01-08 22:35:14', 0, 0, '0000-00-00 00:00:00'),
+(27, 43, 1, 35, '2021-01-08 22:36:30', 0, 0, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -8181,13 +8755,13 @@ INSERT INTO `wp_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`,
 (222, 19, 'affirm-insight-first-sale', 'Sí', '', 'actioned', 0, 'Gracias por tus comentarios'),
 (223, 19, 'deny-insight-first-sale', 'No', '', 'actioned', 0, 'Gracias por tus comentarios'),
 (343, 20, 'browse', 'Ver', 'https://woocommerce.com/success-stories/?utm_source=inbox', 'actioned', 0, ''),
-(435, 3, 'set-up-concierge', 'Schedule free session', 'https://wordpress.com/me/concierge', 'actioned', 1, ''),
-(436, 4, 'learn-more', 'Learn more', 'https://docs.woocommerce.com/document/woocommerce-shipping-and-tax/?utm_source=inbox', 'unactioned', 1, ''),
-(437, 5, 'learn-more-ecomm-unique-shopping-experience', 'Learn more', 'https://docs.woocommerce.com/document/product-add-ons/?utm_source=inbox', 'actioned', 1, ''),
-(438, 6, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
-(439, 7, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
-(440, 8, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
-(441, 9, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, '');
+(568, 3, 'set-up-concierge', 'Schedule free session', 'https://wordpress.com/me/concierge', 'actioned', 1, ''),
+(569, 4, 'learn-more', 'Learn more', 'https://docs.woocommerce.com/document/woocommerce-shipping-and-tax/?utm_source=inbox', 'unactioned', 1, ''),
+(570, 5, 'learn-more-ecomm-unique-shopping-experience', 'Learn more', 'https://docs.woocommerce.com/document/product-add-ons/?utm_source=inbox', 'actioned', 1, ''),
+(571, 6, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
+(572, 7, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
+(573, 8, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, ''),
+(574, 9, 'install-now', 'Install now', 'admin.php?page=wc-admin&action=setup-woocommerce-payments', 'actioned', 1, '');
 
 -- --------------------------------------------------------
 
@@ -8346,9 +8920,9 @@ INSERT INTO `wp_wc_order_stats` (`order_id`, `parent_id`, `date_created`, `date_
 (169, 0, '2021-01-07 17:48:49', '2021-01-07 17:48:49', 2, 10, 0, 0, 10, 1, 'wc-completed', 1),
 (219, 0, '2021-01-08 18:16:16', '2021-01-08 18:16:16', 1, 21, 0, 0, 21, 1, 'wc-completed', 1),
 (224, 0, '2021-01-08 18:34:47', '2021-01-08 18:34:47', 2, 42, 0, 0, 42, 1, 'wc-processing', 1),
-(225, 0, '2021-01-08 19:21:43', '2021-01-08 19:21:43', 2, 42, 0, 0, 42, 0, 'wc-pending', 6),
-(226, 0, '2021-01-08 19:25:58', '2021-01-08 19:25:58', 1, 0.01, 0, 0, 0.01, 0, 'wc-pending', 6),
-(227, 0, '2021-01-08 19:32:08', '2021-01-08 19:32:08', 1, 0.01, 0, 0, 0.01, 0, 'wc-pending', 6);
+(225, 0, '2021-01-08 19:21:43', '2021-01-08 19:21:43', 2, 42, 0, 0, 42, 0, 'wc-cancelled', 6),
+(226, 0, '2021-01-08 19:25:58', '2021-01-08 19:25:58', 1, 0.01, 0, 0, 0.01, 0, 'wc-cancelled', 6),
+(227, 0, '2021-01-08 19:32:08', '2021-01-08 19:32:08', 1, 0.01, 0, 0, 0.01, 0, 'wc-cancelled', 6);
 
 -- --------------------------------------------------------
 
@@ -8408,7 +8982,22 @@ INSERT INTO `wp_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downlo
 (247, '', 0, 0, '28.0000', '28.0000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
 (249, '', 0, 0, '8.6000', '8.6000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
 (251, '', 0, 0, '5.6000', '5.6000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
-(253, '', 0, 0, '1.8500', '1.8500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', '');
+(253, '', 0, 0, '1.8500', '1.8500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(257, '', 0, 0, '7.9500', '7.9500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(259, '', 0, 0, '4.9500', '4.9500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(261, '', 0, 0, '4.0000', '4.0000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(263, '', 0, 0, '4.6000', '4.6000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(265, '', 0, 0, '2.9500', '2.9500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(267, '', 0, 0, '7.5000', '7.5000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(269, '', 0, 0, '0.6000', '0.6000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(273, '', 0, 0, '5.6500', '5.6500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(275, '', 0, 0, '0.0000', '0.0000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(277, '', 0, 0, '3.9500', '3.9500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(279, '', 0, 0, '3.8500', '3.8500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(281, '', 0, 0, '3.2000', '3.2000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(283, '', 0, 0, '2.8500', '2.8500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(285, '', 0, 0, '2.8000', '2.8000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', ''),
+(287, '', 0, 0, '2.4500', '2.4500', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', '');
 
 -- --------------------------------------------------------
 
@@ -8922,7 +9511,7 @@ INSERT INTO `wp_woocommerce_sessions` (`session_id`, `session_key`, `session_val
 (186, '31', 'a:14:{s:4:\"cart\";s:411:\"a:1:{s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";a:11:{s:3:\"key\";s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";s:10:\"product_id\";i:174;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:21;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:21;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:405:\"a:15:{s:8:\"subtotal\";s:5:\"21.00\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:5:\"21.00\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:5:\"21.00\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";s:15:\"wcfm_membership\";i:-1;s:33:\"wcfm_membership_free_registration\";i:-1;s:8:\"customer\";s:862:\"a:26:{s:2:\"id\";s:2:\"31\";s:13:\"date_modified\";s:25:\"2021-01-08T17:21:16+00:00\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:24:\"c/ Reyes Católicos nº4\";s:7:\"address\";s:24:\"c/ Reyes Católicos nº4\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:2:\"SE\";s:7:\"country\";s:2:\"ES\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:24:\"c/ Reyes Católicos nº4\";s:16:\"shipping_address\";s:24:\"c/ Reyes Católicos nº4\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:2:\"SE\";s:16:\"shipping_country\";s:2:\"ES\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:7:\"Dominos\";s:9:\"last_name\";s:5:\"Pizza\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:19:\"elsentoyo@gmail.com\";s:19:\"shipping_first_name\";s:7:\"Dominos\";s:18:\"shipping_last_name\";s:5:\"Pizza\";s:16:\"shipping_company\";s:0:\"\";}\";s:10:\"wc_notices\";N;s:22:\"shipping_for_package_0\";s:716:\"a:2:{s:12:\"package_hash\";s:40:\"wc_ship_261e770e2ac858c668d06e756b51dab5\";s:5:\"rates\";a:2:{s:15:\"free_shipping:1\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:15:\"free_shipping:1\";s:9:\"method_id\";s:13:\"free_shipping\";s:11:\"instance_id\";i:1;s:5:\"label\";s:15:\"Envío gratuito\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}s:14:\"local_pickup:2\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:2\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:2;s:5:\"label\";s:14:\"Recogida local\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}}}\";s:25:\"previous_shipping_methods\";s:69:\"a:1:{i:0;a:2:{i:0;s:15:\"free_shipping:1\";i:1;s:14:\"local_pickup:2\";}}\";s:23:\"chosen_shipping_methods\";s:33:\"a:1:{i:0;s:15:\"free_shipping:1\";}\";s:22:\"shipping_method_counts\";s:14:\"a:1:{i:0;i:2;}\";}', 1610299098),
 (210, '2531637205154f3d69a9a4b3a2a85c4f', 'a:17:{s:4:\"cart\";s:415:\"a:1:{s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";a:11:{s:3:\"key\";s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";s:10:\"product_id\";i:174;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:0.01;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:0.01;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:402:\"a:15:{s:8:\"subtotal\";s:4:\"0.01\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:4:\"0.01\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:4:\"0.01\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";s:22:\"shipping_for_package_0\";s:716:\"a:2:{s:12:\"package_hash\";s:40:\"wc_ship_28a17d927b660697000b16bbd4006e90\";s:5:\"rates\";a:2:{s:15:\"free_shipping:1\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:15:\"free_shipping:1\";s:9:\"method_id\";s:13:\"free_shipping\";s:11:\"instance_id\";i:1;s:5:\"label\";s:15:\"Envío gratuito\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}s:14:\"local_pickup:2\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:2\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:2;s:5:\"label\";s:14:\"Recogida local\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}}}\";s:25:\"previous_shipping_methods\";s:69:\"a:1:{i:0;a:2:{i:0;s:15:\"free_shipping:1\";i:1;s:14:\"local_pickup:2\";}}\";s:23:\"chosen_shipping_methods\";s:33:\"a:1:{i:0;s:15:\"free_shipping:1\";}\";s:22:\"shipping_method_counts\";s:14:\"a:1:{i:0;i:2;}\";s:10:\"wc_notices\";N;s:8:\"customer\";s:779:\"a:26:{s:2:\"id\";s:1:\"0\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:5:\"41770\";s:4:\"city\";s:5:\"Monte\";s:9:\"address_1\";s:6:\"asdsad\";s:7:\"address\";s:6:\"asdsad\";s:9:\"address_2\";s:1:\"1\";s:5:\"state\";s:2:\"SE\";s:7:\"country\";s:2:\"ES\";s:17:\"shipping_postcode\";s:5:\"41770\";s:13:\"shipping_city\";s:5:\"Monte\";s:18:\"shipping_address_1\";s:6:\"asdsad\";s:16:\"shipping_address\";s:6:\"asdsad\";s:18:\"shipping_address_2\";s:1:\"1\";s:14:\"shipping_state\";s:2:\"SE\";s:16:\"shipping_country\";s:2:\"ES\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:1:\"1\";s:10:\"first_name\";s:4:\"juan\";s:9:\"last_name\";s:4:\"dssa\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:24:\"juan.noguerol@hotmail.es\";s:19:\"shipping_first_name\";s:4:\"juan\";s:18:\"shipping_last_name\";s:4:\"dssa\";s:16:\"shipping_company\";s:0:\"\";}\";s:21:\"chosen_payment_method\";s:6:\"paypal\";s:21:\"_wcfmmp_user_location\";s:37:\"Montellano, Sevilla, Andalusia, Spain\";s:25:\"_wcfmmp_user_location_lat\";s:10:\"36.9950734\";s:25:\"_wcfmmp_user_location_lng\";s:10:\"-5.5713466\";s:22:\"order_awaiting_payment\";i:226;}', 1610306367),
 (223, 'bceded51306ab8b7b57837c782cf18fd', 'a:17:{s:4:\"cart\";s:415:\"a:1:{s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";a:11:{s:3:\"key\";s:32:\"bf8229696f7a3bb4700cfddef19fa23f\";s:10:\"product_id\";i:174;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:0.01;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:0.01;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:402:\"a:15:{s:8:\"subtotal\";s:4:\"0.01\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:4:\"0.01\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:4:\"0.01\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";s:22:\"shipping_for_package_0\";s:716:\"a:2:{s:12:\"package_hash\";s:40:\"wc_ship_d1ca7fa1006ae62b12c01addc00c2a0a\";s:5:\"rates\";a:2:{s:15:\"free_shipping:1\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:15:\"free_shipping:1\";s:9:\"method_id\";s:13:\"free_shipping\";s:11:\"instance_id\";i:1;s:5:\"label\";s:15:\"Envío gratuito\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}s:14:\"local_pickup:2\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:2\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:2;s:5:\"label\";s:14:\"Recogida local\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:10:\"Artículos\";s:24:\"Pizza Hawaiana &times; 1\";}}}}\";s:25:\"previous_shipping_methods\";s:69:\"a:1:{i:0;a:2:{i:0;s:15:\"free_shipping:1\";i:1;s:14:\"local_pickup:2\";}}\";s:23:\"chosen_shipping_methods\";s:33:\"a:1:{i:0;s:15:\"free_shipping:1\";}\";s:22:\"shipping_method_counts\";s:14:\"a:1:{i:0;i:2;}\";s:10:\"wc_notices\";N;s:8:\"customer\";s:765:\"a:26:{s:2:\"id\";s:1:\"0\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:5:\"41411\";s:4:\"city\";s:5:\"monte\";s:9:\"address_1\";s:3:\"sad\";s:7:\"address\";s:3:\"sad\";s:9:\"address_2\";s:1:\"1\";s:5:\"state\";s:2:\"SE\";s:7:\"country\";s:2:\"ES\";s:17:\"shipping_postcode\";s:5:\"41411\";s:13:\"shipping_city\";s:5:\"monte\";s:18:\"shipping_address_1\";s:3:\"sad\";s:16:\"shipping_address\";s:3:\"sad\";s:18:\"shipping_address_2\";s:1:\"1\";s:14:\"shipping_state\";s:2:\"SE\";s:16:\"shipping_country\";s:2:\"ES\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:1:\"1\";s:10:\"first_name\";s:4:\"juan\";s:9:\"last_name\";s:3:\"zxz\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:24:\"juan.noguerol@hotmail.es\";s:19:\"shipping_first_name\";s:4:\"juan\";s:18:\"shipping_last_name\";s:3:\"zxz\";s:16:\"shipping_company\";s:0:\"\";}\";s:21:\"chosen_payment_method\";s:6:\"paypal\";s:21:\"_wcfmmp_user_location\";s:86:\"Montellano, Galdames, Biscay, Autonomous Community of the Basque Country, 48550, Spain\";s:25:\"_wcfmmp_user_location_lat\";s:10:\"43.2902244\";s:25:\"_wcfmmp_user_location_lng\";s:10:\"-3.1403535\";s:22:\"order_awaiting_payment\";i:227;}', 1610307057),
-(235, '34', 'a:7:{s:8:\"customer\";s:919:\"a:26:{s:2:\"id\";s:2:\"34\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:35:\"Av. Manuel Siurot, 5, 41013 Sevilla\";s:7:\"address\";s:35:\"Av. Manuel Siurot, 5, 41013 Sevilla\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:2:\"SE\";s:7:\"country\";s:2:\"ES\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:35:\"Av. Manuel Siurot, 5, 41013 Sevilla\";s:16:\"shipping_address\";s:35:\"Av. Manuel Siurot, 5, 41013 Sevilla\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:2:\"SE\";s:16:\"shipping_country\";s:2:\"ES\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:11:\"Burger King\";s:9:\"last_name\";s:13:\"Tiro de Linea\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:30:\"xehtlgsg0rn8jcwu@bombamail.icu\";s:19:\"shipping_first_name\";s:11:\"Burger King\";s:18:\"shipping_last_name\";s:13:\"Tiro de Linea\";s:16:\"shipping_company\";s:0:\"\";}\";s:4:\"cart\";s:6:\"a:0:{}\";s:11:\"cart_totals\";s:367:\"a:15:{s:8:\"subtotal\";i:0;s:12:\"subtotal_tax\";i:0;s:14:\"shipping_total\";i:0;s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";i:0;s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";i:0;s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";i:0;s:9:\"total_tax\";i:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";}', 1610311400);
+(237, '35', 'a:7:{s:8:\"customer\";s:920:\"a:26:{s:2:\"id\";s:2:\"35\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:39:\"Paseo de las Delicias, 5, 41001 Sevilla\";s:7:\"address\";s:39:\"Paseo de las Delicias, 5, 41001 Sevilla\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:2:\"SE\";s:7:\"country\";s:2:\"ES\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:39:\"Paseo de las Delicias, 5, 41001 Sevilla\";s:16:\"shipping_address\";s:39:\"Paseo de las Delicias, 5, 41001 Sevilla\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:2:\"SE\";s:16:\"shipping_country\";s:2:\"ES\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:10:\"McDonald\'s\";s:9:\"last_name\";s:12:\"Puerta Jerez\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:19:\"warebof635@vu38.com\";s:19:\"shipping_first_name\";s:10:\"McDonald\'s\";s:18:\"shipping_last_name\";s:12:\"Puerta Jerez\";s:16:\"shipping_company\";s:0:\"\";}\";s:4:\"cart\";s:6:\"a:0:{}\";s:11:\"cart_totals\";s:367:\"a:15:{s:8:\"subtotal\";i:0;s:12:\"subtotal_tax\";i:0;s:14:\"shipping_total\";i:0;s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";i:0;s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";i:0;s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";i:0;s:9:\"total_tax\";i:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";}', 1610320925);
 
 -- --------------------------------------------------------
 
@@ -11062,13 +11651,13 @@ ALTER TABLE `wp_wpmailsmtp_tasks_meta`
 -- AUTO_INCREMENT for table `wp_actionscheduler_actions`
 --
 ALTER TABLE `wp_actionscheduler_actions`
-  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1042;
+  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1045;
 
 --
 -- AUTO_INCREMENT for table `wp_actionscheduler_claims`
 --
 ALTER TABLE `wp_actionscheduler_claims`
-  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1325;
+  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1365;
 
 --
 -- AUTO_INCREMENT for table `wp_actionscheduler_groups`
@@ -11080,7 +11669,7 @@ ALTER TABLE `wp_actionscheduler_groups`
 -- AUTO_INCREMENT for table `wp_actionscheduler_logs`
 --
 ALTER TABLE `wp_actionscheduler_logs`
-  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2893;
+  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2902;
 
 --
 -- AUTO_INCREMENT for table `wp_alp_pickup_location`
@@ -11098,7 +11687,7 @@ ALTER TABLE `wp_commentmeta`
 -- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
-  MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `wp_links`
@@ -11110,19 +11699,19 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6617;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6908;
 
 --
 -- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1691;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2128;
 
 --
 -- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
 
 --
 -- AUTO_INCREMENT for table `wp_termmeta`
@@ -11164,25 +11753,25 @@ ALTER TABLE `wp_um_metadata`
 -- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1037;
+  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1073;
 
 --
 -- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `wp_wcfm_daily_analysis`
 --
 ALTER TABLE `wp_wcfm_daily_analysis`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `wp_wcfm_detailed_analysis`
 --
 ALTER TABLE `wp_wcfm_detailed_analysis`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `wp_wcfm_enquiries`
@@ -11332,13 +11921,13 @@ ALTER TABLE `wp_wcfm_membership_subscription`
 -- AUTO_INCREMENT for table `wp_wcfm_messages`
 --
 ALTER TABLE `wp_wcfm_messages`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `wp_wcfm_messages_modifier`
 --
 ALTER TABLE `wp_wcfm_messages_modifier`
-  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `wp_wcfm_messages_stat`
@@ -11380,7 +11969,7 @@ ALTER TABLE `wp_wc_admin_notes`
 -- AUTO_INCREMENT for table `wp_wc_admin_note_actions`
 --
 ALTER TABLE `wp_wc_admin_note_actions`
-  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=442;
+  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=575;
 
 --
 -- AUTO_INCREMENT for table `wp_wc_customer_lookup`
@@ -11458,7 +12047,7 @@ ALTER TABLE `wp_woocommerce_payment_tokens`
 -- AUTO_INCREMENT for table `wp_woocommerce_sessions`
 --
 ALTER TABLE `wp_woocommerce_sessions`
-  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
 
 --
 -- AUTO_INCREMENT for table `wp_woocommerce_shipping_zones`
