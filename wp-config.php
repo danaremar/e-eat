@@ -33,7 +33,7 @@ define( 'DB_USER', 'uad5yrghbkqjkgrd' );
 define( 'DB_PASSWORD', '6NNBiVh6ZYhFQJySFK8c' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'mysql://uad5yrghbkqjkgrd:6NNBiVh6ZYhFQJySFK8c@bt79qegjqd1tjrq0bqak-mysql.services.clever-cloud.com:3306/' );
+define( 'DB_HOST', 'bt79qegjqd1tjrq0bqak-mysql.services.clever-cloud.com' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
