@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 09-01-2021 a las 20:40:58
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.0
+-- Host: 127.0.0.1
+-- Generation Time: Jan 10, 2021 at 08:50 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `e-eat`
+-- Database: `e-eat`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_actionscheduler_actions`
+-- Table structure for table `wp_actionscheduler_actions`
 --
 
 CREATE TABLE `wp_actionscheduler_actions` (
@@ -44,7 +44,7 @@ CREATE TABLE `wp_actionscheduler_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_actionscheduler_actions`
+-- Dumping data for table `wp_actionscheduler_actions`
 --
 
 INSERT INTO `wp_actionscheduler_actions` (`action_id`, `hook`, `status`, `scheduled_date_gmt`, `scheduled_date_local`, `args`, `schedule`, `group_id`, `attempts`, `last_attempt_gmt`, `last_attempt_local`, `claim_id`, `extended_args`) VALUES
@@ -1045,7 +1045,7 @@ INSERT INTO `wp_actionscheduler_actions` (`action_id`, `hook`, `status`, `schedu
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_actionscheduler_claims`
+-- Table structure for table `wp_actionscheduler_claims`
 --
 
 CREATE TABLE `wp_actionscheduler_claims` (
@@ -1056,7 +1056,7 @@ CREATE TABLE `wp_actionscheduler_claims` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_actionscheduler_groups`
+-- Table structure for table `wp_actionscheduler_groups`
 --
 
 CREATE TABLE `wp_actionscheduler_groups` (
@@ -1065,7 +1065,7 @@ CREATE TABLE `wp_actionscheduler_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_actionscheduler_groups`
+-- Dumping data for table `wp_actionscheduler_groups`
 --
 
 INSERT INTO `wp_actionscheduler_groups` (`group_id`, `slug`) VALUES
@@ -1078,7 +1078,7 @@ INSERT INTO `wp_actionscheduler_groups` (`group_id`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_actionscheduler_logs`
+-- Table structure for table `wp_actionscheduler_logs`
 --
 
 CREATE TABLE `wp_actionscheduler_logs` (
@@ -1090,7 +1090,7 @@ CREATE TABLE `wp_actionscheduler_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_actionscheduler_logs`
+-- Dumping data for table `wp_actionscheduler_logs`
 --
 
 INSERT INTO `wp_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_date_gmt`, `log_date_local`) VALUES
@@ -4091,7 +4091,7 @@ INSERT INTO `wp_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_da
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_alp_pickup_location`
+-- Table structure for table `wp_alp_pickup_location`
 --
 
 CREATE TABLE `wp_alp_pickup_location` (
@@ -4116,7 +4116,7 @@ CREATE TABLE `wp_alp_pickup_location` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `wp_alp_pickup_location`
+-- Dumping data for table `wp_alp_pickup_location`
 --
 
 INSERT INTO `wp_alp_pickup_location` (`id`, `store_name`, `store_address`, `store_address_2`, `store_city`, `store_country`, `store_postcode`, `store_phone`, `store_time_format`, `store_days`, `store_instruction`, `store_display_address`, `store_display_address_2`, `store_display_city`, `store_display_country`, `store_display_postcode`, `store_display_phone`, `position`) VALUES
@@ -4125,7 +4125,7 @@ INSERT INTO `wp_alp_pickup_location` (`id`, `store_name`, `store_address`, `stor
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_commentmeta`
+-- Table structure for table `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -4136,7 +4136,7 @@ CREATE TABLE `wp_commentmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_commentmeta`
+-- Dumping data for table `wp_commentmeta`
 --
 
 INSERT INTO `wp_commentmeta` (`meta_id`, `comment_id`, `meta_key`, `meta_value`) VALUES
@@ -4149,7 +4149,7 @@ INSERT INTO `wp_commentmeta` (`meta_id`, `comment_id`, `meta_key`, `meta_value`)
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_comments`
+-- Table structure for table `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -4171,7 +4171,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_comments`
+-- Dumping data for table `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -4220,7 +4220,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_links`
+-- Table structure for table `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -4242,7 +4242,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_options`
+-- Table structure for table `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -4253,7 +4253,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_options`
+-- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -5165,7 +5165,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_postmeta`
+-- Table structure for table `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -5176,7 +5176,7 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_postmeta`
+-- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -6926,7 +6926,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_posts`
+-- Table structure for table `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -6956,7 +6956,7 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_posts`
+-- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -7088,7 +7088,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_termmeta`
+-- Table structure for table `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -7099,7 +7099,7 @@ CREATE TABLE `wp_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_termmeta`
+-- Dumping data for table `wp_termmeta`
 --
 
 INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
@@ -7119,7 +7119,7 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_terms`
+-- Table structure for table `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -7130,7 +7130,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_terms`
+-- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -7183,7 +7183,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_term_relationships`
+-- Table structure for table `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -7193,7 +7193,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_term_relationships`
+-- Dumping data for table `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -7244,7 +7244,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_term_taxonomy`
+-- Table structure for table `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -7257,7 +7257,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_term_taxonomy`
+-- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -7310,7 +7310,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_tm_taskmeta`
+-- Table structure for table `wp_tm_taskmeta`
 --
 
 CREATE TABLE `wp_tm_taskmeta` (
@@ -7323,7 +7323,7 @@ CREATE TABLE `wp_tm_taskmeta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_tm_tasks`
+-- Table structure for table `wp_tm_tasks`
 --
 
 CREATE TABLE `wp_tm_tasks` (
@@ -7341,7 +7341,7 @@ CREATE TABLE `wp_tm_tasks` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_um_metadata`
+-- Table structure for table `wp_um_metadata`
 --
 
 CREATE TABLE `wp_um_metadata` (
@@ -7354,7 +7354,7 @@ CREATE TABLE `wp_um_metadata` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_usermeta`
+-- Table structure for table `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -7365,7 +7365,7 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_usermeta`
+-- Dumping data for table `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -7612,7 +7612,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_users`
+-- Table structure for table `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -7629,7 +7629,7 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_users`
+-- Dumping data for table `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
@@ -7642,7 +7642,7 @@ INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_daily_analysis`
+-- Table structure for table `wp_wcfm_daily_analysis`
 --
 
 CREATE TABLE `wp_wcfm_daily_analysis` (
@@ -7657,7 +7657,7 @@ CREATE TABLE `wp_wcfm_daily_analysis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_daily_analysis`
+-- Dumping data for table `wp_wcfm_daily_analysis`
 --
 
 INSERT INTO `wp_wcfm_daily_analysis` (`ID`, `is_shop`, `is_store`, `is_product`, `product_id`, `author_id`, `count`, `visited`) VALUES
@@ -7685,7 +7685,7 @@ INSERT INTO `wp_wcfm_daily_analysis` (`ID`, `is_shop`, `is_store`, `is_product`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_detailed_analysis`
+-- Table structure for table `wp_wcfm_detailed_analysis`
 --
 
 CREATE TABLE `wp_wcfm_detailed_analysis` (
@@ -7704,7 +7704,7 @@ CREATE TABLE `wp_wcfm_detailed_analysis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_detailed_analysis`
+-- Dumping data for table `wp_wcfm_detailed_analysis`
 --
 
 INSERT INTO `wp_wcfm_detailed_analysis` (`ID`, `is_shop`, `is_store`, `is_product`, `product_id`, `author_id`, `referer`, `ip_address`, `country`, `state`, `city`, `visited`) VALUES
@@ -7805,7 +7805,7 @@ INSERT INTO `wp_wcfm_detailed_analysis` (`ID`, `is_shop`, `is_store`, `is_produc
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_enquiries`
+-- Table structure for table `wp_wcfm_enquiries`
 --
 
 CREATE TABLE `wp_wcfm_enquiries` (
@@ -7827,7 +7827,7 @@ CREATE TABLE `wp_wcfm_enquiries` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_enquiries_meta`
+-- Table structure for table `wp_wcfm_enquiries_meta`
 --
 
 CREATE TABLE `wp_wcfm_enquiries_meta` (
@@ -7840,7 +7840,7 @@ CREATE TABLE `wp_wcfm_enquiries_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_enquiries_response`
+-- Table structure for table `wp_wcfm_enquiries_response`
 --
 
 CREATE TABLE `wp_wcfm_enquiries_response` (
@@ -7859,7 +7859,7 @@ CREATE TABLE `wp_wcfm_enquiries_response` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_enquiries_response_meta`
+-- Table structure for table `wp_wcfm_enquiries_response_meta`
 --
 
 CREATE TABLE `wp_wcfm_enquiries_response_meta` (
@@ -7872,7 +7872,7 @@ CREATE TABLE `wp_wcfm_enquiries_response_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_fbc_chat_rows`
+-- Table structure for table `wp_wcfm_fbc_chat_rows`
 --
 
 CREATE TABLE `wp_wcfm_fbc_chat_rows` (
@@ -7887,7 +7887,7 @@ CREATE TABLE `wp_wcfm_fbc_chat_rows` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_fbc_chat_sessions`
+-- Table structure for table `wp_wcfm_fbc_chat_sessions`
 --
 
 CREATE TABLE `wp_wcfm_fbc_chat_sessions` (
@@ -7902,7 +7902,7 @@ CREATE TABLE `wp_wcfm_fbc_chat_sessions` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_fbc_chat_visitors`
+-- Table structure for table `wp_wcfm_fbc_chat_visitors`
 --
 
 CREATE TABLE `wp_wcfm_fbc_chat_visitors` (
@@ -7918,7 +7918,7 @@ CREATE TABLE `wp_wcfm_fbc_chat_visitors` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_fbc_offline_messages`
+-- Table structure for table `wp_wcfm_fbc_offline_messages`
 --
 
 CREATE TABLE `wp_wcfm_fbc_offline_messages` (
@@ -7935,7 +7935,7 @@ CREATE TABLE `wp_wcfm_fbc_offline_messages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_following_followers`
+-- Table structure for table `wp_wcfm_following_followers`
 --
 
 CREATE TABLE `wp_wcfm_following_followers` (
@@ -7953,7 +7953,7 @@ CREATE TABLE `wp_wcfm_following_followers` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_orders`
+-- Table structure for table `wp_wcfm_marketplace_orders`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_orders` (
@@ -7999,7 +7999,7 @@ CREATE TABLE `wp_wcfm_marketplace_orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_marketplace_orders`
+-- Dumping data for table `wp_wcfm_marketplace_orders`
 --
 
 INSERT INTO `wp_wcfm_marketplace_orders` (`ID`, `vendor_id`, `order_id`, `customer_id`, `payment_method`, `product_id`, `variation_id`, `quantity`, `product_price`, `purchase_price`, `item_id`, `item_type`, `item_sub_total`, `item_total`, `shipping`, `tax`, `shipping_tax_amount`, `commission_amount`, `discount_amount`, `discount_type`, `other_amount`, `other_amount_type`, `withdrawal_id`, `refunded_id`, `refunded_amount`, `withdraw_charges`, `total_commission`, `order_status`, `shipping_status`, `commission_status`, `withdraw_status`, `refund_status`, `is_refunded`, `is_partially_refunded`, `is_withdrawable`, `is_auto_withdrawal`, `is_trashed`, `commission_paid_date`, `created`) VALUES
@@ -8013,7 +8013,7 @@ INSERT INTO `wp_wcfm_marketplace_orders` (`ID`, `vendor_id`, `order_id`, `custom
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_orders_meta`
+-- Table structure for table `wp_wcfm_marketplace_orders_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_orders_meta` (
@@ -8024,7 +8024,7 @@ CREATE TABLE `wp_wcfm_marketplace_orders_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_marketplace_orders_meta`
+-- Dumping data for table `wp_wcfm_marketplace_orders_meta`
 --
 
 INSERT INTO `wp_wcfm_marketplace_orders_meta` (`ID`, `order_commission_id`, `key`, `value`) VALUES
@@ -8086,7 +8086,7 @@ INSERT INTO `wp_wcfm_marketplace_orders_meta` (`ID`, `order_commission_id`, `key
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_product_multivendor`
+-- Table structure for table `wp_wcfm_marketplace_product_multivendor`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_product_multivendor` (
@@ -8101,7 +8101,7 @@ CREATE TABLE `wp_wcfm_marketplace_product_multivendor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_refund_request`
+-- Table structure for table `wp_wcfm_marketplace_refund_request`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_refund_request` (
@@ -8123,7 +8123,7 @@ CREATE TABLE `wp_wcfm_marketplace_refund_request` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_refund_request_meta`
+-- Table structure for table `wp_wcfm_marketplace_refund_request_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_refund_request_meta` (
@@ -8136,7 +8136,7 @@ CREATE TABLE `wp_wcfm_marketplace_refund_request_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_reverse_withdrawal`
+-- Table structure for table `wp_wcfm_marketplace_reverse_withdrawal`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_reverse_withdrawal` (
@@ -8157,7 +8157,7 @@ CREATE TABLE `wp_wcfm_marketplace_reverse_withdrawal` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_reverse_withdrawal_meta`
+-- Table structure for table `wp_wcfm_marketplace_reverse_withdrawal_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_reverse_withdrawal_meta` (
@@ -8170,7 +8170,7 @@ CREATE TABLE `wp_wcfm_marketplace_reverse_withdrawal_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_reviews`
+-- Table structure for table `wp_wcfm_marketplace_reviews`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_reviews` (
@@ -8189,7 +8189,7 @@ CREATE TABLE `wp_wcfm_marketplace_reviews` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_reviews_response`
+-- Table structure for table `wp_wcfm_marketplace_reviews_response`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_reviews_response` (
@@ -8207,7 +8207,7 @@ CREATE TABLE `wp_wcfm_marketplace_reviews_response` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_reviews_response_meta`
+-- Table structure for table `wp_wcfm_marketplace_reviews_response_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_reviews_response_meta` (
@@ -8220,7 +8220,7 @@ CREATE TABLE `wp_wcfm_marketplace_reviews_response_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_review_rating_meta`
+-- Table structure for table `wp_wcfm_marketplace_review_rating_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_review_rating_meta` (
@@ -8234,7 +8234,7 @@ CREATE TABLE `wp_wcfm_marketplace_review_rating_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_shipping_zone_locations`
+-- Table structure for table `wp_wcfm_marketplace_shipping_zone_locations`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_shipping_zone_locations` (
@@ -8248,7 +8248,7 @@ CREATE TABLE `wp_wcfm_marketplace_shipping_zone_locations` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_shipping_zone_methods`
+-- Table structure for table `wp_wcfm_marketplace_shipping_zone_methods`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_shipping_zone_methods` (
@@ -8263,7 +8263,7 @@ CREATE TABLE `wp_wcfm_marketplace_shipping_zone_methods` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_store_taxonomies`
+-- Table structure for table `wp_wcfm_marketplace_store_taxonomies`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_store_taxonomies` (
@@ -8277,7 +8277,7 @@ CREATE TABLE `wp_wcfm_marketplace_store_taxonomies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_marketplace_store_taxonomies`
+-- Dumping data for table `wp_wcfm_marketplace_store_taxonomies`
 --
 
 INSERT INTO `wp_wcfm_marketplace_store_taxonomies` (`ID`, `vendor_id`, `product_id`, `term`, `parent`, `taxonomy`, `lang`) VALUES
@@ -8286,7 +8286,7 @@ INSERT INTO `wp_wcfm_marketplace_store_taxonomies` (`ID`, `vendor_id`, `product_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_vendor_ledger`
+-- Table structure for table `wp_wcfm_marketplace_vendor_ledger`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_vendor_ledger` (
@@ -8303,7 +8303,7 @@ CREATE TABLE `wp_wcfm_marketplace_vendor_ledger` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_marketplace_vendor_ledger`
+-- Dumping data for table `wp_wcfm_marketplace_vendor_ledger`
 --
 
 INSERT INTO `wp_wcfm_marketplace_vendor_ledger` (`ID`, `vendor_id`, `credit`, `debit`, `reference_id`, `reference`, `reference_details`, `reference_status`, `reference_update_date`, `created`) VALUES
@@ -8317,7 +8317,7 @@ INSERT INTO `wp_wcfm_marketplace_vendor_ledger` (`ID`, `vendor_id`, `credit`, `d
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_withdraw_request`
+-- Table structure for table `wp_wcfm_marketplace_withdraw_request`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_withdraw_request` (
@@ -8339,7 +8339,7 @@ CREATE TABLE `wp_wcfm_marketplace_withdraw_request` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_marketplace_withdraw_request_meta`
+-- Table structure for table `wp_wcfm_marketplace_withdraw_request_meta`
 --
 
 CREATE TABLE `wp_wcfm_marketplace_withdraw_request_meta` (
@@ -8352,7 +8352,7 @@ CREATE TABLE `wp_wcfm_marketplace_withdraw_request_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_membership_subscription`
+-- Table structure for table `wp_wcfm_membership_subscription`
 --
 
 CREATE TABLE `wp_wcfm_membership_subscription` (
@@ -8374,7 +8374,7 @@ CREATE TABLE `wp_wcfm_membership_subscription` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_messages`
+-- Table structure for table `wp_wcfm_messages`
 --
 
 CREATE TABLE `wp_wcfm_messages` (
@@ -8394,7 +8394,7 @@ CREATE TABLE `wp_wcfm_messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_messages`
+-- Dumping data for table `wp_wcfm_messages`
 --
 
 INSERT INTO `wp_wcfm_messages` (`ID`, `message`, `author_id`, `reply_to`, `message_to`, `author_is_admin`, `author_is_vendor`, `author_is_customer`, `is_notice`, `is_direct_message`, `is_pined`, `message_type`, `created`) VALUES
@@ -8445,7 +8445,7 @@ INSERT INTO `wp_wcfm_messages` (`ID`, `message`, `author_id`, `reply_to`, `messa
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_messages_modifier`
+-- Table structure for table `wp_wcfm_messages_modifier`
 --
 
 CREATE TABLE `wp_wcfm_messages_modifier` (
@@ -8460,7 +8460,7 @@ CREATE TABLE `wp_wcfm_messages_modifier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wcfm_messages_modifier`
+-- Dumping data for table `wp_wcfm_messages_modifier`
 --
 
 INSERT INTO `wp_wcfm_messages_modifier` (`ID`, `message`, `is_read`, `read_by`, `read_on`, `is_trashed`, `trashed_by`, `trashed_on`) VALUES
@@ -8495,7 +8495,7 @@ INSERT INTO `wp_wcfm_messages_modifier` (`ID`, `message`, `is_read`, `read_by`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_messages_stat`
+-- Table structure for table `wp_wcfm_messages_stat`
 --
 
 CREATE TABLE `wp_wcfm_messages_stat` (
@@ -8512,7 +8512,7 @@ CREATE TABLE `wp_wcfm_messages_stat` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_support`
+-- Table structure for table `wp_wcfm_support`
 --
 
 CREATE TABLE `wp_wcfm_support` (
@@ -8535,7 +8535,7 @@ CREATE TABLE `wp_wcfm_support` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_support_meta`
+-- Table structure for table `wp_wcfm_support_meta`
 --
 
 CREATE TABLE `wp_wcfm_support_meta` (
@@ -8549,7 +8549,7 @@ CREATE TABLE `wp_wcfm_support_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_support_response`
+-- Table structure for table `wp_wcfm_support_response`
 --
 
 CREATE TABLE `wp_wcfm_support_response` (
@@ -8568,7 +8568,7 @@ CREATE TABLE `wp_wcfm_support_response` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wcfm_support_response_meta`
+-- Table structure for table `wp_wcfm_support_response_meta`
 --
 
 CREATE TABLE `wp_wcfm_support_response_meta` (
@@ -8581,7 +8581,7 @@ CREATE TABLE `wp_wcfm_support_response_meta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_admin_notes`
+-- Table structure for table `wp_wc_admin_notes`
 --
 
 CREATE TABLE `wp_wc_admin_notes` (
@@ -8604,7 +8604,7 @@ CREATE TABLE `wp_wc_admin_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_admin_notes`
+-- Dumping data for table `wp_wc_admin_notes`
 --
 
 INSERT INTO `wp_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, `content`, `content_data`, `status`, `source`, `date_created`, `date_reminder`, `is_snoozable`, `layout`, `image`, `is_deleted`, `icon`) VALUES
@@ -8631,7 +8631,7 @@ INSERT INTO `wp_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, `
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_admin_note_actions`
+-- Table structure for table `wp_wc_admin_note_actions`
 --
 
 CREATE TABLE `wp_wc_admin_note_actions` (
@@ -8646,7 +8646,7 @@ CREATE TABLE `wp_wc_admin_note_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_admin_note_actions`
+-- Dumping data for table `wp_wc_admin_note_actions`
 --
 
 INSERT INTO `wp_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`, `query`, `status`, `is_primary`, `actioned_text`) VALUES
@@ -8674,7 +8674,7 @@ INSERT INTO `wp_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_category_lookup`
+-- Table structure for table `wp_wc_category_lookup`
 --
 
 CREATE TABLE `wp_wc_category_lookup` (
@@ -8683,7 +8683,7 @@ CREATE TABLE `wp_wc_category_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_category_lookup`
+-- Dumping data for table `wp_wc_category_lookup`
 --
 
 INSERT INTO `wp_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
@@ -8692,7 +8692,7 @@ INSERT INTO `wp_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_customer_lookup`
+-- Table structure for table `wp_wc_customer_lookup`
 --
 
 CREATE TABLE `wp_wc_customer_lookup` (
@@ -8711,7 +8711,7 @@ CREATE TABLE `wp_wc_customer_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_customer_lookup`
+-- Dumping data for table `wp_wc_customer_lookup`
 --
 
 INSERT INTO `wp_wc_customer_lookup` (`customer_id`, `user_id`, `username`, `first_name`, `last_name`, `email`, `date_last_active`, `date_registered`, `country`, `postcode`, `city`, `state`) VALUES
@@ -8722,7 +8722,7 @@ INSERT INTO `wp_wc_customer_lookup` (`customer_id`, `user_id`, `username`, `firs
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_download_log`
+-- Table structure for table `wp_wc_download_log`
 --
 
 CREATE TABLE `wp_wc_download_log` (
@@ -8736,7 +8736,7 @@ CREATE TABLE `wp_wc_download_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_order_coupon_lookup`
+-- Table structure for table `wp_wc_order_coupon_lookup`
 --
 
 CREATE TABLE `wp_wc_order_coupon_lookup` (
@@ -8749,7 +8749,7 @@ CREATE TABLE `wp_wc_order_coupon_lookup` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_order_product_lookup`
+-- Table structure for table `wp_wc_order_product_lookup`
 --
 
 CREATE TABLE `wp_wc_order_product_lookup` (
@@ -8769,7 +8769,7 @@ CREATE TABLE `wp_wc_order_product_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_order_product_lookup`
+-- Dumping data for table `wp_wc_order_product_lookup`
 --
 
 INSERT INTO `wp_wc_order_product_lookup` (`order_item_id`, `order_id`, `product_id`, `variation_id`, `customer_id`, `date_created`, `product_qty`, `product_net_revenue`, `product_gross_revenue`, `coupon_amount`, `tax_amount`, `shipping_amount`, `shipping_tax_amount`) VALUES
@@ -8794,7 +8794,7 @@ INSERT INTO `wp_wc_order_product_lookup` (`order_item_id`, `order_id`, `product_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_order_stats`
+-- Table structure for table `wp_wc_order_stats`
 --
 
 CREATE TABLE `wp_wc_order_stats` (
@@ -8813,7 +8813,7 @@ CREATE TABLE `wp_wc_order_stats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_order_stats`
+-- Dumping data for table `wp_wc_order_stats`
 --
 
 INSERT INTO `wp_wc_order_stats` (`order_id`, `parent_id`, `date_created`, `date_created_gmt`, `num_items_sold`, `total_sales`, `tax_total`, `shipping_total`, `net_total`, `returning_customer`, `status`, `customer_id`) VALUES
@@ -8835,7 +8835,7 @@ INSERT INTO `wp_wc_order_stats` (`order_id`, `parent_id`, `date_created`, `date_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_order_tax_lookup`
+-- Table structure for table `wp_wc_order_tax_lookup`
 --
 
 CREATE TABLE `wp_wc_order_tax_lookup` (
@@ -8850,7 +8850,7 @@ CREATE TABLE `wp_wc_order_tax_lookup` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_product_meta_lookup`
+-- Table structure for table `wp_wc_product_meta_lookup`
 --
 
 CREATE TABLE `wp_wc_product_meta_lookup` (
@@ -8871,7 +8871,7 @@ CREATE TABLE `wp_wc_product_meta_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_product_meta_lookup`
+-- Dumping data for table `wp_wc_product_meta_lookup`
 --
 
 INSERT INTO `wp_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downloadable`, `min_price`, `max_price`, `onsale`, `stock_quantity`, `stock_status`, `rating_count`, `average_rating`, `total_sales`, `tax_status`, `tax_class`) VALUES
@@ -8910,7 +8910,7 @@ INSERT INTO `wp_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downlo
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_reserved_stock`
+-- Table structure for table `wp_wc_reserved_stock`
 --
 
 CREATE TABLE `wp_wc_reserved_stock` (
@@ -8924,7 +8924,7 @@ CREATE TABLE `wp_wc_reserved_stock` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_tax_rate_classes`
+-- Table structure for table `wp_wc_tax_rate_classes`
 --
 
 CREATE TABLE `wp_wc_tax_rate_classes` (
@@ -8934,7 +8934,7 @@ CREATE TABLE `wp_wc_tax_rate_classes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wc_tax_rate_classes`
+-- Dumping data for table `wp_wc_tax_rate_classes`
 --
 
 INSERT INTO `wp_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALUES
@@ -8944,7 +8944,7 @@ INSERT INTO `wp_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wc_webhooks`
+-- Table structure for table `wp_wc_webhooks`
 --
 
 CREATE TABLE `wp_wc_webhooks` (
@@ -8967,7 +8967,7 @@ CREATE TABLE `wp_wc_webhooks` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_api_keys`
+-- Table structure for table `wp_woocommerce_api_keys`
 --
 
 CREATE TABLE `wp_woocommerce_api_keys` (
@@ -8985,7 +8985,7 @@ CREATE TABLE `wp_woocommerce_api_keys` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_attribute_taxonomies`
+-- Table structure for table `wp_woocommerce_attribute_taxonomies`
 --
 
 CREATE TABLE `wp_woocommerce_attribute_taxonomies` (
@@ -9000,7 +9000,7 @@ CREATE TABLE `wp_woocommerce_attribute_taxonomies` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_downloadable_product_permissions`
+-- Table structure for table `wp_woocommerce_downloadable_product_permissions`
 --
 
 CREATE TABLE `wp_woocommerce_downloadable_product_permissions` (
@@ -9020,7 +9020,7 @@ CREATE TABLE `wp_woocommerce_downloadable_product_permissions` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_log`
+-- Table structure for table `wp_woocommerce_log`
 --
 
 CREATE TABLE `wp_woocommerce_log` (
@@ -9035,7 +9035,7 @@ CREATE TABLE `wp_woocommerce_log` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_order_itemmeta`
+-- Table structure for table `wp_woocommerce_order_itemmeta`
 --
 
 CREATE TABLE `wp_woocommerce_order_itemmeta` (
@@ -9046,7 +9046,7 @@ CREATE TABLE `wp_woocommerce_order_itemmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_order_itemmeta`
+-- Dumping data for table `wp_woocommerce_order_itemmeta`
 --
 
 INSERT INTO `wp_woocommerce_order_itemmeta` (`meta_id`, `order_item_id`, `meta_key`, `meta_value`) VALUES
@@ -9316,7 +9316,7 @@ INSERT INTO `wp_woocommerce_order_itemmeta` (`meta_id`, `order_item_id`, `meta_k
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_order_items`
+-- Table structure for table `wp_woocommerce_order_items`
 --
 
 CREATE TABLE `wp_woocommerce_order_items` (
@@ -9327,7 +9327,7 @@ CREATE TABLE `wp_woocommerce_order_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_order_items`
+-- Dumping data for table `wp_woocommerce_order_items`
 --
 
 INSERT INTO `wp_woocommerce_order_items` (`order_item_id`, `order_item_name`, `order_item_type`, `order_id`) VALUES
@@ -9365,7 +9365,7 @@ INSERT INTO `wp_woocommerce_order_items` (`order_item_id`, `order_item_name`, `o
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_payment_tokenmeta`
+-- Table structure for table `wp_woocommerce_payment_tokenmeta`
 --
 
 CREATE TABLE `wp_woocommerce_payment_tokenmeta` (
@@ -9378,7 +9378,7 @@ CREATE TABLE `wp_woocommerce_payment_tokenmeta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_payment_tokens`
+-- Table structure for table `wp_woocommerce_payment_tokens`
 --
 
 CREATE TABLE `wp_woocommerce_payment_tokens` (
@@ -9393,7 +9393,7 @@ CREATE TABLE `wp_woocommerce_payment_tokens` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_sessions`
+-- Table structure for table `wp_woocommerce_sessions`
 --
 
 CREATE TABLE `wp_woocommerce_sessions` (
@@ -9404,7 +9404,7 @@ CREATE TABLE `wp_woocommerce_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_sessions`
+-- Dumping data for table `wp_woocommerce_sessions`
 --
 
 INSERT INTO `wp_woocommerce_sessions` (`session_id`, `session_key`, `session_value`, `session_expiry`) VALUES
@@ -9417,7 +9417,7 @@ INSERT INTO `wp_woocommerce_sessions` (`session_id`, `session_key`, `session_val
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_shipping_zones`
+-- Table structure for table `wp_woocommerce_shipping_zones`
 --
 
 CREATE TABLE `wp_woocommerce_shipping_zones` (
@@ -9427,7 +9427,7 @@ CREATE TABLE `wp_woocommerce_shipping_zones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_shipping_zones`
+-- Dumping data for table `wp_woocommerce_shipping_zones`
 --
 
 INSERT INTO `wp_woocommerce_shipping_zones` (`zone_id`, `zone_name`, `zone_order`) VALUES
@@ -9436,7 +9436,7 @@ INSERT INTO `wp_woocommerce_shipping_zones` (`zone_id`, `zone_name`, `zone_order
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_shipping_zone_locations`
+-- Table structure for table `wp_woocommerce_shipping_zone_locations`
 --
 
 CREATE TABLE `wp_woocommerce_shipping_zone_locations` (
@@ -9447,7 +9447,7 @@ CREATE TABLE `wp_woocommerce_shipping_zone_locations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_shipping_zone_locations`
+-- Dumping data for table `wp_woocommerce_shipping_zone_locations`
 --
 
 INSERT INTO `wp_woocommerce_shipping_zone_locations` (`location_id`, `zone_id`, `location_code`, `location_type`) VALUES
@@ -9456,7 +9456,7 @@ INSERT INTO `wp_woocommerce_shipping_zone_locations` (`location_id`, `zone_id`, 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_shipping_zone_methods`
+-- Table structure for table `wp_woocommerce_shipping_zone_methods`
 --
 
 CREATE TABLE `wp_woocommerce_shipping_zone_methods` (
@@ -9468,7 +9468,7 @@ CREATE TABLE `wp_woocommerce_shipping_zone_methods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woocommerce_shipping_zone_methods`
+-- Dumping data for table `wp_woocommerce_shipping_zone_methods`
 --
 
 INSERT INTO `wp_woocommerce_shipping_zone_methods` (`zone_id`, `instance_id`, `method_id`, `method_order`, `is_enabled`) VALUES
@@ -9478,7 +9478,7 @@ INSERT INTO `wp_woocommerce_shipping_zone_methods` (`zone_id`, `instance_id`, `m
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_tax_rates`
+-- Table structure for table `wp_woocommerce_tax_rates`
 --
 
 CREATE TABLE `wp_woocommerce_tax_rates` (
@@ -9497,7 +9497,7 @@ CREATE TABLE `wp_woocommerce_tax_rates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woocommerce_tax_rate_locations`
+-- Table structure for table `wp_woocommerce_tax_rate_locations`
 --
 
 CREATE TABLE `wp_woocommerce_tax_rate_locations` (
@@ -9510,7 +9510,7 @@ CREATE TABLE `wp_woocommerce_tax_rate_locations` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_woo_shippment_provider`
+-- Table structure for table `wp_woo_shippment_provider`
 --
 
 CREATE TABLE `wp_woo_shippment_provider` (
@@ -9529,7 +9529,7 @@ CREATE TABLE `wp_woo_shippment_provider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_woo_shippment_provider`
+-- Dumping data for table `wp_woo_shippment_provider`
 --
 
 INSERT INTO `wp_woo_shippment_provider` (`id`, `provider_name`, `api_provider_name`, `custom_provider_name`, `ts_slug`, `provider_url`, `shipping_country`, `shipping_default`, `custom_thumb_id`, `display_in_order`, `trackship_supported`, `sort_order`) VALUES
@@ -10034,7 +10034,7 @@ INSERT INTO `wp_woo_shippment_provider` (`id`, `provider_name`, `api_provider_na
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wpforms_tasks_meta`
+-- Table structure for table `wp_wpforms_tasks_meta`
 --
 
 CREATE TABLE `wp_wpforms_tasks_meta` (
@@ -10045,7 +10045,7 @@ CREATE TABLE `wp_wpforms_tasks_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wpforms_tasks_meta`
+-- Dumping data for table `wp_wpforms_tasks_meta`
 --
 
 INSERT INTO `wp_wpforms_tasks_meta` (`id`, `action`, `data`, `date`) VALUES
@@ -10491,7 +10491,7 @@ INSERT INTO `wp_wpforms_tasks_meta` (`id`, `action`, `data`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_wpmailsmtp_tasks_meta`
+-- Table structure for table `wp_wpmailsmtp_tasks_meta`
 --
 
 CREATE TABLE `wp_wpmailsmtp_tasks_meta` (
@@ -10502,7 +10502,7 @@ CREATE TABLE `wp_wpmailsmtp_tasks_meta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `wp_wpmailsmtp_tasks_meta`
+-- Dumping data for table `wp_wpmailsmtp_tasks_meta`
 --
 
 INSERT INTO `wp_wpmailsmtp_tasks_meta` (`id`, `action`, `data`, `date`) VALUES
@@ -10942,11 +10942,11 @@ INSERT INTO `wp_wpmailsmtp_tasks_meta` (`id`, `action`, `data`, `date`) VALUES
 (434, 'wp_mail_smtp_admin_notifications_update', 'W10=', '2021-01-09 19:40:32');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `wp_actionscheduler_actions`
+-- Indexes for table `wp_actionscheduler_actions`
 --
 ALTER TABLE `wp_actionscheduler_actions`
   ADD PRIMARY KEY (`action_id`),
@@ -10959,21 +10959,21 @@ ALTER TABLE `wp_actionscheduler_actions`
   ADD KEY `claim_id` (`claim_id`);
 
 --
--- Indices de la tabla `wp_actionscheduler_claims`
+-- Indexes for table `wp_actionscheduler_claims`
 --
 ALTER TABLE `wp_actionscheduler_claims`
   ADD PRIMARY KEY (`claim_id`),
   ADD KEY `date_created_gmt` (`date_created_gmt`);
 
 --
--- Indices de la tabla `wp_actionscheduler_groups`
+-- Indexes for table `wp_actionscheduler_groups`
 --
 ALTER TABLE `wp_actionscheduler_groups`
   ADD PRIMARY KEY (`group_id`),
   ADD KEY `slug` (`slug`(191));
 
 --
--- Indices de la tabla `wp_actionscheduler_logs`
+-- Indexes for table `wp_actionscheduler_logs`
 --
 ALTER TABLE `wp_actionscheduler_logs`
   ADD PRIMARY KEY (`log_id`),
@@ -10981,13 +10981,13 @@ ALTER TABLE `wp_actionscheduler_logs`
   ADD KEY `log_date_gmt` (`log_date_gmt`);
 
 --
--- Indices de la tabla `wp_alp_pickup_location`
+-- Indexes for table `wp_alp_pickup_location`
 --
 ALTER TABLE `wp_alp_pickup_location`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `wp_commentmeta`
+-- Indexes for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -10995,7 +10995,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_comments`
+-- Indexes for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -11007,14 +11007,14 @@ ALTER TABLE `wp_comments`
   ADD KEY `woo_idx_comment_type` (`comment_type`);
 
 --
--- Indices de la tabla `wp_links`
+-- Indexes for table `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indices de la tabla `wp_options`
+-- Indexes for table `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
@@ -11022,7 +11022,7 @@ ALTER TABLE `wp_options`
   ADD KEY `autoload` (`autoload`);
 
 --
--- Indices de la tabla `wp_postmeta`
+-- Indexes for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -11030,7 +11030,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_posts`
+-- Indexes for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -11040,7 +11040,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Indices de la tabla `wp_termmeta`
+-- Indexes for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -11048,7 +11048,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_terms`
+-- Indexes for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -11056,14 +11056,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Indices de la tabla `wp_term_relationships`
+-- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indices de la tabla `wp_term_taxonomy`
+-- Indexes for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -11071,7 +11071,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indices de la tabla `wp_tm_taskmeta`
+-- Indexes for table `wp_tm_taskmeta`
 --
 ALTER TABLE `wp_tm_taskmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -11079,14 +11079,14 @@ ALTER TABLE `wp_tm_taskmeta`
   ADD KEY `task_id` (`task_id`);
 
 --
--- Indices de la tabla `wp_tm_tasks`
+-- Indexes for table `wp_tm_tasks`
 --
 ALTER TABLE `wp_tm_tasks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indices de la tabla `wp_um_metadata`
+-- Indexes for table `wp_um_metadata`
 --
 ALTER TABLE `wp_um_metadata`
   ADD PRIMARY KEY (`umeta_id`),
@@ -11095,7 +11095,7 @@ ALTER TABLE `wp_um_metadata`
   ADD KEY `meta_value_indx` (`um_value`(191));
 
 --
--- Indices de la tabla `wp_usermeta`
+-- Indexes for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -11103,7 +11103,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_users`
+-- Indexes for table `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -11112,247 +11112,247 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- Indices de la tabla `wp_wcfm_daily_analysis`
+-- Indexes for table `wp_wcfm_daily_analysis`
 --
 ALTER TABLE `wp_wcfm_daily_analysis`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `daily_analysis` (`product_id`,`author_id`,`visited`);
 
 --
--- Indices de la tabla `wp_wcfm_detailed_analysis`
+-- Indexes for table `wp_wcfm_detailed_analysis`
 --
 ALTER TABLE `wp_wcfm_detailed_analysis`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_enquiries`
+-- Indexes for table `wp_wcfm_enquiries`
 --
 ALTER TABLE `wp_wcfm_enquiries`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_enquiries_meta`
+-- Indexes for table `wp_wcfm_enquiries_meta`
 --
 ALTER TABLE `wp_wcfm_enquiries_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_enquiries_response`
+-- Indexes for table `wp_wcfm_enquiries_response`
 --
 ALTER TABLE `wp_wcfm_enquiries_response`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_enquiries_response_meta`
+-- Indexes for table `wp_wcfm_enquiries_response_meta`
 --
 ALTER TABLE `wp_wcfm_enquiries_response_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_fbc_chat_rows`
+-- Indexes for table `wp_wcfm_fbc_chat_rows`
 --
 ALTER TABLE `wp_wcfm_fbc_chat_rows`
   ADD UNIQUE KEY `message_id` (`message_id`);
 
 --
--- Indices de la tabla `wp_wcfm_fbc_chat_sessions`
+-- Indexes for table `wp_wcfm_fbc_chat_sessions`
 --
 ALTER TABLE `wp_wcfm_fbc_chat_sessions`
   ADD UNIQUE KEY `conversation_id` (`conversation_id`),
   ADD KEY `created_at` (`created_at`);
 
 --
--- Indices de la tabla `wp_wcfm_fbc_chat_visitors`
+-- Indexes for table `wp_wcfm_fbc_chat_visitors`
 --
 ALTER TABLE `wp_wcfm_fbc_chat_visitors`
   ADD UNIQUE KEY `user_id` (`user_id`);
 
 --
--- Indices de la tabla `wp_wcfm_fbc_offline_messages`
+-- Indexes for table `wp_wcfm_fbc_offline_messages`
 --
 ALTER TABLE `wp_wcfm_fbc_offline_messages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `wp_wcfm_following_followers`
+-- Indexes for table `wp_wcfm_following_followers`
 --
 ALTER TABLE `wp_wcfm_following_followers`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_orders`
+-- Indexes for table `wp_wcfm_marketplace_orders`
 --
 ALTER TABLE `wp_wcfm_marketplace_orders`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `marketplace_orders` (`order_id`,`vendor_id`,`item_id`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_orders_meta`
+-- Indexes for table `wp_wcfm_marketplace_orders_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_orders_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_product_multivendor`
+-- Indexes for table `wp_wcfm_marketplace_product_multivendor`
 --
 ALTER TABLE `wp_wcfm_marketplace_product_multivendor`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `marketplace_product_multivendor` (`product_id`,`parent_product_id`,`vendor_id`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_refund_request`
+-- Indexes for table `wp_wcfm_marketplace_refund_request`
 --
 ALTER TABLE `wp_wcfm_marketplace_refund_request`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_refund_request_meta`
+-- Indexes for table `wp_wcfm_marketplace_refund_request_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_refund_request_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_reverse_withdrawal`
+-- Indexes for table `wp_wcfm_marketplace_reverse_withdrawal`
 --
 ALTER TABLE `wp_wcfm_marketplace_reverse_withdrawal`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_reverse_withdrawal_meta`
+-- Indexes for table `wp_wcfm_marketplace_reverse_withdrawal_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_reverse_withdrawal_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_reviews`
+-- Indexes for table `wp_wcfm_marketplace_reviews`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_reviews_response`
+-- Indexes for table `wp_wcfm_marketplace_reviews_response`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews_response`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_reviews_response_meta`
+-- Indexes for table `wp_wcfm_marketplace_reviews_response_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews_response_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_review_rating_meta`
+-- Indexes for table `wp_wcfm_marketplace_review_rating_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_review_rating_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_shipping_zone_locations`
+-- Indexes for table `wp_wcfm_marketplace_shipping_zone_locations`
 --
 ALTER TABLE `wp_wcfm_marketplace_shipping_zone_locations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_shipping_zone_methods`
+-- Indexes for table `wp_wcfm_marketplace_shipping_zone_methods`
 --
 ALTER TABLE `wp_wcfm_marketplace_shipping_zone_methods`
   ADD PRIMARY KEY (`instance_id`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_store_taxonomies`
+-- Indexes for table `wp_wcfm_marketplace_store_taxonomies`
 --
 ALTER TABLE `wp_wcfm_marketplace_store_taxonomies`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_vendor_ledger`
+-- Indexes for table `wp_wcfm_marketplace_vendor_ledger`
 --
 ALTER TABLE `wp_wcfm_marketplace_vendor_ledger`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_withdraw_request`
+-- Indexes for table `wp_wcfm_marketplace_withdraw_request`
 --
 ALTER TABLE `wp_wcfm_marketplace_withdraw_request`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_marketplace_withdraw_request_meta`
+-- Indexes for table `wp_wcfm_marketplace_withdraw_request_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_withdraw_request_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_membership_subscription`
+-- Indexes for table `wp_wcfm_membership_subscription`
 --
 ALTER TABLE `wp_wcfm_membership_subscription`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `membership_subscription` (`vendor_id`,`membership_id`,`transaction_id`,`transaction_type`);
 
 --
--- Indices de la tabla `wp_wcfm_messages`
+-- Indexes for table `wp_wcfm_messages`
 --
 ALTER TABLE `wp_wcfm_messages`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_messages_modifier`
+-- Indexes for table `wp_wcfm_messages_modifier`
 --
 ALTER TABLE `wp_wcfm_messages_modifier`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_messages_stat`
+-- Indexes for table `wp_wcfm_messages_stat`
 --
 ALTER TABLE `wp_wcfm_messages_stat`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_support`
+-- Indexes for table `wp_wcfm_support`
 --
 ALTER TABLE `wp_wcfm_support`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_support_meta`
+-- Indexes for table `wp_wcfm_support_meta`
 --
 ALTER TABLE `wp_wcfm_support_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_support_response`
+-- Indexes for table `wp_wcfm_support_response`
 --
 ALTER TABLE `wp_wcfm_support_response`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wcfm_support_response_meta`
+-- Indexes for table `wp_wcfm_support_response_meta`
 --
 ALTER TABLE `wp_wcfm_support_response_meta`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `wp_wc_admin_notes`
+-- Indexes for table `wp_wc_admin_notes`
 --
 ALTER TABLE `wp_wc_admin_notes`
   ADD PRIMARY KEY (`note_id`);
 
 --
--- Indices de la tabla `wp_wc_admin_note_actions`
+-- Indexes for table `wp_wc_admin_note_actions`
 --
 ALTER TABLE `wp_wc_admin_note_actions`
   ADD PRIMARY KEY (`action_id`),
   ADD KEY `note_id` (`note_id`);
 
 --
--- Indices de la tabla `wp_wc_category_lookup`
+-- Indexes for table `wp_wc_category_lookup`
 --
 ALTER TABLE `wp_wc_category_lookup`
   ADD PRIMARY KEY (`category_tree_id`,`category_id`);
 
 --
--- Indices de la tabla `wp_wc_customer_lookup`
+-- Indexes for table `wp_wc_customer_lookup`
 --
 ALTER TABLE `wp_wc_customer_lookup`
   ADD PRIMARY KEY (`customer_id`),
@@ -11360,7 +11360,7 @@ ALTER TABLE `wp_wc_customer_lookup`
   ADD KEY `email` (`email`);
 
 --
--- Indices de la tabla `wp_wc_download_log`
+-- Indexes for table `wp_wc_download_log`
 --
 ALTER TABLE `wp_wc_download_log`
   ADD PRIMARY KEY (`download_log_id`),
@@ -11368,7 +11368,7 @@ ALTER TABLE `wp_wc_download_log`
   ADD KEY `timestamp` (`timestamp`);
 
 --
--- Indices de la tabla `wp_wc_order_coupon_lookup`
+-- Indexes for table `wp_wc_order_coupon_lookup`
 --
 ALTER TABLE `wp_wc_order_coupon_lookup`
   ADD PRIMARY KEY (`order_id`,`coupon_id`),
@@ -11376,7 +11376,7 @@ ALTER TABLE `wp_wc_order_coupon_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indices de la tabla `wp_wc_order_product_lookup`
+-- Indexes for table `wp_wc_order_product_lookup`
 --
 ALTER TABLE `wp_wc_order_product_lookup`
   ADD PRIMARY KEY (`order_item_id`),
@@ -11386,7 +11386,7 @@ ALTER TABLE `wp_wc_order_product_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indices de la tabla `wp_wc_order_stats`
+-- Indexes for table `wp_wc_order_stats`
 --
 ALTER TABLE `wp_wc_order_stats`
   ADD PRIMARY KEY (`order_id`),
@@ -11395,7 +11395,7 @@ ALTER TABLE `wp_wc_order_stats`
   ADD KEY `status` (`status`(191));
 
 --
--- Indices de la tabla `wp_wc_order_tax_lookup`
+-- Indexes for table `wp_wc_order_tax_lookup`
 --
 ALTER TABLE `wp_wc_order_tax_lookup`
   ADD PRIMARY KEY (`order_id`,`tax_rate_id`),
@@ -11403,7 +11403,7 @@ ALTER TABLE `wp_wc_order_tax_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indices de la tabla `wp_wc_product_meta_lookup`
+-- Indexes for table `wp_wc_product_meta_lookup`
 --
 ALTER TABLE `wp_wc_product_meta_lookup`
   ADD PRIMARY KEY (`product_id`),
@@ -11415,27 +11415,27 @@ ALTER TABLE `wp_wc_product_meta_lookup`
   ADD KEY `min_max_price` (`min_price`,`max_price`);
 
 --
--- Indices de la tabla `wp_wc_reserved_stock`
+-- Indexes for table `wp_wc_reserved_stock`
 --
 ALTER TABLE `wp_wc_reserved_stock`
   ADD PRIMARY KEY (`order_id`,`product_id`);
 
 --
--- Indices de la tabla `wp_wc_tax_rate_classes`
+-- Indexes for table `wp_wc_tax_rate_classes`
 --
 ALTER TABLE `wp_wc_tax_rate_classes`
   ADD PRIMARY KEY (`tax_rate_class_id`),
   ADD UNIQUE KEY `slug` (`slug`(191));
 
 --
--- Indices de la tabla `wp_wc_webhooks`
+-- Indexes for table `wp_wc_webhooks`
 --
 ALTER TABLE `wp_wc_webhooks`
   ADD PRIMARY KEY (`webhook_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indices de la tabla `wp_woocommerce_api_keys`
+-- Indexes for table `wp_woocommerce_api_keys`
 --
 ALTER TABLE `wp_woocommerce_api_keys`
   ADD PRIMARY KEY (`key_id`),
@@ -11443,14 +11443,14 @@ ALTER TABLE `wp_woocommerce_api_keys`
   ADD KEY `consumer_secret` (`consumer_secret`);
 
 --
--- Indices de la tabla `wp_woocommerce_attribute_taxonomies`
+-- Indexes for table `wp_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wp_woocommerce_attribute_taxonomies`
   ADD PRIMARY KEY (`attribute_id`),
   ADD KEY `attribute_name` (`attribute_name`(20));
 
 --
--- Indices de la tabla `wp_woocommerce_downloadable_product_permissions`
+-- Indexes for table `wp_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wp_woocommerce_downloadable_product_permissions`
   ADD PRIMARY KEY (`permission_id`),
@@ -11460,14 +11460,14 @@ ALTER TABLE `wp_woocommerce_downloadable_product_permissions`
   ADD KEY `user_order_remaining_expires` (`user_id`,`order_id`,`downloads_remaining`,`access_expires`);
 
 --
--- Indices de la tabla `wp_woocommerce_log`
+-- Indexes for table `wp_woocommerce_log`
 --
 ALTER TABLE `wp_woocommerce_log`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `level` (`level`);
 
 --
--- Indices de la tabla `wp_woocommerce_order_itemmeta`
+-- Indexes for table `wp_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wp_woocommerce_order_itemmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -11475,14 +11475,14 @@ ALTER TABLE `wp_woocommerce_order_itemmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Indices de la tabla `wp_woocommerce_order_items`
+-- Indexes for table `wp_woocommerce_order_items`
 --
 ALTER TABLE `wp_woocommerce_order_items`
   ADD PRIMARY KEY (`order_item_id`),
   ADD KEY `order_id` (`order_id`);
 
 --
--- Indices de la tabla `wp_woocommerce_payment_tokenmeta`
+-- Indexes for table `wp_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wp_woocommerce_payment_tokenmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -11490,27 +11490,27 @@ ALTER TABLE `wp_woocommerce_payment_tokenmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Indices de la tabla `wp_woocommerce_payment_tokens`
+-- Indexes for table `wp_woocommerce_payment_tokens`
 --
 ALTER TABLE `wp_woocommerce_payment_tokens`
   ADD PRIMARY KEY (`token_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indices de la tabla `wp_woocommerce_sessions`
+-- Indexes for table `wp_woocommerce_sessions`
 --
 ALTER TABLE `wp_woocommerce_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD UNIQUE KEY `session_key` (`session_key`);
 
 --
--- Indices de la tabla `wp_woocommerce_shipping_zones`
+-- Indexes for table `wp_woocommerce_shipping_zones`
 --
 ALTER TABLE `wp_woocommerce_shipping_zones`
   ADD PRIMARY KEY (`zone_id`);
 
 --
--- Indices de la tabla `wp_woocommerce_shipping_zone_locations`
+-- Indexes for table `wp_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wp_woocommerce_shipping_zone_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -11518,13 +11518,13 @@ ALTER TABLE `wp_woocommerce_shipping_zone_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- Indices de la tabla `wp_woocommerce_shipping_zone_methods`
+-- Indexes for table `wp_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wp_woocommerce_shipping_zone_methods`
   ADD PRIMARY KEY (`instance_id`);
 
 --
--- Indices de la tabla `wp_woocommerce_tax_rates`
+-- Indexes for table `wp_woocommerce_tax_rates`
 --
 ALTER TABLE `wp_woocommerce_tax_rates`
   ADD PRIMARY KEY (`tax_rate_id`),
@@ -11534,7 +11534,7 @@ ALTER TABLE `wp_woocommerce_tax_rates`
   ADD KEY `tax_rate_priority` (`tax_rate_priority`);
 
 --
--- Indices de la tabla `wp_woocommerce_tax_rate_locations`
+-- Indexes for table `wp_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wp_woocommerce_tax_rate_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -11542,483 +11542,483 @@ ALTER TABLE `wp_woocommerce_tax_rate_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- Indices de la tabla `wp_woo_shippment_provider`
+-- Indexes for table `wp_woo_shippment_provider`
 --
 ALTER TABLE `wp_woo_shippment_provider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `wp_wpforms_tasks_meta`
+-- Indexes for table `wp_wpforms_tasks_meta`
 --
 ALTER TABLE `wp_wpforms_tasks_meta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `wp_wpmailsmtp_tasks_meta`
+-- Indexes for table `wp_wpmailsmtp_tasks_meta`
 --
 ALTER TABLE `wp_wpmailsmtp_tasks_meta`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `wp_actionscheduler_actions`
+-- AUTO_INCREMENT for table `wp_actionscheduler_actions`
 --
 ALTER TABLE `wp_actionscheduler_actions`
   MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1064;
 
 --
--- AUTO_INCREMENT de la tabla `wp_actionscheduler_claims`
+-- AUTO_INCREMENT for table `wp_actionscheduler_claims`
 --
 ALTER TABLE `wp_actionscheduler_claims`
   MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1382;
 
 --
--- AUTO_INCREMENT de la tabla `wp_actionscheduler_groups`
+-- AUTO_INCREMENT for table `wp_actionscheduler_groups`
 --
 ALTER TABLE `wp_actionscheduler_groups`
   MODIFY `group_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `wp_actionscheduler_logs`
+-- AUTO_INCREMENT for table `wp_actionscheduler_logs`
 --
 ALTER TABLE `wp_actionscheduler_logs`
   MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2955;
 
 --
--- AUTO_INCREMENT de la tabla `wp_alp_pickup_location`
+-- AUTO_INCREMENT for table `wp_alp_pickup_location`
 --
 ALTER TABLE `wp_alp_pickup_location`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `wp_commentmeta`
+-- AUTO_INCREMENT for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `wp_comments`
+-- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT de la tabla `wp_links`
+-- AUTO_INCREMENT for table `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_options`
+-- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
   MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7160;
 
 --
--- AUTO_INCREMENT de la tabla `wp_postmeta`
+-- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2128;
 
 --
--- AUTO_INCREMENT de la tabla `wp_posts`
+-- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
 
 --
--- AUTO_INCREMENT de la tabla `wp_termmeta`
+-- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT de la tabla `wp_terms`
+-- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
--- AUTO_INCREMENT de la tabla `wp_term_taxonomy`
+-- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
--- AUTO_INCREMENT de la tabla `wp_tm_taskmeta`
+-- AUTO_INCREMENT for table `wp_tm_taskmeta`
 --
 ALTER TABLE `wp_tm_taskmeta`
   MODIFY `meta_id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_tm_tasks`
+-- AUTO_INCREMENT for table `wp_tm_tasks`
 --
 ALTER TABLE `wp_tm_tasks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_um_metadata`
+-- AUTO_INCREMENT for table `wp_um_metadata`
 --
 ALTER TABLE `wp_um_metadata`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_usermeta`
+-- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1074;
 
 --
--- AUTO_INCREMENT de la tabla `wp_users`
+-- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_daily_analysis`
+-- AUTO_INCREMENT for table `wp_wcfm_daily_analysis`
 --
 ALTER TABLE `wp_wcfm_daily_analysis`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_detailed_analysis`
+-- AUTO_INCREMENT for table `wp_wcfm_detailed_analysis`
 --
 ALTER TABLE `wp_wcfm_detailed_analysis`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_enquiries`
+-- AUTO_INCREMENT for table `wp_wcfm_enquiries`
 --
 ALTER TABLE `wp_wcfm_enquiries`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_enquiries_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_enquiries_meta`
 --
 ALTER TABLE `wp_wcfm_enquiries_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_enquiries_response`
+-- AUTO_INCREMENT for table `wp_wcfm_enquiries_response`
 --
 ALTER TABLE `wp_wcfm_enquiries_response`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_enquiries_response_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_enquiries_response_meta`
 --
 ALTER TABLE `wp_wcfm_enquiries_response_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_fbc_offline_messages`
+-- AUTO_INCREMENT for table `wp_wcfm_fbc_offline_messages`
 --
 ALTER TABLE `wp_wcfm_fbc_offline_messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_following_followers`
+-- AUTO_INCREMENT for table `wp_wcfm_following_followers`
 --
 ALTER TABLE `wp_wcfm_following_followers`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_orders`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_orders`
 --
 ALTER TABLE `wp_wcfm_marketplace_orders`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_orders_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_orders_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_orders_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_product_multivendor`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_product_multivendor`
 --
 ALTER TABLE `wp_wcfm_marketplace_product_multivendor`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_refund_request`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_refund_request`
 --
 ALTER TABLE `wp_wcfm_marketplace_refund_request`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_refund_request_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_refund_request_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_refund_request_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_reverse_withdrawal`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_reverse_withdrawal`
 --
 ALTER TABLE `wp_wcfm_marketplace_reverse_withdrawal`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_reverse_withdrawal_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_reverse_withdrawal_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_reverse_withdrawal_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_reviews`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_reviews`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_reviews_response`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_reviews_response`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews_response`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_reviews_response_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_reviews_response_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_reviews_response_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_review_rating_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_review_rating_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_review_rating_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_shipping_zone_locations`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_shipping_zone_locations`
 --
 ALTER TABLE `wp_wcfm_marketplace_shipping_zone_locations`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_shipping_zone_methods`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_shipping_zone_methods`
 --
 ALTER TABLE `wp_wcfm_marketplace_shipping_zone_methods`
   MODIFY `instance_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_store_taxonomies`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_store_taxonomies`
 --
 ALTER TABLE `wp_wcfm_marketplace_store_taxonomies`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_vendor_ledger`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_vendor_ledger`
 --
 ALTER TABLE `wp_wcfm_marketplace_vendor_ledger`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_withdraw_request`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_withdraw_request`
 --
 ALTER TABLE `wp_wcfm_marketplace_withdraw_request`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_marketplace_withdraw_request_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_marketplace_withdraw_request_meta`
 --
 ALTER TABLE `wp_wcfm_marketplace_withdraw_request_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_membership_subscription`
+-- AUTO_INCREMENT for table `wp_wcfm_membership_subscription`
 --
 ALTER TABLE `wp_wcfm_membership_subscription`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_messages`
+-- AUTO_INCREMENT for table `wp_wcfm_messages`
 --
 ALTER TABLE `wp_wcfm_messages`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_messages_modifier`
+-- AUTO_INCREMENT for table `wp_wcfm_messages_modifier`
 --
 ALTER TABLE `wp_wcfm_messages_modifier`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_messages_stat`
+-- AUTO_INCREMENT for table `wp_wcfm_messages_stat`
 --
 ALTER TABLE `wp_wcfm_messages_stat`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_support`
+-- AUTO_INCREMENT for table `wp_wcfm_support`
 --
 ALTER TABLE `wp_wcfm_support`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_support_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_support_meta`
 --
 ALTER TABLE `wp_wcfm_support_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_support_response`
+-- AUTO_INCREMENT for table `wp_wcfm_support_response`
 --
 ALTER TABLE `wp_wcfm_support_response`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wcfm_support_response_meta`
+-- AUTO_INCREMENT for table `wp_wcfm_support_response_meta`
 --
 ALTER TABLE `wp_wcfm_support_response_meta`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_admin_notes`
+-- AUTO_INCREMENT for table `wp_wc_admin_notes`
 --
 ALTER TABLE `wp_wc_admin_notes`
   MODIFY `note_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_admin_note_actions`
+-- AUTO_INCREMENT for table `wp_wc_admin_note_actions`
 --
 ALTER TABLE `wp_wc_admin_note_actions`
   MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=589;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_customer_lookup`
+-- AUTO_INCREMENT for table `wp_wc_customer_lookup`
 --
 ALTER TABLE `wp_wc_customer_lookup`
   MODIFY `customer_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_download_log`
+-- AUTO_INCREMENT for table `wp_wc_download_log`
 --
 ALTER TABLE `wp_wc_download_log`
   MODIFY `download_log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_tax_rate_classes`
+-- AUTO_INCREMENT for table `wp_wc_tax_rate_classes`
 --
 ALTER TABLE `wp_wc_tax_rate_classes`
   MODIFY `tax_rate_class_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wc_webhooks`
+-- AUTO_INCREMENT for table `wp_wc_webhooks`
 --
 ALTER TABLE `wp_wc_webhooks`
   MODIFY `webhook_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_api_keys`
+-- AUTO_INCREMENT for table `wp_woocommerce_api_keys`
 --
 ALTER TABLE `wp_woocommerce_api_keys`
   MODIFY `key_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_attribute_taxonomies`
+-- AUTO_INCREMENT for table `wp_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wp_woocommerce_attribute_taxonomies`
   MODIFY `attribute_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_downloadable_product_permissions`
+-- AUTO_INCREMENT for table `wp_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wp_woocommerce_downloadable_product_permissions`
   MODIFY `permission_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_log`
+-- AUTO_INCREMENT for table `wp_woocommerce_log`
 --
 ALTER TABLE `wp_woocommerce_log`
   MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_order_itemmeta`
+-- AUTO_INCREMENT for table `wp_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wp_woocommerce_order_itemmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_order_items`
+-- AUTO_INCREMENT for table `wp_woocommerce_order_items`
 --
 ALTER TABLE `wp_woocommerce_order_items`
   MODIFY `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_payment_tokenmeta`
+-- AUTO_INCREMENT for table `wp_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wp_woocommerce_payment_tokenmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_payment_tokens`
+-- AUTO_INCREMENT for table `wp_woocommerce_payment_tokens`
 --
 ALTER TABLE `wp_woocommerce_payment_tokens`
   MODIFY `token_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_sessions`
+-- AUTO_INCREMENT for table `wp_woocommerce_sessions`
 --
 ALTER TABLE `wp_woocommerce_sessions`
   MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_shipping_zones`
+-- AUTO_INCREMENT for table `wp_woocommerce_shipping_zones`
 --
 ALTER TABLE `wp_woocommerce_shipping_zones`
   MODIFY `zone_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_shipping_zone_locations`
+-- AUTO_INCREMENT for table `wp_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wp_woocommerce_shipping_zone_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_shipping_zone_methods`
+-- AUTO_INCREMENT for table `wp_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wp_woocommerce_shipping_zone_methods`
   MODIFY `instance_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_tax_rates`
+-- AUTO_INCREMENT for table `wp_woocommerce_tax_rates`
 --
 ALTER TABLE `wp_woocommerce_tax_rates`
   MODIFY `tax_rate_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woocommerce_tax_rate_locations`
+-- AUTO_INCREMENT for table `wp_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wp_woocommerce_tax_rate_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `wp_woo_shippment_provider`
+-- AUTO_INCREMENT for table `wp_woo_shippment_provider`
 --
 ALTER TABLE `wp_woo_shippment_provider`
   MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=497;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wpforms_tasks_meta`
+-- AUTO_INCREMENT for table `wp_wpforms_tasks_meta`
 --
 ALTER TABLE `wp_wpforms_tasks_meta`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=439;
 
 --
--- AUTO_INCREMENT de la tabla `wp_wpmailsmtp_tasks_meta`
+-- AUTO_INCREMENT for table `wp_wpmailsmtp_tasks_meta`
 --
 ALTER TABLE `wp_wpmailsmtp_tasks_meta`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=435;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `wp_wc_download_log`
+-- Constraints for table `wp_wc_download_log`
 --
 ALTER TABLE `wp_wc_download_log`
   ADD CONSTRAINT `fk_wp_wc_download_log_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `wp_woocommerce_downloadable_product_permissions` (`permission_id`) ON DELETE CASCADE;

@@ -21,10 +21,22 @@ defined( 'ABSPATH' ) || exit;
  * @hooked wc_empty_cart_message - 10
  */
 do_action( 'woocommerce_cart_is_empty' );
+$query_args = array();
 
+$query = wp_parse_url( $YOUR_URL );
+
+$permalink = get_option( 'permalink_structure' );
+
+if ( empty( $permalink ) ) {
+
+	$query_args = $query['query'];
+
+}
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
+
+
 	<p class="return-to-shop">
-		<a class="button wc-backward" href="http://localhost/e-eat/inicio/">
+		<a class="button wc-backward" href=<?php $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>>
 			<?php
 				/**
 				 * Filter "Return To Shop" text.
