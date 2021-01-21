@@ -20,16 +20,27 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+<<<<<<< Updated upstream
 define( 'DB_NAME', 'bligszs4kmiois8ytttm' );
+=======
+define( 'DB_NAME', 'e-eat' );
+>>>>>>> Stashed changes
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
+<<<<<<< Updated upstream
 define( 'DB_PASSWORD', 't6qny6Ha6ND0kaQIQt49' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'bligszs4kmiois8ytttm-mysql.services.clever-cloud.com' );
+=======
+define( 'DB_PASSWORD', '' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+>>>>>>> Stashed changes
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
