@@ -24,16 +24,16 @@ define( 'WP_SITEURL', 'http://e-eat.cleverapps.io/' );
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'bligszs4kmiois8ytttm' );
+define( 'DB_NAME', 'b1evrxpba5zkxvuorcfe' );
 
 /** MySQL database username */
-define( 'DB_USER', 'ujy2cipvmy6g5lnx' );
+define( 'DB_USER', 'u7sl26dpv7fcbufa' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 't6qny6Ha6ND0kaQIQt49' );
+define( 'DB_PASSWORD', 'BTrD7ph8qGr03wiGwTJw' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'bligszs4kmiois8ytttm-mysql.services.clever-cloud.com' );
+define( 'DB_HOST', 'b1evrxpba5zkxvuorcfe-mysql.services.clever-cloud.com' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
